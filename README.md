@@ -21,12 +21,22 @@ l'application : interface, fonctionnalités et banques de questions.
 Elle prend le relais de la branche `codex/ict-infrastructure-questions`.
 
 Pour récupérer cette commande la première fois, arrêter l'application avec
-**Ctrl+C**, puis exécuter :
+**Ctrl+C**. Si `tsconfig.json` apparaît comme un fichier non suivi (`U`),
+conserver d'abord ce réglage local en le renommant :
+
+```bash
+mv -n tsconfig.json tsconfig.backup.json
+```
+
+Puis récupérer la version partagée du projet :
 
 ```bash
 git pull --ff-only origin codex/mcq-trainer
 npm start
 ```
+
+Le fichier `tsconfig.json` fait désormais partie du projet et utilise
+`moduleResolution: "bundler"`, compatible avec les modules compilés par webpack.
 
 Pour les mises à jour suivantes, arrêter l'application avec **Ctrl+C**, puis :
 
