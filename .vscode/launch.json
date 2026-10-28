@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Lancer l’application",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm start",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "BROWSER": "none",
+        "PORT": "3000"
+      }
+    },
+    {
+      "name": "Mettre à jour et relancer",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run update",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "BROWSER": "none",
+        "PORT": "3000"
+      }
+    }
+  ]
+}

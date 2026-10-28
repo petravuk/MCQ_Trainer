@@ -14,6 +14,23 @@ npm start
 Ouvrir ensuite le port **3000** depuis l'onglet **Ports**.
 Le terminal reste occupé pendant que l'application fonctionne.
 
+## Lancer avec les boutons de Codespaces
+
+Dans la barre latérale, ouvrir **Exécuter et déboguer** (icône triangle et insecte).
+Choisir l'une des deux actions dans la liste en haut, puis cliquer sur **▶** :
+
+- **Lancer l’application** exécute `npm start`.
+- **Mettre à jour et relancer** exécute `npm run update`.
+
+Avant de lancer une autre action, arrêter la session précédente avec le
+**carré rouge ■** de la barre de débogage. Si l'application a été lancée
+manuellement dans un terminal, l'arrêter d'abord avec **Ctrl+C**.
+Ouvrir l'application depuis **Ports → 3000 → Open in Browser**, puis actualiser
+son onglet après une mise à jour.
+
+Les commandes sont aussi accessibles dans la section **NPM SCRIPTS** de
+l'Explorateur : cliquer sur le bouton **▶** à côté de `start` ou `update`.
+
 ## Actualiser l'application
 
 La branche `codex/mcq-trainer` regroupe les modifications de toute
