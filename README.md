@@ -3,6 +3,35 @@
 Application de QCM : préparation d'une session, questions avec correction,
 résultats et historique. Les banques de questions sont dans `src/`.
 
+## Progression et révision
+
+- Le menu **Practice** revient toujours au choix du test. Les étapes en haut
+  permettent aussi de revenir aux réglages, au quiz ou aux derniers résultats.
+- Un quiz non terminé est enregistré automatiquement dans ce navigateur, avec
+  l'ordre des questions et des réponses, les choix cochés et la position courante.
+  Après fermeture ou rechargement, **Resume saved quiz** permet de le retrouver.
+  **Save & exit** retourne aux réglages sans le supprimer ; l'abandon explicite
+  demande une confirmation. Un seul quiz en cours est conservé par navigateur.
+- **Review** réunit les erreurs non résolues et les questions marquées à revoir.
+  Une bonne réponse ultérieure résout l'erreur ; une marque manuelle reste
+  jusqu'à son retrait. **Try this question** lance une révision ciblée.
+- **History → Results by topic** utilise les réponses effectivement vérifiées,
+  y compris dans les quiz interrompus et les révisions. Les anciens totaux de
+  quiz sont conservés, sans leur inventer une répartition par thème.
+- Les données locales ne sont pas synchronisées entre appareils et restent
+  communes aux comptes utilisés dans un même navigateur, comme auparavant.
+- Si une mise à jour change le texte ou la réponse d'une question d'un quiz
+  sauvegardé, ce quiz ne peut pas être repris ; un message le précise. Les
+  statistiques déjà enregistrées ne sont pas effacées.
+
+## Qualité des questions
+
+La [revue ponctuelle EP et Infrastructure](docs/question-quality-review.md)
+distingue les corrections rédactionnelles, les réponses effectivement vérifiées
+et les contrôles encore en attente. Les sources disponibles sont affichées après
+la correction d'une question. Il n'y a aucun bouton de signalement par les autres
+utilisateurs ni contrôle quotidien planifié.
+
 ## Tester dans Codespaces
 
 Dans le terminal du projet :

@@ -33,7 +33,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-002",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "medium",
+    "level": "easy",
     "question": "Which storage protocol is most closely associated with block-level access over a TCP/IP network?",
     "options": [
       "NFS",
@@ -63,7 +63,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-004",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "medium",
+    "level": "easy",
     "question": "A data-centre network uses software-defined networking. What is the core architectural principle?",
     "options": [
       "All network traffic must use a public cloud",
@@ -198,7 +198,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-013",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "hard",
+    "level": "easy",
     "question": "What is the main benefit of idempotency in infrastructure automation?",
     "options": [
       "Running a playbook twice always doubles its changes",
@@ -213,7 +213,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-014",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "hard",
+    "level": "easy",
     "question": "An administrator is permitted to manage servers but not read payroll records. Which security principle is being applied?",
     "options": [
       "Least privilege",
@@ -363,7 +363,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-024",
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
-    "level": "medium",
+    "level": "easy",
     "question": "What is the role of a scheduler such as Slurm in an HPC cluster?",
     "options": [
       "Allocate compute resources and queue or dispatch jobs according to policy",
@@ -468,8 +468,8 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-031",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "medium",
-    "question": "A dual-stack server responds over IPv4 but not IPv6. Which DNS record should first be checked?",
+    "level": "easy",
+    "question": "Clients resolving a dual-stack service hostname receive no IPv6 address. Which DNS record type should first be checked?",
     "options": [
       "MX record",
       "AAAA record",
@@ -483,7 +483,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-032",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "hard",
+    "level": "easy",
     "question": "Which protocol normally exchanges routes between independent Internet autonomous systems?",
     "options": [
       "OSPF",
@@ -783,7 +783,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-052",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "medium",
+    "level": "easy",
     "question": "Which hypervisor model runs directly on host hardware?",
     "options": [
       "Application reverse proxy",
@@ -873,7 +873,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-058",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "medium",
+    "level": "easy",
     "question": "Which ITIL practice restores service as quickly as possible following an unplanned interruption?",
     "options": [
       "Problem management",
@@ -948,7 +948,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-063",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "hard",
+    "level": "easy",
     "question": "Which ITIL practice manages information about configuration items and their relationships?",
     "options": [
       "Service configuration management",
@@ -1023,7 +1023,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-068",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "hard",
+    "level": "easy",
     "question": "In ITIL 4, what is a standard change?",
     "options": [
       "A change needing a new CAB approval each time",
@@ -1038,7 +1038,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-069",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "hard",
+    "level": "easy",
     "question": "What is the purpose of the service desk as an ITIL practice?",
     "options": [
       "Replace all technical support teams",
@@ -1069,7 +1069,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
     "level": "hard",
-    "question": "An SLA breach is caused by an underlying supplier. Which agreement helps manage internal supplier performance?",
+    "question": "An external supplier causes an SLA breach. Which agreement sets that supplier's contractual service commitments?",
     "options": [
       "Service catalogue entry",
       "Architectural diagram alone",
@@ -1278,12 +1278,12 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-085",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "medium",
+    "level": "easy",
     "question": "What is the main benefit of storing infrastructure definitions in Git?",
     "options": [
-      "Guaranteeing that every deployment is secure",
-      "Removing all access controls",
-      "Eliminating the need for configuration validation",
+      "Automatically reconciling running resources without a controller",
+      "Preventing drift merely by committing configuration files",
+      "Enforcing production permissions through commit history alone",
       "Versioned reviewable changes with an auditable history"
     ],
     "answer": 3,
@@ -1293,12 +1293,12 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-086",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "hard",
+    "level": "easy",
     "question": "A pipeline builds an artefact twice from identical inputs but produces different binaries. What property is missing?",
     "options": [
-      "Network segmentation",
-      "Horizontal scaling",
-      "Service affinity",
+      "Idempotent deployment",
+      "Backward-compatible releases",
+      "Deterministic test ordering",
       "Reproducible builds"
     ],
     "answer": 3,
@@ -1308,12 +1308,12 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-087",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "hard",
+    "level": "easy",
     "question": "What is a software bill of materials primarily used for?",
     "options": [
-      "Mapping switch ports",
-      "Scheduling overnight backups",
-      "Defining building evacuation routes",
+      "Recording deployed configuration items and their service relationships",
+      "Describing service request and support commitments",
+      "Scheduling release approval and deployment windows",
       "Inventorying software components and dependencies"
     ],
     "answer": 3,
@@ -1341,10 +1341,10 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "hard",
     "question": "What technique checks a container image against a trusted publisher?",
     "options": [
-      "Increasing image size",
+      "Comparing an image checksum obtained from the same unauthenticated download",
       "Signature verification",
-      "Renaming the image tag",
-      "Disabling admission policies"
+      "Pinning a mutable image tag in a deployment file",
+      "Scanning for known vulnerabilities without verifying provenance"
     ],
     "answer": 1,
     "explanation": "Image signatures help verify origin and integrity before deployment."
@@ -1353,12 +1353,12 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-090",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "hard",
+    "level": "easy",
     "question": "Which security test analyses application source without executing the program?",
     "options": [
       "Dynamic application security testing",
-      "Load testing",
-      "Disaster recovery exercise",
+      "Interactive testing of a deployed application",
+      "Software composition analysis of dependency versions",
       "Static application security testing"
     ],
     "answer": 3,
@@ -1368,13 +1368,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-091",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "medium",
+    "level": "easy",
     "question": "Which testing approach probes a running web application for exploitable behaviour?",
     "options": [
-      "Static schema validation only",
-      "Dependency lockfile check",
+      "Static analysis of application source code",
+      "Software composition analysis of third-party dependencies",
       "Dynamic application security testing",
-      "Source formatter"
+      "Signature verification of the released application binary"
     ],
     "answer": 2,
     "explanation": "DAST tests the running application through its externally observable behaviour."
@@ -1401,9 +1401,9 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "hard",
     "question": "A release introduces elevated error rates after deployment. Which strategy can automatically stop rollout?",
     "options": [
-      "Manual copy to all hosts",
-      "Unlimited simultaneous deployment",
-      "Removing all health checks",
+      "A rolling deployment that checks only process startup",
+      "Manual approval after deploying to every production instance",
+      "A scheduled rollout without application-level health gates",
       "Canary deployment with health-based rollback"
     ],
     "answer": 3,
@@ -1416,10 +1416,10 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "What is the principal benefit of blue-green deployment?",
     "options": [
-      "Automatically resolving data model incompatibilities",
-      "Removing production monitoring",
+      "Automatic reversal of incompatible database schema migrations",
+      "Updating the existing production instances in batches",
       "Rapid switch between two separately prepared environments",
-      "Eliminating application testing"
+      "Gradually increasing traffic to a small production canary"
     ],
     "answer": 2,
     "explanation": "Blue-green environments enable traffic switchovers and fast rollback when compatible."
@@ -1462,9 +1462,9 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "question": "What is a primary advantage of a pull-based GitOps model?",
     "options": [
       "Cluster reconciles to a version-controlled declared state",
-      "All clusters require public SSH access",
-      "Operators manually copy production files",
-      "Release history is not recorded"
+      "A CI job pushes changes once without continuous reconciliation",
+      "Running configuration is copied back into Git as the desired state",
+      "A human approval alone enforces the running cluster configuration"
     ],
     "answer": 0,
     "explanation": "GitOps controllers compare observed and declared state and reconcile differences."
@@ -1683,7 +1683,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-112",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "medium",
+    "level": "easy",
     "question": "Which security property ensures data is not altered without detection?",
     "options": [
       "Confidentiality",
@@ -1701,10 +1701,10 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "hard",
     "question": "Which cryptographic mechanism best protects data in transit against eavesdropping?",
     "options": [
-      "DNS caching",
+      "Encrypting database volumes at rest",
       "Properly validated TLS",
-      "Base64 encoding",
-      "Plain HTTP over an internal network"
+      "Encoding request bodies with Base64",
+      "Applying an integrity-only MAC without encrypting the payload"
     ],
     "answer": 1,
     "explanation": "TLS authenticates endpoints and protects transport confidentiality and integrity."
@@ -1728,12 +1728,12 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-115",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "medium",
+    "level": "easy",
     "question": "What is the purpose of MFA for privileged access?",
     "options": [
-      "Allow anonymous administrative actions",
-      "Store passwords in plaintext",
-      "Replace all network controls",
+      "Requiring two different passwords for the same account",
+      "Repeating a password check on every privileged screen",
+      "Using several accounts protected by the same single factor",
       "Require independent authentication factors"
     ],
     "answer": 3,
@@ -1821,10 +1821,10 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "What is a key objective of zero-trust architecture?",
     "options": [
-      "Remove identity controls after VPN connection",
-      "Trust any user inside the office network",
+      "Trust all subsequent requests once a VPN session is established",
+      "Treat the office subnet as sufficient evidence of user authorisation",
       "Explicit verification of access regardless of network location",
-      "Grant permanent broad access"
+      "Grant access based only on a device inventory record"
     ],
     "answer": 2,
     "explanation": "Zero trust does not assume the internal network is inherently trusted."
@@ -1851,10 +1851,10 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "hard",
     "question": "Which backup test best validates actual disaster recovery?",
     "options": [
-      "Count backup jobs without recovery",
+      "Validate checksums of backup files without starting the service",
       "Restore production-representative data and verify service operation",
-      "Verify only that a backup file exists",
-      "Check storage capacity alone"
+      "Review successful backup-job reports without performing a restore",
+      "Verify that backup retention and storage quotas match policy"
     ],
     "answer": 1,
     "explanation": "Recovery tests establish that backups can actually support service restoration."
@@ -2073,7 +2073,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-138",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "hard",
+    "level": "easy",
     "question": "Which metric most directly expresses how much data loss a service can tolerate?",
     "options": [
       "Recovery point objective",
@@ -2226,10 +2226,10 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "What is the correct handling of decommissioned disks containing confidential information?",
     "options": [
-      "Simple deletion of a desktop shortcut",
+      "Delete the files and empty the recycle bin",
       "Verified sanitisation or destruction to approved standards",
-      "Donation without assessing data",
-      "Relabelling the disk only"
+      "Remove the filesystem partition table without sanitising the media",
+      "Disable the former owner's operating-system account"
     ],
     "answer": 1,
     "explanation": "Disposal must make confidential data unrecoverable at the required assurance level."
@@ -2373,7 +2373,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-158",
     "category": "epso_ad7_infrastructure",
     "topic": "ICT infrastructure lifecycle",
-    "level": "hard",
+    "level": "easy",
     "question": "Which document records why an architectural option was chosen over alternatives?",
     "options": [
       "Purchasing receipt only",
@@ -2511,9 +2511,9 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "hard",
     "question": "What is the main benefit of confidential computing?",
     "options": [
-      "Guarantee perfect software security",
-      "Eliminate encryption keys from all systems",
-      "Replace network segmentation",
+      "Encrypt stored disks while leaving plaintext memory outside a protected environment",
+      "Protect network traffic between service endpoints using TLS",
+      "Restrict access to stored files using role-based permissions",
       "Protect certain data during processing using trusted execution environments"
     ],
     "answer": 3,
@@ -2688,13 +2688,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-179",
     "category": "epso_ad7_infrastructure",
     "topic": "Emerging technologies",
-    "level": "hard",
-    "question": "Which metric is commonly used to assess data-centre energy efficiency?",
+    "level": "easy",
+    "question": "Which metric is the ratio of total data-centre energy to energy consumed by its IT equipment?",
     "options": [
-      "Application response status codes",
+      "Server virtualisation density",
       "Power usage effectiveness",
-      "Mean time to close tickets",
-      "Network route count"
+      "CPU instructions per clock cycle",
+      "Average electrical power per rack"
     ],
     "answer": 1,
     "explanation": "PUE compares total facility energy with IT equipment energy."
@@ -3033,7 +3033,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-202",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "medium",
+    "level": "easy",
     "question": "Which artefact documents operational procedures for handling a recurring infrastructure task?",
     "options": [
       "Purchase requisition",
@@ -3063,7 +3063,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-204",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "hard",
+    "level": "easy",
     "question": "What is the role of a RACI matrix in infrastructure governance?",
     "options": [
       "Replace network encryption",
@@ -3303,13 +3303,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-220",
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
-    "level": "medium",
+    "level": "easy",
     "question": "Which programming model commonly enables message passing between separate HPC processes?",
     "options": [
       "MPI",
-      "SNMP",
-      "DOM",
-      "SMTP"
+      "OpenMP",
+      "POSIX threads",
+      "CUDA thread blocks"
     ],
     "answer": 0,
     "explanation": "MPI is widely used for distributed-memory parallel computing."
@@ -3318,13 +3318,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-221",
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
-    "level": "hard",
-    "question": "Which model is commonly used for shared-memory parallelism within one HPC node?",
+    "level": "easy",
+    "question": "Which model uses compiler directives to express shared-memory parallel regions, commonly within one HPC node?",
     "options": [
-      "BGP",
+      "MPI point-to-point communication",
       "OpenMP",
-      "SQL DDL",
-      "NTP"
+      "Remote direct memory access",
+      "Slurm job arrays"
     ],
     "answer": 1,
     "explanation": "OpenMP provides directives and runtime support for shared-memory parallel execution."
@@ -3334,7 +3334,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
     "level": "hard",
-    "question": "A numerical workload spends most time reading main memory rather than computing. What bottleneck is likely?",
+    "question": "A numerical kernel saturates measured main-memory bandwidth while arithmetic units remain underused. What is its likely bottleneck?",
     "options": [
       "Memory bandwidth",
       "Printer throughput",
@@ -3378,13 +3378,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-225",
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
-    "level": "hard",
+    "level": "easy",
     "question": "What does strong scaling measure?",
     "options": [
-      "Growth of the problem with resources at fixed runtime",
+      "Runtime behaviour when work per processor stays constant as resources grow",
       "Runtime improvement for a fixed total problem size with more resources",
-      "Time spent purchasing nodes",
-      "Total disk capacity only"
+      "The fraction of time jobs spend waiting in a scheduler queue",
+      "The fraction of requested cores actually executing instructions"
     ],
     "answer": 1,
     "explanation": "Strong scaling holds problem size constant and increases parallel resources."
@@ -3393,13 +3393,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-226",
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
-    "level": "medium",
+    "level": "easy",
     "question": "What does weak scaling measure?",
     "options": [
       "Ability to maintain performance as workload grows proportionally with resources",
-      "Whether all nodes have identical serial numbers",
-      "Reduction of workload to zero",
-      "Effect of changing monitor size"
+      "Runtime improvement for a fixed problem size as processor count increases",
+      "Latency of one serial task as processor clock speed increases",
+      "Queue waiting time at a fixed cluster size"
     ],
     "answer": 0,
     "explanation": "Weak scaling evaluates increasing problem size and compute resources together."
@@ -3409,12 +3409,12 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
     "level": "hard",
-    "question": "Which scheduling policy can improve fairness in a multi-user HPC cluster?",
+    "question": "Which scheduling policy adjusts priority using allocated shares and historical resource usage?",
     "options": [
       "Fair-share scheduling with defined allocations",
-      "Ignoring job priorities",
-      "Disabling queues",
-      "Unrestricted permanent node reservation by one user"
+      "Strict first-in-first-out scheduling without usage accounting",
+      "Largest-job-first scheduling based only on core requests",
+      "Fixed job priorities that never incorporate past usage"
     ],
     "answer": 0,
     "explanation": "Fair-share scheduling allocates resources according to usage and entitlements."
@@ -3588,8 +3588,8 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-239",
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
-    "level": "hard",
-    "question": "Which metric indicates how much floating-point work a compute device performs?",
+    "level": "easy",
+    "question": "Which metric expresses the rate of floating-point operations performed by a compute device?",
     "options": [
       "Bytes of DNS cache",
       "Packets per second only",
@@ -3606,9 +3606,9 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "hard",
     "question": "What does the roofline model relate?",
     "options": [
-      "BGP path length to screen size",
-      "SLA uptime to payroll",
-      "DNS TTL to cache lifetime",
+      "Queue waiting time as a function of submitted job count",
+      "Energy consumption as a function of rack temperature",
+      "Checkpoint size as a function of recovery time",
       "Arithmetic intensity to attainable computation and memory bandwidth performance"
     ],
     "answer": 3,
@@ -3694,7 +3694,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
     "level": "hard",
-    "question": "Which metric is appropriate for measuring cluster utilisation?",
+    "question": "Which metric measures scheduler resource occupancy, rather than actual CPU execution efficiency, in an HPC cluster?",
     "options": [
       "Allocated compute hours compared with available capacity",
       "Number of office chairs",
@@ -3702,7 +3702,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
       "Length of shell usernames"
     ],
     "answer": 0,
-    "explanation": "Allocated versus available node-hours shows how much of the resource pool is in use."
+    "explanation": "Allocated compute hours divided by available capacity measures resource occupancy. Actual CPU or GPU utilisation requires execution telemetry as well."
   },
   {
     "id": "EPSO-ICT1-247",
@@ -3711,9 +3711,9 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "What is the principal mathematical threat from Shor's algorithm to existing public-key systems?",
     "options": [
-      "Immediate decryption of every AES key",
-      "Breaking all one-time pads",
-      "Eliminating hashing",
+      "A quadratic speed-up in exhaustive symmetric-key search",
+      "Recovery of an independently random one-time pad without its key",
+      "Efficient inversion of every cryptographic hash function",
       "Efficient factorisation and discrete logarithms on a capable quantum computer"
     ],
     "answer": 3,
@@ -3726,9 +3726,9 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "hard",
     "question": "What does Grover's algorithm imply for symmetric-key search?",
     "options": [
-      "An exponential attack on all hash functions",
-      "Removal of the need for randomness",
-      "A proof that AES is broken today",
+      "Polynomial-time integer factorisation rather than key search",
+      "An exponential reduction in queries for every possible search problem",
+      "Elimination of the need to assess implementation attack costs",
       "A quadratic theoretical search speed-up under suitable conditions"
     ],
     "answer": 3,
@@ -3738,7 +3738,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-249",
     "category": "epso_ad7_infrastructure",
     "topic": "Quantum technologies",
-    "level": "hard",
+    "level": "easy",
     "question": "Which NIST-standardised post-quantum mechanism is a key encapsulation mechanism?",
     "options": [
       "AES-GCM",
@@ -3753,7 +3753,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-250",
     "category": "epso_ad7_infrastructure",
     "topic": "Quantum technologies",
-    "level": "medium",
+    "level": "easy",
     "question": "Which NIST-standardised scheme provides post-quantum digital signatures?",
     "options": [
       "AES-XTS",
@@ -3888,12 +3888,12 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-259",
     "category": "epso_ad7_infrastructure",
     "topic": "Quantum technologies",
-    "level": "medium",
-    "question": "What does a qubit differ from a classical bit by?",
+    "level": "easy",
+    "question": "Which property distinguishes an ideal qubit state from a classical bit?",
     "options": [
-      "It never suffers errors",
-      "It is simply a faster transistor",
-      "It always stores exactly two independent classical bits",
+      "Its unknown state can always be cloned exactly",
+      "One measurement reveals every amplitude of an unknown state",
+      "It always yields two independently readable classical bits",
       "It can be in a superposition of basis states before measurement"
     ],
     "answer": 3,
@@ -3963,13 +3963,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-264",
     "category": "epso_ad7_infrastructure",
     "topic": "Quantum technologies",
-    "level": "hard",
+    "level": "easy",
     "question": "What is a KEM used for in secure protocols?",
     "options": [
       "Establish a shared secret between communicating parties",
-      "Compress certificates",
-      "Provide password hashing only",
-      "Perform network routing"
+      "Authenticate a message by producing a digital signature",
+      "Derive a password verifier from a low-entropy password",
+      "Encrypt an arbitrarily long application message directly"
     ],
     "answer": 0,
     "explanation": "Key encapsulation creates shared key material suitable for later symmetric protection."
@@ -4116,10 +4116,10 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "Which measure best detects supplier underperformance across service restoration commitments?",
     "options": [
-      "Number of supplier marketing documents",
+      "Overall availability without incident restoration measurements",
       "Breach rate by priority and service level",
-      "Only contract signature date",
-      "Count of meeting invites"
+      "Number of tickets closed without measuring elapsed restoration time",
+      "Average response time without restoration targets"
     ],
     "answer": 1,
     "explanation": "Service-level performance should be measured against agreed response and restoration targets."
@@ -4266,10 +4266,10 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "hard",
     "question": "Which requirement is most important when external operators access privileged infrastructure?",
     "options": [
-      "Anonymous vendor accounts",
+      "Named MFA-protected accounts with permanent unrestricted admin access",
       "Named access, least privilege, MFA and auditable sessions",
-      "Open public admin ports",
-      "Shared permanent passwords"
+      "A shared support account with a recorded password and no session attribution",
+      "Time-limited admin access without individual identity or audit logs"
     ],
     "answer": 1,
     "explanation": "Privileged third-party access needs individual accountability and strong controls."
@@ -4293,7 +4293,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-286",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "medium",
+    "level": "easy",
     "question": "What is an operational level agreement typically used for?",
     "options": [
       "Guarantee every external supplier price",

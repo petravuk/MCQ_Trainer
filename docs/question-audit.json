@@ -1,0 +1,233 @@
+{
+  "scope": "EP and ICT Infrastructure only",
+  "questions": 600,
+  "banks": {
+    "EP": {
+      "count": 300,
+      "distinctWording": 283,
+      "duplicateGroups": [
+        [
+          "ep-027",
+          "ep-276"
+        ],
+        [
+          "ep-031",
+          "ep-206"
+        ],
+        [
+          "ep-043",
+          "ep-085"
+        ],
+        [
+          "ep-049",
+          "ep-104"
+        ],
+        [
+          "ep-050",
+          "ep-105"
+        ],
+        [
+          "ep-056",
+          "ep-141"
+        ],
+        [
+          "ep-057",
+          "ep-146"
+        ],
+        [
+          "ep-060",
+          "ep-222"
+        ],
+        [
+          "ep-065",
+          "ep-227"
+        ],
+        [
+          "ep-067",
+          "ep-232"
+        ],
+        [
+          "ep-072",
+          "ep-257"
+        ],
+        [
+          "ep-074",
+          "ep-262"
+        ],
+        [
+          "ep-075",
+          "ep-266"
+        ],
+        [
+          "ep-077",
+          "ep-274"
+        ],
+        [
+          "ep-078",
+          "ep-275"
+        ],
+        [
+          "ep-079",
+          "ep-279"
+        ],
+        [
+          "ep-080",
+          "ep-286"
+        ]
+      ],
+      "levels": {
+        "medium": 227,
+        "easy": 40,
+        "hard": 33
+      },
+      "answerPositions": [
+        265,
+        25,
+        10,
+        0
+      ],
+      "easyDistractorCandidates": [],
+      "note": "Heuristic candidates require human judgement; they are not proven answer errors. Source checks cover only the explicitly listed IDs."
+    },
+    "Infrastructure": {
+      "count": 300,
+      "distinctWording": 300,
+      "duplicateGroups": [],
+      "levels": {
+        "hard": 179,
+        "easy": 34,
+        "medium": 87
+      },
+      "answerPositions": [
+        88,
+        82,
+        55,
+        75
+      ],
+      "easyDistractorCandidates": [
+        "EPSO-ICT1-157",
+        "EPSO-ICT1-222",
+        "EPSO-ICT1-246"
+      ],
+      "note": "Heuristic candidates require human judgement; they are not proven answer errors. Source checks cover only the explicitly listed IDs."
+    }
+  },
+  "answerChecked": [
+    "EPSO-ICT1-001",
+    "EPSO-ICT1-003",
+    "EPSO-ICT1-009",
+    "EPSO-ICT1-013",
+    "EPSO-ICT1-014",
+    "EPSO-ICT1-024",
+    "EPSO-ICT1-025",
+    "EPSO-ICT1-033",
+    "EPSO-ICT1-227",
+    "EPSO-ICT1-242",
+    "EPSO-ICT1-249",
+    "EPSO-ICT1-250"
+  ],
+  "equivalentQuestions": [
+    [
+      "ep-042",
+      "ep-081"
+    ],
+    [
+      "ep-044",
+      "ep-087"
+    ],
+    [
+      "ep-047",
+      "ep-101"
+    ],
+    [
+      "ep-048",
+      "ep-102"
+    ],
+    [
+      "ep-051",
+      "ep-110"
+    ],
+    [
+      "ep-052",
+      "ep-113"
+    ],
+    [
+      "ep-053",
+      "ep-116"
+    ],
+    [
+      "ep-054",
+      "ep-118"
+    ],
+    [
+      "ep-055",
+      "ep-140"
+    ],
+    [
+      "ep-059",
+      "ep-157"
+    ],
+    [
+      "ep-061",
+      "ep-223"
+    ],
+    [
+      "ep-062",
+      "ep-224"
+    ],
+    [
+      "ep-063",
+      "ep-225"
+    ],
+    [
+      "ep-064",
+      "ep-226"
+    ],
+    [
+      "ep-066",
+      "ep-231"
+    ],
+    [
+      "ep-069",
+      "ep-241"
+    ],
+    [
+      "ep-070",
+      "ep-255"
+    ],
+    [
+      "ep-071",
+      "ep-256"
+    ],
+    [
+      "ep-073",
+      "ep-260"
+    ],
+    [
+      "ep-076",
+      "ep-269"
+    ]
+  ],
+  "editorialNotes": {
+    "ep-054": "Wording clarified to distinguish Parliament's internal authentication from joint signature by the Presidents of Parliament and the Council. Current rule edition still needs verification.",
+    "ep-118": "Wording clarified to refer explicitly to Parliament's side. Current rule edition still needs verification.",
+    "ep-061": "The fixed quorum-check request number needs confirmation against the applicable edition of the Rules; it has not been certified as current.",
+    "ep-223": "The fixed quorum-check request number needs confirmation against the applicable edition of the Rules; it has not been certified as current.",
+    "ep-067": "Scope clarified: adoption of a text requiring a majority, not an election procedure with its own tie-breaking rules.",
+    "ep-232": "Scope clarified: adoption of a text requiring a majority, not an election procedure with its own tie-breaking rules.",
+    "ep-147": "The question now measures the interval from the debate, matching its answer; other applicable treaty time limits must also be checked.",
+    "ep-201": "This is a basic navigation question, not a substantive procedural scenario.",
+    "ep-205": "This item has limited training value: the answer mostly repeats the subject of the question.",
+    "ep-208": "This item needs a more concrete procedural scenario once the current source is available.",
+    "ep-213": "The answer is too general to teach the actual access rules; a source-backed rewrite is still needed.",
+    "ep-214": "This is a heading-identification question with limited assessment value.",
+    "ep-215": "This is a heading-identification question with limited assessment value.",
+    "ep-271": "The answer repeats that the petition is inadmissible; a source-backed question about the next procedural step would be more useful.",
+    "EPSO-ICT1-031": "The scenario now explicitly concerns missing IPv6 DNS resolution; failure to reach an IPv6 address alone would not establish a DNS problem.",
+    "EPSO-ICT1-071": "External supplier commitments are distinguished from agreements between internal teams.",
+    "EPSO-ICT1-222": "The scenario now specifies measured bandwidth saturation, distinguishing bandwidth from latency and other memory bottlenecks.",
+    "EPSO-ICT1-239": "The wording now asks for a rate, matching floating-point operations per second.",
+    "EPSO-ICT1-246": "Allocated resource occupancy is distinguished from actual CPU/GPU execution utilisation."
+  },
+  "errors": []
+}

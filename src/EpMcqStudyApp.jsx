@@ -8,6 +8,12 @@ import { EPSO_AD7_INFRASTRUCTURE_QUESTIONS } from "./epso_ad7_infrastructure_que
 import { saveQuizResult } from "./firebase_results";
 import { auth, googleProvider } from "./firebase";
 import styles from "./EpMcqStudyApp.module.css";
+import {
+  validateDraft,
+  recordQuestionAnswer,
+  topicResults,
+} from "./quizProgress";
+import { questionReview, questionKey } from "./questionReviews";
 const ALL_EP_CATEGORY = "ep_all";
 const EP_RULES_CATEGORY = "ep_rules";
 const GUIDE_INTERNAL_RULES_CATEGORY = "ep_guide_internal_rules";
@@ -59,6 +65,9 @@ const HISTORY_KEY = "ep-mcq-history-v2";
 const LATEST_WRONG_KEY = "ep-mcq-latest-wrong-v2";
 const SEEN_KEY = "ep-mcq-seen-v2";
 const EMPTY_ARRAY = [];
+const DRAFT_KEY = "mcq-active-session-v1";
+const PROGRESS_KEY = "mcq-question-progress-v1";
+const MARKED_KEY = "mcq-review-marks-v1";
 
 function shuffleArray(arr) {
   const copy = [...arr];
@@ -123,17 +132,21 @@ function buildSessionQuestions(
     pool = pool.filter((q) => q.topic === topicFilter);
   }
 
-  if (mode === "review") {
-    pool = pool.filter((q) => latestWrongIds.includes(q.id));
-  } else {
-    pool = pool.filter((q) => matchDifficulty(q, selectedDifficulties));
-
-    const unseen = pool.filter((q) => !seenIds.includes(q.id));
-    if (unseen.length >= Math.min(count, pool.length)) {
-      pool = unseen;
-    }
+  pool = pool.filter((q) =>
+    mode === "review"
+      ? latestWrongIds.includes(q.id)
+      : matchDifficulty(q, selectedDifficulties),
+  );
+  // Preserve every stored ID while selecting only one copy of a learning point.
+  pool = [...new Map(pool.map((q) => [questionKey(q), q])).values()];
+  if (mode !== "review") {
+    const seen = new Set(seenIds);
+    const seenContent = new Set(
+      bank.filter((q) => seen.has(q.id)).map(questionKey),
+    );
+    const unseen = pool.filter((q) => !seenContent.has(questionKey(q)));
+    if (unseen.length >= Math.min(count, pool.length)) pool = unseen;
   }
-
   return shuffleArray(pool)
     .slice(0, Math.min(count, pool.length))
     .map(randomiseQuestion);
@@ -183,6 +196,48 @@ function Icon({ name, size = 20 }) {
 
 const difficultyLabels = { easy: "Easy", medium: "Medium", hard: "Hard" };
 
+function QuestionSources({ question }) {
+  const review = questionReview(question);
+  if (!review) return null;
+  return (
+    <details className={styles.sources}>
+      <summary>
+        Sources &amp; review ·{" "}
+        {review.checked ? "Answer checked" : "Source check pending"}
+      </summary>
+      <p>{review.note}</p>
+      {review.editorial && <p>{review.editorial}</p>}
+      {review.reviewedAt && (
+        <p>
+          Checked on {review.reviewedAt}
+          {review.method === "calculation"
+            ? " by calculation"
+            : " against the primary documentation below"}
+          .
+        </p>
+      )}
+      {review.suppliedReference && (
+        <p>
+          Reference supplied with the original question:{" "}
+          {review.suppliedReference}. Rule numbering may depend on the edition.
+        </p>
+      )}
+      {review.sources.length > 0 && (
+        <ul>
+          {review.sources.map((item) => (
+            <li key={item.url}>
+              <a href={item.url} target="_blank" rel="noreferrer">
+                {item.title}
+              </a>{" "}
+              — {item.section}
+            </li>
+          ))}
+        </ul>
+      )}
+    </details>
+  );
+}
+
 export default function EpMcqStudyApp() {
   const [user, setUser] = useState(null);
   const [authError, setAuthError] = useState("");
@@ -190,7 +245,8 @@ export default function EpMcqStudyApp() {
   const [screen, setScreen] = useState("setup");
   const [category, setCategory] = useState(ALL_EP_CATEGORY);
   const [mode, setMode] = useState("practice");
-  const [selectedDifficulties, setSelectedDifficulties] = useState(difficultyOptions);
+  const [selectedDifficulties, setSelectedDifficulties] =
+    useState(difficultyOptions);
   const [questionCount, setQuestionCount] = useState("10");
   const [topicFilter, setTopicFilter] = useState("All topics");
   const [history, setHistory] = useState(() => getJsonStorage(HISTORY_KEY, []));
@@ -199,10 +255,25 @@ export default function EpMcqStudyApp() {
   );
   const [seenIds, setSeenIds] = useState(() => getJsonStorage(SEEN_KEY, []));
   const [historyCategory, setHistoryCategory] = useState("all");
-  const [session, setSession] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [selected, setSelected] = useState({});
-  const [submitted, setSubmitted] = useState({});
+  const [restored] = useState(() =>
+    validateDraft(getJsonStorage(DRAFT_KEY, null), questionBanks, history),
+  );
+  const [restoreWarning, setRestoreWarning] = useState(() =>
+    Boolean(getJsonStorage(DRAFT_KEY, null) && !restored),
+  );
+  const [session, setSession] = useState(restored?.session || null);
+  const [currentIndex, setCurrentIndex] = useState(restored?.currentIndex || 0);
+  const [selected, setSelected] = useState(restored?.selected || {});
+  const [submitted, setSubmitted] = useState(restored?.submitted || {});
+  const [questionProgress, setQuestionProgress] = useState(() =>
+    getJsonStorage(PROGRESS_KEY, {}),
+  );
+  const [markedByCategory, setMarkedByCategory] = useState(() =>
+    getJsonStorage(MARKED_KEY, {}),
+  );
+  const [reviewCategory, setReviewCategory] = useState("all");
+  const [reviewFilter, setReviewFilter] = useState("all");
+  const [draftError, setDraftError] = useState("");
   const [completed, setCompleted] = useState(false);
   const [saveStatus, setSaveStatus] = useState("");
   const finishedRef = useRef(false);
@@ -214,6 +285,27 @@ export default function EpMcqStudyApp() {
     headingRef.current?.focus({ preventScroll: true });
     window.scrollTo(0, 0);
   }, [screen, currentIndex]);
+
+  useEffect(() => {
+    try {
+      if (session && !completed) {
+        setJsonStorage(DRAFT_KEY, {
+          version: 1,
+          session,
+          currentIndex,
+          selected,
+          submitted,
+        });
+      } else {
+        window.localStorage.removeItem(DRAFT_KEY);
+      }
+      setDraftError("");
+    } catch {
+      setDraftError(
+        "This browser could not save your quiz. Keep this page open to avoid losing progress.",
+      );
+    }
+  }, [session, currentIndex, selected, submitted, completed]);
 
   async function handleAuth() {
     setAuthError("");
@@ -234,15 +326,24 @@ export default function EpMcqStudyApp() {
   const topicCounts = useMemo(() => buildTopicCounts(bank), [bank]);
   const topicOptions = Object.keys(topicCounts).sort();
   const availableLevels = [...new Set(bank.map((q) => q.level))];
-  const latestWrongIds = latestWrongByCategory[category] || EMPTY_ARRAY;
+  const latestWrongIds = [
+    ...new Set([
+      ...(latestWrongByCategory[category] || EMPTY_ARRAY),
+      ...(markedByCategory[category] || EMPTY_ARRAY),
+    ]),
+  ];
   const reviewCount = bank.filter((q) => latestWrongIds.includes(q.id)).length;
-  const eligibleCount = bank.filter(
-    (q) =>
-      (topicFilter === "All topics" || q.topic === topicFilter) &&
-      (mode === "review"
-        ? latestWrongIds.includes(q.id)
-        : matchDifficulty(q, selectedDifficulties)),
-  ).length;
+  const eligibleCount = new Set(
+    bank
+      .filter(
+        (q) =>
+          (topicFilter === "All topics" || q.topic === topicFilter) &&
+          (mode === "review"
+            ? latestWrongIds.includes(q.id)
+            : matchDifficulty(q, selectedDifficulties)),
+      )
+      .map(questionKey),
+  ).size;
   const sessionCount = Math.min(Number(questionCount), eligibleCount);
   const questions = session?.questions || EMPTY_ARRAY;
   const current = questions[currentIndex];
@@ -261,6 +362,28 @@ export default function EpMcqStudyApp() {
   const allAnswered =
     questions.length > 0 && answeredCount === questions.length;
   const activeSession = session && !completed;
+  const actualTopicResults = topicResults(questionProgress, historyCategory);
+  const reviewItems = Object.entries(questionBanks)
+    .filter(([key]) => reviewCategory === "all" || reviewCategory === key)
+    .flatMap(([key, items]) =>
+      items
+        .filter((q) => {
+          const wrong = (latestWrongByCategory[key] || []).includes(q.id);
+          const marked = (markedByCategory[key] || []).includes(q.id);
+          return reviewFilter === "wrong"
+            ? wrong
+            : reviewFilter === "marked"
+              ? marked
+              : wrong || marked;
+        })
+        .map((q) => ({
+          ...q,
+          reviewCategory: key,
+          progress: questionProgress[`${key}:${q.id}`],
+          marked: (markedByCategory[key] || []).includes(q.id),
+          wrong: (latestWrongByCategory[key] || []).includes(q.id),
+        })),
+    );
   const filteredHistory = history.filter(
     (entry) => historyCategory === "all" || entry.category === historyCategory,
   );
@@ -297,6 +420,11 @@ export default function EpMcqStudyApp() {
 
   function startSession(event) {
     event?.preventDefault();
+    if (
+      activeSession &&
+      !window.confirm("Replace your saved unfinished quiz with a new session?")
+    )
+      return;
     const nextQuestions = buildSessionQuestions(
       bank,
       Number(questionCount),
@@ -308,7 +436,9 @@ export default function EpMcqStudyApp() {
     );
     if (!nextQuestions.length) return;
     saveAttemptRef.current += 1;
+    setRestoreWarning(false);
     setSession({
+      id: `quiz-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`,
       category,
       mode,
       difficulty: selectedDifficulties.join(", "),
@@ -325,20 +455,100 @@ export default function EpMcqStudyApp() {
   }
 
   function leaveSession() {
+    if (completed) {
+      setSession(null);
+      setCompleted(false);
+    }
+    setScreen("setup");
+  }
+
+  function discardSession() {
     if (
-      activeSession &&
       !window.confirm(
-        "Leave this quiz? Your unfinished session will not be saved.",
+        "Discard your saved quiz? Checked answers remain in your topic statistics.",
       )
     )
       return;
     saveAttemptRef.current += 1;
     setSession(null);
     setCompleted(false);
+    setSelected({});
+    setSubmitted({});
     setScreen("setup");
   }
 
+  function toggleMark(question, targetCategory) {
+    const ids = markedByCategory[targetCategory] || [];
+    const next = {
+      ...markedByCategory,
+      [targetCategory]: ids.includes(question.id)
+        ? ids.filter((id) => id !== question.id)
+        : [...ids, question.id],
+    };
+    setMarkedByCategory(next);
+    try {
+      setJsonStorage(MARKED_KEY, next);
+    } catch {
+      setDraftError("This browser could not save your review list.");
+    }
+  }
+
+  function checkAnswer() {
+    if (!current || isSubmitted || selectedIndex === undefined) return;
+    const nextProgress = recordQuestionAnswer(
+      questionProgress,
+      session,
+      current,
+      selectedIndex,
+    );
+    const existing = latestWrongByCategory[session.category] || [];
+    const nextWrong = {
+      ...latestWrongByCategory,
+      [session.category]:
+        selectedIndex === current.answer
+          ? existing.filter((id) => id !== current.id)
+          : [...new Set([...existing, current.id])],
+    };
+    setQuestionProgress(nextProgress);
+    setLatestWrongByCategory(nextWrong);
+    setSubmitted((previous) => ({ ...previous, [current.id]: true }));
+    try {
+      setJsonStorage(PROGRESS_KEY, nextProgress);
+      setJsonStorage(LATEST_WRONG_KEY, nextWrong);
+    } catch {
+      setAuthError("This browser could not save your answer statistics.");
+    }
+  }
+
+  function reviewOne(question, targetCategory) {
+    if (
+      activeSession &&
+      !window.confirm("Replace your saved unfinished quiz with this review?")
+    )
+      return;
+    saveAttemptRef.current += 1;
+    setRestoreWarning(false);
+    setSession({
+      id: `quiz-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`,
+      category: targetCategory,
+      mode: "review",
+      difficulty: question.level,
+      topicFilter: question.topic,
+      questions: [randomiseQuestion(question)],
+    });
+    setCurrentIndex(0);
+    setSelected({});
+    setSubmitted({});
+    setCompleted(false);
+    finishedRef.current = false;
+    setScreen("quiz");
+  }
+
   async function finishSession() {
+    if (completed) {
+      setScreen("results");
+      return;
+    }
     if (!allAnswered || finishedRef.current) return;
     finishedRef.current = true;
     const wrongIds = wrongAnswers.map((q) => q.id);
@@ -346,7 +556,7 @@ export default function EpMcqStudyApp() {
       .filter((q) => selected[q.id] === q.answer)
       .map((q) => q.id);
     const entry = {
-      id: `${Date.now()}-${session.category}-${Math.random().toString(36).slice(2, 8)}`,
+      id: session.id,
       date: new Date().toLocaleString(),
       category: session.category,
       mode: session.mode,
@@ -356,6 +566,13 @@ export default function EpMcqStudyApp() {
       score,
       accuracy,
       wrongQuestionIds: wrongIds,
+      answers: questions.map((q) => ({
+        questionId: q.id,
+        topic: q.topic,
+        selectedAnswer: q.options[selected[q.id]],
+        correctAnswer: q.options[q.answer],
+        correct: selected[q.id] === q.answer,
+      })),
     };
     const nextHistory = [entry, ...history].slice(0, 30);
     const nextWrong = {
@@ -424,7 +641,7 @@ export default function EpMcqStudyApp() {
   function clearHistory() {
     if (
       !window.confirm(
-        "Clear this history and its saved wrong-answer lists in this browser? Account records are not deleted.",
+        "Clear this history, topic statistics and review marks for the selected subjects in this browser? Account records are not deleted.",
       )
     )
       return;
@@ -441,10 +658,21 @@ export default function EpMcqStudyApp() {
       categories.flatMap((key) => questionBanks[key].map((q) => q.id)),
     );
     const nextSeen = seenIds.filter((id) => !removedIds.has(id));
+    const nextProgress = Object.fromEntries(
+      Object.entries(questionProgress).filter(
+        ([, entry]) => !categories.includes(entry.category),
+      ),
+    );
+    const nextMarks = { ...markedByCategory };
+    for (const key of categories) delete nextMarks[key];
+    setQuestionProgress(nextProgress);
+    setMarkedByCategory(nextMarks);
     setHistory(nextHistory);
     setLatestWrongByCategory(nextWrong);
     setSeenIds(nextSeen);
     try {
+      setJsonStorage(PROGRESS_KEY, nextProgress);
+      setJsonStorage(MARKED_KEY, nextMarks);
       setJsonStorage(HISTORY_KEY, nextHistory);
       setJsonStorage(LATEST_WRONG_KEY, nextWrong);
       setJsonStorage(SEEN_KEY, nextSeen);
@@ -458,7 +686,10 @@ export default function EpMcqStudyApp() {
   const stage = screen === "quiz" ? 1 : screen === "results" ? 2 : 0;
   const activeLabel =
     categoryConfig[
-      session && screen !== "setup" && screen !== "history"
+      session &&
+      screen !== "setup" &&
+      screen !== "history" &&
+      screen !== "review"
         ? session.category
         : category
     ].label;
@@ -480,16 +711,14 @@ export default function EpMcqStudyApp() {
           </div>
           <nav className={styles.nav} aria-label="Main navigation">
             <button
-              className={`${styles.navButton} ${screen !== "history" ? styles.navActive : ""}`}
-              aria-current={screen !== "history" ? "page" : undefined}
-              onClick={() =>
-                setScreen(
-                  activeSession ? "quiz" : completed ? "results" : "setup",
-                )
+              className={`${styles.navButton} ${!["history", "review"].includes(screen) ? styles.navActive : ""}`}
+              aria-current={
+                !["history", "review"].includes(screen) ? "page" : undefined
               }
+              onClick={() => setScreen("setup")}
             >
               <Icon name="book" size={17} />
-              {activeSession ? "Resume quiz" : "Practice"}
+              Practice
             </button>
             <button
               className={`${styles.navButton} ${screen === "history" ? styles.navActive : ""}`}
@@ -498,6 +727,14 @@ export default function EpMcqStudyApp() {
             >
               <Icon name="history" size={17} />
               History
+            </button>
+            <button
+              className={`${styles.navButton} ${screen === "review" ? styles.navActive : ""}`}
+              aria-current={screen === "review" ? "page" : undefined}
+              onClick={() => setScreen("review")}
+            >
+              <Icon name="book" size={17} />
+              Review
             </button>
           </nav>
           <div className={styles.account}>
@@ -533,7 +770,7 @@ export default function EpMcqStudyApp() {
             </button>
           </div>
         )}
-        {screen !== "history" && (
+        {!["history", "review"].includes(screen) && (
           <ol className={styles.steps} aria-label="Quiz stages">
             {["Set up", "Practice", "Results"].map((label, index) => (
               <li
@@ -547,21 +784,77 @@ export default function EpMcqStudyApp() {
                       : ""
                 }
               >
-                <span>
-                  {index < stage ? (
-                    <Icon name="check" size={13} />
-                  ) : (
-                    `0${index + 1}`
-                  )}
-                </span>
-                {label}
+                <button
+                  type="button"
+                  aria-label={
+                    index === 0
+                      ? "Go to setup"
+                      : index === 1
+                        ? "Resume current quiz"
+                        : "View last results"
+                  }
+                  disabled={
+                    index === 1 ? !session : index === 2 ? !completed : false
+                  }
+                  onClick={() =>
+                    setScreen(
+                      index === 0 ? "setup" : index === 1 ? "quiz" : "results",
+                    )
+                  }
+                >
+                  <span>
+                    {index < stage ? (
+                      <Icon name="check" size={13} />
+                    ) : (
+                      `0${index + 1}`
+                    )}
+                  </span>
+                  {label}
+                </button>
               </li>
             ))}
           </ol>
         )}
 
+        {restoreWarning && (
+          <div role="status" className={styles.error}>
+            The saved quiz could not be restored because it was completed or its
+            questions changed. Start a new session; your recorded results are
+            preserved.
+          </div>
+        )}
+        {draftError && (
+          <div role="alert" className={styles.error}>
+            {draftError}
+          </div>
+        )}
         {screen === "setup" && (
           <>
+            {activeSession && (
+              <section className={styles.resumeBanner} aria-label="Saved quiz">
+                <div>
+                  <strong>Continue where you left off</strong>
+                  <p>
+                    {categoryConfig[session.category].label} · {answeredCount}{" "}
+                    of {questions.length} answered
+                  </p>
+                </div>
+                <div>
+                  <button
+                    className={styles.primary}
+                    onClick={() => setScreen("quiz")}
+                  >
+                    Resume saved quiz <Icon name="arrow" size={17} />
+                  </button>
+                  <button
+                    className={styles.textButton}
+                    onClick={discardSession}
+                  >
+                    Discard saved quiz
+                  </button>
+                </div>
+              </section>
+            )}
             <div className={styles.intro}>
               <div className={styles.eyebrow}>YOUR PRACTICE SPACE</div>
               <h1 ref={headingRef} tabIndex={-1}>
@@ -651,7 +944,7 @@ export default function EpMcqStudyApp() {
                       disabled={!reviewCount}
                       onClick={() => setMode("review")}
                     >
-                      Review mistakes <span>{reviewCount}</span>
+                      Review queue <span>{reviewCount}</span>
                     </button>
                   </div>
                 </fieldset>
@@ -726,7 +1019,7 @@ export default function EpMcqStudyApp() {
                   </div>
                   <p className={styles.fieldHint}>
                     {mode === "review"
-                      ? "Review includes your saved mistakes at every difficulty level."
+                      ? "Review includes unresolved mistakes and questions you marked, at every difficulty level."
                       : availableLevels.length < 3
                         ? `This subject includes ${availableLevels.map((level) => difficultyLabels[level].toLowerCase()).join(" and ")} questions.`
                         : "Mix levels to find the right balance for your session."}
@@ -777,7 +1070,7 @@ export default function EpMcqStudyApp() {
                 </h1>
               </div>
               <button className={styles.textButton} onClick={leaveSession}>
-                Back to setup
+                Save & exit
               </button>
             </div>
             <div className={styles.progressHeading}>
@@ -805,7 +1098,22 @@ export default function EpMcqStudyApp() {
                 {current.sourceRule && <span>{current.sourceRule}</span>}
               </div>
               <h2 id="question-heading">{current.question}</h2>
-              <p className={styles.answerHint}>Choose one answer.</p>
+              <div className={styles.questionTools}>
+                <p className={styles.answerHint}>Choose one answer.</p>
+                <button
+                  className={styles.markButton}
+                  aria-pressed={(
+                    markedByCategory[session.category] || []
+                  ).includes(current.id)}
+                  onClick={() => toggleMark(current, session.category)}
+                >
+                  {(markedByCategory[session.category] || []).includes(
+                    current.id,
+                  )
+                    ? "Marked for review"
+                    : "Mark for review"}
+                </button>
+              </div>
               <fieldset className={styles.answers} disabled={isSubmitted}>
                 <legend className={styles.srOnly}>Answer choices</legend>
                 {current.options.map((option, index) => {
@@ -863,6 +1171,7 @@ export default function EpMcqStudyApp() {
                       : "An opportunity to learn."}
                   </strong>
                   <p>{current.explanation}</p>
+                  <QuestionSources question={current} />
                 </div>
               )}
               <div className={styles.questionActions}>
@@ -878,12 +1187,7 @@ export default function EpMcqStudyApp() {
                     <button
                       className={styles.primary}
                       disabled={selectedIndex === undefined}
-                      onClick={() =>
-                        setSubmitted((previous) => ({
-                          ...previous,
-                          [current.id]: true,
-                        }))
-                      }
+                      onClick={checkAnswer}
                     >
                       Check answer <Icon name="check" size={17} />
                     </button>
@@ -1008,6 +1312,7 @@ export default function EpMcqStudyApp() {
                         <strong>Correct answer:</strong> {q.options[q.answer]}
                       </p>
                       <p>{q.explanation}</p>
+                      <QuestionSources question={q} />
                     </details>
                   ))}
                 </div>
@@ -1023,6 +1328,97 @@ export default function EpMcqStudyApp() {
               View your practice history <Icon name="arrow" size={16} />
             </button>
           </div>
+        )}
+
+        {screen === "review" && (
+          <>
+            <div className={styles.intro}>
+              <div className={styles.eyebrow}>YOUR REVIEW QUEUE</div>
+              <h1 ref={headingRef} tabIndex={-1}>
+                Give tricky questions another try.
+              </h1>
+              <p>
+                Unresolved mistakes and questions you have chosen to revisit.
+              </p>
+            </div>
+            <div className={styles.formGrid}>
+              <label className={styles.field}>
+                Review subject
+                <select
+                  value={reviewCategory}
+                  onChange={(event) => setReviewCategory(event.target.value)}
+                >
+                  <option value="all">All subjects</option>
+                  {Object.entries(categoryConfig).map(([key, config]) => (
+                    <option key={key} value={key}>
+                      {config.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label className={styles.field}>
+                Show
+                <select
+                  value={reviewFilter}
+                  onChange={(event) => setReviewFilter(event.target.value)}
+                >
+                  <option value="all">Mistakes and marked questions</option>
+                  <option value="wrong">Unresolved mistakes</option>
+                  <option value="marked">Marked for review</option>
+                </select>
+              </label>
+            </div>
+            {reviewItems.length ? (
+              <section
+                className={styles.reviewList}
+                aria-label="Questions to revisit"
+              >
+                {reviewItems.map((q) => (
+                  <article
+                    key={`${q.reviewCategory}:${q.id}`}
+                    className={styles.reviewItem}
+                  >
+                    <div className={styles.questionMeta}>
+                      <span>{categoryConfig[q.reviewCategory].label}</span>
+                      <span>{q.topic}</span>
+                      {q.wrong && <span>Unresolved mistake</span>}
+                      {q.marked && <span>Marked</span>}
+                    </div>
+                    <h2>{q.question}</h2>
+                    {q.progress && (
+                      <p className={styles.fieldHint}>
+                        {q.progress.correct}/{q.progress.attempts} correct ·
+                        Last answer: {q.progress.lastSelectedAnswer}
+                      </p>
+                    )}
+                    <div className={styles.reviewActions}>
+                      <button
+                        className={styles.primary}
+                        onClick={() => reviewOne(q, q.reviewCategory)}
+                      >
+                        Try this question <Icon name="arrow" size={16} />
+                      </button>
+                      <button
+                        className={styles.markButton}
+                        aria-pressed={q.marked}
+                        onClick={() => toggleMark(q, q.reviewCategory)}
+                      >
+                        {q.marked ? "Remove review mark" : "Mark for review"}
+                      </button>
+                    </div>
+                  </article>
+                ))}
+              </section>
+            ) : (
+              <section className={styles.setupCard}>
+                <h2>No questions to revisit.</h2>
+                <p className={styles.fieldHint}>
+                  Mistakes appear here as soon as you check an answer. You can
+                  also mark any question during a quiz.
+                </p>
+              </section>
+            )}
+          </>
         )}
 
         {screen === "history" && (
@@ -1053,6 +1449,12 @@ export default function EpMcqStudyApp() {
                 className={styles.textButton}
                 disabled={
                   !filteredHistory.length &&
+                  !actualTopicResults.length &&
+                  !Object.entries(markedByCategory).some(
+                    ([key, ids]) =>
+                      ids.length &&
+                      (historyCategory === "all" || historyCategory === key),
+                  ) &&
                   !Object.entries(latestWrongByCategory).some(
                     ([key, ids]) =>
                       ids.length &&
@@ -1082,6 +1484,51 @@ export default function EpMcqStudyApp() {
                 </strong>
               </div>
             </div>
+            <section
+              className={styles.setupCard}
+              aria-labelledby="topic-results-heading"
+            >
+              <h2 id="topic-results-heading">Results by topic</h2>
+              <p className={styles.fieldHint}>
+                Based on each answer checked since this feature was added,
+                including reviews and unfinished quizzes. Previous quiz totals
+                are kept separately.
+              </p>
+              {actualTopicResults.length ? (
+                <div className={styles.topicResults}>
+                  {actualTopicResults.map((row) => (
+                    <div
+                      className={styles.topicResult}
+                      key={`${row.category}:${row.topic}`}
+                    >
+                      <div>
+                        <strong>{row.topic}</strong>
+                        <span>
+                          {categoryConfig[row.category]?.label} ·{" "}
+                          {row.questions} distinct questions
+                        </span>
+                      </div>
+                      <div>
+                        <strong>{row.accuracy}%</strong>
+                        <span>
+                          {row.correct}/{row.attempts} correct · {row.wrong}{" "}
+                          wrong
+                        </span>
+                      </div>
+                      <progress
+                        max={row.attempts}
+                        value={row.correct}
+                        aria-label={`${row.topic}: ${row.correct} correct out of ${row.attempts}`}
+                      />
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <p className={styles.emptyHint}>
+                  Check your first answer to start tracking results by topic.
+                </p>
+              )}
+            </section>
             <section
               className={styles.historyCard}
               aria-label="Completed sessions"
@@ -1129,8 +1576,8 @@ export default function EpMcqStudyApp() {
               )}
             </section>
             <p className={styles.bottomNote}>
-              Your latest 30 sessions in this browser. Previous history is
-              preserved.
+              Your latest 30 sessions in this browser. Topic statistics also
+              include checked answers from unfinished sessions.
             </p>
           </>
         )}

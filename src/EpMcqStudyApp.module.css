@@ -191,7 +191,7 @@
   background: #d8e1e8;
   margin: 0 16px 0 8px;
 }
-.steps li > span {
+.steps li > button > span {
   border: 1px solid #d9e2e9;
   width: 25px;
   height: 25px;
@@ -204,7 +204,7 @@
   color: var(--navy);
   font-weight: 650;
 }
-.currentStep > span {
+.currentStep > button > span {
   background: var(--navy);
   color: white;
   border-color: var(--navy) !important;
@@ -212,7 +212,7 @@
 .steps .finishedStep {
   color: var(--navy);
 }
-.finishedStep > span {
+.finishedStep > button > span {
   background: #e6edf3;
   border-color: #e6edf3 !important;
 }
@@ -1308,5 +1308,190 @@
   .app * {
     transition: none !important;
     scroll-behavior: auto !important;
+  }
+}
+
+.resumeBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  border: 1px solid #bdd1e0;
+  background: #edf4fa;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 28px;
+}
+.resumeBanner p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 5px 0 0;
+}
+.resumeBanner > div:last-child {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.questionTools {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.questionTools .answerHint {
+  margin-bottom: 0;
+}
+.markButton {
+  border: 1px solid #d6e1e9;
+  border-radius: 6px;
+  padding: 7px 10px;
+  font-size: 11px !important;
+  background: white;
+  color: #4b6b84;
+}
+.markButton[aria-pressed="true"] {
+  background: #edf4fa;
+  border-color: #7d9ab0;
+}
+.topicResults {
+  margin-top: 20px;
+}
+.topicResult {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  border-top: 1px solid var(--line);
+  padding: 17px 0;
+}
+.topicResult > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.topicResult > div:nth-child(2) {
+  text-align: right;
+}
+.topicResult strong {
+  font-size: 13px;
+  font-weight: 600;
+}
+.topicResult span {
+  font-size: 11px;
+  color: var(--muted);
+}
+.topicResult progress {
+  grid-column: 1 / -1;
+  width: 100%;
+  height: 5px;
+  accent-color: #486d88;
+}
+.emptyHint {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 20px 0 0;
+}
+.reviewList {
+  display: grid;
+  gap: 16px;
+}
+.reviewItem {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px;
+}
+.reviewItem h2 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+.reviewActions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+.sources {
+  border-top: 1px solid var(--line);
+  margin-top: 18px;
+  padding-top: 14px;
+  font-size: 12px;
+  color: #516f85;
+}
+.sources summary {
+  cursor: pointer;
+}
+.sources p {
+  margin: 12px 0;
+  font-size: 12px;
+}
+.sources a {
+  color: var(--navy);
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+.sources ul {
+  padding-left: 20px;
+}
+@media (max-width: 600px) {
+  .navButton {
+    padding: 12px 14px;
+    font-size: 12px !important;
+  }
+  .questionTools {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .topicResult {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .topicResult > div:nth-child(2) {
+    text-align: left;
+  }
+  .resumeBanner {
+    padding: 18px;
+  }
+  .reviewItem {
+    padding: 18px;
+  }
+}
+
+.steps li > button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+}
+.steps li > button:disabled {
+  opacity: 0.65;
+}
+.steps li > button:hover:not(:disabled) {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (max-width: 760px) {
+  .headerInner {
+    flex-wrap: wrap;
+    padding-bottom: 0;
+    padding-top: 16px;
+  }
+  .nav {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+  .account {
+    order: 1;
+  }
+  .navButton {
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 }

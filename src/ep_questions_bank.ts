@@ -917,7 +917,7 @@ export const EP_QUESTIONS = [
       "Base - general organisation, bodies, political groups, committees and votes",
     level: "medium",
     question:
-      "After finalisation and verification of the procedure, who signs acts adopted under the ordinary legislative procedure?",
+      "On Parliament's side, who authenticates the final text of an ordinary legislative act under its Rules of Procedure?",
     options: [
       "The President and the Secretary-General",
       "The President of the Commission only",
@@ -926,7 +926,7 @@ export const EP_QUESTIONS = [
     ],
     answer: 0,
     explanation:
-      "Acts adopted under the ordinary legislative procedure are signed by the President and the Secretary-General.",
+      "This question concerns authentication on Parliament's side by its President and Secretary-General. It should not be confused with signature by the Presidents of Parliament and the Council under Article 297 TFEU.",
   },
   {
     id: "ep-055",
@@ -1138,7 +1138,7 @@ export const EP_QUESTIONS = [
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
     level: "medium",
-    question: "What happens in the event of a tied vote?",
+    question: "For adoption of a text or proposal requiring a majority, what does a tied vote mean?",
     options: [
       "The President has a casting vote in plenary",
       "The text or proposal is deemed to have been rejected",
@@ -2042,7 +2042,7 @@ export const EP_QUESTIONS = [
       "Legislative procedures, consultation, consent, budget and discharge",
     level: "easy",
     question:
-      "Who signs acts adopted under the ordinary legislative procedure after finalisation and verification?",
+      "On Parliament's side, which two office-holders authenticate the final text of an ordinary legislative act?",
     options: [
       "The President and the Secretary-General",
       "The Ombudsman and the Quaestors",
@@ -2051,7 +2051,7 @@ export const EP_QUESTIONS = [
     ],
     answer: 0,
     explanation:
-      "Acts adopted under the ordinary legislative procedure are signed by the President and the Secretary-General.",
+      "This question concerns authentication on Parliament's side by its President and Secretary-General. It should not be confused with signature by the Presidents of Parliament and the Council under Article 297 TFEU.",
   },
   {
     id: "ep-119",
@@ -2554,7 +2554,7 @@ export const EP_QUESTIONS = [
       "Relations with institutions, parliamentary questions, Commission, motions and appointments",
     level: "hard",
     question:
-      "How soon may the vote on a motion of censure on the Commission take place after it has been tabled?",
+      "Measured from the beginning of the debate, what is the minimum interval before voting on a motion of censure on the Commission?",
     options: [
       "At least 48 hours after the beginning of the debate",
       "Immediately after tabling",
@@ -4039,7 +4039,7 @@ export const EP_QUESTIONS = [
     topic:
       "Sessions, agenda, debates, amendments, quorum, votes and points of order",
     level: "easy",
-    question: "What happens in the event of a tied vote?",
+    question: "For adoption of a text or proposal requiring a majority, what does a tied vote mean?",
     options: [
       "The text or proposal is deemed to have been rejected",
       "The President always has a casting vote in plenary",
