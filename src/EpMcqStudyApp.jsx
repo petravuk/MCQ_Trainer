@@ -4,6 +4,7 @@ import { EP_QUESTIONS } from "./ep_questions_bank";
 import { GUIDE_INTERNAL_RULES_QUESTIONS } from "./guide_internal_rules_question_bank";
 import { DATA_QUESTIONS } from "./data_question_bank";
 import { EU_QUESTIONS } from "./eu_question_bank";
+import { EPSO_AD7_INFRASTRUCTURE_QUESTIONS } from "./epso_ad7_infrastructure_questions";
 import { saveQuizResult } from "./firebase_results";
 import { auth, googleProvider } from "./firebase";
 const ALL_EP_CATEGORY = "ep_all";
@@ -11,6 +12,7 @@ const EP_RULES_CATEGORY = "ep_rules";
 const GUIDE_INTERNAL_RULES_CATEGORY = "ep_guide_internal_rules";
 const DATA_CATEGORY = "data";
 const EU_CATEGORY = "eu_knowledge";
+const ICT_INFRASTRUCTURE_CATEGORY = "epso_ad7_infrastructure";
 
 const questionBanks = {
   [ALL_EP_CATEGORY]: [
@@ -21,9 +23,14 @@ const questionBanks = {
   [GUIDE_INTERNAL_RULES_CATEGORY]: GUIDE_INTERNAL_RULES_QUESTIONS,
   [DATA_CATEGORY]: DATA_QUESTIONS,
   [EU_CATEGORY]: EU_QUESTIONS,
+  [ICT_INFRASTRUCTURE_CATEGORY]: EPSO_AD7_INFRASTRUCTURE_QUESTIONS,
 };
 
 const categoryConfig = {
+  [ICT_INFRASTRUCTURE_CATEGORY]: {
+    label: "ICT Infrastructure",
+    description: "EPSO/AD/429/26 - Domain 1: 300 original practice questions (not official EPSO questions).",
+  },
   [ALL_EP_CATEGORY]: {
     label: "EP questions",
     description: "All European Parliament questions combined.",
