@@ -7,6 +7,7 @@ import { EU_QUESTIONS } from "./eu_question_bank";
 import { EPSO_AD7_INFRASTRUCTURE_QUESTIONS } from "./epso_ad7_infrastructure_questions";
 import { saveQuizResult } from "./firebase_results";
 import { auth, googleProvider } from "./firebase";
+import styles from "./EpMcqStudyApp.module.css";
 const ALL_EP_CATEGORY = "ep_all";
 const EP_RULES_CATEGORY = "ep_rules";
 const GUIDE_INTERNAL_RULES_CATEGORY = "ep_guide_internal_rules";
@@ -15,10 +16,7 @@ const EU_CATEGORY = "eu_knowledge";
 const ICT_INFRASTRUCTURE_CATEGORY = "epso_ad7_infrastructure";
 
 const questionBanks = {
-  [ALL_EP_CATEGORY]: [
-    ...EP_QUESTIONS,
-    ...GUIDE_INTERNAL_RULES_QUESTIONS,
-  ],
+  [ALL_EP_CATEGORY]: [...EP_QUESTIONS, ...GUIDE_INTERNAL_RULES_QUESTIONS],
   [EP_RULES_CATEGORY]: EP_QUESTIONS,
   [GUIDE_INTERNAL_RULES_CATEGORY]: GUIDE_INTERNAL_RULES_QUESTIONS,
   [DATA_CATEGORY]: DATA_QUESTIONS,
@@ -29,7 +27,8 @@ const questionBanks = {
 const categoryConfig = {
   [ICT_INFRASTRUCTURE_CATEGORY]: {
     label: "ICT Infrastructure",
-    description: "EPSO/AD/429/26 - Domain 1: 300 original practice questions (not official EPSO questions).",
+    description:
+      "EPSO/AD/429/26 - Domain 1: 300 original practice questions (not official EPSO questions).",
   },
   [ALL_EP_CATEGORY]: {
     label: "EP questions",
@@ -116,7 +115,7 @@ function buildSessionQuestions(
   topicFilter,
   mode,
   latestWrongIds,
-  seenIds
+  seenIds,
 ) {
   let pool = bank;
 
@@ -140,271 +139,167 @@ function buildSessionQuestions(
     .map(randomiseQuestion);
 }
 
-const styles = {
-  page: {
-    minHeight: "100vh",
-    background: "#f8fafc",
-    padding: 24,
-    fontFamily: "Arial, sans-serif",
-    color: "#0f172a",
-  },
-  container: {
-    maxWidth: 1300,
-    margin: "0 auto",
-  },
-  layout: {
-    display: "grid",
-    gridTemplateColumns: "300px 1fr 320px",
-    gap: 24,
-  },
-  column: {
-    display: "flex",
-    flexDirection: "column",
-    gap: 24,
-  },
-  card: {
-    background: "#ffffff",
-    borderRadius: 20,
-    padding: 20,
-    boxShadow: "0 8px 24px rgba(15, 23, 42, 0.08)",
-    border: "1px solid #e2e8f0",
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 700,
-    marginBottom: 16,
-  },
-  bigTitle: {
-    fontSize: 32,
-    fontWeight: 700,
-    marginBottom: 8,
-  },
-  smallText: {
-    fontSize: 14,
-    color: "#475569",
-  },
-  muted: {
-    color: "#64748b",
-    fontSize: 13,
-  },
-  statBox: {
-    background: "#f8fafc",
-    borderRadius: 16,
-    padding: 14,
-    marginTop: 12,
-  },
-  statValue: {
-    fontSize: 28,
-    fontWeight: 700,
-    marginTop: 6,
-  },
-  button: {
-    border: "1px solid #cbd5e1",
-    background: "#fff",
-    borderRadius: 14,
-    padding: "10px 14px",
-    cursor: "pointer",
-    fontSize: 14,
-  },
-  buttonPrimary: {
-    border: "1px solid #0f172a",
-    background: "#0f172a",
-    color: "#fff",
-    borderRadius: 14,
-    padding: "10px 14px",
-    cursor: "pointer",
-    fontSize: 14,
-  },
-  buttonActive: {
-    border: "1px solid #0f172a",
-    background: "#0f172a",
-    color: "#fff",
-  },
-  buttonRow: {
-    display: "flex",
-    flexWrap: "wrap",
-    gap: 10,
-  },
-  select: {
-    width: "100%",
-    padding: 10,
-    borderRadius: 12,
-    border: "1px solid #cbd5e1",
-    fontSize: 14,
-    background: "#fff",
-  },
-  badge: {
-    display: "inline-block",
-    padding: "6px 10px",
-    borderRadius: 999,
-    background: "#eef2ff",
-    border: "1px solid #cbd5e1",
-    fontSize: 12,
-    marginRight: 8,
-    marginBottom: 8,
-  },
-  progressOuter: {
-    width: "100%",
-    height: 12,
-    background: "#e2e8f0",
-    borderRadius: 999,
-    overflow: "hidden",
-  },
-  progressInner: (value) => ({
-    width: `${value}%`,
-    height: "100%",
-    background: "#0f172a",
-  }),
-  questionCard: {
-    background: "#fff",
-    border: "1px solid #e2e8f0",
-    borderRadius: 20,
-    padding: 20,
-  },
-  option: {
-    width: "100%",
-    textAlign: "left",
-    padding: 14,
-    borderRadius: 16,
-    border: "1px solid #cbd5e1",
-    background: "#fff",
-    marginBottom: 10,
-    cursor: "pointer",
-    fontSize: 14,
-    lineHeight: 1.5,
-  },
-  feedback: {
-    background: "#f8fafc",
-    borderRadius: 16,
-    padding: 14,
-    marginTop: 16,
-    fontSize: 14,
-  },
-  historyItem: {
-    background: "#f8fafc",
-    borderRadius: 16,
-    padding: 12,
-    marginBottom: 10,
-  },
-  focusPage: {
-    minHeight: "100vh",
-    background: "#f8fafc",
-    padding: 24,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  focusContainer: {
-    width: "100%",
-    maxWidth: 900,
-  },
-  focusTopBar: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginBottom: 16,
-    gap: 12,
-    flexWrap: "wrap",
-  },
-};
-
-function getOptionStyle({ picked, correct, isSubmitted }) {
-  if (isSubmitted && correct) {
-    return {
-      ...styles.option,
-      border: "1px solid #16a34a",
-      background: "#dcfce7",
-    };
-  }
-
-  if (isSubmitted && picked && !correct) {
-    return {
-      ...styles.option,
-      border: "1px solid #dc2626",
-      background: "#fee2e2",
-    };
-  }
-
-  if (!isSubmitted && picked) {
-    return {
-      ...styles.option,
-      border: "1px solid #0f172a",
-      background: "#e2e8f0",
-    };
-  }
-
-  return styles.option;
+function Icon({ name, size = 20 }) {
+  const paths = {
+    arrow: (
+      <>
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </>
+    ),
+    check: <path d="m5 12 4 4L19 6" />,
+    close: <path d="m6 6 12 12M6 18 18 6" />,
+    book: (
+      <>
+        <path d="M12 5v15M3 4h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z" />
+      </>
+    ),
+    history: (
+      <>
+        <path d="M3 11a9 9 0 1 1 2 7M3 4v7h7M12 7v5l3 2" />
+      </>
+    ),
+    layers: (
+      <>
+        <path d="m12 3 10 5-10 5L2 8ZM2 12l10 5 10-5M2 16l10 5 10-5" />
+      </>
+    ),
+  };
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      {paths[name] || paths.book}
+    </svg>
+  );
 }
 
-export default function EpMcqStudyApp() {
-  const resultSavedRef = useRef(false);
+const difficultyLabels = { easy: "Easy", medium: "Medium", hard: "Hard" };
 
+export default function EpMcqStudyApp() {
   const [user, setUser] = useState(null);
   const [authError, setAuthError] = useState("");
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
-
-    return () => unsubscribe();
-  }, []);
-
-  async function signInWithGoogle() {
-    setAuthError("");
-
-    try {
-      await signInWithPopup(auth, googleProvider);
-    } catch (err) {
-      console.error("Google sign-in failed:", err);
-      setAuthError(err.message || "Google sign-in failed.");
-    }
-  }
-
-  async function logout() {
-    setAuthError("");
-
-    try {
-      await signOut(auth);
-    } catch (err) {
-      console.error("Sign-out failed:", err);
-      setAuthError(err.message || "Sign-out failed.");
-    }
-  }
-
+  const [authPending, setAuthPending] = useState(false);
+  const [screen, setScreen] = useState("setup");
   const [category, setCategory] = useState(ALL_EP_CATEGORY);
-  const bank = questionBanks[category] || [];
-
-  const [screen, setScreen] = useState("dashboard");
   const [mode, setMode] = useState("practice");
   const [selectedDifficulties, setSelectedDifficulties] = useState(["medium"]);
   const [questionCount, setQuestionCount] = useState("10");
   const [topicFilter, setTopicFilter] = useState("All topics");
-  const [sessionSeed, setSessionSeed] = useState(0);
+  const [history, setHistory] = useState(() => getJsonStorage(HISTORY_KEY, []));
+  const [latestWrongByCategory, setLatestWrongByCategory] = useState(() =>
+    getJsonStorage(LATEST_WRONG_KEY, {}),
+  );
+  const [seenIds, setSeenIds] = useState(() => getJsonStorage(SEEN_KEY, []));
+  const [historyCategory, setHistoryCategory] = useState("all");
+  const [session, setSession] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selected, setSelected] = useState({});
   const [submitted, setSubmitted] = useState({});
-  const [history, setHistory] = useState([]);
-  const [latestWrongByCategory, setLatestWrongByCategory] = useState({});
-  const [seenIds, setSeenIds] = useState([]);
   const [completed, setCompleted] = useState(false);
-  const [readyForResults, setReadyForResults] = useState(false);
-  const [sessionQuestions, setSessionQuestions] = useState([]);
+  const [saveStatus, setSaveStatus] = useState("");
+  const finishedRef = useRef(false);
+  const headingRef = useRef(null);
+  const saveAttemptRef = useRef(0);
 
-  const latestWrongIds = latestWrongByCategory[category] || EMPTY_ARRAY;
+  useEffect(() => onAuthStateChanged(auth, setUser), []);
+  useEffect(() => {
+    headingRef.current?.focus({ preventScroll: true });
+    window.scrollTo(0, 0);
+  }, [screen, currentIndex]);
 
+  async function handleAuth() {
+    setAuthError("");
+    setAuthPending(true);
+    try {
+      if (user) await signOut(auth);
+      else await signInWithPopup(auth, googleProvider);
+    } catch (error) {
+      setAuthError(
+        error.message || "Sign-in could not be completed. Please try again.",
+      );
+    } finally {
+      setAuthPending(false);
+    }
+  }
+
+  const bank = questionBanks[category];
   const topicCounts = useMemo(() => buildTopicCounts(bank), [bank]);
-  const topicOptions = ["All topics", ...Object.keys(topicCounts).sort()];
+  const topicOptions = Object.keys(topicCounts).sort();
+  const availableLevels = [...new Set(bank.map((q) => q.level))];
+  const latestWrongIds = latestWrongByCategory[category] || EMPTY_ARRAY;
+  const reviewCount = bank.filter((q) => latestWrongIds.includes(q.id)).length;
+  const eligibleCount = bank.filter(
+    (q) =>
+      (topicFilter === "All topics" || q.topic === topicFilter) &&
+      (mode === "review"
+        ? latestWrongIds.includes(q.id)
+        : matchDifficulty(q, selectedDifficulties)),
+  ).length;
+  const sessionCount = Math.min(Number(questionCount), eligibleCount);
+  const questions = session?.questions || EMPTY_ARRAY;
+  const current = questions[currentIndex];
+  const isSubmitted = current && Boolean(submitted[current.id]);
+  const selectedIndex = current ? selected[current.id] : undefined;
+  const answeredCount = questions.filter((q) => submitted[q.id]).length;
+  const score = questions.filter(
+    (q) => submitted[q.id] && selected[q.id] === q.answer,
+  ).length;
+  const wrongAnswers = questions.filter(
+    (q) => submitted[q.id] && selected[q.id] !== q.answer,
+  );
+  const accuracy = questions.length
+    ? Math.round((score / questions.length) * 100)
+    : 0;
+  const allAnswered =
+    questions.length > 0 && answeredCount === questions.length;
+  const activeSession = session && !completed;
+  const filteredHistory = history.filter(
+    (entry) => historyCategory === "all" || entry.category === historyCategory,
+  );
+  const bestAccuracy = filteredHistory.length
+    ? Math.max(...filteredHistory.map((entry) => entry.accuracy))
+    : null;
+  const averageAccuracy = filteredHistory.length
+    ? Math.round(
+        filteredHistory.reduce((sum, entry) => sum + entry.accuracy, 0) /
+          filteredHistory.length,
+      )
+    : null;
 
-  useEffect(() => {
-    setHistory(getJsonStorage(HISTORY_KEY, []));
-    setLatestWrongByCategory(getJsonStorage(LATEST_WRONG_KEY, {}));
-    setSeenIds(getJsonStorage(SEEN_KEY, []));
-  }, []);
+  function changeCategory(nextCategory) {
+    const levels = [
+      ...new Set(questionBanks[nextCategory].map((q) => q.level)),
+    ];
+    setCategory(nextCategory);
+    setTopicFilter("All topics");
+    setMode("practice");
+    const valid = selectedDifficulties.filter((level) =>
+      levels.includes(level),
+    );
+    setSelectedDifficulties(
+      valid.length ? valid : [levels.includes("medium") ? "medium" : levels[0]],
+    );
+  }
 
-  useEffect(() => {
-    if (completed) return;
+  function toggleDifficulty(level) {
+    setSelectedDifficulties((previous) => {
+      const next = previous.includes(level)
+        ? previous.filter((item) => item !== level)
+        : [...previous, level];
+      return next.length ? next : previous;
+    });
+  }
 
+  function startSession(event) {
+    event?.preventDefault();
     const nextQuestions = buildSessionQuestions(
       bank,
       Number(questionCount),
@@ -412,1118 +307,841 @@ export default function EpMcqStudyApp() {
       topicFilter,
       mode,
       latestWrongIds,
-      seenIds
+      seenIds,
     );
-
-    setSessionQuestions(nextQuestions);
-  }, [
-    bank,
-    questionCount,
-    selectedDifficulties,
-    topicFilter,
-    mode,
-    sessionSeed,
-    latestWrongIds,
-    seenIds,
-    completed,
-  ]);
-
-  const questions = sessionQuestions;
-  const current = questions[currentIndex] || null;
-  const selectedIndex = current ? selected[current.id] : undefined;
-  const isSubmitted = current ? submitted[current.id] : false;
-
-  const answeredCount = questions.filter((q) => submitted[q.id]).length;
-
-  const score = questions.reduce(
-    (sum, q) =>
-      submitted[q.id] && selected[q.id] === q.answer ? sum + 1 : sum,
-    0
-  );
-
-  const wrongAnswers = questions.filter(
-    (q) => submitted[q.id] && selected[q.id] !== q.answer
-  );
-
-  const accuracy = questions.length
-    ? Math.round((score / questions.length) * 100)
-    : 0;
-
-  const progress = questions.length
-    ? Math.round((answeredCount / questions.length) * 100)
-    : 0;
-
-  const reviewCount = latestWrongIds.length;
-
-  const allAnswered =
-    questions.length > 0 && answeredCount === questions.length;
-
-  const strongTopics = useMemo(() => {
-    return [
-      ...new Set(
-        questions
-          .filter((q) => submitted[q.id] && selected[q.id] === q.answer)
-          .map((q) => q.topic)
-      ),
-    ]
-      .sort((a, b) => a.localeCompare(b))
-      .slice(0, 4);
-  }, [questions, submitted, selected]);
-
-  const weakTopics = useMemo(() => {
-    return [...new Set(wrongAnswers.map((q) => q.topic))]
-      .sort((a, b) => a.localeCompare(b))
-      .slice(0, 4);
-  }, [wrongAnswers]);
-
-  useEffect(() => {
-    if (!completed || !questions.length || resultSavedRef.current) return;
-
-    resultSavedRef.current = true;
-
-    const correctQuestionIds = questions
-      .filter((q) => submitted[q.id] && selected[q.id] === q.answer)
-      .map((q) => q.id);
-
-    const wrongQuestionIds = wrongAnswers.map((q) => q.id);
-
-    const entry = {
-      id: `${Date.now()}-${mode}-${selectedDifficulties.join(
-        "-"
-      )}-${questionCount}-${topicFilter}-${category}`,
-      date: new Date().toLocaleString(),
+    if (!nextQuestions.length) return;
+    saveAttemptRef.current += 1;
+    setSession({
       category,
       mode,
       difficulty: selectedDifficulties.join(", "),
       topicFilter,
-      questionCount: questions.length,
-      score,
-      accuracy,
-      wrongQuestionIds,
-    };
-
-    const nextHistory = [entry, ...history].slice(0, 30);
-    setHistory(nextHistory);
-    setJsonStorage(HISTORY_KEY, nextHistory);
-
-    const existingUnresolved = latestWrongByCategory[category] || [];
-    const nextCategoryWrong = [
-      ...new Set([
-        ...existingUnresolved.filter((id) => !correctQuestionIds.includes(id)),
-        ...wrongQuestionIds,
-      ]),
-    ];
-
-    const nextWrongByCategory = {
-      ...latestWrongByCategory,
-      [category]: nextCategoryWrong,
-    };
-
-    setLatestWrongByCategory(nextWrongByCategory);
-    setJsonStorage(LATEST_WRONG_KEY, nextWrongByCategory);
-
-    const updatedSeen = [
-      ...new Set([...seenIds, ...questions.map((q) => q.id)]),
-    ];
-
-    setSeenIds(updatedSeen);
-    setJsonStorage(SEEN_KEY, updatedSeen);
-
-    saveQuizResult({
-      category,
-      mode,
-      difficulty: selectedDifficulties.join(", "),
-      topicFilter,
-      questionCount: questions.length,
-      score,
-      accuracy,
-      wrongQuestionIds,
-    }).catch((err) => {
-      console.error("Firebase save failed:", err);
+      questions: nextQuestions,
     });
-  }, [
-    completed,
-    questions,
-    submitted,
-    selected,
-    wrongAnswers,
-    mode,
-    selectedDifficulties,
-    questionCount,
-    topicFilter,
-    category,
-    score,
-    accuracy,
-    history,
-    latestWrongByCategory,
-    seenIds,
-  ]);
-
-  function resetSession(nextMode = mode) {
-    resultSavedRef.current = false;
-    setMode(nextMode);
     setCurrentIndex(0);
     setSelected({});
     setSubmitted({});
     setCompleted(false);
-    setReadyForResults(false);
-    setSessionQuestions([]);
-    setSessionSeed((s) => s + 1);
+    setSaveStatus("");
+    finishedRef.current = false;
+    setScreen("quiz");
   }
 
-  function changeCategory(nextCategory) {
-    setCategory(nextCategory);
-    setTopicFilter("All topics");
-    resetSession("practice");
+  function leaveSession() {
+    if (
+      activeSession &&
+      !window.confirm(
+        "Leave this quiz? Your unfinished session will not be saved.",
+      )
+    )
+      return;
+    saveAttemptRef.current += 1;
+    setSession(null);
+    setCompleted(false);
+    setScreen("setup");
   }
 
-  function submitAnswer() {
-    if (selectedIndex === undefined || !current || isSubmitted) return;
-
-    const nextSubmitted = { ...submitted, [current.id]: true };
-    setSubmitted(nextSubmitted);
-
-    const willFinish =
-      questions.length > 0 &&
-      questions.every((q) => nextSubmitted[q.id] || q.id === current.id);
-
-    if (willFinish) {
-      setReadyForResults(true);
-    }
-  }
-
-  function showResults() {
-    if (!allAnswered) return;
+  async function finishSession() {
+    if (!allAnswered || finishedRef.current) return;
+    finishedRef.current = true;
+    const wrongIds = wrongAnswers.map((q) => q.id);
+    const correctIds = questions
+      .filter((q) => selected[q.id] === q.answer)
+      .map((q) => q.id);
+    const entry = {
+      id: `${Date.now()}-${session.category}-${Math.random().toString(36).slice(2, 8)}`,
+      date: new Date().toLocaleString(),
+      category: session.category,
+      mode: session.mode,
+      difficulty: session.difficulty,
+      topicFilter: session.topicFilter,
+      questionCount: questions.length,
+      score,
+      accuracy,
+      wrongQuestionIds: wrongIds,
+    };
+    const nextHistory = [entry, ...history].slice(0, 30);
+    const nextWrong = {
+      ...latestWrongByCategory,
+      [session.category]: [
+        ...new Set([
+          ...(latestWrongByCategory[session.category] || []).filter(
+            (id) => !correctIds.includes(id),
+          ),
+          ...wrongIds,
+        ]),
+      ],
+    };
+    const nextSeen = [...new Set([...seenIds, ...questions.map((q) => q.id)])];
+    setHistory(nextHistory);
+    setLatestWrongByCategory(nextWrong);
+    setSeenIds(nextSeen);
     setCompleted(true);
-    setReadyForResults(false);
-  }
-
-  function nextQuestion() {
-    if (currentIndex < questions.length - 1) {
-      setCurrentIndex((i) => i + 1);
+    setScreen("results");
+    let localSaved = true;
+    try {
+      setJsonStorage(HISTORY_KEY, nextHistory);
+      setJsonStorage(LATEST_WRONG_KEY, nextWrong);
+      setJsonStorage(SEEN_KEY, nextSeen);
+    } catch {
+      localSaved = false;
     }
-  }
-
-  function previousQuestion() {
-    if (currentIndex > 0) {
-      setCurrentIndex((i) => i - 1);
+    const attempt = ++saveAttemptRef.current;
+    if (!user) {
+      setSaveStatus(
+        localSaved
+          ? "Saved in this browser. Sign in before your next quiz to also save results to your account."
+          : "Browser storage is unavailable. These results are available until you close or reload the page.",
+      );
+      return;
     }
-  }
-
-  function nextUnanswered() {
-    const nextIndex = questions.findIndex(
-      (q, index) => index > currentIndex && !submitted[q.id]
+    setSaveStatus(
+      localSaved
+        ? "Saved in this browser. Saving to your account…"
+        : "Saving to your account…",
     );
-
-    if (nextIndex !== -1) {
-      setCurrentIndex(nextIndex);
+    try {
+      const { id, date, ...result } = entry;
+      await saveQuizResult(result);
+      if (attempt === saveAttemptRef.current)
+        setSaveStatus("Results saved to your account.");
+    } catch {
+      if (attempt === saveAttemptRef.current)
+        setSaveStatus(
+          localSaved
+            ? "Saved in this browser. Account sync failed; please check your connection."
+            : "Results could not be saved. Keep this page open to retain them.",
+        );
     }
+  }
+
+  function prepareReview() {
+    setCategory(session.category);
+    setMode("review");
+    setTopicFilter("All topics");
+    setSession(null);
+    setCompleted(false);
+    setScreen("setup");
   }
 
   function clearHistory() {
-    const nextHistory = history.filter((item) => item.category !== category);
-    const nextWrongByCategory = {
-      ...latestWrongByCategory,
-      [category]: [],
-    };
-
-    setHistory(nextHistory);
-    setLatestWrongByCategory(nextWrongByCategory);
-    setSeenIds([]);
-
-    setJsonStorage(HISTORY_KEY, nextHistory);
-    setJsonStorage(LATEST_WRONG_KEY, nextWrongByCategory);
-    setJsonStorage(SEEN_KEY, []);
-  }
-
-  function toggleDifficulty(level) {
-    const active = selectedDifficulties.includes(level);
-
-    const next = active
-      ? selectedDifficulties.filter((item) => item !== level)
-      : [...selectedDifficulties, level];
-
-    setSelectedDifficulties(next.length ? next : [level]);
-    resetSession(mode);
-  }
-
-  const filteredHistory = history.filter((item) => item.category === category);
-
-  const bestAccuracy = filteredHistory.length
-    ? Math.max(...filteredHistory.map((item) => item.accuracy))
-    : null;
-
-  const averageAccuracy = filteredHistory.length
-    ? Math.round(
-        filteredHistory.reduce((sum, item) => sum + item.accuracy, 0) /
-          filteredHistory.length
+    if (
+      !window.confirm(
+        "Clear this history and its saved wrong-answer lists in this browser? Account records are not deleted.",
       )
-    : null;
-
-  const masteredTopics = Object.entries(topicCounts)
-    .map(([topic]) => {
-      const attempts = filteredHistory.filter(
-        (item) =>
-          item.topicFilter === topic || item.topicFilter === "All topics"
-      );
-
-      if (!attempts.length) return { topic, accuracy: null };
-
-      const avg = Math.round(
-        attempts.reduce((sum, item) => sum + item.accuracy, 0) / attempts.length
-      );
-
-      return { topic, accuracy: avg };
-    })
-    .sort((a, b) => (b.accuracy ?? -1) - (a.accuracy ?? -1));
-
-  if (screen === "focus") {
-    return (
-      <div style={styles.focusPage}>
-        <div style={styles.focusContainer}>
-          <div style={styles.card}>
-            <div style={styles.focusTopBar}>
-              <div>
-                <div style={{ fontSize: 28, fontWeight: 700 }}>
-                  EP question view
-                </div>
-                <div style={styles.smallText}>
-                  Focus mode with only the current question and answers.
-                </div>
-              </div>
-
-              <button
-                style={styles.button}
-                onClick={() => setScreen("dashboard")}
-              >
-                Back to dashboard
-              </button>
-            </div>
-
-            {!completed ? (
-              <>
-                <div style={{ marginBottom: 14 }}>
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      marginBottom: 8,
-                      fontSize: 14,
-                      color: "#475569",
-                    }}
-                  >
-                    <span>
-                      Question {questions.length ? currentIndex + 1 : 0} of{" "}
-                      {questions.length}
-                    </span>
-                    <span>{progress}% answered</span>
-                  </div>
-
-                  <div style={styles.progressOuter}>
-                    <div style={styles.progressInner(progress)} />
-                  </div>
-                </div>
-
-                {current ? (
-                  <div style={styles.questionCard}>
-                    <div style={{ marginBottom: 10 }}>
-                      <span style={styles.badge}>{current.topic}</span>
-                      <span style={styles.badge}>{current.level}</span>
-                      {current.sourceRule ? (
-                        <span style={styles.badge}>{current.sourceRule}</span>
-                      ) : null}
-                    </div>
-
-                    <h2
-                      style={{
-                        fontSize: "clamp(18px, 5vw, 24px)",
-                        lineHeight: 1.35,
-                        marginBottom: 16,
-                      }}
-                    >
-                      {current.question}
-                    </h2>
-
-                    <div>
-                      {current.options.map((option, idx) => {
-                        const picked = selectedIndex === idx;
-                        const correct = current.answer === idx;
-
-                        return (
-                          <button
-                            key={idx}
-                            style={getOptionStyle({
-                              picked,
-                              correct,
-                              isSubmitted,
-                            })}
-                            onClick={() => {
-                              if (!isSubmitted) {
-                                setSelected((prev) => ({
-                                  ...prev,
-                                  [current.id]: idx,
-                                }));
-                              }
-                            }}
-                          >
-                            <strong>{String.fromCharCode(65 + idx)}.</strong>{" "}
-                            {option}
-                          </button>
-                        );
-                      })}
-                    </div>
-
-                    {isSubmitted ? (
-                      <div style={styles.feedback}>
-                        <strong>Immediate feedback</strong>
-                        <div style={{ marginTop: 8 }}>
-                          {current.explanation}
-                        </div>
-                      </div>
-                    ) : null}
-                  </div>
-                ) : (
-                  <div style={styles.questionCard}>
-                    No questions available for this filter.
-                  </div>
-                )}
-
-                <div style={{ ...styles.buttonRow, marginTop: 16 }}>
-                  <button
-                    style={styles.buttonPrimary}
-                    onClick={submitAnswer}
-                    disabled={
-                      selectedIndex === undefined ||
-                      isSubmitted ||
-                      !current ||
-                      readyForResults
-                    }
-                  >
-                    Submit answer
-                  </button>
-
-                  <button
-                    style={styles.button}
-                    onClick={previousQuestion}
-                    disabled={currentIndex === 0}
-                  >
-                    Previous
-                  </button>
-
-                  <button
-                    style={styles.button}
-                    onClick={nextQuestion}
-                    disabled={
-                      currentIndex === questions.length - 1 ||
-                      !questions.length ||
-                      readyForResults
-                    }
-                  >
-                    Next
-                  </button>
-
-                  <button
-                    style={styles.button}
-                    onClick={nextUnanswered}
-                    disabled={
-                      !questions.some(
-                        (q, index) => index > currentIndex && !submitted[q.id]
-                      ) || readyForResults
-                    }
-                  >
-                    Next unanswered
-                  </button>
-
-                  {readyForResults ? (
-                    <button style={styles.buttonPrimary} onClick={showResults}>
-                      See results
-                    </button>
-                  ) : null}
-                </div>
-
-                {readyForResults ? (
-                  <div
-                    style={{
-                      marginTop: 16,
-                      padding: 14,
-                      borderRadius: 14,
-                      background: "#dcfce7",
-                      color: "#166534",
-                      fontSize: 14,
-                    }}
-                  >
-                    You answered the last question. Open the results when ready.
-                  </div>
-                ) : null}
-              </>
-            ) : (
-              <div style={styles.questionCard}>
-                <div style={{ marginBottom: 12 }}>
-                  <span style={styles.badge}>Quiz complete</span>
-                  <span style={styles.badge}>
-                    {score}/{questions.length}
-                  </span>
-                  <span style={styles.badge}>{accuracy}%</span>
-                </div>
-
-                <h2 style={{ fontSize: 28, marginBottom: 10 }}>Your result</h2>
-                <p style={styles.smallText}>
-                  Accuracy = correct answers / total questions.
-                </p>
-
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(3, 1fr)",
-                    gap: 12,
-                    marginTop: 16,
-                  }}
-                >
-                  <div style={styles.statBox}>
-                    <div style={styles.muted}>Correct</div>
-                    <div style={styles.statValue}>{score}</div>
-                  </div>
-
-                  <div style={styles.statBox}>
-                    <div style={styles.muted}>Wrong</div>
-                    <div style={styles.statValue}>{wrongAnswers.length}</div>
-                  </div>
-
-                  <div style={styles.statBox}>
-                    <div style={styles.muted}>Accuracy</div>
-                    <div style={styles.statValue}>{accuracy}%</div>
-                  </div>
-                </div>
-
-                <div style={{ ...styles.buttonRow, marginTop: 16 }}>
-                  <button
-                    style={styles.buttonPrimary}
-                    onClick={() => resetSession("practice")}
-                  >
-                    Start another quiz
-                  </button>
-
-                  <button
-                    style={styles.button}
-                    onClick={() => resetSession("review")}
-                    disabled={!latestWrongIds.length}
-                  >
-                    Review wrong answers
-                  </button>
-
-                  <button
-                    style={styles.button}
-                    onClick={() => setScreen("dashboard")}
-                  >
-                    Back to dashboard
-                  </button>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
+    )
+      return;
+    const categories =
+      historyCategory === "all"
+        ? Object.keys(questionBanks)
+        : [historyCategory];
+    const nextHistory = history.filter(
+      (entry) => !categories.includes(entry.category),
     );
+    const nextWrong = { ...latestWrongByCategory };
+    for (const key of categories) delete nextWrong[key];
+    const removedIds = new Set(
+      categories.flatMap((key) => questionBanks[key].map((q) => q.id)),
+    );
+    const nextSeen = seenIds.filter((id) => !removedIds.has(id));
+    setHistory(nextHistory);
+    setLatestWrongByCategory(nextWrong);
+    setSeenIds(nextSeen);
+    try {
+      setJsonStorage(HISTORY_KEY, nextHistory);
+      setJsonStorage(LATEST_WRONG_KEY, nextWrong);
+      setJsonStorage(SEEN_KEY, nextSeen);
+    } catch {
+      setAuthError(
+        "Browser storage is unavailable. History could not be cleared permanently.",
+      );
+    }
   }
+
+  const stage = screen === "quiz" ? 1 : screen === "results" ? 2 : 0;
+  const activeLabel =
+    categoryConfig[
+      session && screen !== "setup" && screen !== "history"
+        ? session.category
+        : category
+    ].label;
 
   return (
-    <div style={styles.page}>
-      <div style={styles.container}>
-        <div style={styles.layout}>
-          <div style={styles.column}>
-            <div style={styles.card}>
-              <div style={styles.title}>Dashboard</div>
-              <div style={{ marginBottom: 16 }}>
-                {user ? (
-                  <div>
-                    <div style={styles.muted}>Signed in as</div>
-                    <div style={{ fontWeight: 700, marginTop: 4 }}>
-                      {user.displayName || user.email}
-                    </div>
-
-                    <button
-                      style={{ ...styles.button, marginTop: 10 }}
-                      onClick={logout}
-                    >
-                      Sign out
-                    </button>
-                  </div>
-                ) : (
-                  <div>
-                    <button
-                      style={styles.buttonPrimary}
-                      onClick={signInWithGoogle}
-                    >
-                      Sign in with Google
-                    </button>
-
-                    <div style={{ ...styles.muted, marginTop: 8 }}>
-                      Sign in to save your quiz results.
-                    </div>
-                  </div>
-                )}
-
-                {authError ? (
-                  <div
-                    style={{
-                      marginTop: 10,
-                      padding: 10,
-                      borderRadius: 12,
-                      background: "#fee2e2",
-                      color: "#991b1b",
-                      fontSize: 13,
-                    }}
-                  >
-                    {authError}
-                  </div>
-                ) : null}
-              </div>
-
-              <div>
-                <div style={styles.muted}>Track</div>
-                <div style={{ fontSize: 18, fontWeight: 700, marginTop: 6 }}>
-                  {categoryConfig[category].label}
-                </div>
-                <p style={{ ...styles.smallText, marginTop: 8 }}>
-                  {categoryConfig[category].description}
-                </p>
-              </div>
-
-              <div style={styles.statBox}>
-                <div style={styles.muted}>Question bank</div>
-                <div style={styles.statValue}>{bank.length}</div>
-              </div>
-
-              <div style={styles.statBox}>
-                <div style={styles.muted}>Best score rate</div>
-                <div style={styles.statValue}>
-                  {bestAccuracy !== null ? `${bestAccuracy}%` : "-"}
-                </div>
-              </div>
-
-              <div style={styles.statBox}>
-                <div style={styles.muted}>Average score rate</div>
-                <div style={styles.statValue}>
-                  {averageAccuracy !== null ? `${averageAccuracy}%` : "-"}
-                </div>
-              </div>
-            </div>
-
-            <div style={styles.card}>
-              <div style={styles.title}>Quiz setup</div>
-
-              <div style={{ marginBottom: 18 }}>
-                <div style={{ marginBottom: 8, fontSize: 14 }}>
-                  Question source
-                </div>
-
-                <div style={styles.buttonRow}>
-                  {Object.entries(categoryConfig).map(([key, config]) => (
-                    <button
-                      key={key}
-                      style={{
-                        ...styles.button,
-                        ...(category === key ? styles.buttonActive : {}),
-                      }}
-                      onClick={() => changeCategory(key)}
-                    >
-                      {config.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div style={{ marginBottom: 18 }}>
-                <div style={{ marginBottom: 8, fontSize: 14 }}>Mode</div>
-                <div style={styles.buttonRow}>
-                  <button
-                    style={{
-                      ...styles.button,
-                      ...(mode === "practice" ? styles.buttonActive : {}),
-                    }}
-                    onClick={() => resetSession("practice")}
-                  >
-                    Practice
-                  </button>
-
-                  <button
-                    style={{
-                      ...styles.button,
-                      ...(mode === "review" ? styles.buttonActive : {}),
-                      opacity: reviewCount ? 1 : 0.5,
-                      cursor: reviewCount ? "pointer" : "not-allowed",
-                    }}
-                    onClick={() => reviewCount && resetSession("review")}
-                    disabled={!reviewCount}
-                  >
-                    Review wrong
-                  </button>
-                </div>
-              </div>
-
-              <div style={{ marginBottom: 18 }}>
-                <div style={{ marginBottom: 8, fontSize: 14 }}>
-                  Number of questions
-                </div>
-
-                <select
-                  style={styles.select}
-                  value={questionCount}
-                  onChange={(e) => {
-                    setQuestionCount(e.target.value);
-                    resetSession(mode);
-                  }}
-                >
-                  {questionCountOptions.map((count) => (
-                    <option key={count} value={String(count)}>
-                      {count} questions
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div style={{ marginBottom: 18 }}>
-                <div style={{ marginBottom: 8, fontSize: 14 }}>Difficulty</div>
-
-                <div style={styles.buttonRow}>
-                  {difficultyOptions.map((level) => {
-                    const active = selectedDifficulties.includes(level);
-
-                    return (
-                      <button
-                        key={level}
-                        style={{
-                          ...styles.button,
-                          ...(active ? styles.buttonActive : {}),
-                        }}
-                        onClick={() => toggleDifficulty(level)}
-                      >
-                        {level}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-
-              <div style={{ marginBottom: 18 }}>
-                <div style={{ marginBottom: 8, fontSize: 14 }}>Topic</div>
-
-                <select
-                  style={styles.select}
-                  value={topicFilter}
-                  onChange={(e) => {
-                    setTopicFilter(e.target.value);
-                    resetSession(mode);
-                  }}
-                >
-                  {topicOptions.map((topic) => (
-                    <option key={topic} value={topic}>
-                      {topic}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div>
-                <span style={styles.badge}>Loaded: {questions.length}</span>
-                <span style={styles.badge}>Review: {reviewCount}</span>
-              </div>
-            </div>
-
-            <div style={styles.card}>
-              <div style={styles.title}>Topics</div>
-
-              {Object.entries(topicCounts)
-                .sort((a, b) => a[0].localeCompare(b[0]))
-                .map(([topic, count]) => (
-                  <div
-                    key={topic}
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      background: "#f8fafc",
-                      borderRadius: 14,
-                      padding: 10,
-                      marginBottom: 8,
-                    }}
-                  >
-                    <span>{topic}</span>
-                    <span>{count}</span>
-                  </div>
-                ))}
-            </div>
+    <div className={styles.app}>
+      <a className={styles.skipLink} href="#main-content">
+        Skip to content
+      </a>
+      <header className={styles.header}>
+        <div className={styles.headerInner}>
+          <div className={styles.brand}>
+            <span className={styles.brandMark}>
+              Q<span>.</span>
+            </span>
+            <span>
+              MCQ<span className={styles.brandLight}> / Trainer</span>
+            </span>
           </div>
-
-          <div style={styles.column}>
-            <div style={styles.card}>
-              <div style={styles.bigTitle}>European Parliament MCQ Trainer</div>
-
-              <div style={styles.smallText}>
-                Rules of Procedure, Guide and Internal Rules, with immediate
-                feedback and topic-based practice.
-              </div>
-
-              <div style={{ marginTop: 16, marginBottom: 16 }}>
-                <div style={styles.buttonRow}>
-                  <button
-                    style={styles.button}
-                    onClick={() => resetSession(mode)}
-                  >
-                    New quiz
-                  </button>
-
-                  <button
-                    style={styles.buttonPrimary}
-                    onClick={() => setScreen("focus")}
-                  >
-                    Question-only view
-                  </button>
-                </div>
-              </div>
-
-              {!completed ? (
-                <>
-                  <div style={{ marginBottom: 14 }}>
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        marginBottom: 8,
-                        fontSize: 14,
-                        color: "#475569",
-                      }}
-                    >
-                      <span>
-                        Question {questions.length ? currentIndex + 1 : 0} of{" "}
-                        {questions.length}
-                      </span>
-                      <span>{progress}% answered</span>
-                    </div>
-
-                    <div style={styles.progressOuter}>
-                      <div style={styles.progressInner(progress)} />
-                    </div>
-                  </div>
-
-                  {current ? (
-                    <div style={styles.questionCard}>
-                      <div style={{ marginBottom: 10 }}>
-                        <span style={styles.badge}>{current.topic}</span>
-                        <span style={styles.badge}>{current.level}</span>
-                        {current.sourceRule ? (
-                          <span style={styles.badge}>{current.sourceRule}</span>
-                        ) : null}
-                      </div>
-
-                      <h2 style={{ fontSize: 24, marginBottom: 16 }}>
-                        {current.question}
-                      </h2>
-
-                      <div>
-                        {current.options.map((option, idx) => {
-                          const picked = selectedIndex === idx;
-                          const correct = current.answer === idx;
-
-                          return (
-                            <button
-                              key={idx}
-                              style={getOptionStyle({
-                                picked,
-                                correct,
-                                isSubmitted,
-                              })}
-                              onClick={() => {
-                                if (!isSubmitted) {
-                                  setSelected((prev) => ({
-                                    ...prev,
-                                    [current.id]: idx,
-                                  }));
-                                }
-                              }}
-                            >
-                              <strong>{String.fromCharCode(65 + idx)}.</strong>{" "}
-                              {option}
-                            </button>
-                          );
-                        })}
-                      </div>
-
-                      {isSubmitted ? (
-                        <div style={styles.feedback}>
-                          <strong>Immediate feedback</strong>
-                          <div style={{ marginTop: 8 }}>
-                            {current.explanation}
-                          </div>
-                        </div>
-                      ) : null}
-                    </div>
-                  ) : (
-                    <div style={styles.questionCard}>
-                      No questions available for this filter.
-                    </div>
-                  )}
-
-                  <div style={{ ...styles.buttonRow, marginTop: 16 }}>
-                    <button
-                      style={styles.buttonPrimary}
-                      onClick={submitAnswer}
-                      disabled={
-                        selectedIndex === undefined ||
-                        isSubmitted ||
-                        !current ||
-                        readyForResults
-                      }
-                    >
-                      Submit answer
-                    </button>
-
-                    <button
-                      style={styles.button}
-                      onClick={previousQuestion}
-                      disabled={currentIndex === 0}
-                    >
-                      Previous
-                    </button>
-
-                    <button
-                      style={styles.button}
-                      onClick={nextQuestion}
-                      disabled={
-                        currentIndex === questions.length - 1 ||
-                        !questions.length ||
-                        readyForResults
-                      }
-                    >
-                      Next
-                    </button>
-
-                    <button
-                      style={styles.button}
-                      onClick={nextUnanswered}
-                      disabled={
-                        !questions.some(
-                          (q, index) => index > currentIndex && !submitted[q.id]
-                        ) || readyForResults
-                      }
-                    >
-                      Next unanswered
-                    </button>
-
-                    {readyForResults ? (
-                      <button
-                        style={styles.buttonPrimary}
-                        onClick={showResults}
-                      >
-                        See results
-                      </button>
-                    ) : null}
-                  </div>
-
-                  {readyForResults ? (
-                    <div
-                      style={{
-                        marginTop: 16,
-                        padding: 14,
-                        borderRadius: 14,
-                        background: "#dcfce7",
-                        color: "#166534",
-                        fontSize: 14,
-                      }}
-                    >
-                      You answered the last question. Open the results when
-                      ready.
-                    </div>
-                  ) : null}
-                </>
-              ) : (
-                <div style={styles.questionCard}>
-                  <div style={{ marginBottom: 12 }}>
-                    <span style={styles.badge}>Quiz complete</span>
-                    <span style={styles.badge}>
-                      {score}/{questions.length}
-                    </span>
-                    <span style={styles.badge}>{accuracy}%</span>
-                  </div>
-
-                  <h2 style={{ fontSize: 28, marginBottom: 10 }}>
-                    Your result
-                  </h2>
-
-                  <p style={styles.smallText}>
-                    Accuracy = correct answers / total questions.
-                  </p>
-
-                  <div
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns: "repeat(3, 1fr)",
-                      gap: 12,
-                      marginTop: 16,
-                    }}
-                  >
-                    <div style={styles.statBox}>
-                      <div style={styles.muted}>Correct</div>
-                      <div style={styles.statValue}>{score}</div>
-                    </div>
-
-                    <div style={styles.statBox}>
-                      <div style={styles.muted}>Wrong</div>
-                      <div style={styles.statValue}>{wrongAnswers.length}</div>
-                    </div>
-
-                    <div style={styles.statBox}>
-                      <div style={styles.muted}>Accuracy</div>
-                      <div style={styles.statValue}>{accuracy}%</div>
-                    </div>
-                  </div>
-
-                  <div style={{ ...styles.buttonRow, marginTop: 16 }}>
-                    <button
-                      style={styles.buttonPrimary}
-                      onClick={() => resetSession("practice")}
-                    >
-                      Start another quiz
-                    </button>
-
-                    <button
-                      style={styles.button}
-                      onClick={() => resetSession("review")}
-                      disabled={!latestWrongIds.length}
-                    >
-                      Review wrong answers
-                    </button>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-
-          <div style={styles.column}>
-            <div style={styles.card}>
-              <div style={styles.title}>Session stats</div>
-
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(2, 1fr)",
-                  gap: 12,
-                }}
-              >
-                <div style={styles.statBox}>
-                  <div style={styles.muted}>Scored</div>
-                  <div style={styles.statValue}>{score}</div>
-                </div>
-
-                <div style={styles.statBox}>
-                  <div style={styles.muted}>Answered</div>
-                  <div style={styles.statValue}>{answeredCount}</div>
-                </div>
-
-                <div style={styles.statBox}>
-                  <div style={styles.muted}>Accuracy</div>
-                  <div style={styles.statValue}>{accuracy}%</div>
-                </div>
-
-                <div style={styles.statBox}>
-                  <div style={styles.muted}>Wrong answers</div>
-                  <div style={styles.statValue}>{wrongAnswers.length}</div>
-                </div>
-              </div>
-
-              <div style={{ ...styles.statBox, marginTop: 12 }}>
-                <div style={styles.muted}>Stronger topics</div>
-
-                <div style={{ marginTop: 8 }}>
-                  {strongTopics.length ? (
-                    strongTopics.map((topic) => (
-                      <span key={topic} style={styles.badge}>
-                        {topic}
-                      </span>
-                    ))
-                  ) : (
-                    <span style={styles.muted}>None yet</span>
-                  )}
-                </div>
-              </div>
-
-              <div style={{ ...styles.statBox, marginTop: 12 }}>
-                <div style={styles.muted}>Needs more work</div>
-
-                <div style={{ marginTop: 8 }}>
-                  {weakTopics.length ? (
-                    weakTopics.map((topic) => (
-                      <span key={topic} style={styles.badge}>
-                        {topic}
-                      </span>
-                    ))
-                  ) : (
-                    <span style={styles.muted}>None yet</span>
-                  )}
-                </div>
-              </div>
-            </div>
-
-            <div style={styles.card}>
-              <div style={styles.title}>Score history</div>
-
-              <div style={{ marginBottom: 12 }}>
-                <button
-                  style={styles.button}
-                  onClick={clearHistory}
-                  disabled={!filteredHistory.length}
-                >
-                  Clear current source
-                </button>
-              </div>
-
-              {filteredHistory.length ? (
-                filteredHistory.slice(0, 8).map((item) => (
-                  <div key={item.id} style={styles.historyItem}>
-                    <div style={{ fontWeight: 700 }}>
-                      {item.score}/{item.questionCount} · {item.accuracy}%
-                    </div>
-
-                    <div style={{ ...styles.muted, marginTop: 6 }}>
-                      {item.mode} · {item.difficulty} · {item.topicFilter}
-                    </div>
-
-                    <div style={{ ...styles.muted, marginTop: 4 }}>
-                      {item.date}
-                    </div>
-                  </div>
-                ))
-              ) : (
-                <div style={styles.muted}>No completed quiz yet.</div>
-              )}
-            </div>
-
-            <div style={styles.card}>
-              <div style={styles.title}>Topic mastery</div>
-
-              {masteredTopics.map((item) => (
-                <div key={item.topic} style={{ marginBottom: 14 }}>
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      marginBottom: 6,
-                    }}
-                  >
-                    <span>{item.topic}</span>
-                    <span style={styles.muted}>
-                      {item.accuracy !== null ? `${item.accuracy}%` : "No data"}
-                    </span>
-                  </div>
-
-                  <div style={styles.progressOuter}>
-                    <div style={styles.progressInner(item.accuracy || 0)} />
-                  </div>
-                </div>
-              ))}
-            </div>
+          <nav className={styles.nav} aria-label="Main navigation">
+            <button
+              className={`${styles.navButton} ${screen !== "history" ? styles.navActive : ""}`}
+              aria-current={screen !== "history" ? "page" : undefined}
+              onClick={() =>
+                setScreen(
+                  activeSession ? "quiz" : completed ? "results" : "setup",
+                )
+              }
+            >
+              <Icon name="book" size={17} />
+              {activeSession ? "Resume quiz" : "Practice"}
+            </button>
+            <button
+              className={`${styles.navButton} ${screen === "history" ? styles.navActive : ""}`}
+              aria-current={screen === "history" ? "page" : undefined}
+              onClick={() => setScreen("history")}
+            >
+              <Icon name="history" size={17} />
+              History
+            </button>
+          </nav>
+          <div className={styles.account}>
+            {user && (
+              <span className={styles.accountName}>
+                {user.displayName || user.email}
+              </span>
+            )}
+            <button
+              className={styles.accountButton}
+              onClick={handleAuth}
+              disabled={authPending}
+            >
+              {authPending
+                ? "Please wait…"
+                : user
+                  ? "Sign out"
+                  : "Sign in with Google"}
+            </button>
           </div>
         </div>
-      </div>
+      </header>
+
+      <main id="main-content" className={styles.main}>
+        {authError && (
+          <div role="alert" className={styles.error}>
+            {authError}
+            <button
+              aria-label="Dismiss message"
+              onClick={() => setAuthError("")}
+            >
+              <Icon name="close" size={16} />
+            </button>
+          </div>
+        )}
+        {screen !== "history" && (
+          <ol className={styles.steps} aria-label="Quiz stages">
+            {["Set up", "Practice", "Results"].map((label, index) => (
+              <li
+                key={label}
+                aria-current={stage === index ? "step" : undefined}
+                className={
+                  index === stage
+                    ? styles.currentStep
+                    : index < stage
+                      ? styles.finishedStep
+                      : ""
+                }
+              >
+                <span>
+                  {index < stage ? (
+                    <Icon name="check" size={13} />
+                  ) : (
+                    `0${index + 1}`
+                  )}
+                </span>
+                {label}
+              </li>
+            ))}
+          </ol>
+        )}
+
+        {screen === "setup" && (
+          <>
+            <div className={styles.intro}>
+              <div className={styles.eyebrow}>YOUR PRACTICE SPACE</div>
+              <h1 ref={headingRef} tabIndex={-1}>
+                Make room for a little progress.
+              </h1>
+              <p>
+                Choose your subject. Set your pace. Learn one question at a
+                time.
+              </p>
+            </div>
+            <form onSubmit={startSession}>
+              <section
+                className={styles.setupCard}
+                aria-labelledby="subject-heading"
+              >
+                <div className={styles.sectionHeading}>
+                  <div>
+                    <span className={styles.sectionNumber}>01</span>
+                    <h2 id="subject-heading">
+                      What would you like to practise?
+                    </h2>
+                  </div>
+                  <span className={styles.muted}>6 subjects</span>
+                </div>
+                <div className={styles.subjectGrid}>
+                  {Object.entries(categoryConfig).map(
+                    ([key, config], index) => (
+                      <button
+                        type="button"
+                        key={key}
+                        className={`${styles.subject} ${category === key ? styles.subjectSelected : ""}`}
+                        aria-pressed={category === key}
+                        onClick={() => changeCategory(key)}
+                      >
+                        <div className={styles.subjectTop}>
+                          <span className={styles.subjectIcon}>
+                            <Icon name={index === 0 ? "layers" : "book"} />
+                          </span>
+                          <span className={styles.selectionCircle}>
+                            {category === key && (
+                              <Icon name="check" size={12} />
+                            )}
+                          </span>
+                        </div>
+                        <strong>{config.label}</strong>
+                        <span>
+                          {questionBanks[key].length} questions
+                          <span aria-hidden="true"> · </span>
+                          {
+                            Object.keys(buildTopicCounts(questionBanks[key]))
+                              .length
+                          }{" "}
+                          topics
+                        </span>
+                      </button>
+                    ),
+                  )}
+                </div>
+                <p className={styles.subjectDescription}>
+                  {categoryConfig[category].description}
+                </p>
+              </section>
+
+              <section
+                className={styles.setupCard}
+                aria-labelledby="session-heading"
+              >
+                <div className={styles.sectionHeading}>
+                  <div>
+                    <span className={styles.sectionNumber}>02</span>
+                    <h2 id="session-heading">Build your session</h2>
+                  </div>
+                </div>
+                <fieldset className={styles.fieldset}>
+                  <legend>Practice mode</legend>
+                  <div className={styles.segmented}>
+                    <button
+                      type="button"
+                      aria-pressed={mode === "practice"}
+                      onClick={() => setMode("practice")}
+                    >
+                      New questions
+                    </button>
+                    <button
+                      type="button"
+                      aria-pressed={mode === "review"}
+                      disabled={!reviewCount}
+                      onClick={() => setMode("review")}
+                    >
+                      Review mistakes <span>{reviewCount}</span>
+                    </button>
+                  </div>
+                </fieldset>
+                <div className={styles.formGrid}>
+                  <label className={styles.field}>
+                    Topic
+                    <select
+                      value={topicFilter}
+                      onChange={(event) => setTopicFilter(event.target.value)}
+                    >
+                      <option>All topics</option>
+                      {topicOptions.map((topic) => (
+                        <option key={topic} value={topic}>
+                          {topic} ({topicCounts[topic]})
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                  <label className={styles.field}>
+                    Number of questions
+                    <select
+                      value={questionCount}
+                      onChange={(event) => setQuestionCount(event.target.value)}
+                    >
+                      {questionCountOptions.map((count) => (
+                        <option key={count} value={count}>
+                          {count} questions
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                </div>
+                <fieldset
+                  className={styles.fieldset}
+                  disabled={mode === "review"}
+                >
+                  <legend>
+                    Difficulty{" "}
+                    <span className={styles.optional}>Select one or more</span>
+                  </legend>
+                  <div className={styles.difficulties}>
+                    {difficultyOptions.map((level) => (
+                      <button
+                        type="button"
+                        key={level}
+                        aria-pressed={selectedDifficulties.includes(level)}
+                        disabled={!availableLevels.includes(level)}
+                        onClick={() => toggleDifficulty(level)}
+                        className={styles.difficulty}
+                      >
+                        <span
+                          className={styles.difficultyDots}
+                          aria-hidden="true"
+                        >
+                          {[0, 1, 2].map((i) => (
+                            <i
+                              key={i}
+                              className={
+                                i <= difficultyOptions.indexOf(level)
+                                  ? styles.filledDot
+                                  : ""
+                              }
+                            />
+                          ))}
+                        </span>
+                        {difficultyLabels[level]}
+                        {selectedDifficulties.includes(level) && (
+                          <Icon name="check" size={14} />
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                  <p className={styles.fieldHint}>
+                    {mode === "review"
+                      ? "Review includes your saved mistakes at every difficulty level."
+                      : availableLevels.length < 3
+                        ? `This subject includes ${availableLevels.map((level) => difficultyLabels[level].toLowerCase()).join(" and ")} questions.`
+                        : "Mix levels to find the right balance for your session."}
+                  </p>
+                </fieldset>
+                <div className={styles.startBar}>
+                  <div>
+                    <strong>
+                      {sessionCount
+                        ? `${sessionCount} questions, one step forward.`
+                        : "No questions match these settings."}
+                    </strong>
+                    <span>
+                      {sessionCount
+                        ? `${eligibleCount} matching questions · Immediate feedback after each answer`
+                        : "Try another topic, difficulty or practice mode."}
+                    </span>
+                  </div>
+                  <button
+                    type="submit"
+                    className={styles.primary}
+                    disabled={!sessionCount}
+                  >
+                    Start practice <Icon name="arrow" size={18} />
+                  </button>
+                </div>
+              </section>
+            </form>
+            <p className={styles.bottomNote}>
+              <Icon name="book" size={16} />
+              Your progress stays in this browser. Sign in to also save
+              completed results to your account.
+            </p>
+          </>
+        )}
+
+        {screen === "quiz" && current && (
+          <div className={styles.quizContainer}>
+            <div className={styles.quizHeading}>
+              <div>
+                <div className={styles.eyebrow}>
+                  {session.mode === "review"
+                    ? "MISTAKE REVIEW"
+                    : "PRACTICE SESSION"}
+                </div>
+                <h1 ref={headingRef} tabIndex={-1}>
+                  {activeLabel}
+                </h1>
+              </div>
+              <button className={styles.textButton} onClick={leaveSession}>
+                Back to setup
+              </button>
+            </div>
+            <div className={styles.progressHeading}>
+              <span>
+                Question <strong>{currentIndex + 1}</strong> of{" "}
+                {questions.length}
+              </span>
+              <span>{answeredCount} answered</span>
+            </div>
+            <progress
+              className={styles.progress}
+              max={questions.length}
+              value={answeredCount}
+              aria-label="Questions answered"
+            />
+            <section
+              className={styles.questionCard}
+              aria-labelledby="question-heading"
+            >
+              <div className={styles.questionMeta}>
+                <span>{current.topic}</span>
+                <span className={styles.levelBadge}>
+                  {difficultyLabels[current.level]}
+                </span>
+                {current.sourceRule && <span>{current.sourceRule}</span>}
+              </div>
+              <h2 id="question-heading">{current.question}</h2>
+              <p className={styles.answerHint}>Choose one answer.</p>
+              <fieldset className={styles.answers} disabled={isSubmitted}>
+                <legend className={styles.srOnly}>Answer choices</legend>
+                {current.options.map((option, index) => {
+                  const picked = selectedIndex === index;
+                  const correct = isSubmitted && current.answer === index;
+                  const wrong = isSubmitted && picked && !correct;
+                  return (
+                    <label
+                      key={`${current.id}-${index}`}
+                      className={`${styles.answer} ${picked && !isSubmitted ? styles.answerSelected : ""} ${correct ? styles.answerCorrect : ""} ${wrong ? styles.answerWrong : ""}`}
+                    >
+                      <input
+                        type="radio"
+                        name={`answer-${current.id}`}
+                        value={index}
+                        checked={picked}
+                        onChange={() =>
+                          setSelected((previous) => ({
+                            ...previous,
+                            [current.id]: index,
+                          }))
+                        }
+                      />
+                      <span className={styles.answerLetter} aria-hidden="true">
+                        {String.fromCharCode(65 + index)}
+                      </span>
+                      <span className={styles.answerText}>{option}</span>
+                      {correct ? (
+                        <span className={styles.answerStatus}>
+                          <Icon name="check" size={17} />
+                          <span>Correct answer</span>
+                        </span>
+                      ) : wrong ? (
+                        <span className={styles.answerStatus}>
+                          <Icon name="close" size={17} />
+                          <span>Your answer</span>
+                        </span>
+                      ) : null}
+                    </label>
+                  );
+                })}
+              </fieldset>
+              {isSubmitted && (
+                <div
+                  role="status"
+                  className={`${styles.feedback} ${selectedIndex === current.answer ? styles.feedbackCorrect : styles.feedbackWrong}`}
+                >
+                  <strong>
+                    <Icon
+                      name={selectedIndex === current.answer ? "check" : "book"}
+                      size={18}
+                    />
+                    {selectedIndex === current.answer
+                      ? "That's right."
+                      : "An opportunity to learn."}
+                  </strong>
+                  <p>{current.explanation}</p>
+                </div>
+              )}
+              <div className={styles.questionActions}>
+                <button
+                  className={styles.textButton}
+                  disabled={currentIndex === 0}
+                  onClick={() => setCurrentIndex((index) => index - 1)}
+                >
+                  ← Previous
+                </button>
+                <div>
+                  {!isSubmitted ? (
+                    <button
+                      className={styles.primary}
+                      disabled={selectedIndex === undefined}
+                      onClick={() =>
+                        setSubmitted((previous) => ({
+                          ...previous,
+                          [current.id]: true,
+                        }))
+                      }
+                    >
+                      Check answer <Icon name="check" size={17} />
+                    </button>
+                  ) : allAnswered ? (
+                    <button className={styles.primary} onClick={finishSession}>
+                      See results <Icon name="arrow" size={17} />
+                    </button>
+                  ) : (
+                    <button
+                      className={styles.primary}
+                      onClick={() => {
+                        const next = questions.findIndex(
+                          (q, index) =>
+                            index > currentIndex && !submitted[q.id],
+                        );
+                        setCurrentIndex(
+                          next >= 0
+                            ? next
+                            : questions.findIndex((q) => !submitted[q.id]),
+                        );
+                      }}
+                    >
+                      Next question <Icon name="arrow" size={17} />
+                    </button>
+                  )}
+                </div>
+              </div>
+            </section>
+            <nav
+              className={styles.questionMap}
+              aria-label="Question navigation"
+            >
+              {questions.map((q, index) => (
+                <button
+                  key={q.id}
+                  aria-label={`Question ${index + 1}${submitted[q.id] ? ", answered" : ""}`}
+                  aria-current={index === currentIndex ? "step" : undefined}
+                  className={`${submitted[q.id] ? styles.mapAnswered : ""} ${index === currentIndex ? styles.mapCurrent : ""}`}
+                  onClick={() => setCurrentIndex(index)}
+                >
+                  {index + 1}
+                </button>
+              ))}
+            </nav>
+            <p className={styles.bottomNote}>
+              Take your time. This is practice, not a timed exam.
+            </p>
+          </div>
+        )}
+
+        {screen === "results" && session && (
+          <div className={styles.quizContainer}>
+            <section className={styles.resultsCard}>
+              <div className={styles.resultIcon}>
+                <Icon name="check" size={26} />
+              </div>
+              <div className={styles.eyebrow}>SESSION COMPLETE</div>
+              <h1 ref={headingRef} tabIndex={-1}>
+                Another step forward.
+              </h1>
+              <p>
+                {activeLabel} ·{" "}
+                {session.mode === "review" ? "Mistake review" : "Practice"}
+              </p>
+              <div className={styles.score}>
+                {accuracy}
+                <span>%</span>
+              </div>
+              <p className={styles.scoreCaption}>
+                {score} correct answers out of {questions.length}
+              </p>
+              <div className={styles.resultStats}>
+                <div>
+                  <strong>{score}</strong>
+                  <span>Correct</span>
+                </div>
+                <div>
+                  <strong>{wrongAnswers.length}</strong>
+                  <span>To revisit</span>
+                </div>
+                <div>
+                  <strong>{questions.length}</strong>
+                  <span>Completed</span>
+                </div>
+              </div>
+              <div className={styles.resultActions}>
+                {(latestWrongByCategory[session.category] || []).length > 0 && (
+                  <button className={styles.primary} onClick={prepareReview}>
+                    Review mistakes <Icon name="arrow" size={17} />
+                  </button>
+                )}
+                <button className={styles.secondary} onClick={leaveSession}>
+                  New practice session
+                </button>
+              </div>
+              <p className={styles.saveNote} role="status">
+                {saveStatus}
+              </p>
+            </section>
+            {wrongAnswers.length > 0 && (
+              <section className={styles.setupCard}>
+                <div className={styles.sectionHeading}>
+                  <div>
+                    <h2>Where to focus next</h2>
+                  </div>
+                </div>
+                <p className={styles.muted}>
+                  Revisit these topics while the ideas are still fresh.
+                </p>
+                <div className={styles.topicChips}>
+                  {[...new Set(wrongAnswers.map((q) => q.topic))].map(
+                    (topic) => (
+                      <span key={topic}>{topic}</span>
+                    ),
+                  )}
+                </div>
+                <div className={styles.resultReview}>
+                  {wrongAnswers.map((q) => (
+                    <details key={q.id}>
+                      <summary>{q.question}</summary>
+                      <p>
+                        <strong>Correct answer:</strong> {q.options[q.answer]}
+                      </p>
+                      <p>{q.explanation}</p>
+                    </details>
+                  ))}
+                </div>
+              </section>
+            )}
+            <button
+              className={styles.historyLink}
+              onClick={() => {
+                setHistoryCategory(session.category);
+                setScreen("history");
+              }}
+            >
+              View your practice history <Icon name="arrow" size={16} />
+            </button>
+          </div>
+        )}
+
+        {screen === "history" && (
+          <>
+            <div className={styles.intro}>
+              <div className={styles.eyebrow}>YOUR PROGRESS</div>
+              <h1 ref={headingRef} tabIndex={-1}>
+                Every session counts.
+              </h1>
+              <p>Look back at your practice and choose where to go next.</p>
+            </div>
+            <div className={styles.historyToolbar}>
+              <label className={styles.field}>
+                Subject
+                <select
+                  value={historyCategory}
+                  onChange={(event) => setHistoryCategory(event.target.value)}
+                >
+                  <option value="all">All subjects</option>
+                  {Object.entries(categoryConfig).map(([key, config]) => (
+                    <option key={key} value={key}>
+                      {config.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <button
+                className={styles.textButton}
+                disabled={
+                  !filteredHistory.length &&
+                  !Object.entries(latestWrongByCategory).some(
+                    ([key, ids]) =>
+                      ids.length &&
+                      (historyCategory === "all" || historyCategory === key),
+                  )
+                }
+                onClick={clearHistory}
+              >
+                Clear browser history
+              </button>
+            </div>
+            <div className={styles.historyStats}>
+              <div>
+                <span>Sessions completed</span>
+                <strong>{filteredHistory.length}</strong>
+              </div>
+              <div>
+                <span>Best score</span>
+                <strong>
+                  {bestAccuracy === null ? "—" : `${bestAccuracy}%`}
+                </strong>
+              </div>
+              <div>
+                <span>Average score</span>
+                <strong>
+                  {averageAccuracy === null ? "—" : `${averageAccuracy}%`}
+                </strong>
+              </div>
+            </div>
+            <section
+              className={styles.historyCard}
+              aria-label="Completed sessions"
+            >
+              {filteredHistory.length ? (
+                filteredHistory.map((entry) => (
+                  <article className={styles.historyRow} key={entry.id}>
+                    <div className={styles.historyScore}>{entry.accuracy}%</div>
+                    <div className={styles.historyInfo}>
+                      <h2>
+                        {categoryConfig[entry.category]?.label ||
+                          entry.category}
+                      </h2>
+                      <p>
+                        {entry.questionCount} questions ·{" "}
+                        {entry.mode === "review"
+                          ? "Mistake review"
+                          : "Practice"}{" "}
+                        · {entry.topicFilter}
+                      </p>
+                      <span>{entry.date}</span>
+                    </div>
+                    <span className={styles.historyFraction}>
+                      {entry.score}
+                      <span> / {entry.questionCount}</span>
+                    </span>
+                  </article>
+                ))
+              ) : (
+                <div className={styles.emptyState}>
+                  <Icon name="history" size={34} />
+                  <h2>Your first session starts here.</h2>
+                  <p>
+                    Completed quizzes will appear here with your scores and
+                    topics.
+                  </p>
+                  <button
+                    className={styles.primary}
+                    onClick={() => setScreen(activeSession ? "quiz" : "setup")}
+                  >
+                    {activeSession ? "Resume quiz" : "Set up a session"}
+                    <Icon name="arrow" size={17} />
+                  </button>
+                </div>
+              )}
+            </section>
+            <p className={styles.bottomNote}>
+              Your latest 30 sessions in this browser. Previous history is
+              preserved.
+            </p>
+          </>
+        )}
+      </main>
+      <footer className={styles.footer}>
+        <span>MCQ / Trainer</span>
+        <span>Practice with purpose.</span>
+      </footer>
     </div>
   );
 }
