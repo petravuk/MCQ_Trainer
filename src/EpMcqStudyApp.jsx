@@ -190,7 +190,7 @@ export default function EpMcqStudyApp() {
   const [screen, setScreen] = useState("setup");
   const [category, setCategory] = useState(ALL_EP_CATEGORY);
   const [mode, setMode] = useState("practice");
-  const [selectedDifficulties, setSelectedDifficulties] = useState(["medium"]);
+  const [selectedDifficulties, setSelectedDifficulties] = useState(difficultyOptions);
   const [questionCount, setQuestionCount] = useState("10");
   const [topicFilter, setTopicFilter] = useState("All topics");
   const [history, setHistory] = useState(() => getJsonStorage(HISTORY_KEY, []));
@@ -281,11 +281,8 @@ export default function EpMcqStudyApp() {
     setCategory(nextCategory);
     setTopicFilter("All topics");
     setMode("practice");
-    const valid = selectedDifficulties.filter((level) =>
-      levels.includes(level),
-    );
     setSelectedDifficulties(
-      valid.length ? valid : [levels.includes("medium") ? "medium" : levels[0]],
+      difficultyOptions.filter((level) => levels.includes(level)),
     );
   }
 
