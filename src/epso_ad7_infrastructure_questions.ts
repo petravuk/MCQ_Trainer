@@ -18,7 +18,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-001",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "hard",
+    "level": "medium",
     "question": "A Kubernetes service must remain available if one worker node fails. Which deployment approach best addresses this requirement?",
     "options": [
       "Run two replicas on the same worker with local storage",
@@ -48,13 +48,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-003",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "hard",
-    "question": "An active-passive database cluster has synchronous replication between two sites. What is the principal availability trade-off when inter-site latency rises?",
+    "level": "medium",
+    "question": "An active-passive database cluster has synchronous replication between two sites. What is the main performance trade-off as inter-site latency rises?",
     "options": [
-      "Replication traffic no longer needs encryption",
+      "Network round-trip time affects only read-only queries",
       "Commit latency can increase because acknowledgement waits for the remote replica",
-      "Writes automatically become eventually consistent",
-      "Database backups become unnecessary"
+      "Commit latency cannot change until a site fails completely",
+      "Synchronous acknowledgement automatically becomes asynchronous",
     ],
     "answer": 1,
     "explanation": "Synchronous commit typically waits for a remote acknowledgement, increasing write latency and potentially reducing availability when the remote link fails."
@@ -78,16 +78,16 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-005",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "hard",
-    "question": "A virtualised server has high CPU ready time despite moderate guest CPU utilisation. What is the most plausible explanation?",
+    "level": "medium",
+    "question": "A Linux VM reports high CPU steal time. What does that indicate?",
     "options": [
-      "The VM waits for physical CPU scheduling capacity",
-      "The VM is running out of disk space",
-      "DNS resolution has failed",
-      "The guest clock is synchronised"
+      "Time spent by the guest waiting only for its own disk I/O",
+      "Time during which the guest CPU executes its own instructions",
+      "Time spent applying a database transaction log",
+      "Time spent involuntarily waiting while the hypervisor runs other virtual processors",
     ],
-    "answer": 0,
-    "explanation": "CPU ready time measures time a VM is ready to execute but must wait for host CPU scheduling; overcommitment or contention may be responsible."
+    "answer": 3,
+    "explanation": "Linux reports steal time separately from user, system, idle and I/O-wait CPU time. High steal suggests that a virtual CPU is losing execution time to other virtualised workloads; investigate host contention and VM placement."
   },
   {
     "id": "EPSO-ICT1-006",
@@ -108,7 +108,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-007",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "medium",
+    "level": "easy",
     "question": "A recurring outage has been restored using a workaround, but its underlying cause is unknown. Which ITIL practice should drive investigation of the cause?",
     "options": [
       "Service request management",
@@ -123,7 +123,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-008",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "hard",
+    "level": "medium",
     "question": "An urgent security patch is needed to mitigate active exploitation in a production service. Which change approach is most appropriate?",
     "options": [
       "Bypass change assessment and documentation",
@@ -139,7 +139,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
     "level": "medium",
-    "question": "A service availability SLA is 99.9% for a 30-day month. Approximately how much downtime is permitted?",
+    "question": "An SLA measures 99.9% availability over a full 30-day month with no exclusions. Approximately how much downtime is permitted?",
     "options": [
       "4.32 minutes",
       "43.2 minutes",
@@ -153,7 +153,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-010",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "hard",
+    "level": "medium",
     "question": "An organisation wants to detect incidents before users report them. Which combination best supports this objective?",
     "options": [
       "Monitoring, event correlation and actionable alert thresholds",
@@ -183,7 +183,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-012",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "hard",
+    "level": "medium",
     "question": "A Terraform-managed resource has been changed manually in production. What is the safest first step before applying the next plan?",
     "options": [
       "Apply immediately without reviewing the plan",
@@ -243,7 +243,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-016",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "hard",
+    "level": "medium",
     "question": "Which control most directly reduces lateral movement after one workstation is compromised?",
     "options": [
       "Flat network access for all devices",
@@ -273,7 +273,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-018",
     "category": "epso_ad7_infrastructure",
     "topic": "ICT infrastructure lifecycle",
-    "level": "hard",
+    "level": "medium",
     "question": "Which approach best limits operational risk during a major infrastructure upgrade?",
     "options": [
       "Upgrade all critical environments at once without a rollback plan",
@@ -288,7 +288,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-019",
     "category": "epso_ad7_infrastructure",
     "topic": "Emerging technologies",
-    "level": "hard",
+    "level": "medium",
     "question": "What is the primary purpose of a technology proof of concept before an enterprise-wide adoption decision?",
     "options": [
       "To replace procurement governance",
@@ -306,12 +306,12 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "When assessing a new infrastructure platform, which criterion is most useful for avoiding supplier lock-in?",
     "options": [
-      "Whether the dashboard has custom colours",
       "Standards-based interoperability and practical data/workload portability",
-      "The size of the sales presentation",
-      "Whether deployment requires only one supplier-specific tool"
+      "The provider-specific features available only on the chosen platform",
+      "The size of the initial discount without evaluating exit costs",
+      "The number of proprietary integration tools required",
     ],
-    "answer": 1,
+    "answer": 0,
     "explanation": "Interoperability and portability reduce switching costs and improve future architectural options."
   },
   {
@@ -321,19 +321,19 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "Which artefact best records the relationship between a business service and the underlying infrastructure components supporting it?",
     "options": [
+      "A hardware purchase order with no service dependencies",
+      "A network address list without business-service relationships",
+      "An incident count grouped only by reporting month",
       "A service-to-configuration-item dependency map",
-      "A generic staff holiday calendar",
-      "An unversioned presentation slide",
-      "A procurement invoice alone"
     ],
-    "answer": 0,
+    "answer": 3,
     "explanation": "A service dependency model, often maintained in a CMDB or service map, links business services with their supporting configuration items."
   },
   {
     "id": "EPSO-ICT1-022",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "hard",
+    "level": "medium",
     "question": "Two proposed infrastructure projects depend on the same storage migration. What should portfolio governance do first?",
     "options": [
       "Approve both without coordination",
@@ -348,15 +348,15 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-023",
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
-    "level": "hard",
+    "level": "medium",
     "question": "A parallel application spends most of its time exchanging data between compute nodes. Which improvement is most likely to help?",
     "options": [
+      "Disable profiling to reduce the visibility of synchronisation delays",
       "Use an interconnect with lower latency and higher bandwidth",
-      "Increase the colour depth of the login screen",
-      "Disable performance profiling",
-      "Move all processing to slower disks"
+      "Increase node count without measuring communication overhead",
+      "Optimise only local disk capacity when no disk I/O occurs",
     ],
-    "answer": 0,
+    "answer": 1,
     "explanation": "Communication-bound parallel workloads benefit from reduced inter-node latency and increased bandwidth."
   },
   {
@@ -393,15 +393,15 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-026",
     "category": "epso_ad7_infrastructure",
     "topic": "Quantum technologies",
-    "level": "hard",
+    "level": "medium",
     "question": "Why is crypto-agility important in planning for post-quantum cryptography?",
     "options": [
-      "It ensures algorithms never need replacing",
+      "It replaces all cryptographic algorithms with a fixed hardware dependency",
+      "It makes certificate and protocol compatibility testing unnecessary",
       "It enables cryptographic algorithms and keys to be changed with controlled impact as standards and threats evolve",
-      "It removes all need for a public-key infrastructure",
-      "It makes symmetric encryption obsolete"
+      "It guarantees that current algorithms never need replacing",
     ],
-    "answer": 1,
+    "answer": 2,
     "explanation": "Crypto-agility allows inventories, protocols and systems to transition algorithms without redesigning every dependent service."
   },
   {
@@ -411,27 +411,27 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "Which public-key cryptographic problem is most directly threatened by a sufficiently capable fault-tolerant quantum computer running Shor’s algorithm?",
     "options": [
+      "Compressing arbitrary messages without information loss",
       "Integer factorisation underlying RSA",
-      "Random bit generation by itself",
-      "Hash table indexing",
-      "Packet fragmentation"
+      "Exhaustive symmetric-key search with Grover’s quadratic speed-up",
+      "Predicting the output of every correctly implemented random generator",
     ],
-    "answer": 0,
+    "answer": 1,
     "explanation": "Shor’s algorithm can efficiently solve integer factorisation and discrete logarithm problems on a sufficiently capable quantum computer."
   },
   {
     "id": "EPSO-ICT1-028",
     "category": "epso_ad7_infrastructure",
     "topic": "Quantum technologies",
-    "level": "hard",
+    "level": "medium",
     "question": "An organisation is prioritising systems for migration to post-quantum cryptography. Which factor is most relevant?",
     "options": [
-      "The age of the server rack alone",
       "Sensitivity and required confidentiality lifetime of protected information",
-      "The number of icons in the interface",
-      "Whether users prefer dark mode"
+      "Only the age of the operating system, regardless of protected data",
+      "Only whether the service is hosted on physical or virtual servers",
+      "Only the current CPU utilisation of the endpoints",
     ],
-    "answer": 1,
+    "answer": 0,
     "explanation": "Long-lived sensitive information is particularly exposed to harvest-now-decrypt-later risks, making confidentiality lifetime important."
   },
   {
@@ -453,7 +453,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-030",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "hard",
+    "level": "medium",
     "question": "A critical incident involves several vendors, each claiming the failure is outside its scope. Which governance measure best improves resolution?",
     "options": [
       "Separate status updates with no overall owner",
@@ -514,21 +514,21 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
     "level": "medium",
-    "question": "Which design removes a single power-supply failure from a critical server?",
+    "question": "Which design avoids a single PSU or power-feed failure taking down a critical server?",
     "options": [
+      "Two PSUs connected to the same single power feed",
+      "One PSU supported only by a monitoring agent",
       "Dual power supplies connected to independent power feeds",
-      "One high-wattage supply on one circuit",
-      "Two power supplies on the same power strip",
-      "One power supply plus a UPS monitoring agent"
+      "One high-wattage PSU connected to a single circuit",
     ],
-    "answer": 0,
-    "explanation": "Independent supplies and feeds eliminate the single power-feed dependency."
+    "answer": 2,
+    "explanation": "Redundant PSUs connected to independent feeds avoid both a single-PSU and a single-feed failure point. Two PSUs on the same feed do not remove that feed as a shared failure domain."
   },
   {
     "id": "EPSO-ICT1-035",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "hard",
+    "level": "medium",
     "question": "A site has two WAN providers. Which architecture best reduces dependence on a single provider?",
     "options": [
       "Two circuits purchased through the same last-mile fibre",
@@ -543,13 +543,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-036",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "hard",
+    "level": "easy",
     "question": "A DNS resolver returns an old IP address after a service migration. Which factor most directly determines cache expiry?",
     "options": [
       "DNS TTL",
-      "MTU",
-      "TCP receive window",
-      "BGP local preference"
+      "DNSSEC validation status",
+      "The authoritative server’s zone serial alone",
+      "The reverse DNS record’s hostname",
     ],
     "answer": 0,
     "explanation": "Time to live controls how long a cached DNS record may remain valid."
@@ -561,40 +561,40 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "Which load-balancing technique keeps a user's requests consistently mapped to a backend when required?",
     "options": [
-      "DNSSEC",
-      "Route summarisation",
+      "Round-robin distribution with no affinity mechanism",
+      "Independent random backend selection for every request",
+      "DNSSEC signing without session-affinity configuration",
       "Session persistence",
-      "Port mirroring"
     ],
-    "answer": 2,
+    "answer": 3,
     "explanation": "Session persistence maintains affinity between a client session and a selected backend."
   },
   {
     "id": "EPSO-ICT1-038",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "hard",
-    "question": "A RAID 5 array of four equal disks loses one disk. Which statement is accurate?",
+    "level": "medium",
+    "question": "A RAID 5 array of four equal disks loses one disk. Assuming the remaining disks are healthy, which statement is accurate?",
     "options": [
-      "Data is immediately unrecoverable",
-      "RAID 5 eliminates the need for backups",
-      "Two additional disk failures are tolerated",
-      "Data remains available but fault tolerance is exhausted until rebuild"
+      "The remaining disks no longer need parity during the rebuild",
+      "The array provides a full independent backup of its data",
+      "Data remains available but fault tolerance is exhausted until rebuild",
+      "The array can tolerate a second disk failure without data loss",
     ],
-    "answer": 3,
+    "answer": 2,
     "explanation": "RAID 5 tolerates one disk failure; another failure before rebuilding may cause loss."
   },
   {
     "id": "EPSO-ICT1-039",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "hard",
+    "level": "easy",
     "question": "Which RAID level generally survives failure of any two disks in one array?",
     "options": [
-      "RAID 1 with only two drives",
+      "A two-disk RAID 1 mirror after both member disks fail",
       "RAID 6",
-      "RAID 0",
-      "RAID 5"
+      "RAID 5 with one parity disk",
+      "RAID 0 across four disks",
     ],
     "answer": 1,
     "explanation": "RAID 6 uses dual distributed parity to tolerate two disk failures."
@@ -604,36 +604,36 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
     "level": "medium",
-    "question": "In a distributed system, what is the main purpose of a quorum?",
+    "question": "Why do consensus protocols require a majority quorum before accepting a change?",
     "options": [
-      "Reduce all storage needs to zero",
-      "Remove the need for failure detection",
       "Prevent conflicting decisions by requiring sufficient participating replicas",
-      "Encrypt messages between nodes"
+      "Remove the need for a leader election or consensus protocol",
+      "Keep every partition writable even when it lacks a majority",
+      "Replace agreement between replicas with encrypted network traffic",
     ],
-    "answer": 2,
-    "explanation": "Quorum voting ensures enough replicas participate in decisions to maintain consistency guarantees."
+    "answer": 0,
+    "explanation": "Majorities intersect, so the quorum and the protocol’s leader, term and log rules prevent two isolated groups from independently committing conflicting changes. A group without a majority normally cannot continue writes safely."
   },
   {
     "id": "EPSO-ICT1-041",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "hard",
+    "level": "medium",
     "question": "A cluster loses communication between its two sites. What mechanism best reduces split-brain risk?",
     "options": [
-      "Give both sites unconditional write authority",
+      "Allow both isolated sites to continue writing without arbitration",
+      "Rely only on a DNS timeout with no fencing or quorum",
+      "Promote a replica automatically without checking the other site",
       "A witness or fencing mechanism with quorum rules",
-      "Disable cluster logging",
-      "Increase the DNS TTL"
     ],
-    "answer": 1,
+    "answer": 3,
     "explanation": "Fencing and quorum arbitration prevent both isolated partitions from acting as the active writer."
   },
   {
     "id": "EPSO-ICT1-042",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "hard",
+    "level": "medium",
     "question": "Which traffic is most appropriately separated into a dedicated management network?",
     "options": [
       "Customer video streams",
@@ -651,34 +651,34 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "What does an MTU mismatch most often cause for large network packets?",
     "options": [
-      "An incorrect DNS MX preference",
-      "A changed VLAN name",
+      "A replacement of the end-to-end TLS certificate chain",
       "Fragmentation or black-hole connectivity depending on path behaviour",
-      "An expired certificate"
+      "A change to the authoritative DNS zone serial number",
+      "An automatic increase in every application’s retransmission limit",
     ],
-    "answer": 2,
+    "answer": 1,
     "explanation": "An MTU mismatch affects packet sizes and can break path-MTU discovery."
   },
   {
     "id": "EPSO-ICT1-044",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "hard",
+    "level": "easy",
     "question": "Which feature limits broadcast traffic between distinct enterprise subnets?",
     "options": [
-      "More DHCP leases",
       "Layer 3 routing boundary",
-      "Increasing switch port speed",
-      "Longer Ethernet cables"
+      "A VLAN trunk that bridges all subnets at Layer 2",
+      "A DHCP relay with unchanged broadcast domains",
+      "A DNS forwarding rule between the subnets",
     ],
-    "answer": 1,
+    "answer": 0,
     "explanation": "Routers separate broadcast domains; switches normally forward broadcasts within a VLAN."
   },
   {
     "id": "EPSO-ICT1-045",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "hard",
+    "level": "medium",
     "question": "A container image works locally but fails in production due to a missing package. What best improves repeatability?",
     "options": [
       "Using a mutable latest tag without pinning",
@@ -693,7 +693,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-046",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "medium",
+    "level": "easy",
     "question": "What is the primary function of a Kubernetes readiness probe?",
     "options": [
       "Assign IP subnets",
@@ -708,22 +708,22 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-047",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "hard",
+    "level": "medium",
     "question": "Which topology minimises east-west data-centre network oversubscription at scale?",
     "options": [
+      "Independent racks connected only through one shared narrow uplink",
       "A properly provisioned leaf-spine fabric",
-      "A single unmanaged switch",
-      "An isolated hub per server",
-      "A daisy chain of access switches"
+      "A deliberately oversubscribed aggregation tier with one uplink per rack",
+      "A serial chain of top-of-rack switches for all east-west traffic",
     ],
-    "answer": 0,
+    "answer": 1,
     "explanation": "Leaf-spine topologies provide multiple equal-cost paths and predictable bisection bandwidth."
   },
   {
     "id": "EPSO-ICT1-048",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "hard",
+    "level": "easy",
     "question": "Which routing technique allows multiple equal-cost paths to be used?",
     "options": [
       "ECMP",
@@ -741,42 +741,42 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "A storage snapshot is taken every 15 minutes. Why can it still be inadequate as the sole recovery control?",
     "options": [
+      "Every snapshot is always a full offline copy",
+      "Snapshots automatically include a tested application recovery process",
+      "Taking snapshots prevents all changes to the source volume",
       "Snapshots may share the same failure or compromise domain as the source",
-      "Snapshots are always immutable offline copies",
-      "Snapshots guarantee recovery after site destruction",
-      "Snapshots prevent all application-level corruption"
     ],
-    "answer": 0,
+    "answer": 3,
     "explanation": "Snapshots often depend on the original storage platform and require separate protected backup copies."
   },
   {
     "id": "EPSO-ICT1-050",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "hard",
+    "level": "medium",
     "question": "Which measurement best indicates storage performance under concurrent random I/O?",
     "options": [
-      "CPU clock speed only",
-      "DNS TTL",
-      "Screen refresh rate",
-      "IOPS and latency"
+      "The storage interface’s advertised line rate alone",
+      "Total provisioned capacity without workload measurements",
+      "IOPS and latency",
+      "Sequential throughput from one stream without latency information",
     ],
-    "answer": 3,
+    "answer": 2,
     "explanation": "Random storage workloads are characterised by completed I/O operations and response latency."
   },
   {
     "id": "EPSO-ICT1-051",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "hard",
+    "level": "medium",
     "question": "For a database with strict transactional consistency, which storage consideration matters most?",
     "options": [
-      "Client browser version alone",
-      "Monitor colour calibration",
-      "Number of DNS aliases",
-      "Durable writes and predictable write latency"
+      "Only the number of available volume mount points",
+      "Durable writes and predictable write latency",
+      "Only the size of the array’s read cache",
+      "Only peak sequential throughput from a read-only benchmark",
     ],
-    "answer": 3,
+    "answer": 1,
     "explanation": "Transaction durability and latency affect correctness and committed-write performance."
   },
   {
@@ -798,7 +798,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-053",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "hard",
+    "level": "medium",
     "question": "Which protection is most relevant for privileged hypervisor access?",
     "options": [
       "MFA and role-based administrative separation",
@@ -813,15 +813,15 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-054",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "hard",
+    "level": "easy",
     "question": "What is the main purpose of a reverse proxy in front of web applications?",
     "options": [
+      "Expose every backend directly without mediating requests",
+      "Synchronise application data between database replicas",
       "Terminate and forward incoming client requests to backends",
-      "Assign physical switch MAC addresses",
-      "Replace the hypervisor scheduler",
-      "Perform RAID parity rebuilds"
+      "Select Internet routes between independent autonomous systems",
     ],
-    "answer": 0,
+    "answer": 2,
     "explanation": "Reverse proxies route inbound application traffic and may terminate TLS or enforce policies."
   },
   {
@@ -831,40 +831,40 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "An application uses long-lived WebSocket connections. Which load-balancer feature matters?",
     "options": [
-      "Disk sector size",
-      "ICMP redirect handling",
-      "Short DNS TTL alone",
-      "Support for connection upgrades and appropriate idle timeouts"
+      "A timeout shorter than the application’s expected idle connection period",
+      "Support for connection upgrades and appropriate idle timeouts",
+      "Only the maximum request-body size for ordinary short HTTP requests",
+      "Only a shorter DNS cache lifetime with no connection support",
     ],
-    "answer": 3,
+    "answer": 1,
     "explanation": "WebSocket upgrades and connection timeout behaviour must be supported for persistent connections."
   },
   {
     "id": "EPSO-ICT1-056",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "hard",
-    "question": "Which metric most directly reveals VM memory pressure on the hypervisor?",
+    "level": "medium",
+    "question": "A virtualisation host shows sustained swapping while its workloads run. What is the most useful next diagnostic step?",
     "options": [
-      "Number of browser tabs",
-      "DNS query type",
-      "Ballooning or swapping activity",
-      "The VM display resolution"
+      "Compare available host memory, swap-in/out activity and VM memory allocations",
+      "Increase every VM’s vCPU count without inspecting host memory",
+      "Use guest uptime alone to rule out all host resource pressure",
+      "Measure only storage capacity without inspecting memory or swap activity",
     ],
-    "answer": 2,
-    "explanation": "Hypervisor ballooning and swapping indicate memory reclamation under resource pressure."
+    "answer": 0,
+    "explanation": "Investigate host memory and swap behaviour together with the allocation and workload of its VMs. Swapping is a diagnostic signal; it is not by itself proof that a particular guest needs more memory."
   },
   {
     "id": "EPSO-ICT1-057",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "hard",
+    "level": "medium",
     "question": "Which design improves resilience of an application's database connections during primary failover?",
     "options": [
-      "Manual hostname editing by users",
-      "One permanent TCP session without retries",
-      "Hard-coded primary node IP only",
-      "A stable service endpoint with reconnection and retry logic"
+      "Use a permanent connection with no reconnection handling",
+      "Hard-code the current primary’s address and disable DNS updates",
+      "Retry every failed write indefinitely without considering duplicate effects",
+      "A stable service endpoint with reconnection and retry logic",
     ],
     "answer": 3,
     "explanation": "A stable endpoint plus reconnection behaviour enables recovery when database leadership changes."
@@ -888,43 +888,43 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-059",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "hard",
-    "question": "What distinguishes a known error from a generic problem record?",
+    "level": "easy",
+    "question": "A workaround restores a repeatedly failing service, but the cause has not been removed. What is the correct conclusion?",
     "options": [
-      "Its cause has been analysed and a workaround may be documented",
-      "It is always a closed service request",
-      "It has no relation to incidents",
-      "It refers only to software licences"
+      "Every affected configuration item must be decommissioned",
+      "The incident may be resolved while the underlying problem still needs investigation",
+      "The problem is permanently resolved as soon as service returns",
+      "The workaround eliminates the need to track recurring incidents",
     ],
-    "answer": 0,
-    "explanation": "Known errors are problems analysed but not necessarily permanently resolved."
+    "answer": 1,
+    "explanation": "Restoring service and eliminating an underlying problem are different outcomes. Record the workaround, link recurring incidents and continue problem investigation; a workaround is not proof of a permanent fix."
   },
   {
     "id": "EPSO-ICT1-060",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "hard",
+    "level": "easy",
     "question": "Which metric describes the average elapsed time to restore service after incidents?",
     "options": [
-      "Mean time between changes",
       "Mean time to restore service",
-      "Average purchase order value",
-      "Number of configuration items"
+      "Mean time between failures of the same service",
+      "Mean time to detect an incident before restoration starts",
+      "Average elapsed time to approve a normal change",
     ],
-    "answer": 1,
+    "answer": 0,
     "explanation": "MTTR measures average restoration duration across relevant incidents."
   },
   {
     "id": "EPSO-ICT1-061",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "medium",
+    "level": "easy",
     "question": "Which metric is most appropriate for monitoring service desk answer timeliness?",
     "options": [
-      "Average server rack height",
-      "Count of unused licences",
-      "Total number of catalog items",
-      "Percentage of contacts answered within a defined target"
+      "The total number of tickets closed regardless of age",
+      "The number of knowledge articles created per month",
+      "The average CPU utilisation of the ticketing server",
+      "Percentage of contacts answered within a defined target",
     ],
     "answer": 3,
     "explanation": "Service desk responsiveness can be tracked against a defined response-time target."
@@ -933,7 +933,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-062",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "hard",
+    "level": "medium",
     "question": "A service request is mistakenly logged as an incident. What is the best initial correction?",
     "options": [
       "Mark it as a major incident",
@@ -963,13 +963,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-064",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "medium",
+    "level": "easy",
     "question": "A CMDB lists hundreds of retired servers as active. Which quality dimension is most directly affected?",
     "options": [
       "Accuracy",
-      "Availability target",
-      "Network throughput",
-      "Encryption strength"
+      "The number of approved maintenance windows",
+      "The confidentiality classification of support tickets",
+      "The average duration of an application deployment",
     ],
     "answer": 0,
     "explanation": "Incorrect operational states reduce CMDB accuracy."
@@ -978,13 +978,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-065",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "hard",
+    "level": "medium",
     "question": "A monitoring alert is triggered repeatedly by the same normal scheduled job. What should be improved?",
     "options": [
-      "Network cable colour",
-      "Service catalogue descriptions only",
-      "Change freeze duration alone",
-      "Event rules and alert thresholds"
+      "The incident priority matrix without changing the alert",
+      "The storage retention period of unrelated audit logs",
+      "The number of people authorised to approve purchases",
+      "Event rules and alert thresholds",
     ],
     "answer": 3,
     "explanation": "Event management should reduce false-positive alert noise."
@@ -993,13 +993,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-066",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "hard",
+    "level": "medium",
     "question": "Which measure best demonstrates that a change had the intended outcome?",
     "options": [
-      "Ticket title length",
-      "Number of approvers without results",
+      "The number of people invited to the change meeting",
+      "The age of the change ticket without checking results",
       "Post-implementation review against success criteria",
-      "Volume of approval emails"
+      "The number of approval messages generated",
     ],
     "answer": 2,
     "explanation": "A review compares outcomes, incidents and expected benefits with defined criteria."
@@ -1008,13 +1008,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-067",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "medium",
+    "level": "easy",
     "question": "What is the purpose of a change schedule?",
     "options": [
-      "Replace all service SLAs",
+      "Define business continuity objectives independently of deployments",
       "Show planned changes and potential conflicts",
-      "List only unresolved incidents",
-      "Archive user training records"
+      "Record only emergency changes after implementation",
+      "Replace the approval and impact assessment for every change",
     ],
     "answer": 1,
     "explanation": "Change schedules coordinate timing and expose collision risk."
@@ -1056,10 +1056,10 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "Which indicator is most relevant for measuring incident resolution effectiveness?",
     "options": [
-      "Office supply spend",
-      "Percentage of hardware painted black",
+      "The amount of monitoring data retained on disk",
+      "The number of software releases made by the development team",
       "Incidents resolved within agreed target times",
-      "Number of meeting rooms"
+      "The total number of tickets closed without their priorities",
     ],
     "answer": 2,
     "explanation": "Target-based resolution performance measures service fulfilment outcomes."
@@ -1068,31 +1068,31 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-071",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "hard",
+    "level": "medium",
     "question": "An external supplier causes an SLA breach. Which agreement sets that supplier's contractual service commitments?",
     "options": [
-      "Service catalogue entry",
-      "Architectural diagram alone",
-      "Underpinning contract",
-      "Personal development plan"
+      "A configuration baseline approved by the architecture team",
+      "The supplier contract and its agreed service levels",
+      "An operational level agreement between internal teams",
+      "An internal incident priority matrix",
     ],
-    "answer": 2,
-    "explanation": "Underpinning supplier contracts support commitments made in customer-facing SLAs."
+    "answer": 1,
+    "explanation": "External supplier commitments are set by the supplier contract, including agreed service levels and reporting or escalation duties. Internal operational agreements do not replace those external contractual obligations."
   },
   {
     "id": "EPSO-ICT1-072",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "hard",
-    "question": "Which agreement defines expectations between internal teams supporting a service?",
+    "level": "easy",
+    "question": "A service depends on an internal database team restoring access within 30 minutes. Where should that commitment be recorded?",
     "options": [
-      "End-user licence agreement",
-      "Non-disclosure agreement only",
-      "Operational level agreement",
-      "Employee work contract"
+      "In an internal operational agreement covering targets, handoffs and escalation",
+      "Only in a software licence assigned to the end user",
+      "Only in a supplier brochure without internal responsibilities",
+      "Only in an asset list that contains no support targets",
     ],
-    "answer": 2,
-    "explanation": "OLAs set operational commitments between internal service provider teams."
+    "answer": 0,
+    "explanation": "Record internal responsibilities, service targets and escalation so the teams can support the end-to-end service commitment."
   },
   {
     "id": "EPSO-ICT1-073",
@@ -1113,7 +1113,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-074",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "hard",
+    "level": "medium",
     "question": "What should a post-incident review prioritise?",
     "options": [
       "Root causes, contributing factors and actions to prevent recurrence",
@@ -1128,7 +1128,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-075",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "hard",
+    "level": "easy",
     "question": "Which practice ensures users can find accurate instructions for recurring support issues?",
     "options": [
       "Knowledge management",
@@ -1158,7 +1158,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-077",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "hard",
+    "level": "easy",
     "question": "What is the distinction between a service level indicator and an objective?",
     "options": [
       "The indicator is a measure; the objective is its target value",
@@ -1173,7 +1173,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-078",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "hard",
+    "level": "medium",
     "question": "A service reports 100% uptime but users cannot log in. What is wrong with the measurement?",
     "options": [
       "User authentication is unrelated to service availability",
@@ -1191,10 +1191,10 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "Which review best identifies recurring demand suitable for self-service?",
     "options": [
-      "Increase the number of ticket categories arbitrarily",
+      "Increase the severity of every service request",
       "Analyse high-volume repeat service desk contacts",
-      "Review badge colours",
-      "Inspect only supplier invoices"
+      "Review only the largest supplier invoices",
+      "Count all open project risks without classifying requests",
     ],
     "answer": 1,
     "explanation": "Frequent repeat requests can reveal opportunities for automation and self-service."
@@ -1203,7 +1203,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-080",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "hard",
+    "level": "medium",
     "question": "When a critical service changes ownership, what must be updated?",
     "options": [
       "Only the display name of the service",
@@ -1218,15 +1218,15 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-081",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "hard",
+    "level": "easy",
     "question": "What is the main purpose of continual improvement registers?",
     "options": [
+      "Store only incident records without improvement ownership",
+      "Replace all service performance measures with a project budget",
+      "Automatically approve every proposed change",
       "Record opportunities, priorities, owners and progress",
-      "Replace the incident database",
-      "Store only vendor marketing slides",
-      "Automatically approve all changes"
     ],
-    "answer": 0,
+    "answer": 3,
     "explanation": "Improvement registers make proposed and ongoing improvements traceable."
   },
   {
@@ -1248,13 +1248,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-083",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "hard",
+    "level": "medium",
     "question": "An incident affects 2,000 users but has a low ticket count. What should determine its priority?",
     "options": [
-      "Length of the incident description",
+      "The age of the oldest server involved, regardless of impact",
       "Impact and urgency under the agreed priority matrix",
-      "Whether the requester is a developer",
-      "Number of tickets alone"
+      "Ticket count alone, regardless of business effect",
+      "The seniority of the person who reported the incident",
     ],
     "answer": 1,
     "explanation": "Priority should follow defined impact and urgency criteria rather than raw ticket volume."
@@ -1263,13 +1263,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-084",
     "category": "epso_ad7_infrastructure",
     "topic": "IT service management",
-    "level": "hard",
+    "level": "easy",
     "question": "Which record should link a recurring incident pattern to investigation of its root cause?",
     "options": [
       "Problem record",
-      "User survey response only",
-      "Service request only",
-      "Purchase order"
+      "A change record that contains no incident links",
+      "A software licence entitlement record",
+      "A service request catalogue entry with no investigation",
     ],
     "answer": 0,
     "explanation": "Problem records track underlying causes and related incidents."
@@ -1296,12 +1296,12 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "easy",
     "question": "A pipeline builds an artefact twice from identical inputs but produces different binaries. What property is missing?",
     "options": [
-      "Idempotent deployment",
-      "Backward-compatible releases",
-      "Deterministic test ordering",
-      "Reproducible builds"
+      "Deployment frequency during working hours",
+      "The number of package repositories configured",
+      "Reproducible builds",
+      "Code coverage of the automated unit tests",
     ],
-    "answer": 3,
+    "answer": 2,
     "explanation": "Reproducibility aims to generate identical build outputs from the same inputs."
   },
   {
@@ -1311,12 +1311,12 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "easy",
     "question": "What is a software bill of materials primarily used for?",
     "options": [
-      "Recording deployed configuration items and their service relationships",
-      "Describing service request and support commitments",
-      "Scheduling release approval and deployment windows",
-      "Inventorying software components and dependencies"
+      "Replacing dependency vulnerability analysis with a version number",
+      "Inventorying software components and dependencies",
+      "Guaranteeing that all listed components are vulnerability-free",
+      "Recording only the servers where software is deployed",
     ],
-    "answer": 3,
+    "answer": 1,
     "explanation": "An SBOM identifies included components for vulnerability and supply-chain management."
   },
   {
@@ -1327,9 +1327,9 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "question": "Why should CI runners avoid long-lived production credentials?",
     "options": [
       "Credential compromise could grant persistent production access",
-      "It removes the need for unit tests",
-      "It improves DNS resolution",
-      "It increases compilation speed"
+      "Because short-lived credentials eliminate the need for authorisation",
+      "Because CI runners cannot execute code supplied in a pull request",
+      "Because long-lived credentials guarantee reproducible builds",
     ],
     "answer": 0,
     "explanation": "Short-lived scoped credentials reduce the blast radius of a compromised runner."
@@ -1338,7 +1338,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-089",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "hard",
+    "level": "medium",
     "question": "What technique checks a container image against a trusted publisher?",
     "options": [
       "Comparing an image checksum obtained from the same unauthenticated download",
@@ -1383,31 +1383,31 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-092",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "hard",
+    "level": "medium",
     "question": "A developer commits a cloud access key to a repository. What should happen first?",
     "options": [
-      "Increase the key expiration date",
       "Revoke or rotate the exposed key and assess use",
-      "Hide the key in a later commit only",
-      "Ignore it if the repository is private"
+      "Delete the current line but leave the credential valid",
+      "Rewrite repository history first while keeping the key active",
+      "Wait for the next planned password rotation before acting",
     ],
-    "answer": 1,
+    "answer": 0,
     "explanation": "Exposed credentials must be invalidated because repository history may preserve them."
   },
   {
     "id": "EPSO-ICT1-093",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "hard",
-    "question": "A release introduces elevated error rates after deployment. Which strategy can automatically stop rollout?",
+    "level": "medium",
+    "question": "Which release approach can detect elevated application error rates in a small production cohort and stop promotion?",
     "options": [
       "A rolling deployment that checks only process startup",
-      "Manual approval after deploying to every production instance",
-      "A scheduled rollout without application-level health gates",
-      "Canary deployment with health-based rollback"
+      "A blue-green switch with no post-switch health evaluation",
+      "A deployment timer that promotes regardless of service metrics",
+      "A canary rollout with application-level health analysis and configured abort or rollback",
     ],
     "answer": 3,
-    "explanation": "Canary releases expose a small population first and use signals to halt unhealthy changes."
+    "explanation": "A canary limits initial exposure. Automated stopping or rollback requires configured health analysis and failure criteria; it is not guaranteed merely by calling a rollout canary."
   },
   {
     "id": "EPSO-ICT1-094",
@@ -1428,13 +1428,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-095",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "hard",
+    "level": "medium",
     "question": "Why should database schema migrations be planned separately from application rollbacks?",
     "options": [
-      "Schemas do not affect applications",
+      "Testing the old application against the new schema is unnecessary",
       "Schema changes may not be backward compatible",
-      "Rollback can always reverse data loss",
-      "Databases never change during deployment"
+      "Application rollback always restores every previous data format",
+      "All schema migrations are automatically reversed by deployment tools",
     ],
     "answer": 1,
     "explanation": "Irreversible schema/data transformations may prevent safe application rollback."
@@ -1443,15 +1443,15 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-096",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "hard",
+    "level": "easy",
     "question": "What does a policy-as-code tool primarily enforce?",
     "options": [
-      "Payroll tax deductions",
-      "Physical data-centre floor plans",
-      "User interface colour choices",
-      "Machine-checkable compliance rules in automated workflows"
+      "Machine-checkable compliance rules in automated workflows",
+      "Store policy documents without evaluating them during deployment",
+      "Apply the desired resource configuration without checking its rules",
+      "Replace identity permissions with a pipeline success indicator",
     ],
-    "answer": 3,
+    "answer": 0,
     "explanation": "Policy-as-code evaluates infrastructure and deployment changes against encoded requirements."
   },
   {
@@ -1473,28 +1473,28 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-098",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "hard",
+    "level": "easy",
     "question": "Which kind of automated test verifies interactions between two deployed services?",
     "options": [
-      "CPU microbenchmark only",
-      "Licence count report",
-      "Code formatting check",
-      "Integration test"
+      "A formatting check on the service source files",
+      "A benchmark of one isolated arithmetic function",
+      "Integration test",
+      "A unit test with every external dependency replaced by a mock",
     ],
-    "answer": 3,
+    "answer": 2,
     "explanation": "Integration tests assess interfaces and behaviour across components."
   },
   {
     "id": "EPSO-ICT1-099",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "hard",
+    "level": "medium",
     "question": "A pipeline deployment stage passes on a developer laptop but fails in CI. Which improvement is most useful?",
     "options": [
-      "Skip tests on CI",
+      "Rebuild production manually using unrecorded dependency versions",
       "Standardise toolchain versions and build environment",
-      "Disable failure reporting",
-      "Deploy manually without logs"
+      "Disable CI validation because local execution succeeded",
+      "Allow each runner to choose its toolchain version independently",
     ],
     "answer": 1,
     "explanation": "Consistent environments reduce configuration drift between developer and CI execution."
@@ -1506,55 +1506,55 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "What is the main reason to isolate untrusted pull-request builds?",
     "options": [
-      "Speed up all builds automatically",
       "Prevent execution of attacker-controlled code with privileged secrets",
-      "Avoid keeping audit logs",
-      "Reduce source code size"
+      "Force every pull-request test to use production administrator credentials",
+      "Trust code automatically whenever its repository is public",
+      "Rely on log redaction as the only barrier to malicious code",
     ],
-    "answer": 1,
+    "answer": 0,
     "explanation": "Untrusted contributions must not inherit powerful credentials or access to deployment systems."
   },
   {
     "id": "EPSO-ICT1-101",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "hard",
+    "level": "medium",
     "question": "Why is a deployment artefact promoted unchanged across environments?",
     "options": [
-      "To avoid storing checksums",
+      "Allow every environment to rebuild independently from changing dependencies",
+      "Avoid signing or identifying the artefact after the first test",
+      "Guarantee that environment-specific configuration cannot fail",
       "To preserve tested artefact identity",
-      "To make vulnerability results irrelevant",
-      "To force separate source compilation in production"
     ],
-    "answer": 1,
+    "answer": 3,
     "explanation": "Promoting the same artefact ensures production receives what passed prior checks."
   },
   {
     "id": "EPSO-ICT1-102",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "hard",
+    "level": "medium",
     "question": "Which test deliberately injects failures to assess resilience?",
     "options": [
-      "User acceptance questionnaire",
-      "Static linting",
-      "Snapshot retention test only",
-      "Chaos engineering experiment"
+      "A user acceptance review of the requirements",
+      "A code coverage report from unit tests only",
+      "Chaos engineering experiment",
+      "A static analysis scan without running the service",
     ],
-    "answer": 3,
+    "answer": 2,
     "explanation": "Controlled fault injection reveals system behaviour under failure conditions."
   },
   {
     "id": "EPSO-ICT1-103",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "medium",
+    "level": "easy",
     "question": "What does a CI quality gate do?",
     "options": [
-      "Replace disaster recovery",
+      "Approve changes without any defined acceptance conditions",
       "Block progression when defined checks fail",
-      "Guarantee business approval for all projects",
-      "Assign physical rack units"
+      "Guarantee that a release has no undiscovered vulnerabilities",
+      "Replace operational monitoring after the release",
     ],
     "answer": 1,
     "explanation": "Quality gates enforce conditions such as tests, coverage or security findings before promotion."
@@ -1563,7 +1563,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-104",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "hard",
+    "level": "medium",
     "question": "What is the safest handling of secrets in IaC repositories?",
     "options": [
       "Plaintext passwords committed with source",
@@ -1578,28 +1578,28 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-105",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "hard",
+    "level": "easy",
     "question": "Why use a deployment lock when two automated pipelines target the same environment?",
     "options": [
-      "Increase disk redundancy",
+      "Prevent infrastructure changes by every other team permanently",
+      "Increase the service’s replication factor automatically",
+      "Guarantee that every concurrent operation is idempotent",
       "Prevent conflicting concurrent modifications",
-      "Improve network throughput",
-      "Disable change records"
     ],
-    "answer": 1,
+    "answer": 3,
     "explanation": "Deployment locks serialise changes to shared environments."
   },
   {
     "id": "EPSO-ICT1-106",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "medium",
+    "level": "easy",
     "question": "What is a drift-detection job for?",
     "options": [
-      "Detect changes in user screen brightness",
-      "Replace security incident reporting",
+      "Measure application response times without inspecting configuration",
+      "Copy the live configuration over declared intent without review",
       "Identify deviations between declared and running infrastructure",
-      "Measure employee attendance"
+      "Check only whether the last pipeline exited successfully",
     ],
     "answer": 2,
     "explanation": "Drift detection compares desired configuration with deployed resources."
@@ -1608,7 +1608,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-107",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "hard",
+    "level": "medium",
     "question": "Which method minimises configuration errors across many servers?",
     "options": [
       "Manual edits without recording",
@@ -1623,28 +1623,28 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-108",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "hard",
+    "level": "medium",
     "question": "What is the main security concern of installing dependencies without pinned versions?",
     "options": [
-      "Containers cannot connect to networks",
-      "Application logs become encrypted",
-      "Certificates automatically expire",
-      "Unexpected or malicious upstream changes may be introduced"
+      "Unexpected or malicious upstream changes may be introduced",
+      "Pinned versions guarantee that components have no vulnerabilities",
+      "Only the deployment frequency is affected",
+      "Dependency integrity is guaranteed by a successful build",
     ],
-    "answer": 3,
+    "answer": 0,
     "explanation": "Lockfiles and pinning improve repeatability and constrain supply-chain changes."
   },
   {
     "id": "EPSO-ICT1-109",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "medium",
+    "level": "easy",
     "question": "Which practice gives traceability from source commit to running production release?",
     "options": [
-      "Unversioned artefact overwrites",
-      "Shared anonymous access",
-      "Disabling pipeline logging",
-      "Release provenance and deployment metadata"
+      "Overwrite every released artefact under the same unversioned name",
+      "Track only the current production hostname",
+      "Record a release date without linking source or artefact identity",
+      "Release provenance and deployment metadata",
     ],
     "answer": 3,
     "explanation": "Provenance connects source, build, artefact and deployed environment."
@@ -1653,13 +1653,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-110",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "hard",
+    "level": "medium",
     "question": "An automation job repeats after a transient API timeout. Which design reduces duplicate actions?",
     "options": [
-      "Unbounded immediate retries without identifiers",
-      "Replacing HTTPS with HTTP",
+      "Treat every timeout as proof that the remote action did not happen",
+      "Start a separate non-idempotent action on each retry",
       "Idempotent operation with retry backoff",
-      "Disabling API responses"
+      "Retry indefinitely without a request identifier or delay",
     ],
     "answer": 2,
     "explanation": "Idempotency and backoff limit duplicate side effects and provider overload."
@@ -1668,7 +1668,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-111",
     "category": "epso_ad7_infrastructure",
     "topic": "DevSecOps and automation",
-    "level": "hard",
+    "level": "medium",
     "question": "What is the primary reason for peer review of infrastructure changes?",
     "options": [
       "Detect errors and validate intent before merge",
@@ -1698,7 +1698,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-113",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "hard",
+    "level": "easy",
     "question": "Which cryptographic mechanism best protects data in transit against eavesdropping?",
     "options": [
       "Encrypting database volumes at rest",
@@ -1713,7 +1713,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-114",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "hard",
+    "level": "medium",
     "question": "A certificate is valid by date but issued by an untrusted CA. What should a client do?",
     "options": [
       "Reject the untrusted certificate chain",
@@ -1743,22 +1743,22 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-116",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "hard",
+    "level": "easy",
     "question": "What does a SIEM principally provide?",
     "options": [
-      "Automatic physical repairs of storage",
       "Centralised security event collection, correlation and investigation",
-      "Replacement of all firewalls",
-      "Guaranteed removal of malware"
+      "Guarantee that every collected event is a confirmed intrusion",
+      "Replace endpoint protection and all network controls",
+      "Perform backup restoration for failed business services",
     ],
-    "answer": 1,
+    "answer": 0,
     "explanation": "SIEM supports detection and investigation by correlating security telemetry."
   },
   {
     "id": "EPSO-ICT1-117",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "hard",
+    "level": "medium",
     "question": "Which practice reduces the time attackers have to exploit known vulnerabilities?",
     "options": [
       "Risk-based vulnerability remediation with deadlines",
@@ -1773,13 +1773,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-118",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "medium",
+    "level": "easy",
     "question": "What differentiates an authenticated vulnerability scan?",
     "options": [
-      "It cannot evaluate missing patches",
-      "It requires no permission",
+      "It is limited to looking up the target’s public DNS records",
+      "It guarantees that no vulnerability can be missed",
       "It uses authorised credentials to inspect internal system state",
-      "It always scans only public DNS"
+      "It means no authorisation from the system owner is required",
     ],
     "answer": 2,
     "explanation": "Authenticated scans can inspect installed packages and configurations more deeply."
@@ -1788,7 +1788,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-119",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "hard",
+    "level": "medium",
     "question": "What does a security incident playbook provide?",
     "options": [
       "Defined response steps, roles and decision points",
@@ -1803,13 +1803,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-120",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "hard",
+    "level": "medium",
     "question": "Why maintain synchronised timestamps in security logs?",
     "options": [
       "Enable reliable cross-system correlation and timelines",
-      "Replace audit trails",
-      "Reduce the number of security events",
-      "Prevent malware execution by itself"
+      "Make every source log use an unrelated local time with no offset",
+      "Replace evidence retention with a daily event count",
+      "Prevent all malicious activity merely by setting the correct time",
     ],
     "answer": 0,
     "explanation": "Consistent timestamps are essential for reconstructing incident sequences."
@@ -1833,13 +1833,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-122",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "hard",
+    "level": "medium",
     "question": "Which measure helps contain a compromised privileged account?",
     "options": [
-      "Keep active tokens indefinitely",
-      "Increase account privileges",
+      "Increase the account’s privileges until investigation is complete",
+      "Delete the account’s audit trail before containing access",
       "Rapid credential revocation and session termination",
-      "Disable all MFA controls"
+      "Rotate a password but deliberately preserve every active session",
     ],
     "answer": 2,
     "explanation": "Revoking credentials and sessions limits continued attacker access."
@@ -1848,7 +1848,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-123",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "hard",
+    "level": "medium",
     "question": "Which backup test best validates actual disaster recovery?",
     "options": [
       "Validate checksums of backup files without starting the service",
@@ -1867,9 +1867,9 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "question": "A disaster recovery plan has never been exercised. What is the chief risk?",
     "options": [
       "Assumptions about recovery timing and dependencies remain unverified",
-      "Recovery will always be faster",
-      "SLA penalties are impossible",
-      "Data integrity is automatically guaranteed"
+      "A written plan guarantees that all recovery targets will be met",
+      "Backup-job success proves that application dependencies can recover",
+      "Supplier assurances eliminate the need to test recovery assumptions",
     ],
     "answer": 0,
     "explanation": "Exercises reveal procedural and technical gaps in documented recovery assumptions."
@@ -1878,7 +1878,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-125",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "hard",
+    "level": "medium",
     "question": "Which method best protects encryption keys used for sensitive systems?",
     "options": [
       "Managed key storage with controlled access and rotation",
@@ -1893,13 +1893,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-126",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "hard",
+    "level": "easy",
     "question": "What is the key distinction between an IDS and an IPS?",
     "options": [
-      "Both are backup systems",
-      "An IPS operates only on physical disk drives",
+      "An IPS always encrypts traffic while an IDS only decrypts it",
+      "An IDS replaces the need for endpoint detection",
       "An IPS can block matching traffic inline, while an IDS primarily detects and alerts",
-      "An IDS always encrypts traffic"
+      "An IDS necessarily blocks every packet before it reaches the target",
     ],
     "answer": 2,
     "explanation": "Intrusion prevention may actively enforce blocking decisions; detection primarily observes."
@@ -1908,37 +1908,37 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-127",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "medium",
+    "level": "easy",
     "question": "Which control is most appropriate for protecting a public API from excessive requests?",
     "options": [
-      "Changing DNS record names",
-      "Increasing database backup frequency",
+      "Change the DNS name without limiting requests to the endpoint",
       "Rate limiting and abuse controls",
-      "Disabling TLS"
+      "Increase the backup retention period of the API database",
+      "Disable authentication to reduce request processing overhead",
     ],
-    "answer": 2,
+    "answer": 1,
     "explanation": "Rate limits constrain abusive request volumes and protect service capacity."
   },
   {
     "id": "EPSO-ICT1-128",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "hard",
+    "level": "easy",
     "question": "What is the main function of a web application firewall?",
     "options": [
-      "Replace secure application coding",
-      "Prevent all credential theft automatically",
-      "Provide hardware RAID",
-      "Filter suspicious application-layer HTTP traffic"
+      "Filter suspicious application-layer HTTP traffic",
+      "Guarantee that all application business logic is correct",
+      "Replace patching and authentication for the application",
+      "Encrypt every stored database record without application changes",
     ],
-    "answer": 3,
+    "answer": 0,
     "explanation": "WAFs inspect application traffic against defined attack patterns and policies."
   },
   {
     "id": "EPSO-ICT1-129",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "hard",
+    "level": "medium",
     "question": "A supplier requires access to a production environment for two days. What is the best access model?",
     "options": [
       "Time-bound least-privilege access with logging",
@@ -1953,7 +1953,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-130",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "medium",
+    "level": "easy",
     "question": "Which exercise is primarily used to discuss incident response roles without touching production?",
     "options": [
       "Unannounced destructive failover",
@@ -1968,7 +1968,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-131",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "hard",
+    "level": "easy",
     "question": "What is the difference between a business continuity plan and a DR plan?",
     "options": [
       "Both only define firewall rules",
@@ -1983,13 +1983,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-132",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "hard",
+    "level": "easy",
     "question": "Why classify information before defining controls?",
     "options": [
       "Protection can be matched to sensitivity and impact",
-      "Classification eliminates the need for access reviews",
-      "It removes all compliance obligations",
-      "Every data set then becomes public"
+      "Make all information public so every team applies the same controls",
+      "Eliminate the need to review access to sensitive information",
+      "Use identical retention and access rules for every information type",
     ],
     "answer": 0,
     "explanation": "Classification supports risk-proportionate handling and access requirements."
@@ -2013,30 +2013,30 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-134",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "hard",
+    "level": "medium",
     "question": "Which control helps prevent accidental disclosure of confidential files by email?",
     "options": [
+      "Rely only on encrypting the mail server’s disks",
+      "Disable attachment inspection to avoid false positives",
       "Data loss prevention rules with classification-aware checks",
-      "Increasing mailbox quotas",
-      "Disabling attachment scanning",
-      "Making all files public"
+      "Increase mailbox storage quotas without inspecting outgoing content",
     ],
-    "answer": 0,
+    "answer": 2,
     "explanation": "DLP checks outbound data against defined protection policies."
   },
   {
     "id": "EPSO-ICT1-135",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "hard",
+    "level": "medium",
     "question": "What is the security risk of an overly broad wildcard firewall rule?",
     "options": [
+      "It removes the need to inspect allowed application traffic",
       "Unnecessary services become reachable across trust boundaries",
-      "The hypervisor stops scheduling CPUs",
-      "DNS resolution becomes slower by definition",
-      "Backup retention becomes shorter"
+      "It automatically reduces the privileges held by every user",
+      "It prevents every external denial-of-service attack",
     ],
-    "answer": 0,
+    "answer": 1,
     "explanation": "Overly broad rules increase exposure and potential lateral movement."
   },
   {
@@ -2044,29 +2044,29 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
     "level": "medium",
-    "question": "What should an incident responder prioritise when collecting volatile evidence?",
+    "question": "Which response action preserves endpoint investigation data for analysis before rebuilding?",
     "options": [
-      "Delete logs to save disk space",
-      "Reboot all machines immediately without recording state",
-      "Start rebuilding before any evidence is captured",
-      "Preserve relevant memory and live-state information before it disappears"
+      "Collect an investigation package and preserve the evidence with appropriate handling",
+      "Rebuild the device first and collect only the newly created logs",
+      "Clear the device’s security logs before starting the investigation",
+      "Delete the incident record once the endpoint is reinstalled",
     ],
-    "answer": 3,
-    "explanation": "Volatile evidence can be lost on shutdown or reboot and requires controlled collection."
+    "answer": 0,
+    "explanation": "Collect and preserve relevant investigation data before destructive remediation removes it. Record handling and access, and follow the incident response plan; rebuilding a device is not a substitute for preserving evidence."
   },
   {
     "id": "EPSO-ICT1-137",
     "category": "epso_ad7_infrastructure",
     "topic": "Information security and continuity",
-    "level": "hard",
+    "level": "medium",
     "question": "A production system is infected but supplies a critical public service. Which decision should be based on risk assessment?",
     "options": [
+      "Always disconnect every production component without considering consequences",
+      "Keep the compromised system fully connected until business hours resume",
+      "Rebuild the system before assessing evidence or service dependencies",
       "Containment strategy balancing spread risk against service impact",
-      "Always erase every disk immediately",
-      "Always leave it connected indefinitely",
-      "Never inform incident coordination"
     ],
-    "answer": 0,
+    "answer": 3,
     "explanation": "Containment must consider threat propagation, operational impact and recovery options."
   },
   {
@@ -2103,30 +2103,30 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-140",
     "category": "epso_ad7_infrastructure",
     "topic": "ICT infrastructure lifecycle",
-    "level": "hard",
+    "level": "medium",
     "question": "What should a hardware refresh business case consider beyond purchase price?",
     "options": [
-      "Only the initial supplier discount",
-      "The model number alone",
       "Total cost of ownership including maintenance, energy and migration",
-      "Only the amount of packaging"
+      "Only the initial purchase discount from the selected vendor",
+      "Only the CPU benchmark score of the proposed model",
+      "Only licence cost, excluding migration and operational support",
     ],
-    "answer": 2,
+    "answer": 0,
     "explanation": "TCO includes ongoing operation and transition costs."
   },
   {
     "id": "EPSO-ICT1-141",
     "category": "epso_ad7_infrastructure",
     "topic": "ICT infrastructure lifecycle",
-    "level": "hard",
+    "level": "medium",
     "question": "Why maintain a supported operating-system inventory?",
     "options": [
-      "Avoid all vulnerability assessment",
-      "Remove the need for asset owners",
+      "Guarantee compliance with every software licence automatically",
+      "Replace the need for vulnerability monitoring",
+      "Remove the need to identify owners of obsolete systems",
       "Identify end-of-support exposure and prioritise upgrades",
-      "Guarantee licence compliance automatically"
     ],
-    "answer": 2,
+    "answer": 3,
     "explanation": "Inventory supports planning for products that no longer receive fixes."
   },
   {
@@ -2136,10 +2136,10 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "Before upgrading a critical database, which compatibility test is essential?",
     "options": [
-      "User badge colour",
-      "Network rack numbering",
+      "Only that the new server has more CPU cores",
+      "Only that the database storage volume has enough free space",
       "Application queries, drivers and schema compatibility",
-      "Office printer toner usage"
+      "Only that the vendor’s demonstration database starts successfully",
     ],
     "answer": 2,
     "explanation": "Database changes can affect clients, schema and application behaviour."
@@ -2148,15 +2148,15 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-143",
     "category": "epso_ad7_infrastructure",
     "topic": "ICT infrastructure lifecycle",
-    "level": "hard",
+    "level": "medium",
     "question": "When is a rollback plan inadequate for a major migration?",
     "options": [
-      "When backup restoration was tested",
-      "When it is written in a runbook",
+      "When it documents how to return to a compatible prior state",
       "When data is irreversibly transformed without a restoration strategy",
-      "When it includes decision criteria"
+      "When it includes a tested backup restoration procedure",
+      "When it specifies measurable decision criteria",
     ],
-    "answer": 2,
+    "answer": 1,
     "explanation": "Rollback requires a feasible path to restore the prior service state and data."
   },
   {
@@ -2164,15 +2164,15 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "category": "epso_ad7_infrastructure",
     "topic": "ICT infrastructure lifecycle",
     "level": "hard",
-    "question": "A migration requires transferring 12 TB over a 100 Mbps link. What must the schedule account for?",
+    "question": "At a sustained ideal 100 Mbps, approximately how long does transferring 12 TB take, using decimal units and ignoring overhead?",
     "options": [
-      "Only number of VMs",
-      "Only power supply ratings",
-      "Only the DNS zone serial",
-      "Transfer time, protocol overhead and competing traffic"
+      "11.1 days",
+      "1.1 days",
+      "11.1 hours",
+      "111 days",
     ],
-    "answer": 3,
-    "explanation": "Network throughput limits practical migration windows."
+    "answer": 0,
+    "explanation": "12 TB = 12 × 10^12 bytes. At 100 × 10^6 bits/s, time = 12 × 10^12 × 8 / (100 × 10^6) = 960,000 seconds, or about 11.1 days. Overhead, contention and validation can make a real migration longer."
   },
   {
     "id": "EPSO-ICT1-145",
@@ -2181,40 +2181,40 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "Why set explicit acceptance criteria for an infrastructure project?",
     "options": [
+      "Treat a successful purchase as proof that every service target is met",
+      "Leave completion criteria undefined until after handover",
+      "Require no operational owner to accept the delivered service",
       "Define objectively what must work before handover",
-      "Remove stakeholder involvement",
-      "Replace all operational monitoring",
-      "Avoid technical documentation"
     ],
-    "answer": 0,
+    "answer": 3,
     "explanation": "Acceptance criteria provide measurable evidence of completion."
   },
   {
     "id": "EPSO-ICT1-146",
     "category": "epso_ad7_infrastructure",
     "topic": "ICT infrastructure lifecycle",
-    "level": "hard",
+    "level": "easy",
     "question": "What is the principal purpose of capacity forecasting?",
     "options": [
-      "Guarantee no future demand spikes",
+      "Replace demand monitoring with a one-off hardware purchase",
+      "Define an incident severity without measuring resource demand",
       "Predict demand and plan resources ahead of saturation",
-      "Automatically reduce system load to zero",
-      "Replace financial planning"
+      "Guarantee that no unexpected demand can ever occur",
     ],
-    "answer": 1,
+    "answer": 2,
     "explanation": "Forecasting aligns resource additions with expected workload trends."
   },
   {
     "id": "EPSO-ICT1-147",
     "category": "epso_ad7_infrastructure",
     "topic": "ICT infrastructure lifecycle",
-    "level": "hard",
+    "level": "medium",
     "question": "Which action should accompany an operating-system version upgrade?",
     "options": [
-      "Grant all local users administrator access",
+      "Grant users permanent administrator privileges to avoid compatibility testing",
       "Update security baselines and verify hardening",
-      "Disable endpoint protection permanently",
-      "Delete configuration history"
+      "Reuse an obsolete baseline without reviewing changed settings",
+      "Disable endpoint protection until the next annual audit",
     ],
     "answer": 1,
     "explanation": "Baseline validation ensures the upgraded platform retains required controls."
@@ -2238,7 +2238,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-149",
     "category": "epso_ad7_infrastructure",
     "topic": "ICT infrastructure lifecycle",
-    "level": "hard",
+    "level": "easy",
     "question": "Why keep a configuration baseline for critical network devices?",
     "options": [
       "Make all network changes automatic",
@@ -2253,15 +2253,15 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-150",
     "category": "epso_ad7_infrastructure",
     "topic": "ICT infrastructure lifecycle",
-    "level": "hard",
+    "level": "easy",
     "question": "Which lifecycle process should track supplier end-of-support notifications?",
     "options": [
-      "Travel authorisation",
-      "User interface theming",
-      "Payroll administration",
-      "Technology lifecycle and obsolescence management"
+      "Invoice approval without recording technical support dates",
+      "User access recertification without an asset lifecycle inventory",
+      "Technology lifecycle and obsolescence management",
+      "Incident closure alone, without tracking supported versions",
     ],
-    "answer": 3,
+    "answer": 2,
     "explanation": "Obsolescence tracking enables planned replacement before support ends."
   },
   {
@@ -2269,44 +2269,44 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "category": "epso_ad7_infrastructure",
     "topic": "ICT infrastructure lifecycle",
     "level": "medium",
-    "question": "What should a production handover include?",
+    "question": "Which handover package best establishes operational readiness for a new production service?",
     "options": [
-      "Only source code repository name",
-      "Only the project logo",
-      "Only the purchase invoice",
-      "Runbooks, monitoring, ownership, support procedures and known risks"
+      "A successful development demo without recovery or support validation",
+      "Validated runbooks, monitoring, ownership, escalation, recovery procedures and accepted residual risks",
+      "Architecture diagrams and source code, with support ownership to be decided later",
+      "A completed purchase order and supplier installation confirmation only",
     ],
-    "answer": 3,
-    "explanation": "Operations need documented procedures and accountability to support the service."
+    "answer": 1,
+    "explanation": "Operational readiness includes the ability to operate, monitor, support and recover the service, with named owners and explicit acceptance of remaining risks. A purchase or a demonstration alone does not establish that readiness."
   },
   {
     "id": "EPSO-ICT1-152",
     "category": "epso_ad7_infrastructure",
     "topic": "ICT infrastructure lifecycle",
-    "level": "hard",
+    "level": "medium",
     "question": "Why schedule a pilot before fleet-wide workstation deployment?",
     "options": [
-      "Disable central management",
       "Validate compatibility and operational impact on a limited group",
-      "Guarantee all future upgrades are risk-free",
-      "Avoid collecting user feedback"
+      "Replace the need for testing with a supplier compatibility claim",
+      "Prove that every future version will work without another pilot",
+      "Avoid gathering feedback from the users in the pilot",
     ],
-    "answer": 1,
+    "answer": 0,
     "explanation": "Pilots expose faults before widespread rollout."
   },
   {
     "id": "EPSO-ICT1-153",
     "category": "epso_ad7_infrastructure",
     "topic": "ICT infrastructure lifecycle",
-    "level": "hard",
+    "level": "easy",
     "question": "Which metric best measures server capacity utilisation trends?",
     "options": [
-      "Number of service catalogue categories",
+      "The number of incidents alone, without resource measurements",
+      "The current purchase price of replacement servers",
+      "The number of applications listed in the service catalogue",
       "CPU, memory, storage and network usage over time",
-      "User display brightness",
-      "Office seating occupancy"
     ],
-    "answer": 1,
+    "answer": 3,
     "explanation": "Capacity requires resource-demand trend measurements."
   },
   {
@@ -2316,40 +2316,40 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "A storage supplier ends firmware support next quarter. Which risk should be evaluated first?",
     "options": [
-      "Email signature format",
+      "Whether purchase invoices have been archived for all affected devices",
+      "Whether rack labels follow the current naming standard",
       "Security and operational supportability of the affected systems",
-      "Number of desk phones",
-      "Office heating costs alone"
+      "Whether a newer model has a higher advertised benchmark",
     ],
-    "answer": 1,
+    "answer": 2,
     "explanation": "Unsupported firmware creates security and maintenance constraints."
   },
   {
     "id": "EPSO-ICT1-155",
     "category": "epso_ad7_infrastructure",
     "topic": "ICT infrastructure lifecycle",
-    "level": "hard",
+    "level": "medium",
     "question": "Why should test and production environments have separate credentials?",
     "options": [
-      "Remove need for approvals",
-      "Increase duplicated source code",
-      "Make DNS less reliable",
-      "Prevent privilege spillover and reduce cross-environment compromise"
+      "Avoid reviewing environment access once initial deployment succeeds",
+      "Prevent privilege spillover and reduce cross-environment compromise",
+      "Allow production secrets in every development runner to simplify testing",
+      "Use one shared account so access cannot be attributed to an environment",
     ],
-    "answer": 3,
+    "answer": 1,
     "explanation": "Environment separation limits lateral movement and accidental production access."
   },
   {
     "id": "EPSO-ICT1-156",
     "category": "epso_ad7_infrastructure",
     "topic": "ICT infrastructure lifecycle",
-    "level": "hard",
+    "level": "medium",
     "question": "Which factor should drive patch deployment priority?",
     "options": [
       "Exploitability, exposure, business criticality and compensating controls",
-      "Rack location alone",
-      "Employee seniority",
-      "Alphabetical server name order"
+      "The alphabetical order of server hostnames",
+      "Only how long the patch has been available, regardless of exposure",
+      "Only the purchase price of the affected equipment",
     ],
     "answer": 0,
     "explanation": "Risk-based prioritisation targets the greatest probable impact."
@@ -2359,15 +2359,15 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "category": "epso_ad7_infrastructure",
     "topic": "ICT infrastructure lifecycle",
     "level": "medium",
-    "question": "What is a critical concern when migrating a stateful application between cloud providers?",
+    "question": "A stateful service must move between cloud providers with minimal data loss. What should the cutover plan establish?",
     "options": [
-      "Theme colour of the console",
-      "Number of meeting invites",
-      "Consistency and cutover of persistent data",
-      "Age of user browsers only"
+      "Only that both providers support the same VM image format",
+      "Only that DNS can be changed to the new service endpoint",
+      "Only that the target provider offers more aggregate storage",
+      "A validated replication and consistency strategy, cutover criteria and a recovery path",
     ],
-    "answer": 2,
-    "explanation": "Stateful migrations require data integrity, synchronisation and cutover planning."
+    "answer": 3,
+    "explanation": "Application portability alone does not preserve state. Validate data replication, consistency, final synchronisation, cutover and the conditions under which the source or target can safely resume service."
   },
   {
     "id": "EPSO-ICT1-158",
@@ -2376,10 +2376,10 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "easy",
     "question": "Which document records why an architectural option was chosen over alternatives?",
     "options": [
-      "Purchasing receipt only",
-      "User leave application",
+      "An asset purchase receipt without considered alternatives",
+      "A deployment log containing only process exit codes",
       "Architecture decision record",
-      "Daily helpdesk ticket"
+      "An incident timeline that contains no design rationale",
     ],
     "answer": 2,
     "explanation": "ADRs capture rationale, context and consequences of design choices."
@@ -2388,7 +2388,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-159",
     "category": "epso_ad7_infrastructure",
     "topic": "ICT infrastructure lifecycle",
-    "level": "hard",
+    "level": "medium",
     "question": "Why define maintenance windows for infrastructure services?",
     "options": [
       "Eliminate all need for backups",
@@ -2418,30 +2418,30 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-161",
     "category": "epso_ad7_infrastructure",
     "topic": "ICT infrastructure lifecycle",
-    "level": "hard",
+    "level": "easy",
     "question": "Which inventory attribute is critical for planning OS replacement?",
     "options": [
+      "The asset’s naming prefix without its software version",
+      "Its most recent purchase invoice alone",
+      "The number of users currently logged on, without a support status",
       "Installed version and vendor support end date",
-      "Laptop case colour",
-      "Office floorplan identifier",
-      "Web browser bookmark count"
     ],
-    "answer": 0,
+    "answer": 3,
     "explanation": "Version and support status determine exposure and upgrade timing."
   },
   {
     "id": "EPSO-ICT1-162",
     "category": "epso_ad7_infrastructure",
     "topic": "ICT infrastructure lifecycle",
-    "level": "hard",
+    "level": "medium",
     "question": "What should be done before removing an old DNS service?",
     "options": [
-      "Delete the zone with no notice",
-      "Change employee passwords",
-      "Leave undocumented static resolvers forever",
-      "Identify all consumers and migrate dependencies with validation"
+      "Change the server hostname without identifying static clients",
+      "Keep an undocumented server running without testing the replacement",
+      "Identify all consumers and migrate dependencies with validation",
+      "Delete the service after confirming that its process is idle once",
     ],
-    "answer": 3,
+    "answer": 2,
     "explanation": "Dependency mapping prevents hidden consumers from losing name resolution."
   },
   {
@@ -2451,19 +2451,19 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "Which test best proves a newly installed UPS meets a system's continuity needs?",
     "options": [
-      "Confirming the supplier brochure",
-      "Counting unused network ports",
+      "Measure only the normal utility voltage with no failover",
       "Controlled load and failover test under realistic conditions",
-      "Visual inspection of the label only"
+      "Verify only the manufacturer’s advertised maximum runtime",
+      "Inspect the UPS label without connecting the intended load",
     ],
-    "answer": 2,
+    "answer": 1,
     "explanation": "Load and failover testing verifies real runtime and transfer behaviour."
   },
   {
     "id": "EPSO-ICT1-164",
     "category": "epso_ad7_infrastructure",
     "topic": "ICT infrastructure lifecycle",
-    "level": "hard",
+    "level": "medium",
     "question": "What does configuration management contribute to a hardware refresh?",
     "options": [
       "Traceability of changed CIs, dependencies and relationships",
@@ -2478,7 +2478,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-165",
     "category": "epso_ad7_infrastructure",
     "topic": "ICT infrastructure lifecycle",
-    "level": "hard",
+    "level": "medium",
     "question": "Which lifecycle control is most important when retiring cloud resources?",
     "options": [
       "Delete only the console shortcut",
@@ -2508,52 +2508,52 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-167",
     "category": "epso_ad7_infrastructure",
     "topic": "Emerging technologies",
-    "level": "hard",
+    "level": "medium",
     "question": "What is the main benefit of confidential computing?",
     "options": [
-      "Encrypt stored disks while leaving plaintext memory outside a protected environment",
-      "Protect network traffic between service endpoints using TLS",
-      "Restrict access to stored files using role-based permissions",
-      "Protect certain data during processing using trusted execution environments"
+      "Removing the need to trust or attest the execution environment",
+      "Protect certain data during processing using trusted execution environments",
+      "Protecting every workload from all software vulnerabilities",
+      "Encrypting only data sent over a network",
     ],
-    "answer": 3,
+    "answer": 1,
     "explanation": "Confidential computing aims to reduce exposure of data in use."
   },
   {
     "id": "EPSO-ICT1-168",
     "category": "epso_ad7_infrastructure",
     "topic": "Emerging technologies",
-    "level": "hard",
+    "level": "easy",
     "question": "Why use an open telemetry standard across infrastructure tools?",
     "options": [
-      "Guarantee every alert is actionable",
       "Enable consistent collection and export of observability data",
-      "Remove all monitoring costs",
-      "Prevent all vendor lock-in automatically"
+      "Guarantee that all traces, metrics and logs use identical storage",
+      "Replace service instrumentation with a shared dashboard template",
+      "Require all monitored services to use one programming language",
     ],
-    "answer": 1,
+    "answer": 0,
     "explanation": "Open telemetry conventions and protocols improve interoperability."
   },
   {
     "id": "EPSO-ICT1-169",
     "category": "epso_ad7_infrastructure",
     "topic": "Emerging technologies",
-    "level": "medium",
+    "level": "easy",
     "question": "Which factor is central to evaluating edge computing for a latency-sensitive service?",
     "options": [
+      "The number of features in the management dashboard alone",
+      "The provider’s advertised storage capacity without measuring response time",
+      "The length of the procurement contract alone",
       "Latency and locality of data processing",
-      "The font in the management console",
-      "The age of office furniture",
-      "Number of supplier webinars"
     ],
-    "answer": 0,
+    "answer": 3,
     "explanation": "Processing near data sources can reduce round-trip time and bandwidth needs."
   },
   {
     "id": "EPSO-ICT1-170",
     "category": "epso_ad7_infrastructure",
     "topic": "Emerging technologies",
-    "level": "hard",
+    "level": "easy",
     "question": "What is the operational trade-off of serverless functions?",
     "options": [
       "Unlimited execution time without quotas",
@@ -2568,7 +2568,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-171",
     "category": "epso_ad7_infrastructure",
     "topic": "Emerging technologies",
-    "level": "hard",
+    "level": "medium",
     "question": "When is a proof of concept insufficient for production approval?",
     "options": [
       "When it has measured business feasibility",
@@ -2586,25 +2586,25 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "What is a digital twin of infrastructure primarily intended to support?",
     "options": [
-      "Replace all production backups",
-      "Act as a hardware encryption chip",
       "Model and simulate behaviour of a corresponding physical or logical system",
-      "Guarantee exact future predictions"
+      "Replace the need to observe the real infrastructure",
+      "Guarantee exact predictions without validating the model",
+      "Provide an independent backup of every production data record",
     ],
-    "answer": 2,
+    "answer": 0,
     "explanation": "Digital twins represent systems for monitoring or scenario analysis."
   },
   {
     "id": "EPSO-ICT1-173",
     "category": "epso_ad7_infrastructure",
     "topic": "Emerging technologies",
-    "level": "hard",
+    "level": "medium",
     "question": "What is the principal concern when adopting an immature open-source component?",
     "options": [
-      "Whether the filename is short",
-      "Whether the repository has a logo",
-      "Whether it uses markdown",
-      "Maintenance capacity, security response and community sustainability"
+      "The visual design of the repository landing page",
+      "The length of the component name without maintenance evidence",
+      "The total number of downloads without evaluating support and security",
+      "Maintenance capacity, security response and community sustainability",
     ],
     "answer": 3,
     "explanation": "Open-source selection must assess governance and long-term maintenance."
@@ -2613,7 +2613,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-174",
     "category": "epso_ad7_infrastructure",
     "topic": "Emerging technologies",
-    "level": "hard",
+    "level": "medium",
     "question": "Which approach best evaluates cloud service portability?",
     "options": [
       "Test export, redeployment, dependencies and operational procedures",
@@ -2631,25 +2631,25 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "A new observability tool reports anomalies but generates excessive false alarms. What should be improved?",
     "options": [
+      "Buy more storage for the same unvalidated alerts without tuning detection",
       "Signal quality, baselines and alert validation",
-      "Data-centre floor area",
-      "Number of alert colours",
-      "Office Wi-Fi name"
+      "Increase the number of identical alerts sent to every team",
+      "Disable all event correlation permanently",
     ],
-    "answer": 0,
+    "answer": 1,
     "explanation": "Anomaly tools need tuning to avoid alert fatigue."
   },
   {
     "id": "EPSO-ICT1-176",
     "category": "epso_ad7_infrastructure",
     "topic": "Emerging technologies",
-    "level": "hard",
+    "level": "easy",
     "question": "What does a service mesh most commonly provide?",
     "options": [
       "Traffic management, identity and policy for service-to-service communication",
-      "Storage parity calculation",
-      "User payroll processing",
-      "Physical replacement of Ethernet cabling"
+      "Create parity blocks for a storage array",
+      "Replace the underlying physical network and all application code",
+      "Schedule batch compute jobs across an HPC cluster",
     ],
     "answer": 0,
     "explanation": "Service meshes manage communication between distributed services."
@@ -2658,7 +2658,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-177",
     "category": "epso_ad7_infrastructure",
     "topic": "Emerging technologies",
-    "level": "hard",
+    "level": "medium",
     "question": "What risk does adopting a proprietary protocol create?",
     "options": [
       "Potential interoperability and migration constraints",
@@ -2691,10 +2691,10 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "easy",
     "question": "Which metric is the ratio of total data-centre energy to energy consumed by its IT equipment?",
     "options": [
-      "Server virtualisation density",
+      "Average CPU utilisation divided by rack power capacity",
       "Power usage effectiveness",
-      "CPU instructions per clock cycle",
-      "Average electrical power per rack"
+      "Energy used by IT equipment divided by total facility energy",
+      "Total cooling energy divided by server purchase price",
     ],
     "answer": 1,
     "explanation": "PUE compares total facility energy with IT equipment energy."
@@ -2703,13 +2703,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-180",
     "category": "epso_ad7_infrastructure",
     "topic": "Emerging technologies",
-    "level": "hard",
+    "level": "medium",
     "question": "What limitation must be considered for containerising legacy applications?",
     "options": [
       "Persistent state and operating-system dependencies may constrain portability",
-      "Containers eliminate all licensing costs",
-      "Containers cannot use TCP",
-      "Containers always require dedicated physical hardware"
+      "Containers remove all host-kernel and operating-system compatibility concerns",
+      "Every stateful dependency is made portable automatically",
+      "Containerisation automatically removes licence and support restrictions",
     ],
     "answer": 0,
     "explanation": "Legacy dependencies and state management can complicate migration."
@@ -2718,7 +2718,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-181",
     "category": "epso_ad7_infrastructure",
     "topic": "Emerging technologies",
-    "level": "medium",
+    "level": "easy",
     "question": "Why might an organisation use a hybrid cloud architecture?",
     "options": [
       "Eliminate all networking requirements",
@@ -2733,30 +2733,30 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-182",
     "category": "epso_ad7_infrastructure",
     "topic": "Emerging technologies",
-    "level": "hard",
+    "level": "medium",
     "question": "Which concern is important when applying generative AI to incident data?",
     "options": [
-      "CPU case colour",
+      "Send all raw secrets and personal data to any available model endpoint",
+      "Treat every generated recommendation as an approved production change",
       "Protection of sensitive logs and potential inaccurate outputs",
-      "Number of dashboard widgets",
-      "Ability to display emojis"
+      "Assume generated summaries are accurate because logs were supplied",
     ],
-    "answer": 1,
+    "answer": 2,
     "explanation": "Sensitive operational data and output reliability require governance."
   },
   {
     "id": "EPSO-ICT1-183",
     "category": "epso_ad7_infrastructure",
     "topic": "Emerging technologies",
-    "level": "hard",
+    "level": "easy",
     "question": "What is the core idea of platform engineering?",
     "options": [
-      "Replace all product management",
-      "Remove all shared standards",
-      "Require every team to run its own data centre",
-      "Provide reusable self-service capabilities and standardised internal developer services"
+      "Measure success only by the number of platform features published",
+      "Provide reusable self-service capabilities and standardised internal developer services",
+      "Require each team to build its own incompatible deployment tools",
+      "Replace application teams with a single approval queue for every task",
     ],
-    "answer": 3,
+    "answer": 1,
     "explanation": "Internal platforms simplify common engineering workflows with governed services."
   },
   {
@@ -2778,13 +2778,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-185",
     "category": "epso_ad7_infrastructure",
     "topic": "Emerging technologies",
-    "level": "hard",
+    "level": "medium",
     "question": "Which architecture improves resilience against one cloud region becoming unavailable?",
     "options": [
-      "One VM with more CPU",
-      "Multiple zones in the same failed region only",
-      "A second DNS alias to one endpoint",
-      "Multi-region design with validated failover and data replication"
+      "Multiple availability zones wholly within the unavailable region",
+      "A larger VM in the same failed region",
+      "A second DNS name pointing only to the unavailable endpoint",
+      "Multi-region design with validated failover and data replication",
     ],
     "answer": 3,
     "explanation": "Multi-region designs address regional failure domains when correctly tested."
@@ -2793,7 +2793,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-186",
     "category": "epso_ad7_infrastructure",
     "topic": "Emerging technologies",
-    "level": "hard",
+    "level": "medium",
     "question": "Why should an enterprise evaluate open API standards?",
     "options": [
       "They enable integration and reduce proprietary coupling",
@@ -2823,22 +2823,22 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-188",
     "category": "epso_ad7_infrastructure",
     "topic": "Emerging technologies",
-    "level": "hard",
+    "level": "medium",
     "question": "Which criterion matters for low-code workflow platforms in regulated environments?",
     "options": [
-      "Number of prebuilt icons",
       "Auditability, access control and change governance",
-      "Animation speed",
-      "Social media followers"
+      "Only the visual style of the workflow builder",
+      "Only the number of templates supplied out of the box",
+      "No access or change controls because no traditional code is written",
     ],
-    "answer": 1,
+    "answer": 0,
     "explanation": "Enterprise workflows require traceable controlled changes and secure access."
   },
   {
     "id": "EPSO-ICT1-189",
     "category": "epso_ad7_infrastructure",
     "topic": "Emerging technologies",
-    "level": "hard",
+    "level": "easy",
     "question": "What problem does an event-driven architecture help address?",
     "options": [
       "Guaranteeing global synchronous transactions",
@@ -2856,34 +2856,34 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "Why assess data residency before adopting a managed service?",
     "options": [
+      "Guarantee that all copies of data remain in a region without checking the contract",
+      "Eliminate the need to assess international data transfers",
       "Location and transfer rules may constrain where sensitive information is processed",
-      "It sets the TCP window",
-      "It controls CPU instruction sets",
-      "It determines monitor resolution"
+      "Determine the CPU instruction set used by every managed service",
     ],
-    "answer": 0,
+    "answer": 2,
     "explanation": "Data placement can have contractual and legal implications."
   },
   {
     "id": "EPSO-ICT1-191",
     "category": "epso_ad7_infrastructure",
     "topic": "Emerging technologies",
-    "level": "hard",
+    "level": "medium",
     "question": "What should a technology watch report distinguish?",
     "options": [
-      "Hardware colour from rack colour",
-      "Presentation font from font size only",
+      "Only the age of the technology, irrespective of evidence",
       "Evidence from marketing claims and assessed applicability",
-      "Employee preferences from salaries"
+      "Product announcements without checking applicability",
+      "Only benchmark claims supplied by the vendor",
     ],
-    "answer": 2,
+    "answer": 1,
     "explanation": "Technology assessment should separate verified capability from assertions and relevance."
   },
   {
     "id": "EPSO-ICT1-192",
     "category": "epso_ad7_infrastructure",
     "topic": "Emerging technologies",
-    "level": "hard",
+    "level": "medium",
     "question": "Which strategy helps limit emerging-tool proliferation across teams?",
     "options": [
       "Allow all tools without inventory",
@@ -2898,7 +2898,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-193",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "medium",
+    "level": "easy",
     "question": "Which view most clearly identifies project dependencies and delivery milestones?",
     "options": [
       "An alphabetical asset inventory alone",
@@ -2913,22 +2913,22 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-194",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "hard",
+    "level": "easy",
     "question": "What is the principal purpose of a project risk register?",
     "options": [
-      "Replace financial approvals",
-      "Record only closed procurement orders",
-      "Archive meeting invitations",
-      "Track likelihood, impact, owner and treatment of risks"
+      "Record risks without owners, impact or response actions",
+      "Replace project decisions with a list of current software versions",
+      "Track likelihood, impact, owner and treatment of risks",
+      "List only problems that have already occurred",
     ],
-    "answer": 3,
+    "answer": 2,
     "explanation": "A risk register supports active risk treatment and accountability."
   },
   {
     "id": "EPSO-ICT1-195",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "hard",
+    "level": "medium",
     "question": "How should a shared technical dependency across three projects be managed?",
     "options": [
       "Always cancel all projects",
@@ -2943,13 +2943,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-196",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "medium",
+    "level": "easy",
     "question": "What does an architecture diagram need to remain operationally useful?",
     "options": [
       "Version, ownership and alignment with the deployed state",
-      "A vendor logo",
-      "No change history",
-      "Only attractive colours"
+      "A one-off design snapshot with no named owner",
+      "An attractive vendor diagram unrelated to the deployed configuration",
+      "A list of hostnames without versions or change history",
     ],
     "answer": 0,
     "explanation": "Current version-controlled diagrams support troubleshooting and change planning."
@@ -2958,7 +2958,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-197",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "hard",
+    "level": "medium",
     "question": "Why distinguish business and technical ownership of infrastructure services?",
     "options": [
       "It makes SLAs unnecessary",
@@ -2973,22 +2973,22 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-198",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "hard",
+    "level": "easy",
     "question": "What information is essential in a service dependency map?",
     "options": [
-      "Only supplier advertising slogans",
+      "Only a list of service names with no relationship information",
+      "Only the number of incidents per calendar month",
       "Upstream and downstream relationships between services and components",
-      "Only ticket colours",
-      "Only user display names"
+      "Only the number of applications purchased from each vendor",
     ],
-    "answer": 1,
+    "answer": 2,
     "explanation": "Dependency mapping supports impact analysis and recovery sequencing."
   },
   {
     "id": "EPSO-ICT1-199",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "medium",
+    "level": "easy",
     "question": "What does a project decision log add to governance?",
     "options": [
       "Replace all project plans",
@@ -3003,7 +3003,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-200",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "hard",
+    "level": "medium",
     "question": "What does a portfolio prioritisation framework normally weigh?",
     "options": [
       "Alphabetical project order",
@@ -3018,13 +3018,13 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-201",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "hard",
+    "level": "medium",
     "question": "How can a project avoid ambiguous completion status?",
     "options": [
-      "Use informal verbal assumptions only",
-      "Track only meetings held",
-      "Avoid agreed milestones",
-      "Use measurable deliverables and explicit acceptance sign-off"
+      "Declare completion whenever the supplier issues its final invoice",
+      "Allow each team to decide privately what delivered means",
+      "Close the project after the final development demonstration only",
+      "Use measurable deliverables and explicit acceptance sign-off",
     ],
     "answer": 3,
     "explanation": "Acceptance sign-off shows deliverables met agreed conditions."
@@ -3048,7 +3048,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-203",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "hard",
+    "level": "medium",
     "question": "When should a disaster recovery dependency map be updated?",
     "options": [
       "After relevant architectural or service changes",
@@ -3066,12 +3066,12 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "easy",
     "question": "What is the role of a RACI matrix in infrastructure governance?",
     "options": [
-      "Replace network encryption",
-      "Calculate storage IOPS",
       "Clarify who is responsible, accountable, consulted and informed",
-      "Define BGP routes"
+      "Prescribe one universal escalation path for every technical incident",
+      "Replace an accountability decision with a list of all team members",
+      "Allocate CPU and storage resources automatically",
     ],
-    "answer": 2,
+    "answer": 0,
     "explanation": "RACI separates execution from accountability and communication roles."
   },
   {
@@ -3081,34 +3081,34 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "What is an architecture review board primarily intended to assess?",
     "options": [
+      "Approve staff schedules independently of architecture constraints",
+      "Replace all service acceptance and security testing",
+      "Select a vendor solely from its marketing presentation",
       "Design alignment with agreed standards and constraints",
-      "Holiday requests",
-      "User browser bookmarks",
-      "Employee appraisal results"
     ],
-    "answer": 0,
+    "answer": 3,
     "explanation": "Architecture governance evaluates solution decisions and exceptions."
   },
   {
     "id": "EPSO-ICT1-206",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "hard",
+    "level": "medium",
     "question": "A portfolio includes projects with double-booked specialist staff. What should be reviewed?",
     "options": [
+      "Only the number of reports submitted to the steering committee",
+      "Only the total original budget without considering available skills",
       "Resource capacity and project scheduling",
-      "Only procurement item colours",
-      "Only office locations",
-      "Only DNS aliases"
+      "Only which project sponsor submitted the first request",
     ],
-    "answer": 0,
+    "answer": 2,
     "explanation": "Capacity planning prevents unachievable parallel commitments."
   },
   {
     "id": "EPSO-ICT1-207",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "hard",
+    "level": "medium",
     "question": "Which documentation is most important during on-call escalation?",
     "options": [
       "An unrelated budget memo",
@@ -3127,9 +3127,9 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "question": "How should architecture exceptions be handled?",
     "options": [
       "Record justification, risks, approver and expiration or review date",
-      "Treat every exception as permanent",
-      "Leave them undocumented",
-      "Grant automatic approval to all deviations"
+      "Allow every exception indefinitely once requested",
+      "Keep exceptions informal so they do not affect audit results",
+      "Treat a vendor recommendation as automatic approval of an exception",
     ],
     "answer": 0,
     "explanation": "Documented exceptions make risk acceptance explicit and reviewable."
@@ -3138,7 +3138,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-209",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "hard",
+    "level": "easy",
     "question": "What should a service catalogue entry provide?",
     "options": [
       "A clear service description, request path and support expectations",
@@ -3153,7 +3153,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-210",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "hard",
+    "level": "easy",
     "question": "Why attach risk owners to high-impact project risks?",
     "options": [
       "Guarantee risk probability becomes zero",
@@ -3168,22 +3168,22 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-211",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "medium",
+    "level": "easy",
     "question": "What information is needed to evaluate a project cost variance?",
     "options": [
+      "The current hardware capacity without any financial baseline",
       "Baseline budget, actuals and forecast at completion",
-      "Only the latest invoice",
-      "Only number of meetings",
-      "Only the project logo"
+      "The original purchase order alone, without actual expenditure",
+      "The number of closed project tasks without their costs",
     ],
-    "answer": 0,
+    "answer": 1,
     "explanation": "Variance assessment compares expenditure and expected final cost with baseline."
   },
   {
     "id": "EPSO-ICT1-212",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "hard",
+    "level": "easy",
     "question": "What is a technical debt register useful for?",
     "options": [
       "Storing browser cookies",
@@ -3198,43 +3198,43 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-213",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "hard",
+    "level": "medium",
     "question": "What should an infrastructure operating model define?",
     "options": [
-      "Only the dashboard font",
+      "Only how many employees appear on the organisation chart",
+      "Only which vendor provides the service dashboard",
+      "Only the initial cost of the infrastructure equipment",
       "Responsibilities, processes, escalation, tooling and service boundaries",
-      "Only the hardware purchase price",
-      "Only the number of team members"
     ],
-    "answer": 1,
+    "answer": 3,
     "explanation": "Operating models clarify how services are operated and supported."
   },
   {
     "id": "EPSO-ICT1-214",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "medium",
-    "question": "Which diagram is most useful for tracing a request through several microservices?",
+    "level": "easy",
+    "question": "Which observability signal follows a request as it crosses several microservices?",
     "options": [
-      "Building seating plan",
-      "Service interaction or sequence diagram",
-      "An asset depreciation table",
-      "A pie chart of training budget"
+      "A monthly count of closed incidents",
+      "An asset list without request or timing relationships",
+      "A distributed trace made of related spans",
+      "A single host’s average CPU utilisation",
     ],
-    "answer": 1,
-    "explanation": "Interaction diagrams show service calls and dependencies."
+    "answer": 2,
+    "explanation": "Distributed tracing records a request’s path through services as linked spans, exposing timing, dependencies and errors. An architecture diagram describes a design but does not record an individual live request."
   },
   {
     "id": "EPSO-ICT1-215",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "hard",
+    "level": "medium",
     "question": "What is the purpose of configuration item relationships in change impact analysis?",
     "options": [
-      "Calculate annual leave",
+      "Determine the purchase price of unrelated assets",
       "Identify services that may be affected by a component change",
-      "Assign keyboard layouts",
-      "Determine office access badges"
+      "Guarantee that every change has no business impact",
+      "Replace all testing with a list of configuration item names",
     ],
     "answer": 1,
     "explanation": "CI dependencies support evaluation of blast radius."
@@ -3243,15 +3243,15 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-216",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "hard",
+    "level": "medium",
     "question": "Which measure helps verify portfolio value after project completion?",
     "options": [
-      "Only final invoice approval",
-      "Ignoring operational outcomes",
       "Benefits realisation review against initial objectives",
-      "Only counting completed tasks"
+      "The number of documents archived at project closure alone",
+      "Only whether every project invoice was paid on time",
+      "The count of implementation tasks regardless of outcomes",
     ],
-    "answer": 2,
+    "answer": 0,
     "explanation": "Benefits review tests whether expected outcomes materialised."
   },
   {
@@ -3262,18 +3262,18 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "question": "Why should infrastructure documentation be stored under access control?",
     "options": [
       "Eliminate backups",
-      "Prevent unauthorised disclosure of sensitive topology and credentials",
+      "Prevent unauthorised disclosure or alteration of sensitive topology and operational information",
       "Make all diagrams publicly editable",
-      "Replace audit logging"
+      "Replace audit logging",
     ],
     "answer": 1,
-    "explanation": "Infrastructure documents can reveal sensitive architecture details."
+    "explanation": "Control access to sensitive operational documentation and protect its integrity. Keep passwords and tokens in an approved secret manager; documentation should describe authorised retrieval procedures rather than embed live credentials."
   },
   {
     "id": "EPSO-ICT1-218",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "hard",
+    "level": "medium",
     "question": "Which responsibility belongs to a service owner rather than a project manager after handover?",
     "options": [
       "Preparing launch invitations only",
@@ -3288,15 +3288,15 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-219",
     "category": "epso_ad7_infrastructure",
     "topic": "Infrastructure portfolios and documentation",
-    "level": "hard",
+    "level": "medium",
     "question": "What should a decommissioning portfolio track?",
     "options": [
-      "Only meeting room bookings",
-      "Only training completion",
-      "Only new hardware purchases",
-      "Assets, dependencies, migration status and verified retirement"
+      "Only software licence invoices without retirement verification",
+      "Assets, dependencies, migration status and verified retirement",
+      "Only assets purchased during the current financial year",
+      "Only the number of project meetings held",
     ],
-    "answer": 3,
+    "answer": 1,
     "explanation": "Retirement portfolios coordinate removal of legacy assets and residual risk."
   },
   {
@@ -3336,12 +3336,12 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "hard",
     "question": "A numerical kernel saturates measured main-memory bandwidth while arithmetic units remain underused. What is its likely bottleneck?",
     "options": [
+      "Insufficient network bandwidth in a job doing no inter-node communication",
+      "A GPU launch bottleneck in a kernel using only CPU memory",
       "Memory bandwidth",
-      "Printer throughput",
-      "DNS lookup latency only",
-      "Certificate validation"
+      "A branch prediction bottleneck despite idle memory channels",
     ],
-    "answer": 0,
+    "answer": 2,
     "explanation": "Memory-bound kernels are limited by data movement rates."
   },
   {
@@ -3351,12 +3351,12 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "What is a GPU most suited to in HPC?",
     "options": [
+      "Guaranteeing lower latency for every single-threaded task",
       "Massively parallel operations on large data sets",
-      "Filesystem metadata administration",
-      "Serial tasks with extensive unpredictable branching only",
-      "DNS zone transfers"
+      "A strictly serial workload with extensive unpredictable branching",
+      "Running the cluster’s central metadata service by itself",
     ],
-    "answer": 0,
+    "answer": 1,
     "explanation": "GPUs provide many parallel execution units suitable for data-parallel computation."
   },
   {
@@ -3367,9 +3367,9 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "question": "What is a major performance limitation of scaling a serial algorithm to more nodes?",
     "options": [
       "Its serial fraction cannot be accelerated by extra nodes",
-      "Ethernet addresses become longer",
-      "NTP stops synchronising",
-      "Files must use ASCII"
+      "Additional nodes automatically parallelise all unchanged serial code",
+      "Communication overhead disappears as soon as node count increases",
+      "Increasing the number of cores removes every dependency between tasks",
     ],
     "answer": 0,
     "explanation": "Amdahl's law limits speed-up when some work remains serial."
@@ -3408,7 +3408,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-227",
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
-    "level": "hard",
+    "level": "medium",
     "question": "Which scheduling policy adjusts priority using allocated shares and historical resource usage?",
     "options": [
       "Fair-share scheduling with defined allocations",
@@ -3423,7 +3423,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-228",
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
-    "level": "hard",
+    "level": "medium",
     "question": "Why is a parallel filesystem used in HPC?",
     "options": [
       "Deliver high aggregate throughput to many compute nodes",
@@ -3441,19 +3441,19 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "Which operation can create a metadata bottleneck on an HPC filesystem?",
     "options": [
+      "Reading one large sequential file with few metadata operations",
+      "Increasing CPU frequency without changing the file workload",
+      "Reusing already-open files with no create or delete operations",
       "Creating millions of tiny files",
-      "Reading one large sequential file only",
-      "Changing DNS TTL",
-      "Increasing CPU core frequency"
     ],
-    "answer": 0,
+    "answer": 3,
     "explanation": "Large numbers of small-file operations place heavy demand on metadata services."
   },
   {
     "id": "EPSO-ICT1-230",
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
-    "level": "hard",
+    "level": "easy",
     "question": "What does checkpointing provide for long-running simulations?",
     "options": [
       "Guaranteed zero runtime overhead",
@@ -3468,7 +3468,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-231",
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
-    "level": "hard",
+    "level": "medium",
     "question": "A simulation performs collective communication every iteration. Why may scaling degrade?",
     "options": [
       "Synchronisation and network latency increase coordination cost",
@@ -3498,30 +3498,30 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-233",
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
-    "level": "hard",
+    "level": "medium",
     "question": "What should be considered when choosing HPC interconnects?",
     "options": [
+      "Only the advertised link bandwidth, without latency or workload behaviour",
+      "Only the physical length of the cable, without communication requirements",
+      "Only the vendor name, without congestion or collective-operation tests",
       "Latency, bandwidth, congestion and collective communication patterns",
-      "Only number of helpdesk tickets",
-      "Only cable colour",
-      "Only IP address length"
     ],
-    "answer": 0,
+    "answer": 3,
     "explanation": "Interconnect performance affects distributed computation and data exchange."
   },
   {
     "id": "EPSO-ICT1-234",
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
-    "level": "hard",
+    "level": "medium",
     "question": "Which diagnostic is useful for identifying unbalanced parallel workloads?",
     "options": [
-      "User avatar size",
+      "Only the total number of files produced by the application",
+      "Only the scheduler queue length before the job started",
       "Per-rank execution timings and utilisation",
-      "Number of helpdesk forms",
-      "Only cluster hostname"
+      "The average utilisation of the whole cluster without per-rank data",
     ],
-    "answer": 1,
+    "answer": 2,
     "explanation": "Rank-level timings expose nodes or processes waiting for slower work."
   },
   {
@@ -3531,19 +3531,19 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "A job requests 64 cores but consistently uses only 8. What should be investigated?",
     "options": [
+      "Disable accounting so low utilisation no longer appears in reports",
       "Parallel efficiency and resource allocation",
-      "Whether the cluster has more badges",
-      "The helpdesk opening hours",
-      "The network DNS suffix"
+      "Increase every future allocation to 128 cores without profiling",
+      "Judge efficiency only from the number of cores reserved",
     ],
-    "answer": 0,
+    "answer": 1,
     "explanation": "Unused allocated cores indicate poor utilisation or a scheduling mismatch."
   },
   {
     "id": "EPSO-ICT1-236",
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
-    "level": "hard",
+    "level": "medium",
     "question": "What is the primary difference between a CPU and a GPU for many HPC kernels?",
     "options": [
       "GPUs favour high-throughput data parallelism; CPUs favour general-purpose low-latency execution",
@@ -3558,7 +3558,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-237",
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
-    "level": "hard",
+    "level": "easy",
     "question": "Which programming error can cause nondeterministic outcomes in parallel computation?",
     "options": [
       "Data race on shared mutable state",
@@ -3591,12 +3591,12 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "easy",
     "question": "Which metric expresses the rate of floating-point operations performed by a compute device?",
     "options": [
-      "Bytes of DNS cache",
-      "Packets per second only",
-      "Mean ticket age",
-      "FLOPS"
+      "Operations per byte used to describe arithmetic intensity",
+      "FLOPS",
+      "Instructions per cycle, independent of elapsed time",
+      "Bytes transferred per second between memory and a processor",
     ],
-    "answer": 3,
+    "answer": 1,
     "explanation": "FLOPS measures floating-point operations per second."
   },
   {
@@ -3633,22 +3633,22 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-242",
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
-    "level": "hard",
+    "level": "easy",
     "question": "What is an HPC job array useful for?",
     "options": [
+      "Force unrelated tasks to share a single process memory space",
+      "Replace all input parameters with a single fixed job configuration",
       "Launching many related independent tasks under a scheduler",
-      "Replacing hardware RAID",
-      "Creating DNSSEC keys",
-      "Configuring email aliases"
+      "Automatically parallelise the internal code of one serial executable",
     ],
-    "answer": 0,
+    "answer": 2,
     "explanation": "Job arrays simplify many similar parameter-sweep tasks."
   },
   {
     "id": "EPSO-ICT1-243",
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
-    "level": "hard",
+    "level": "medium",
     "question": "Why should scientific computation record software versions and input parameters?",
     "options": [
       "Enable reproducibility and comparison of results",
@@ -3666,19 +3666,19 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "Which network feature can reduce CPU overhead for high-volume HPC communication?",
     "options": [
-      "Longer TCP keepalive alone",
       "RDMA-capable fabric",
-      "More DNS TXT records",
-      "Disabling packet checksums"
+      "A DNS cache with a longer time to live",
+      "An HTTP reverse proxy on the login node",
+      "A backup scheduler that serialises all compute traffic",
     ],
-    "answer": 1,
+    "answer": 0,
     "explanation": "RDMA supports data transfer with reduced CPU involvement and copies."
   },
   {
     "id": "EPSO-ICT1-245",
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
-    "level": "hard",
+    "level": "medium",
     "question": "What is an important limitation of using a single shared login node for heavy computation?",
     "options": [
       "It always has more compute capacity than worker nodes",
@@ -3693,22 +3693,22 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-246",
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
-    "level": "hard",
-    "question": "Which metric measures scheduler resource occupancy, rather than actual CPU execution efficiency, in an HPC cluster?",
+    "level": "easy",
+    "question": "Which metric measures scheduler resource occupancy rather than actual CPU execution efficiency in an HPC cluster?",
     "options": [
-      "Allocated compute hours compared with available capacity",
-      "Number of office chairs",
-      "Count of DNS domains",
-      "Length of shell usernames"
+      "Application speed-up divided by the number of allocated cores",
+      "Floating-point operations per second achieved by the job",
+      "Allocated core-hours divided by available core-hours over the same period",
+      "Average CPU busy time within allocated cores",
     ],
-    "answer": 0,
-    "explanation": "Allocated compute hours divided by available capacity measures resource occupancy. Actual CPU or GPU utilisation requires execution telemetry as well."
+    "answer": 2,
+    "explanation": "Allocated capacity measures reservation or occupancy. It must not be confused with actual CPU/GPU utilisation or parallel efficiency; use comparable units and the same measurement window."
   },
   {
     "id": "EPSO-ICT1-247",
     "category": "epso_ad7_infrastructure",
     "topic": "Quantum technologies",
-    "level": "medium",
+    "level": "hard",
     "question": "What is the principal mathematical threat from Shor's algorithm to existing public-key systems?",
     "options": [
       "A quadratic speed-up in exhaustive symmetric-key search",
@@ -3768,7 +3768,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-251",
     "category": "epso_ad7_infrastructure",
     "topic": "Quantum technologies",
-    "level": "hard",
+    "level": "easy",
     "question": "What is the main purpose of digital signatures?",
     "options": [
       "Authenticate origin and detect unauthorised modification",
@@ -3783,30 +3783,30 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-252",
     "category": "epso_ad7_infrastructure",
     "topic": "Quantum technologies",
-    "level": "hard",
+    "level": "medium",
     "question": "A web service uses RSA key exchange. What should its PQC migration inventory identify?",
     "options": [
-      "Only DNS TTL values",
-      "Only users' monitor models",
-      "Only the server's colour",
-      "Protocols, algorithms, key sizes and dependent endpoints"
+      "Protocols, algorithms, key sizes and dependent endpoints",
+      "Only the number of application servers, without their cryptographic use",
+      "Only current certificate expiry dates, ignoring algorithms and dependencies",
+      "Only network bandwidth without protocols or key information",
     ],
-    "answer": 3,
+    "answer": 0,
     "explanation": "Cryptographic inventories map where vulnerable mechanisms are used."
   },
   {
     "id": "EPSO-ICT1-253",
     "category": "epso_ad7_infrastructure",
     "topic": "Quantum technologies",
-    "level": "medium",
+    "level": "easy",
     "question": "What does harvest-now-decrypt-later refer to?",
     "options": [
-      "DNS query replay only",
+      "Rotate encryption keys while deliberately discarding all retained ciphertext",
+      "Recover a forgotten password from a current backup only",
+      "Replace public-key algorithms after every scheduled backup completes",
       "Storing intercepted encrypted data for possible future decryption",
-      "A backup retention policy",
-      "A filesystem deduplication method"
     ],
-    "answer": 1,
+    "answer": 3,
     "explanation": "Attackers may retain ciphertext until future advances allow decryption."
   },
   {
@@ -3828,28 +3828,28 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-255",
     "category": "epso_ad7_infrastructure",
     "topic": "Quantum technologies",
-    "level": "hard",
+    "level": "easy",
     "question": "What is a cryptographic agility inventory intended to record?",
     "options": [
-      "Only DNS aliases",
-      "Only data-centre floor numbers",
-      "Only supplier logos",
-      "Algorithms, keys, protocols, certificates and owners"
+      "Only key lengths without protocols, certificates or dependencies",
+      "Algorithms, keys, protocols, certificates and owners",
+      "Only certificate expiration dates without algorithms or owners",
+      "Only server versions without identifying where cryptography is used",
     ],
-    "answer": 3,
+    "answer": 1,
     "explanation": "Inventory enables coordinated algorithm replacement and lifecycle planning."
   },
   {
     "id": "EPSO-ICT1-256",
     "category": "epso_ad7_infrastructure",
     "topic": "Quantum technologies",
-    "level": "medium",
+    "level": "easy",
     "question": "What is the difference between quantum key distribution and post-quantum algorithms?",
     "options": [
       "QKD uses quantum communication; PQC algorithms run on conventional computers",
-      "Both require a quantum computer for encryption",
-      "PQC always needs dedicated optical fibre",
-      "QKD is simply a new password manager"
+      "Both approaches require quantum hardware at every application endpoint",
+      "PQC requires a dedicated quantum communication channel",
+      "QKD automatically authenticates classical endpoints without any other trust mechanism",
     ],
     "answer": 0,
     "explanation": "PQC is deployable in conventional systems while QKD uses quantum physical channels."
@@ -3873,7 +3873,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-258",
     "category": "epso_ad7_infrastructure",
     "topic": "Quantum technologies",
-    "level": "hard",
+    "level": "medium",
     "question": "What is the main operational challenge with deploying quantum-resistant signatures?",
     "options": [
       "All post-quantum signatures are shorter than RSA",
@@ -3906,27 +3906,27 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "hard",
     "question": "Why is quantum error correction essential to scalable computation?",
     "options": [
-      "It replaces encryption algorithms",
       "Physical qubits are noisy and logical computation needs fault tolerance",
-      "It prevents all human mistakes",
-      "It increases the number of DNS requests"
+      "It eliminates the need to control noise in physical qubits",
+      "It makes every noisy physical qubit operate perfectly by itself",
+      "It guarantees that every quantum algorithm has zero computational overhead",
     ],
-    "answer": 1,
+    "answer": 0,
     "explanation": "Error correction protects logical qubits from physical noise and errors."
   },
   {
     "id": "EPSO-ICT1-261",
     "category": "epso_ad7_infrastructure",
     "topic": "Quantum technologies",
-    "level": "hard",
+    "level": "easy",
     "question": "What is decoherence in a quantum computer?",
     "options": [
-      "TCP congestion collapse",
-      "Ordinary hard disk fragmentation",
+      "The intentional extraction of a classical outcome by a chosen measurement",
+      "A guarantee that an unknown state can be copied without alteration",
+      "A purely classical queueing delay in the control computer",
       "Loss of usable quantum coherence through interaction with environment",
-      "Compilation of source code"
     ],
-    "answer": 2,
+    "answer": 3,
     "explanation": "Environmental interactions disrupt the quantum state needed for computation."
   },
   {
@@ -3951,12 +3951,12 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "hard",
     "question": "Which attack category must still be assessed for implementations of PQC algorithms?",
     "options": [
+      "Only exhaustive search of classical passwords, regardless of the implementation",
       "Side-channel attacks",
-      "Only screen-scraping",
-      "Only physical door access",
-      "Only DNS zone spoofing"
+      "Only attacks that require a large fault-tolerant quantum computer",
+      "No implementation attacks, because standardising the algorithm prevents them",
     ],
-    "answer": 0,
+    "answer": 1,
     "explanation": "PQC mathematics does not eliminate implementation leakage and side channels."
   },
   {
@@ -4008,7 +4008,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-267",
     "category": "epso_ad7_infrastructure",
     "topic": "Quantum technologies",
-    "level": "hard",
+    "level": "medium",
     "question": "Why does quantum computing not make all encryption immediately insecure?",
     "options": [
       "Practical attacks require suitable algorithms and sufficiently capable fault-tolerant hardware",
@@ -4038,7 +4038,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-269",
     "category": "epso_ad7_infrastructure",
     "topic": "Quantum technologies",
-    "level": "hard",
+    "level": "medium",
     "question": "What is the main risk of replacing cryptographic libraries without end-to-end tests?",
     "options": [
       "Complete removal of vulnerabilities",
@@ -4053,15 +4053,15 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-270",
     "category": "epso_ad7_infrastructure",
     "topic": "Quantum technologies",
-    "level": "hard",
+    "level": "medium",
     "question": "Which PQC migration goal is especially urgent for archives kept confidential for decades?",
     "options": [
-      "Shorten email subject lines",
-      "Reduce office printer consumption",
-      "Improve user interface styling",
-      "Protect data against future decryption of captured ciphertext"
+      "Reduce the number of users authorised to view public information",
+      "Retain only current certificate expiry dates without protecting captured ciphertext",
+      "Protect data against future decryption of captured ciphertext",
+      "Guarantee that every archived dataset can be published immediately",
     ],
-    "answer": 3,
+    "answer": 2,
     "explanation": "Long-term confidentiality can be threatened even before a capable quantum attacker exists."
   },
   {
@@ -4069,7 +4069,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "category": "epso_ad7_infrastructure",
     "topic": "Quantum technologies",
     "level": "medium",
-    "question": "Why should key rotation be tested during crypto-agility exercises?",
+    "question": "Why test both key rotation and algorithm replacement during a crypto-agility exercise?",
     "options": [
       "Avoid testing disaster recovery",
       "Verify that keys and algorithms can change without loss of service",
@@ -4077,28 +4077,28 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
       "Remove certificate expiry dates"
     ],
     "answer": 1,
-    "explanation": "Operational key lifecycle changes must be reliable and recoverable."
+    "explanation": "Rotating a key and replacing an algorithm are distinct operations. Test both, including dependent certificates, protocol support, recovery and continued service operation; key rotation alone does not establish algorithm agility."
   },
   {
     "id": "EPSO-ICT1-272",
     "category": "epso_ad7_infrastructure",
     "topic": "Quantum technologies",
-    "level": "hard",
+    "level": "easy",
     "question": "What is quantum annealing primarily associated with?",
     "options": [
-      "Native RSA signing",
-      "Direct replacement of all general-purpose CPUs",
       "Optimisation-oriented quantum approaches",
-      "Ordinary Ethernet switching"
+      "A universal guarantee of polynomial-time solutions to all hard problems",
+      "A direct substitute for all fault-tolerant gate-model algorithms",
+      "A classical digital-signature scheme standardised as ML-DSA",
     ],
-    "answer": 2,
+    "answer": 0,
     "explanation": "Quantum annealing is explored for particular optimisation problems rather than universal replacement of classical computing."
   },
   {
     "id": "EPSO-ICT1-273",
     "category": "epso_ad7_infrastructure",
     "topic": "Quantum technologies",
-    "level": "hard",
+    "level": "medium",
     "question": "What is the correct role of standards in PQC procurement?",
     "options": [
       "Remove performance acceptance tests",
@@ -4113,7 +4113,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-274",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "medium",
+    "level": "easy",
     "question": "Which measure best detects supplier underperformance across service restoration commitments?",
     "options": [
       "Overall availability without incident restoration measurements",
@@ -4128,7 +4128,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-275",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "hard",
+    "level": "medium",
     "question": "A provider meets an uptime target but repeatedly fails security reporting deadlines. What follows?",
     "options": [
       "Uptime makes every other obligation irrelevant",
@@ -4143,7 +4143,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-276",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "hard",
+    "level": "medium",
     "question": "What should a service integration function do when two suppliers dispute incident ownership?",
     "options": [
       "Suspend all communications",
@@ -4161,19 +4161,19 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "level": "medium",
     "question": "Which document should define who escalates a cross-vendor major incident?",
     "options": [
-      "A hardware receipt",
-      "A generic supplier brochure",
+      "A purchase invoice that names the equipment but no operational roles",
+      "A supplier marketing brochure without agreed responsibilities",
+      "A list of support tools with no escalation contacts or ownership",
       "Joint operating procedures and escalation matrix",
-      "An employee leave schedule"
     ],
-    "answer": 2,
+    "answer": 3,
     "explanation": "Explicit joint procedures make multi-supplier escalation actionable."
   },
   {
     "id": "EPSO-ICT1-278",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "hard",
+    "level": "easy",
     "question": "Why should SLA measurement definitions be agreed before signing a contract?",
     "options": [
       "Guarantee zero service outages",
@@ -4188,7 +4188,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-279",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "hard",
+    "level": "medium",
     "question": "Which metric is most relevant for a critical service's support availability?",
     "options": [
       "Coverage hours and measured responsiveness within those hours",
@@ -4203,22 +4203,22 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-280",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "medium",
+    "level": "easy",
     "question": "What is a practical purpose of regular supplier service reviews?",
     "options": [
-      "Delete historical SLA records",
       "Examine KPIs, incidents, risks and improvement actions",
-      "Approve unrelated employee leave",
-      "Replace all technical monitoring"
+      "Replace monitoring with the supplier’s verbal assurances",
+      "Remove all past incidents from the review once the invoice is paid",
+      "Assess only whether the account manager attended the meeting",
     ],
-    "answer": 1,
+    "answer": 0,
     "explanation": "Service reviews support evidence-based corrective action and risk oversight."
   },
   {
     "id": "EPSO-ICT1-281",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "hard",
+    "level": "medium",
     "question": "Which management approach best addresses a persistent SLA breach?",
     "options": [
       "Hide failing measurements",
@@ -4233,7 +4233,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-282",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "hard",
+    "level": "medium",
     "question": "A contract requires quarterly recovery tests. What evidence should be retained?",
     "options": [
       "Only a verbal statement",
@@ -4263,7 +4263,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-284",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "hard",
+    "level": "medium",
     "question": "Which requirement is most important when external operators access privileged infrastructure?",
     "options": [
       "Named MFA-protected accounts with permanent unrestricted admin access",
@@ -4278,15 +4278,15 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-285",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "hard",
+    "level": "medium",
     "question": "What should a contract exit plan explicitly cover?",
     "options": [
-      "Only stationery supplies",
-      "Only the vendor logo",
+      "Only the purchase price of replacement licences",
+      "Only the date of the final invoice without transition responsibilities",
+      "Only a promise to retain the provider’s portal login indefinitely",
       "Data return, knowledge transfer, access revocation and transition support",
-      "Only employee seating"
     ],
-    "answer": 2,
+    "answer": 3,
     "explanation": "Exit planning protects continuity and information during provider changes."
   },
   {
@@ -4294,21 +4294,21 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
     "level": "easy",
-    "question": "What is an operational level agreement typically used for?",
+    "question": "Why should support commitments between internal teams be aligned with the customer-facing SLA?",
     "options": [
-      "Guarantee every external supplier price",
-      "Define internal support commitments between service teams",
-      "Replace national employment law",
-      "Set staff pension contributions"
+      "So an internal agreement replaces all supplier contracts",
+      "So every internal task can ignore the customer’s restoration target",
+      "So internal response and handover times support the end-to-end service promise",
+      "So internal teams never need named owners",
     ],
-    "answer": 1,
-    "explanation": "OLAs govern supporting internal operational commitments."
+    "answer": 2,
+    "explanation": "An end-to-end service target depends on the internal teams and handoffs supporting it. Agree realistic internal responsibilities and timings rather than assuming the external promise can be met independently."
   },
   {
     "id": "EPSO-ICT1-287",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "hard",
+    "level": "medium",
     "question": "How should a vendor's claimed 99.95% availability be verified?",
     "options": [
       "By counting service catalogue entries",
@@ -4323,22 +4323,22 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-288",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "hard",
+    "level": "easy",
     "question": "What is a supplier dependency concentration risk?",
     "options": [
-      "Two suppliers use different logos",
-      "Several contracts use the same font",
       "Critical operations rely too heavily on one provider or shared failure domain",
-      "Support staff work in two buildings"
+      "Critical vendors use different company names but are evaluated separately",
+      "Two providers have different invoice formats",
+      "Support is provided from more than one building with no shared dependencies",
     ],
-    "answer": 2,
+    "answer": 0,
     "explanation": "Concentrated dependencies can amplify outages and commercial exposure."
   },
   {
     "id": "EPSO-ICT1-289",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "medium",
+    "level": "easy",
     "question": "What should incident communications to senior management emphasise?",
     "options": [
       "Impact, current status, actions, decisions and next update",
@@ -4353,7 +4353,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-290",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "hard",
+    "level": "medium",
     "question": "Which strategy reduces ambiguity in multi-vendor handovers?",
     "options": [
       "An informal unrecorded chat",
@@ -4368,7 +4368,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-291",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "hard",
+    "level": "medium",
     "question": "Why should service credits not be the sole response to repeated SLA failure?",
     "options": [
       "Credits replace continuity planning",
@@ -4398,7 +4398,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-293",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "hard",
+    "level": "easy",
     "question": "What must a KPI have to support fair supplier evaluation?",
     "options": [
       "No measurement method",
@@ -4413,7 +4413,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-294",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "hard",
+    "level": "medium",
     "question": "What is the most appropriate reaction to evidence of breached contractual security controls?",
     "options": [
       "Wait until annual renewal automatically",
@@ -4443,7 +4443,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-296",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "hard",
+    "level": "medium",
     "question": "What is the main purpose of a service acceptance review before supplier handover?",
     "options": [
       "End all supplier obligations immediately",
@@ -4458,7 +4458,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-297",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "hard",
+    "level": "medium",
     "question": "Which evidence supports an SLA dispute over incident resolution time?",
     "options": [
       "Timestamped incident lifecycle and defined clock-stop rules",
@@ -4488,7 +4488,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-299",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "hard",
+    "level": "medium",
     "question": "How should technical ownership be handled when a contracted cloud service relies on a subcontractor?",
     "options": [
       "Assume subcontractors have no impact",
@@ -4503,7 +4503,7 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-300",
     "category": "epso_ad7_infrastructure",
     "topic": "Teams, suppliers and SLAs",
-    "level": "hard",
+    "level": "medium",
     "question": "What improves resilience when a single vendor supports a business-critical platform?",
     "options": [
       "Keeping all platform knowledge proprietary and undocumented",

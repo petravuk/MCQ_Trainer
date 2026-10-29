@@ -4,18 +4,18 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question:
-      "According to the Rules of Procedure, what is the European Parliament?",
+      "How are Members of the European Parliament chosen?",
     options: [
-      "An advisory body appointed by the Council",
-      "The assembly elected pursuant to the Treaties and the 1976 Act",
-      "A committee of representatives from national governments",
-      "The executive body of the European Union",
+      "By direct elections held every five years",
+      "By appointment by national governments",
+      "By appointment by the European Commission",
+      "By appointment by the European Council",
     ],
-    answer: 1,
+    answer: 0,
     explanation:
-      "Rule 1 defines the European Parliament as the assembly elected pursuant to the Treaties and the Act of 20 September 1976.",
+      "MEPs are directly elected by EU citizens for a five-year parliamentary term.",
   },
   {
     id: "ep-002",
@@ -39,7 +39,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "hard",
     question:
       "What must newly elected Members declare before taking their seat in Parliament?",
     options: [
@@ -57,7 +57,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "hard",
     question: "If a Member resigns, to whom must the resignation be notified?",
     options: [
       "The President",
@@ -91,25 +91,25 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "hard",
     question:
-      "When Members are required to appear as witnesses, when is there no need to request a waiver of immunity?",
+      "When an MEP is called as a witness, which safeguards can make a waiver of immunity unnecessary?",
     options: [
-      "When they are not obliged to appear at a time that prevents them from performing parliamentary duties and are not obliged to disclose confidential information",
-      "When the request comes from a national authority",
-      "When the Member belongs to a political group",
-      "When the hearing takes place outside Parliament",
+      "Their parliamentary duties are not hindered and they are not forced to disclose confidential parliamentary information they do not wish to disclose",
+      "Only their political group needs to agree",
+      "The hearing merely needs to be held outside Parliament",
+      "No safeguards apply if a national authority requests the hearing",
     ],
     answer: 0,
     explanation:
-      "Rule 6 provides that no waiver is needed in specific witness situations, provided parliamentary duties and confidential information are protected.",
+      "Rule 6(2) protects parliamentary duties and confidential information. A compatible date or a written or equivalent statement may preserve the Member’s duties; protected confidential information need not be disclosed.",
   },
   {
     id: "ep-007",
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "hard",
     question:
       "Who may take urgent action to assert a Member's privileges and immunities when the Member is arrested or has freedom of movement curtailed?",
     options: [
@@ -127,7 +127,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "hard",
     question:
       "In procedures on immunity, what must the responsible committee always do with requests relating to immunity?",
     options: [
@@ -194,7 +194,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "hard",
     question:
       "Observers from an acceding State may take part in Parliament's proceedings, but they do not have the right to:",
     options: [
@@ -212,7 +212,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "hard",
     question:
       "At a sitting held to elect the President and the Bureau, who may take the chair until the President has been elected?",
     options: [
@@ -247,7 +247,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "hard",
     question:
       "If no candidate for President obtains an absolute majority after three ballots, what happens on the fourth ballot?",
     options: [
@@ -265,7 +265,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question: "How many Vice-Presidents does Parliament elect?",
     options: ["5", "10", "14", "27"],
     answer: 2,
@@ -277,7 +277,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question: "How many Quaestors does Parliament elect?",
     options: ["3", "5", "7", "14"],
     answer: 1,
@@ -288,7 +288,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question:
       "What is the term of office of the President, Vice-Presidents and Quaestors?",
     options: [
@@ -306,7 +306,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "hard",
     question:
       "If the office of President becomes vacant, who acts as President until a new President is elected?",
     options: [
@@ -324,7 +324,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "hard",
     question:
       "Who may propose to Parliament the early termination of the term of office of certain office holders in cases of serious misconduct?",
     options: [
@@ -342,7 +342,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question: "Who directs all the activities of Parliament and its bodies?",
     options: [
       "The Secretary-General",
@@ -359,7 +359,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question:
       "Which of the following is one of the President's duties during sittings?",
     options: [
@@ -377,7 +377,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question:
       "When the President is absent or unable to discharge his or her duties, who replaces the President?",
     options: [
@@ -396,7 +396,7 @@ export const EP_QUESTIONS = [
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
     level: "medium",
-    question: "What is the Bureau composed of?",
+    question: "Who are the voting members of Parliament’s Bureau?",
     options: [
       "The President and the Chairs of the political groups",
       "The President and the 14 Vice-Presidents",
@@ -405,14 +405,14 @@ export const EP_QUESTIONS = [
     ],
     answer: 1,
     explanation:
-      "The Bureau consists of the President and the 14 Vice-Presidents. The Quaestors are members of the Bureau in an advisory capacity.",
+      "The President and 14 Vice-Presidents are its voting members. The five Quaestors are also members of the Bureau, in an advisory capacity.",
   },
   {
     id: "ep-025",
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question: "What is the role of the Quaestors in the Bureau?",
     options: [
       "They are members with full voting rights in all cases",
@@ -429,7 +429,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question:
       "Which body takes financial, organisational and administrative decisions concerning the internal organisation of Parliament, its Secretariat and its bodies?",
     options: [
@@ -447,7 +447,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question: "Who appoints the Secretary-General of Parliament?",
     options: [
       "The Council",
@@ -464,7 +464,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question: "Who sits in the Conference of Presidents?",
     options: [
       "The President of Parliament and the Chairs of the political groups",
@@ -483,23 +483,23 @@ export const EP_QUESTIONS = [
       "Base - general organisation, bodies, political groups, committees and votes",
     level: "medium",
     question:
-      "Can a non-attached Member attend meetings of the Conference of Presidents?",
+      "Does the non-attached Members’ representative have voting rights in the Conference of Presidents?",
     options: [
-      "No, never",
-      "Yes, one non-attached Member may be invited to attend without the right to vote",
-      "Yes, all non-attached Members attend with voting rights",
-      "Only if appointed by the Commission",
+      "No, the representative participates without voting rights",
+      "Yes, with the same voting weight as the largest group",
+      "Yes, with one vote for every non-attached Member",
+      "Only when the President is absent",
     ],
-    answer: 1,
+    answer: 0,
     explanation:
-      "The President invites one non-attached Member to attend meetings of the Conference of Presidents, without the right to vote.",
+      "The Conference of Presidents includes a representative of non-attached Members without voting rights.",
   },
   {
     id: "ep-030",
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question:
       "Which body takes decisions on the organisation of Parliament's work and legislative planning?",
     options: [
@@ -517,7 +517,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question: "Who draws up the draft agenda of Parliament's part-sessions?",
     options: [
       "The Conference of Presidents",
@@ -534,7 +534,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question: "What are the Quaestors responsible for?",
     options: [
       "Administrative and financial matters directly concerning Members",
@@ -551,7 +551,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question: "Who belongs to the Conference of Committee Chairs?",
     options: [
       "The Chairs of all standing or special committees",
@@ -568,24 +568,24 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
-    question: "Who belongs to the Conference of Delegation Chairs?",
+    level: "easy",
+    question: "What is the main purpose of the Conference of Delegation Chairs?",
     options: [
-      "The Chairs of all standing interparliamentary delegations",
-      "The Chairs of all national parliaments",
-      "Only the President and Vice-Presidents",
-      "Only Members from the largest political group",
+      "To coordinate Parliament’s delegations",
+      "To prepare the Commission’s work programme",
+      "To allocate national seats in European elections",
+      "To supervise the European Central Bank",
     ],
     answer: 0,
     explanation:
-      "The Conference of Delegation Chairs consists of the Chairs of all standing interparliamentary delegations.",
+      "The Conference of Delegation Chairs coordinates the work of Parliament’s delegations and their cooperation with other parliamentary structures.",
   },
   {
     id: "ep-035",
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question:
       "What is the minimum number of Members required to form a political group?",
     options: ["14 Members", "20 Members", "23 Members", "27 Members"],
@@ -598,7 +598,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question: "Members forming a political group must be elected in at least:",
     options: [
       "One fifth of the Member States",
@@ -615,7 +615,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question: "Can a Member belong to more than one political group?",
     options: [
       "Yes, if the groups agree",
@@ -649,7 +649,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "hard",
     question: "Unofficial groupings must not engage in activities that could:",
     options: [
       "Be confused with the official activities of Parliament or its bodies",
@@ -666,7 +666,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question: "Who are non-attached Members?",
     options: [
       "Members who do not belong to a political group",
@@ -755,25 +755,25 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question:
-      "Under the Rules, Parliament may request the Commission to submit a proposal for a new act or the amendment of an existing act on the basis of which Treaty provision?",
+      "What can Parliament do if it considers new EU legislation necessary?",
     options: [
-      "Article 225 TFEU",
-      "Article 50 TEU",
-      "Article 7 TEU",
-      "Article 294 TFEU",
+      "Ask the Commission to submit a legislative proposal",
+      "Order the Council to adopt a law without a proposal",
+      "Adopt any EU law without the Council",
+      "Require national parliaments to draft an EU regulation",
     ],
     answer: 0,
     explanation:
-      "Rule 47 refers to Parliament's power to request the Commission to submit proposals pursuant to Article 225 TFEU.",
+      "Parliament can invite the Commission to submit a proposal. If the Commission refuses, it must explain its reasons; Parliament does not thereby acquire a general power to adopt legislation alone.",
   },
   {
     id: "ep-046",
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question:
       "After deciding the procedure for a proposal for a legally binding act, what may the committee do if the simplified procedure does not apply?",
     options: [
@@ -791,7 +791,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question:
       "Who is responsible for preparing the committee's report and presenting it to Parliament on behalf of that committee?",
     options: [
@@ -810,23 +810,23 @@ export const EP_QUESTIONS = [
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
     level: "medium",
-    question: "When may committees be authorised to deliver an opinion?",
+    question: "Why might another committee be invited to give an opinion on a legislative proposal?",
     options: [
-      "If a matter falls to a substantial extent within their competence",
-      "Only when requested by the Council",
-      "Only during the third reading",
-      "Only if they have no rapporteur",
+      "Because the proposal also concerns that committee’s policy responsibilities",
+      "Because its chair is from the same country as the rapporteur",
+      "Because every proposal must receive opinions from all committees",
+      "Because only an opinion-giving committee can adopt Parliament’s final position",
     ],
     answer: 0,
     explanation:
-      "Rule 57 allows committees to be authorised to deliver an opinion if the matter falls substantially within their competence.",
+      "A committee may give an opinion when the proposal also concerns its policy responsibilities. The committee responsible prepares the report for Parliament.",
   },
   {
     id: "ep-049",
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "hard",
     question: "When may the joint committee procedure be applied?",
     options: [
       "When a matter falls within the competence of two or three committees without the competence of any of them prevailing",
@@ -843,7 +843,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question:
       "At first reading, what may Parliament do with a draft legislative act?",
     options: [
@@ -881,16 +881,16 @@ export const EP_QUESTIONS = [
       "Base - general organisation, bodies, political groups, committees and votes",
     level: "medium",
     question:
-      "Who leads Parliament's negotiating team in interinstitutional negotiations during the ordinary legislative procedure?",
+      "Who normally presides over Parliament’s negotiating team in ordinary legislative negotiations before conciliation?",
     options: [
-      "The rapporteur",
-      "The Secretary-General",
-      "The oldest Member",
-      "The European Ombudsman",
+      "The chair of the committee responsible",
+      "The rapporteur acting as chair in every case",
+      "The President of the European Commission",
+      "The rotating President of the Council",
     ],
     answer: 0,
     explanation:
-      "Rule 75 states that Parliament's negotiating team is led by the rapporteur.",
+      "The committee chair, or a designated vice-chair, normally presides. The rapporteur leads the team and defends Parliament’s position. If neither chair nor vice-chair can attend a specific trilogue, the rapporteur may exceptionally preside, after the required notification.",
   },
   {
     id: "ep-053",
@@ -917,41 +917,41 @@ export const EP_QUESTIONS = [
       "Base - general organisation, bodies, political groups, committees and votes",
     level: "medium",
     question:
-      "On Parliament's side, who authenticates the final text of an ordinary legislative act under its Rules of Procedure?",
+      "Which two Presidents sign legislative acts adopted under the ordinary legislative procedure?",
     options: [
-      "The President and the Secretary-General",
-      "The President of the Commission only",
-      "The Court of Justice",
-      "The Quaestors",
+      "The Presidents of the European Parliament and the Council",
+      "The Presidents of the European Parliament and the Commission",
+      "The Presidents of the Commission and the European Council",
+      "The President of Parliament and the European Ombudsman",
     ],
     answer: 0,
     explanation:
-      "This question concerns authentication on Parliament's side by its President and Secretary-General. It should not be confused with signature by the Presidents of Parliament and the Council under Article 297 TFEU.",
+      "Ordinary legislative acts are jointly signed by the Presidents of Parliament and the Council. This is distinct from Parliament’s internal authentication by its President and Secretary-General.",
   },
   {
     id: "ep-055",
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question:
-      "In the consent procedure, how does Parliament decide whether to give consent?",
+      "Under the consent procedure, what can Parliament do with the proposed act?",
     options: [
-      "By means of a single vote on consent, irrespective of whether the committee recommends approval or rejection",
-      "By amending the agreement line by line",
-      "By referring the decision to the Commission",
-      "By automatic approval unless a Member objects",
+      "Approve or reject it, without amending it",
+      "Amend it and adopt it without the Council",
+      "Give an opinion that the Council may disregard before adoption",
+      "Approve it only after every MEP votes in favour",
     ],
     answer: 0,
     explanation:
-      "Under the consent procedure, Parliament decides by means of a single vote on consent, regardless of the committee recommendation.",
+      "Consent gives Parliament the choice of approving or rejecting the proposed act. Parliament cannot amend it under this procedure.",
   },
   {
     id: "ep-056",
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question:
       "Who proposes to Parliament a candidate for President of the Commission?",
     options: [
@@ -969,18 +969,18 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question:
-      "A motion of censure on the Commission must be supported by at least:",
+      "Which body can Parliament require to resign through a successful motion of censure?",
     options: [
-      "The low threshold",
-      "The medium threshold",
-      "The high threshold",
-      "One Member only",
+      "The European Commission as a body",
+      "The Council of the European Union",
+      "The European Council",
+      "An individual national government",
     ],
     answer: 0,
     explanation:
-      "Rule 131 provides that a motion of censure must be supported by Members reaching at least the low threshold.",
+      "A motion of censure concerns the Commission collectively. It is a tool of Parliament’s democratic scrutiny.",
   },
   {
     id: "ep-058",
@@ -1005,17 +1005,17 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
-    question: "Who may put questions for written answer under Rule 144?",
+    level: "easy",
+    question: "Why do MEPs put written and oral questions to the Commission?",
     options: [
-      "Any Member, a political group or a committee",
-      "Only the President",
-      "Only the Council",
-      "Only citizens through petitions",
+      "To scrutinise its activities and obtain explanations",
+      "To replace the Commission’s legislative proposals",
+      "To appoint national ministers",
+      "To give binding judgments on EU law",
     ],
     answer: 0,
     explanation:
-      "Rule 144 allows any Member, a political group or a committee to put questions for written answer to specified addressees.",
+      "Parliamentary questions are a direct scrutiny tool. The Commission must reply to oral and written questions from MEPs.",
   },
   {
     id: "ep-060",
@@ -1039,7 +1039,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "hard",
     question:
       "How many Members must request that the President establish whether a quorum is present before a vote begins?",
     options: ["10", "23", "39", "100"],
@@ -1069,7 +1069,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "hard",
     question:
       "What does the medium threshold mean, unless specified otherwise?",
     options: [
@@ -1087,7 +1087,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "hard",
     question: "What does the high threshold mean, unless specified otherwise?",
     options: [
       "One-twentieth of Parliament's component Members",
@@ -1147,7 +1147,7 @@ export const EP_QUESTIONS = [
     ],
     answer: 1,
     explanation:
-      "Under Rule 196, in the event of a tied vote, the text or proposal is deemed to have been rejected.",
+      "A text requiring a majority is not adopted if yes and no votes are tied. This does not describe every kind of vote: the Bureau and certain elections have their own tie-breaking rules.",
   },
   {
     id: "ep-068",
@@ -1172,7 +1172,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question:
       "What is the public record that includes decisions taken and names of speakers, among other elements, for a sitting?",
     options: [
@@ -1208,7 +1208,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question:
       "What should the composition of committees reflect as far as possible?",
     options: [
@@ -1226,24 +1226,24 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
-    question: "What do standing committees examine?",
+    level: "easy",
+    question: "What is the main function of standing parliamentary committees?",
     options: [
-      "Questions referred to them by Parliament or, during an adjournment, by the President on behalf of the Conference of Presidents",
-      "Only petitions from citizens",
-      "Only appointments to the Commission",
-      "Only national election results",
+      "To examine files in their policy areas and prepare reports for plenary",
+      "To represent national governments in the Council",
+      "To adopt every EU law without plenary",
+      "To run European elections in the Member States",
     ],
     answer: 0,
     explanation:
-      "Rule 217 defines the duties of standing committees in relation to questions referred to them.",
+      "Standing committees specialise in policy areas and prepare Parliament’s plenary work.",
   },
   {
     id: "ep-073",
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question: "What is the role of shadow rapporteurs?",
     options: [
       "They follow the progress of a report and seek compromises on behalf of their political group",
@@ -1313,7 +1313,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question: "Who elects the Ombudsman?",
     options: [
       "Parliament",
@@ -1330,7 +1330,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Base - general organisation, bodies, political groups, committees and votes",
-    level: "medium",
+    level: "easy",
     question: "Who heads Parliament's Secretariat?",
     options: [
       "The Secretary-General",
@@ -1385,16 +1385,16 @@ export const EP_QUESTIONS = [
       "Legislative procedures, consultation, consent, budget and discharge",
     level: "easy",
     question:
-      "Which institutions does Parliament work with to determine the legislative planning of the Union?",
+      "Which institution shares the power to adopt the EU’s annual budget with Parliament?",
     options: [
-      "The Commission and the Council",
-      "The Court of Justice and the Ombudsman",
-      "Only the Commission",
-      "Only national parliaments",
+      "The Council of the European Union",
+      "The European Council",
+      "The European Central Bank",
+      "The Court of Auditors",
     ],
     answer: 0,
     explanation:
-      "Parliament works together with the Commission and the Council to determine the legislative planning of the Union.",
+      "Parliament and the Council are the EU’s budgetary authority. The Commission prepares the draft budget.",
   },
   {
     id: "ep-082",
@@ -1418,7 +1418,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Legislative procedures, consultation, consent, budget and discharge",
-    level: "medium",
+    level: "hard",
     question:
       "Before the President signs the joint declaration on annual interinstitutional programming, whose approval must be sought?",
     options: [
@@ -1472,7 +1472,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Legislative procedures, consultation, consent, budget and discharge",
-    level: "medium",
+    level: "hard",
     question:
       "If the committee responsible disputes the legal basis of a proposal, whose opinion does it request?",
     options: [
@@ -1510,23 +1510,23 @@ export const EP_QUESTIONS = [
       "Legislative procedures, consultation, consent, budget and discharge",
     level: "hard",
     question:
-      "Except in urgent cases, when may the committee responsible proceed to its final vote on a legislative proposal in relation to subsidiarity checks?",
+      "How long do national parliaments have to issue a reasoned opinion on a draft legislative act’s compliance with subsidiarity?",
     options: [
-      "After the expiry of the eight-week deadline for national parliaments",
-      "Immediately after referral",
-      "Only after the next European elections",
-      "Only after the Ombudsman has issued an opinion",
+      "Eight weeks",
+      "Two weeks",
+      "Six months",
+      "Until the Council has adopted the act",
     ],
     answer: 0,
     explanation:
-      "Except in urgent cases, the committee responsible should not proceed to its final vote before the eight-week subsidiarity deadline has expired.",
+      "National parliaments have eight weeks to issue a reasoned opinion if they consider a draft legislative act incompatible with subsidiarity.",
   },
   {
     id: "ep-089",
     category: "ep_knowledge",
     topic:
       "Legislative procedures, consultation, consent, budget and discharge",
-    level: "medium",
+    level: "hard",
     question:
       "What happens if a national parliament sends a reasoned opinion on subsidiarity to the President?",
     options: [
@@ -1562,7 +1562,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Legislative procedures, consultation, consent, budget and discharge",
-    level: "medium",
+    level: "hard",
     question:
       "When the Council invites Parliament to take part in a Council meeting, who is asked to represent Parliament?",
     options: [
@@ -1580,18 +1580,18 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Legislative procedures, consultation, consent, budget and discharge",
-    level: "medium",
+    level: "easy",
     question:
-      "What may Parliament ask the Commission to submit under its right of initiative?",
+      "Which institution normally submits proposals for EU legislation?",
     options: [
-      "A proposal for a new Union act or the amendment of an existing act",
-      "A list of Members' private addresses",
-      "A national election result",
-      "A secret ballot paper",
+      "The European Commission",
+      "The European Council",
+      "The Court of Auditors",
+      "The European Ombudsman",
     ],
     answer: 0,
     explanation:
-      "Parliament may request the Commission to submit an appropriate proposal for a new act or an amendment to an existing act.",
+      "The Commission submits most EU legislative proposals. Parliament and the Council may ask it to act, and the Treaties provide specific exceptions.",
   },
   {
     id: "ep-093",
@@ -1600,23 +1600,23 @@ export const EP_QUESTIONS = [
       "Legislative procedures, consultation, consent, budget and discharge",
     level: "hard",
     question:
-      "How many Members may jointly table a proposal for a Union act under Parliament's right of initiative?",
+      "What is the maximum number of MEPs who may jointly table a proposal for a Union act under Rule 47(2)?",
     options: [
-      "Up to 10 Members",
-      "Up to 5 Members",
-      "At least 23 Members",
-      "Only one political group",
+      "10 Members",
+      "5 Members",
+      "23 Members",
+      "Only the chair of a political group",
     ],
     answer: 0,
     explanation:
-      "A proposal for a Union act may be tabled jointly by up to 10 Members.",
+      "Rule 47(2) permits a proposal to be tabled jointly by up to ten Members. An individual Member may also table a proposal. This is distinct from Parliament as an institution formally requesting a Commission proposal.",
   },
   {
     id: "ep-094",
     category: "ep_knowledge",
     topic:
       "Legislative procedures, consultation, consent, budget and discharge",
-    level: "medium",
+    level: "hard",
     question:
       "When the President refers proposals for legally binding acts to committees, what may another committee or political group do within two weeks?",
     options: [
@@ -1671,23 +1671,23 @@ export const EP_QUESTIONS = [
       "Legislative procedures, consultation, consent, budget and discharge",
     level: "easy",
     question:
-      "In a legislative report, who is normally appointed by the committee to handle the proposal?",
+      "After a parliamentary committee adopts its legislative report, where is Parliament’s position normally adopted?",
     options: [
-      "A rapporteur",
-      "A Quaestor",
-      "The Ombudsman",
-      "A judge of the Court of Justice",
+      "In plenary",
+      "In the European Council",
+      "In the College of Commissioners",
+      "In the national parliament of the rapporteur",
     ],
     answer: 0,
     explanation:
-      "The committee normally appoints a rapporteur from among its members or permanent substitutes.",
+      "Committee work prepares the file; Parliament adopts its position on the legislative proposal in plenary.",
   },
   {
     id: "ep-098",
     category: "ep_knowledge",
     topic:
       "Legislative procedures, consultation, consent, budget and discharge",
-    level: "medium",
+    level: "hard",
     question:
       "Under the simplified procedure, what may the Chair propose after a first discussion of a proposal for a legally binding act?",
     options: [
@@ -1742,16 +1742,16 @@ export const EP_QUESTIONS = [
       "Legislative procedures, consultation, consent, budget and discharge",
     level: "medium",
     question:
-      "Who is responsible for preparing a committee report and presenting it to Parliament on behalf of the committee?",
+      "Who appoints the rapporteur responsible for preparing a legislative report?",
     options: [
-      "The rapporteur",
-      "The Secretary-General",
-      "The Quaestors",
+      "The parliamentary committee responsible",
+      "The European Commission",
       "The Council Presidency",
+      "The European Ombudsman",
     ],
     answer: 0,
     explanation:
-      "The rapporteur prepares the committee's report and presents it to Parliament.",
+      "The responsible committee appoints a rapporteur from among its Members to prepare the report and steer the file through Parliament.",
   },
   {
     id: "ep-102",
@@ -1828,7 +1828,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Legislative procedures, consultation, consent, budget and discharge",
-    level: "medium",
+    level: "hard",
     question:
       "At first reading, what does Parliament vote on first if such a proposal has been tabled?",
     options: [
@@ -1846,7 +1846,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Legislative procedures, consultation, consent, budget and discharge",
-    level: "medium",
+    level: "hard",
     question:
       "If Parliament adopts a proposal for immediate rejection at first reading, what does the President ask the originating institution to do?",
     options: [
@@ -1866,7 +1866,7 @@ export const EP_QUESTIONS = [
       "Legislative procedures, consultation, consent, budget and discharge",
     level: "hard",
     question:
-      "When a matter is referred back to the committee responsible after a first-reading vote, within what period must the committee report to Parliament?",
+      "Unless an extension is granted, within what period must a committee report back after a first-reading referral under Rule 61?",
     options: [
       "Within four months",
       "Within two weeks",
@@ -1875,14 +1875,14 @@ export const EP_QUESTIONS = [
     ],
     answer: 0,
     explanation:
-      "The committee responsible must report to Parliament within four months, unless extended.",
+      "The committee must report orally or in writing within four months. The Conference of Presidents may extend that period.",
   },
   {
     id: "ep-109",
     category: "ep_knowledge",
     topic:
       "Legislative procedures, consultation, consent, budget and discharge",
-    level: "medium",
+    level: "hard",
     question:
       "When is the Council's first-reading position deemed to have been referred automatically to the committee responsible?",
     options: [
@@ -1900,18 +1900,18 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Legislative procedures, consultation, consent, budget and discharge",
-    level: "hard",
+    level: "medium",
     question:
-      "At second reading, what majority is required for Parliament to reject the Council's position?",
+      "What happens if Parliament rejects the Council’s position by the required majority at second reading?",
     options: [
-      "A majority of Parliament's component Members",
-      "A majority of votes cast only",
-      "Unanimity of political groups",
-      "A simple majority of the Council",
+      "The proposed act is not adopted and the procedure ends",
+      "The Council can enact the same text under that procedure anyway",
+      "The proposal goes automatically to a third reading",
+      "The Commission immediately turns it into a delegated act",
     ],
     answer: 0,
     explanation:
-      "Rejection at second reading requires a majority of Parliament's component Members.",
+      "Rejection at second reading requires a majority of Parliament’s component Members and ends that legislative procedure.",
   },
   {
     id: "ep-111",
@@ -1956,39 +1956,39 @@ export const EP_QUESTIONS = [
       "Legislative procedures, consultation, consent, budget and discharge",
     level: "medium",
     question:
-      "Who leads Parliament's negotiating team during interinstitutional negotiations?",
+      "What is the rapporteur’s role in Parliament’s legislative negotiating team?",
     options: [
-      "The rapporteur",
-      "The Secretary-General",
-      "The Ombudsman",
-      "A Quaestor",
+      "To defend Parliament’s position on the file",
+      "To represent the Council’s national ministers",
+      "To adopt the final act without a parliamentary vote",
+      "To chair every negotiation instead of the committee chair",
     ],
     answer: 0,
-    explanation: "Parliament's negotiating team is led by the rapporteur.",
+    explanation: "The rapporteur leads Parliament’s negotiating team and defends Parliament’s position. The committee chair or a designated vice-chair normally presides over the team; these are distinct roles.",
   },
   {
     id: "ep-114",
     category: "ep_knowledge",
     topic:
       "Legislative procedures, consultation, consent, budget and discharge",
-    level: "hard",
+    level: "medium",
     question: "What is a trilogue in the context of legislative negotiations?",
     options: [
-      "A negotiation meeting with the Council and the Commission",
-      "A meeting only between political groups",
-      "A public hearing on petitions",
-      "A secret ballot for Quaestors",
+      "An informal negotiation between Parliament, the Council and the Commission",
+      "A meeting of three parliamentary committees without the Council",
+      "A vote by the three largest political groups",
+      "A meeting of the three Presidents that adopts legislation without votes",
     ],
     answer: 0,
     explanation:
-      "A trilogue is a negotiation meeting involving Parliament, the Council and the Commission.",
+      "A trilogue is an informal meeting between representatives of Parliament, the Council and the Commission seeking agreement. A provisional agreement still needs formal approval.",
   },
   {
     id: "ep-115",
     category: "ep_knowledge",
     topic:
       "Legislative procedures, consultation, consent, budget and discharge",
-    level: "medium",
+    level: "hard",
     question:
       "After each trilogue, who reports back to the committee responsible?",
     options: [
@@ -1999,7 +1999,7 @@ export const EP_QUESTIONS = [
     ],
     answer: 0,
     explanation:
-      "The Chair of the negotiating team and the rapporteur report back to the committee responsible.",
+      "After a trilogue, the chair of the negotiating team and the rapporteur report to the next meeting of the committee responsible. If a committee meeting cannot be convened in time, they report to its coordinators.",
   },
   {
     id: "ep-116",
@@ -2008,16 +2008,16 @@ export const EP_QUESTIONS = [
       "Legislative procedures, consultation, consent, budget and discharge",
     level: "medium",
     question:
-      "During third reading, can amendments be tabled to the joint text agreed in Conciliation Committee?",
+      "How are Parliament and the Council represented in the legislative Conciliation Committee?",
     options: [
-      "No",
-      "Yes, by any Member",
-      "Yes, by the Council only",
-      "Yes, if the Ombudsman agrees",
+      "By equal numbers of representatives",
+      "By twice as many Council representatives as MEPs",
+      "By the Commission alone on behalf of both institutions",
+      "By one representative of every political group and no Council members",
     ],
     answer: 0,
     explanation:
-      "No amendments may be tabled to the joint text at third reading.",
+      "The legislative Conciliation Committee brings together Council representatives and an equal number of MEPs to seek agreement on a joint text.",
   },
   {
     id: "ep-117",
@@ -2051,14 +2051,14 @@ export const EP_QUESTIONS = [
     ],
     answer: 0,
     explanation:
-      "This question concerns authentication on Parliament's side by its President and Secretary-General. It should not be confused with signature by the Presidents of Parliament and the Council under Article 297 TFEU.",
+      "On Parliament’s side, its President and Secretary-General authenticate the legislative text. Joint signature of the act is by the Presidents of Parliament and the Council; these are distinct steps.",
   },
   {
     id: "ep-119",
     category: "ep_knowledge",
     topic:
       "Legislative procedures, consultation, consent, budget and discharge",
-    level: "medium",
+    level: "hard",
     question:
       "In the consultation procedure, what may the committee responsible do if the Commission intends to replace or modify its proposal?",
     options: [
@@ -2076,7 +2076,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Legislative procedures, consultation, consent, budget and discharge",
-    level: "medium",
+    level: "hard",
     question:
       "Before the committee responsible proceeds to the final vote on a proposal, what may it ask the Commission to state?",
     options: [
@@ -2183,7 +2183,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Legislative procedures, consultation, consent, budget and discharge",
-    level: "medium",
+    level: "hard",
     question:
       "Who may table amendments to the Council's position on the draft budget in the committee responsible?",
     options: [
@@ -2201,7 +2201,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Legislative procedures, consultation, consent, budget and discharge",
-    level: "medium",
+    level: "hard",
     question:
       "Who sets the time limit for tabling amendments to the Council's position on the draft budget?",
     options: [
@@ -2306,7 +2306,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Legislative procedures, consultation, consent, budget and discharge",
-    level: "medium",
+    level: "easy",
     question: "What does the discharge procedure assess?",
     options: [
       "The implementation of a budget",
@@ -2340,7 +2340,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Legislative procedures, consultation, consent, budget and discharge",
-    level: "medium",
+    level: "hard",
     question:
       "Other discharge procedures may apply to the implementation of whose budget?",
     options: [
@@ -2358,7 +2358,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Legislative procedures, consultation, consent, budget and discharge",
-    level: "medium",
+    level: "hard",
     question:
       "Under interinstitutional cooperation in budgetary procedures, who participates in regular meetings between the Presidents of Parliament, the Council and the Commission?",
     options: [
@@ -2376,7 +2376,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Legislative procedures, consultation, consent, budget and discharge",
-    level: "medium",
+    level: "hard",
     question: "Who draws up Parliament's preliminary draft estimates?",
     options: [
       "The Bureau, on the basis of a report prepared by the Secretary-General",
@@ -2393,7 +2393,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Legislative procedures, consultation, consent, budget and discharge",
-    level: "medium",
+    level: "hard",
     question: "Who adopts Parliament's estimates?",
     options: [
       "Parliament",
@@ -2429,16 +2429,16 @@ export const EP_QUESTIONS = [
       "Legislative procedures, consultation, consent, budget and discharge",
     level: "medium",
     question:
-      "How does Parliament decide on a proposed act under the consent procedure?",
+      "What is the key difference between consent and consultation?",
     options: [
-      "By a single vote on consent, with no amendments tabled",
-      "By unlimited amendments in plenary",
-      "By secret ballot only",
-      "By referring the decision to national parliaments",
+      "Under consent, Parliament can block adoption by withholding approval",
+      "Under consultation, Parliament adopts the act alone",
+      "Under consent, Parliament can amend the Council’s text directly",
+      "Under consultation, the Council never has to seek Parliament’s opinion",
     ],
     answer: 0,
     explanation:
-      "Parliament decides by a single vote on consent, and no amendments may be tabled.",
+      "Consent allows Parliament to approve or reject, without amendments. Consultation requires Parliament’s opinion, but the Council is not legally bound to follow it.",
   },
   {
     id: "ep-141",
@@ -2499,7 +2499,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Relations with institutions, parliamentary questions, Commission, motions and appointments",
-    level: "medium",
+    level: "easy",
     question:
       "Before Parliament votes on the Commission as a body, what happens to Commissioners-designate?",
     options: [
@@ -2534,18 +2534,18 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Relations with institutions, parliamentary questions, Commission, motions and appointments",
-    level: "medium",
+    level: "hard",
     question:
-      "A motion of censure on the Commission must be supported by at least:",
+      "Under Rule 131(1), what is the normal minimum support needed to submit a motion of censure on the Commission?",
     options: [
-      "The low threshold",
-      "The medium threshold",
-      "The high threshold",
-      "One Member only",
+      "One tenth of Parliament’s component Members",
+      "One twentieth of Parliament’s component Members",
+      "A single political group, irrespective of its size",
+      "One Member acting alone",
     ],
     answer: 0,
     explanation:
-      "A motion of censure on the Commission must be supported by Members reaching at least the low threshold.",
+      "A motion of censure may be submitted by one tenth of Parliament’s component Members, not merely the low threshold. If a censure motion has been voted on in the preceding two months, a new motion needs at least one fifth to be admissible.",
   },
   {
     id: "ep-147",
@@ -2563,7 +2563,7 @@ export const EP_QUESTIONS = [
     ],
     answer: 0,
     explanation:
-      "The vote on a motion of censure may not take place until at least 48 hours after the beginning of the debate.",
+      "Rule 131 requires at least 48 hours between the beginning of the debate and the vote. The debate itself cannot start until at least 24 hours after the receipt of the motion is announced. The 48-hour interval is not the only condition governing the timetable.",
   },
   {
     id: "ep-148",
@@ -2588,7 +2588,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Relations with institutions, parliamentary questions, Commission, motions and appointments",
-    level: "medium",
+    level: "hard",
     question:
       "Which committee normally examines nominations to the Court of Auditors?",
     options: [
@@ -2599,7 +2599,7 @@ export const EP_QUESTIONS = [
     ],
     answer: 0,
     explanation:
-      "Nominations to the Court of Auditors are examined by the committee responsible for budgetary control.",
+      "Rule 133 provides for the responsible committee to hear and assess nominees. Annex VI, section VI, point 6 assigns relations with the Court of Auditors and the appointment of its members to the Committee on Budgetary Control (CONT). Parliament gives an opinion; the Council appoints the members.",
   },
   {
     id: "ep-150",
@@ -2680,15 +2680,15 @@ export const EP_QUESTIONS = [
       "Relations with institutions, parliamentary questions, Commission, motions and appointments",
     level: "easy",
     question:
-      "Which institution may present statements to Parliament concerning its activities?",
+      "Which institution’s annual report helps Parliament assess how the EU budget was implemented?",
     options: [
-      "The Court of Auditors",
-      "Only the Council",
-      "Only national courts",
-      "Only political groups",
+      "The European Court of Auditors",
+      "The European Ombudsman",
+      "The European Council",
+      "The European Central Bank",
     ],
     answer: 0,
-    explanation: "The Rules provide for statements by the Court of Auditors.",
+    explanation: "Parliament takes the Court of Auditors’ annual report into account when deciding whether to grant budget discharge.",
   },
   {
     id: "ep-155",
@@ -2732,23 +2732,23 @@ export const EP_QUESTIONS = [
     topic:
       "Relations with institutions, parliamentary questions, Commission, motions and appointments",
     level: "easy",
-    question: "Who may put questions for written answer under the Rules?",
+    question: "Must the Commission reply to parliamentary questions from MEPs?",
     options: [
-      "Any Member, a political group or a committee",
-      "Only the President",
-      "Only the Council",
-      "Only citizens through petitions",
+      "Yes, to both oral and written questions",
+      "Only if the question comes from the largest political group",
+      "Only if the Council first authorises a reply",
+      "No, replies are entirely optional",
     ],
     answer: 0,
     explanation:
-      "Questions for written answer may be put by any Member, a political group or a committee.",
+      "The Commission is required to reply to oral and written questions from MEPs as part of Parliament’s scrutiny role.",
   },
   {
     id: "ep-158",
     category: "ep_knowledge",
     topic:
       "Relations with institutions, parliamentary questions, Commission, motions and appointments",
-    level: "medium",
+    level: "hard",
     question:
       "Questions for written answer may be addressed to which addressees?",
     options: [
@@ -2811,7 +2811,7 @@ export const EP_QUESTIONS = [
     ],
     answer: 0,
     explanation:
-      "A motion for a resolution proposes a position or statement by Parliament.",
+      "A motion for a resolution proposes a position for Parliament to adopt. A non-legislative resolution is not itself binding EU legislation.",
   },
   {
     id: "ep-162",
@@ -3014,7 +3014,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Relations with institutions, parliamentary questions, Commission, motions and appointments",
-    level: "medium",
+    level: "hard",
     question:
       "Who authorises missions away from the usual places of work and interparliamentary meetings?",
     options: [
@@ -3032,7 +3032,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Relations with institutions, parliamentary questions, Commission, motions and appointments",
-    level: "medium",
+    level: "hard",
     question:
       "Who is responsible for authorising the drawing up of own-initiative reports?",
     options: [
@@ -3067,7 +3067,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Relations with institutions, parliamentary questions, Commission, motions and appointments",
-    level: "medium",
+    level: "hard",
     question:
       "How does Parliament decide whether to consent to a withdrawal agreement?",
     options: [
@@ -3121,7 +3121,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Relations with institutions, parliamentary questions, Commission, motions and appointments",
-    level: "medium",
+    level: "hard",
     question:
       "Requests for enhanced cooperation between Member States are referred by the President to whom?",
     options: [
@@ -3247,16 +3247,16 @@ export const EP_QUESTIONS = [
       "Relations with institutions, parliamentary questions, Commission, motions and appointments",
     level: "medium",
     question:
-      "What may Parliament request from European Agencies under the Rules?",
+      "When an MEP asks Parliament to forward a request to a European Agency, what must the request concern?",
     options: [
-      "Information or action under the relevant procedure",
-      "The election of Members",
-      "The dissolution of political groups",
-      "A replacement for plenary votes",
+      "A matter within that Agency’s remit, with background explaining the issue and the Union interest",
+      "Any national political issue, even outside the Agency’s remit",
+      "The appointment of national ministers",
+      "Instructions to the Agency to replace a plenary vote",
     ],
     answer: 0,
     explanation:
-      "The Rules include a procedure for requests to European Agencies.",
+      "Under Rule 153, requests must concern the Agency’s remit and include background on the issue and Union interest. The President consults the responsible committee before forwarding the request or taking another appropriate course.",
   },
   {
     id: "ep-187",
@@ -3349,7 +3349,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Relations with institutions, parliamentary questions, Commission, motions and appointments",
-    level: "medium",
+    level: "hard",
     question:
       "Who may make a proposal to modify the composition of Parliament before the end of a parliamentary term?",
     options: [
@@ -3386,16 +3386,16 @@ export const EP_QUESTIONS = [
     topic:
       "Relations with institutions, parliamentary questions, Commission, motions and appointments",
     level: "medium",
-    question: "What is the purpose of special scrutiny hearings?",
+    question: "What is a special scrutiny hearing used for?",
     options: [
-      "To scrutinise matters of major political importance",
-      "To elect the President of Parliament",
-      "To replace all committee work",
-      "To handle only petitions",
+      "Questioning one or more Commissioners on an issue of major political importance",
+      "Electing the President of Parliament",
+      "Approving the minutes of a routine committee meeting",
+      "Appointing national judges",
     ],
     answer: 0,
     explanation:
-      "Special scrutiny hearings are used for parliamentary scrutiny of major political matters.",
+      "Rule 141 allows a special scrutiny hearing to question one or more Commissioners on an issue of major political importance. It is convened by the Conference of Presidents under the procedure in that Rule.",
   },
   {
     id: "ep-195",
@@ -3419,17 +3419,17 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Relations with institutions, parliamentary questions, Commission, motions and appointments",
-    level: "medium",
-    question: "What is a major interpellation for written answer?",
+    level: "hard",
+    question: "Who submits a major interpellation for written answer under the Rules?",
     options: [
-      "A formal written question procedure for matters of broader political relevance",
-      "A petition by a citizen",
-      "A vote on a committee Chair",
-      "A secret ballot for the Ombudsman",
+      "A political group",
+      "Any citizen through the petitions portal",
+      "The Court of Auditors on behalf of Parliament",
+      "A national court",
     ],
     answer: 0,
     explanation:
-      "Major interpellations are a formal written question procedure under the Rules.",
+      "Under Rule 145, major interpellations are written questions of general interest submitted by a political group to the Council, Commission or Vice-President/High Representative.",
   },
   {
     id: "ep-197",
@@ -3509,23 +3509,23 @@ export const EP_QUESTIONS = [
     topic:
       "Sessions, agenda, debates, amendments, quorum, votes and points of order",
     level: "easy",
-    question: "Which Rules title covers Parliament's sessions?",
+    question: "How many official EU languages are used in Parliament’s multilingual work?",
     options: [
-      "Sessions",
-      "Petitions",
-      "The Ombudsman",
-      "External relations only",
+      "24",
+      "27",
+      "One language per political group",
+      "Only English and French",
     ],
     answer: 0,
     explanation:
-      "The Rules contain a title specifically covering Parliament's sessions.",
+      "Parliament works in all 24 official EU languages. Their number is different from the number of EU Member States.",
   },
   {
     id: "ep-202",
     category: "ep_knowledge",
     topic:
       "Sessions, agenda, debates, amendments, quorum, votes and points of order",
-    level: "medium",
+    level: "easy",
     question: "What is the parliamentary term?",
     options: [
       "The period for which Parliament is elected",
@@ -3535,7 +3535,7 @@ export const EP_QUESTIONS = [
     ],
     answer: 0,
     explanation:
-      "The parliamentary term is the period for which the European Parliament is elected.",
+      "A parliamentary term is the five-year period for which MEPs are elected.",
   },
   {
     id: "ep-203",
@@ -3561,7 +3561,7 @@ export const EP_QUESTIONS = [
       "Sessions, agenda, debates, amendments, quorum, votes and points of order",
     level: "medium",
     question:
-      "Who convenes Parliament in the circumstances laid down in the Rules?",
+      "Who convenes Parliament exceptionally at the request of a majority of MEPs, the Commission or the Council?",
     options: [
       "The President",
       "The Ombudsman",
@@ -3570,7 +3570,7 @@ export const EP_QUESTIONS = [
     ],
     answer: 0,
     explanation:
-      "The President convenes Parliament in accordance with the Rules.",
+      "Under Rule 160(4), the President convenes Parliament exceptionally on such a request after consulting the Conference of Presidents. Some regular sittings occur without requiring Parliament to be convened.",
   },
   {
     id: "ep-205",
@@ -3579,23 +3579,23 @@ export const EP_QUESTIONS = [
       "Sessions, agenda, debates, amendments, quorum, votes and points of order",
     level: "easy",
     question:
-      "Which rule area concerns the venue of Parliament's sittings and meetings?",
+      "Where are Parliament’s regular monthly plenary part-sessions held?",
     options: [
-      "Venue of sittings and meetings",
-      "Petitions",
-      "Immunity only",
-      "Discharge only",
+      "Strasbourg, with additional part-sessions in Brussels",
+      "Brussels, with all additional part-sessions in Luxembourg",
+      "Luxembourg, with additional part-sessions in Frankfurt",
+      "In each national capital in rotation",
     ],
     answer: 0,
     explanation:
-      "The Rules include provisions on the venue of sittings and meetings.",
+      "Parliament holds twelve four-day plenary part-sessions a year in Strasbourg and additional part-sessions in Brussels.",
   },
   {
     id: "ep-206",
     category: "ep_knowledge",
     topic:
       "Sessions, agenda, debates, amendments, quorum, votes and points of order",
-    level: "medium",
+    level: "easy",
     question: "Who draws up the draft agenda of Parliament's part-sessions?",
     options: [
       "The Conference of Presidents",
@@ -3630,18 +3630,18 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Sessions, agenda, debates, amendments, quorum, votes and points of order",
-    level: "medium",
+    level: "easy",
     question:
-      "What is the purpose of the procedure in plenary without amendment and debate?",
+      "A committee adopts a report. Does that alone make it Parliament’s formal plenary position?",
     options: [
-      "To allow certain items to be dealt with without amendment and debate under the Rules",
-      "To replace all votes by secret ballot",
-      "To cancel committee work",
-      "To elect the Ombudsman",
+      "No, plenary must adopt Parliament’s position",
+      "Yes, committee adoption always replaces a plenary vote",
+      "Yes, if the rapporteur signs the report",
+      "Yes, if the Commission agrees with the report",
     ],
     answer: 0,
     explanation:
-      "The Rules allow certain items to be handled in plenary without amendment and debate.",
+      "Committees prepare Parliament’s work. Texts adopted in plenary constitute the formal acts of the European Parliament.",
   },
   {
     id: "ep-209",
@@ -3665,7 +3665,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Sessions, agenda, debates, amendments, quorum, votes and points of order",
-    level: "medium",
+    level: "hard",
     question: "Who may request a topical debate under the Rules?",
     options: [
       "A political group",
@@ -3717,34 +3717,34 @@ export const EP_QUESTIONS = [
     topic:
       "Sessions, agenda, debates, amendments, quorum, votes and points of order",
     level: "medium",
-    question: "Who has access to the Chamber under the Rules?",
+    question: "How is speaking time shared between political groups in plenary?",
     options: [
-      "Persons authorised under the Rules",
-      "Any visitor at any time",
-      "Only national ministers",
-      "Only journalists",
+      "Part equally between groups and part in proportion to their membership",
+      "Equally between Member States, irrespective of political groups",
+      "Entirely to the largest group",
+      "According only to the alphabetical order of group names",
     ],
     answer: 0,
     explanation:
-      "Access to the Chamber is limited to persons authorised under the Rules.",
+      "A first share of speaking time is divided equally between groups and a further share is allocated according to their number of Members. Groups then decide who speaks.",
   },
   {
     id: "ep-214",
     category: "ep_knowledge",
     topic:
       "Sessions, agenda, debates, amendments, quorum, votes and points of order",
-    level: "medium",
+    level: "easy",
     question:
-      "Which rule area concerns the use of languages in Parliament's proceedings?",
+      "Which service makes a speech immediately understandable in other languages during a parliamentary debate?",
     options: [
-      "Languages",
-      "Petitions only",
-      "Budget discharge only",
-      "Secret ballots only",
+      "Interpretation",
+      "Translation of written documents",
+      "Legal-linguistic revision",
+      "Publication of the final minutes",
     ],
     answer: 0,
     explanation:
-      "The Rules include provisions on languages in parliamentary proceedings.",
+      "Interpreters provide live language interpretation during meetings. Translators work on written content.",
   },
   {
     id: "ep-215",
@@ -3752,16 +3752,16 @@ export const EP_QUESTIONS = [
     topic:
       "Sessions, agenda, debates, amendments, quorum, votes and points of order",
     level: "easy",
-    question: "Which rule area concerns electronic handling of documents?",
+    question: "Which service makes written parliamentary documents available in other official EU languages?",
     options: [
-      "Electronic handling of documents",
-      "Election of Quaestors",
-      "Petitions only",
-      "External relations only",
+      "Translation",
+      "Simultaneous interpretation",
+      "Allocation of speaking time",
+      "The roll-call voting service",
     ],
     answer: 0,
     explanation:
-      "The Rules include provisions on electronic handling of documents.",
+      "Parliament’s translation service makes written content accessible in the official EU languages. Interpretation concerns live speech.",
   },
   {
     id: "ep-216",
@@ -3802,17 +3802,17 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Sessions, agenda, debates, amendments, quorum, votes and points of order",
-    level: "medium",
-    question: "What are personal statements used for?",
+    level: "hard",
+    question: "What may an MEP address in a personal statement?",
     options: [
-      "To allow Members to make statements concerning personal matters under the Rules",
-      "To table budget amendments",
-      "To appoint Commissioners",
-      "To create political groups",
+      "Remarks about them, opinions attributed to them, or corrections to their own observations",
+      "Any new policy subject unrelated to the preceding debate",
+      "A new legislative proposal without a committee report",
+      "The political group’s complete programme for the next year",
     ],
     answer: 0,
     explanation:
-      "The Rules provide for personal statements under specified conditions.",
+      "Rule 180 limits personal statements to rebutting remarks concerning the Member or opinions attributed to them, or correcting their own observations. It is not a general opportunity to reopen the substance of a debate.",
   },
   {
     id: "ep-219",
@@ -3854,7 +3854,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Sessions, agenda, debates, amendments, quorum, votes and points of order",
-    level: "medium",
+    level: "hard",
     question:
       "What is available to Members against certain penalties under the Rules?",
     options: [
@@ -3889,30 +3889,35 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Sessions, agenda, debates, amendments, quorum, votes and points of order",
-    level: "hard",
+    level: "medium",
     question:
-      "Before a vote begins, how many Members must request that the President establish whether a quorum is present?",
-    options: ["39 Members", "10 Members", "23 Members", "One Member only"],
+      "What does the quorum rule concern in a plenary vote?",
+    options: [
+      "The minimum presence of Members required for a valid vote",
+      "The proportion of yes votes needed to adopt every text",
+      "The number of political groups needed to submit a report",
+      "The number of interpreters needed for a sitting",
+    ],
     answer: 0,
     explanation:
-      "At least 39 Members must request that the President establish whether a quorum is present before voting begins.",
+      "A quorum concerns attendance, not the majority needed to adopt a text. In Parliament it is one third of the component Members; the Rules govern how its presence is checked.",
   },
   {
     id: "ep-224",
     category: "ep_knowledge",
     topic:
       "Sessions, agenda, debates, amendments, quorum, votes and points of order",
-    level: "medium",
-    question: "What is the low threshold, unless otherwise specified?",
+    level: "easy",
+    question: "Unless a specific rule requires another majority, how does Parliament normally decide in plenary?",
     options: [
-      "One twentieth of Parliament's component Members or a political group",
-      "One tenth of Parliament's component Members",
-      "One fifth of Parliament's component Members",
-      "Half of Parliament's component Members",
+      "By a majority of votes cast",
+      "By unanimity of all MEPs",
+      "By a majority of Member States",
+      "By approval from every political group",
     ],
     answer: 0,
     explanation:
-      "The low threshold means one twentieth of Parliament's component Members or a political group, unless otherwise specified.",
+      "The normal rule is a majority of votes cast. Some decisions require a majority of all component Members or another special majority.",
   },
   {
     id: "ep-225",
@@ -3920,40 +3925,40 @@ export const EP_QUESTIONS = [
     topic:
       "Sessions, agenda, debates, amendments, quorum, votes and points of order",
     level: "medium",
-    question: "What is the medium threshold, unless otherwise specified?",
+    question: "A proposal needs a simple majority: 100 Members vote for, 90 against and 20 abstain. Is it approved?",
     options: [
-      "One tenth of Parliament's component Members",
-      "One twentieth of Parliament's component Members",
-      "One fifth of Parliament's component Members",
-      "A majority of votes cast",
+      "Yes, because there are more votes for than against",
+      "No, because fewer than half of those present voted for it",
+      "No, because abstentions count as votes against",
+      "Only if every political group voted for it",
     ],
     answer: 0,
     explanation:
-      "The medium threshold means one tenth of Parliament's component Members.",
+      "For a simple majority, yes votes must outnumber no votes. Abstentions do not count as votes for or against. This example assumes the quorum and other procedural conditions are met.",
   },
   {
     id: "ep-226",
     category: "ep_knowledge",
     topic:
       "Sessions, agenda, debates, amendments, quorum, votes and points of order",
-    level: "medium",
-    question: "What is the high threshold, unless otherwise specified?",
+    level: "easy",
+    question: "What can the President do if the result of a show-of-hands vote is unclear?",
     options: [
-      "One fifth of Parliament's component Members",
-      "One twentieth of Parliament's component Members",
-      "One tenth of Parliament's component Members",
-      "A majority of the Council",
+      "Call an electronic vote to establish the result",
+      "Treat every abstention as a vote against",
+      "Ask the Commission to decide the result",
+      "Give the largest political group a casting vote",
     ],
     answer: 0,
     explanation:
-      "The high threshold means one fifth of Parliament's component Members.",
+      "The President can call for an electronic vote when the majority cannot be determined clearly by a show of hands.",
   },
   {
     id: "ep-227",
     category: "ep_knowledge",
     topic:
       "Sessions, agenda, debates, amendments, quorum, votes and points of order",
-    level: "medium",
+    level: "hard",
     question: "Who may table amendments for consideration in Parliament?",
     options: [
       "The committee responsible, a political group or Members reaching at least the low threshold",
@@ -4023,39 +4028,39 @@ export const EP_QUESTIONS = [
       "Sessions, agenda, debates, amendments, quorum, votes and points of order",
     level: "easy",
     question:
-      "The right to vote is described in the Rules as what kind of right?",
+      "Can a political group force one of its Members to vote in a particular way?",
     options: [
-      "A personal right",
-      "A transferable right",
-      "A right held only by political groups",
-      "A right held only by committee Chairs",
+      "No, Members remain free to decide how to vote",
+      "Yes, for every legislative vote",
+      "Yes, whenever the Council requests it",
+      "Yes, if the Member is a committee chair",
     ],
     answer: 0,
-    explanation: "The right to vote is a personal right.",
+    explanation: "Political groups coordinate their positions, but no MEP can be forced to vote in a particular way.",
   },
   {
     id: "ep-232",
     category: "ep_knowledge",
     topic:
       "Sessions, agenda, debates, amendments, quorum, votes and points of order",
-    level: "easy",
-    question: "For adoption of a text or proposal requiring a majority, what does a tied vote mean?",
+    level: "medium",
+    question: "What happens if a vote in Parliament’s Bureau is tied?",
     options: [
-      "The text or proposal is deemed to have been rejected",
-      "The President always has a casting vote in plenary",
-      "The vote is automatically repeated three times",
-      "The Council decides the result",
+      "The President has the deciding vote",
+      "The Quaestors jointly cast an additional vote",
+      "The Council Presidency decides",
+      "The Secretary-General replaces the Bureau’s vote",
     ],
     answer: 0,
     explanation:
-      "In the event of a tied vote, the text or proposal is deemed to have been rejected.",
+      "The President has the deciding vote in the Bureau in the event of a tie. This must not be generalised to plenary voting.",
   },
   {
     id: "ep-233",
     category: "ep_knowledge",
     topic:
       "Sessions, agenda, debates, amendments, quorum, votes and points of order",
-    level: "medium",
+    level: "easy",
     question: "What is voting by roll call?",
     options: [
       "A vote where individual Members' votes are recorded",
@@ -4190,16 +4195,16 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Sessions, agenda, debates, amendments, quorum, votes and points of order",
-    level: "medium",
-    question: "What are minutes used for?",
+    level: "easy",
+    question: "Where can the public find how individual MEPs voted in a roll-call vote?",
     options: [
-      "To record decisions and proceedings of a sitting",
-      "To appoint Commissioners",
-      "To change the Treaties",
-      "To allocate seats in national parliaments",
+      "In the roll-call results published with the minutes",
+      "Only in the confidential records of political groups",
+      "Only in the Council’s voting records",
+      "Only in the Commission’s annual report",
     ],
     answer: 0,
-    explanation: "Minutes record decisions and proceedings of a sitting.",
+    explanation: "A roll-call vote records individual Members’ votes and publishes them in an annex to the minutes.",
   },
   {
     id: "ep-242",
@@ -4392,7 +4397,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
+    level: "easy",
     question:
       "What kind of committee may Parliament set up for a specific subject or purpose?",
     options: [
@@ -4402,7 +4407,7 @@ export const EP_QUESTIONS = [
       "A national parliament",
     ],
     answer: 0,
-    explanation: "Parliament may set up special committees under the Rules.",
+    explanation: "Parliament can establish a temporary special committee to address a specific issue.",
   },
   {
     id: "ep-254",
@@ -4427,36 +4432,36 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
+    level: "easy",
     question:
-      "Who appoints Members to committees, special committees and committees of inquiry?",
+      "What is the main relationship between committee work and plenary?",
     options: [
-      "The political groups and the non-attached Members",
-      "The Court of Auditors",
-      "The Ombudsman",
-      "The Council Presidency",
+      "Committees prepare files for decisions in plenary",
+      "Committees replace plenary for all legislative decisions",
+      "Plenary prepares files only after committees stop working",
+      "Committees act as national delegations to the Council",
     ],
     answer: 0,
     explanation:
-      "Members of committees are appointed by political groups and non-attached Members.",
+      "Specialised committees examine proposals and prepare reports for the plenary assembly.",
   },
   {
     id: "ep-256",
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
+    level: "easy",
     question:
-      "As far as possible, what should the composition of committees reflect?",
+      "Are parliamentary committees organised as one delegation per Member State?",
     options: [
-      "The composition of Parliament",
-      "Only the Council's composition",
-      "Only Member States' population",
-      "Only the order of accession to the EU",
+      "No, they specialise in policy areas and reflect Parliament’s political makeup",
+      "Yes, each committee represents one national government",
+      "Yes, each Member State chairs a committee with only its own MEPs",
+      "No, they consist solely of external experts",
     ],
     answer: 0,
     explanation:
-      "Committee composition should, as far as possible, reflect the composition of Parliament.",
+      "Committees are composed of MEPs, specialise in policy areas and reflect the political balance of Parliament.",
   },
   {
     id: "ep-257",
@@ -4483,21 +4488,21 @@ export const EP_QUESTIONS = [
     level: "medium",
     question: "What is a committee bureau?",
     options: [
-      "The committee's internal leadership structure",
-      "A national ministry",
-      "A citizens' petition",
-      "A type of secret ballot",
+      "Its chair and vice-chairs",
+      "All national ministers responsible for its policy area",
+      "The President and 14 Vice-Presidents of Parliament",
+      "The chairs of every political group",
     ],
     answer: 0,
     explanation:
-      "Committee bureaux are the internal leadership structures of committees.",
+      "A committee has its own chair and vice-chairs, supported by a secretariat. This committee leadership is distinct from Parliament’s Bureau.",
   },
   {
     id: "ep-259",
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
+    level: "easy",
     question: "What role do committee coordinators play?",
     options: [
       "They coordinate political group work within committees",
@@ -4515,16 +4520,16 @@ export const EP_QUESTIONS = [
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
     level: "medium",
-    question: "What is the role of a shadow rapporteur?",
+    question: "Besides the committee chair and rapporteur, who participates in Parliament’s legislative negotiating team?",
     options: [
-      "To follow the progress of a report and seek compromises on behalf of a political group",
-      "To chair Parliament when the President is absent",
-      "To audit Members' allowances",
-      "To appoint the Secretary-General",
+      "Shadow rapporteurs from the political groups",
+      "Judges of the Court of Justice",
+      "The heads of all national governments",
+      "Only officials of the Commission",
     ],
     answer: 0,
     explanation:
-      "Shadow rapporteurs follow reports and help seek compromises for their political groups.",
+      "Shadow rapporteurs participate in the team to follow the file on behalf of their political groups.",
   },
   {
     id: "ep-261",
@@ -4566,15 +4571,15 @@ export const EP_QUESTIONS = [
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
     level: "medium",
-    question: "What is Question Time in committee?",
+    question: "Who decides whether to hold Question Time in a committee and how to conduct it?",
     options: [
-      "A procedure for questions within committee meetings under the Rules",
-      "A secret ballot for the Ombudsman",
-      "A citizens' petition only",
-      "A budget discharge vote only",
+      "The committee itself",
+      "The Council Presidency",
+      "The European Ombudsman",
+      "The Court of Auditors",
     ],
     answer: 0,
-    explanation: "The Rules include Question Time in committee.",
+    explanation: "Under Rule 226, Question Time may be held if the committee so decides. Each committee determines its own rules for conducting it.",
   },
   {
     id: "ep-264",
@@ -4601,16 +4606,16 @@ export const EP_QUESTIONS = [
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
     level: "medium",
     question:
-      "Which public activities may committees organise under the Rules?",
+      "After a qualifying European citizens’ initiative is submitted, what event does the committee responsible organise?",
     options: [
-      "Public hearings and debates on citizens' initiatives",
-      "Only secret ballots",
-      "Only staff appraisals",
-      "Only national elections",
+      "A public hearing at Parliament with representatives of the organisers",
+      "A secret ballot to elect the President of the Commission",
+      "A meeting that automatically adopts the requested law",
+      "An appeal hearing replacing national courts",
     ],
     answer: 0,
     explanation:
-      "Committees may organise public hearings and debates on citizens' initiatives.",
+      "Under Rule 228, the committee responsible for the subject organises a public hearing, with the petitions committee involved and appropriate Commission participation. The subsequent debate is held in plenary; a citizens’ initiative does not automatically become law.",
   },
   {
     id: "ep-266",
@@ -4634,18 +4639,18 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
+    level: "hard",
     question:
-      "Which bodies may be established for relations with parliaments of associated states or states with specific EU agreements?",
+      "What may Parliament establish with the parliaments of associated states or states with which accession negotiations have begun?",
     options: [
       "Joint parliamentary committees",
-      "Political groups",
-      "Committees of inquiry only",
-      "Intergroups only",
+      "Political groups within the European Parliament",
+      "National delegations to the Council",
+      "The Bureau of the European Parliament",
     ],
     answer: 0,
     explanation:
-      "The Rules include provisions on joint parliamentary committees.",
+      "Rule 230 provides for joint parliamentary committees with these parliaments. Their procedures are based on parity between the parliamentary delegations, within the framework of the relevant agreement.",
   },
   {
     id: "ep-268",
@@ -4670,24 +4675,24 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "easy",
-    question: "Who has the right of petition to Parliament?",
+    level: "medium",
+    question: "For a petition to Parliament, which connection must the subject have?",
     options: [
-      "Citizens of the Union and certain natural or legal persons residing or having their registered office in a Member State",
-      "Only Members of Parliament",
-      "Only national governments",
-      "Only political groups",
+      "It must fall within the EU’s fields of activity and directly affect the petitioner",
+      "It must concern only the petitioner’s national election results",
+      "It must already be the subject of a Commission legislative proposal",
+      "It must be supported by a political group",
     ],
     answer: 0,
     explanation:
-      "The right of petition belongs to EU citizens and certain natural or legal persons in a Member State.",
+      "A petition must concern a matter within the EU’s fields of activity that directly affects the petitioner. The right is not limited to subjects already being legislated on.",
   },
   {
     id: "ep-270",
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
+    level: "easy",
     question: "Which committee is responsible for examining petitions?",
     options: [
       "The committee responsible for petitions",
@@ -4706,16 +4711,16 @@ export const EP_QUESTIONS = [
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
     level: "medium",
     question:
-      "What may the committee responsible for petitions decide if a petition is inadmissible?",
+      "Is dissatisfaction with any national decision automatically enough for a petition to fall within Parliament’s remit?",
     options: [
-      "That the petition is inadmissible",
-      "That the petitioner becomes an MEP",
-      "That the Commission is dismissed",
-      "That the Council must adopt it",
+      "No, the petition must concern an EU field of activity and directly affect the petitioner",
+      "Yes, Parliament can overturn any national decision",
+      "Yes, if the petitioner sends it in English",
+      "Yes, if it concerns a local authority",
     ],
     answer: 0,
     explanation:
-      "The committee responsible assesses admissibility and may declare a petition inadmissible.",
+      "Parliament’s petition procedure is not a general appeal against every national decision. The subject must fall within EU activities and directly affect the petitioner.",
   },
   {
     id: "ep-272",
@@ -4773,56 +4778,56 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
-    question: "Who heads Parliament's Secretariat?",
+    level: "easy",
+    question: "Which body deals with the internal organisation and staffing of Parliament’s Secretariat?",
     options: [
-      "The Secretary-General",
-      "The President of the Commission",
-      "The Chair of the Council",
-      "The European Ombudsman",
+      "The Bureau",
+      "The European Council",
+      "The European Central Bank",
+      "The Conference of national finance ministers",
     ],
     answer: 0,
-    explanation: "Parliament's Secretariat is headed by the Secretary-General.",
+    explanation: "The Bureau establishes the composition and organisation of the Secretariat and appoints the Secretary-General.",
   },
   {
     id: "ep-276",
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
-    question: "Who appoints the Secretary-General of Parliament?",
+    level: "easy",
+    question: "Does Parliament’s Secretariat decide the political position that MEPs must adopt?",
     options: [
-      "The Bureau",
-      "The Council",
-      "The Ombudsman",
-      "The Court of Justice",
+      "No, it provides administrative, technical and expert support",
+      "Yes, it adopts Parliament’s political positions before every vote",
+      "Yes, it can replace an MEP’s vote",
+      "Yes, it directs how each political group must vote",
     ],
     answer: 0,
-    explanation: "The Bureau appoints the Secretary-General.",
+    explanation: "The Secretariat supports parliamentary bodies and MEPs in exercising their mandates. Political choices remain with elected Members.",
   },
   {
     id: "ep-277",
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
-    question: "Which administrative body supports Parliament's work?",
+    level: "easy",
+    question: "Which body coordinates legislative work and organises parliamentary sittings and meetings administratively?",
     options: [
-      "Parliament's Secretariat",
-      "The Court of Justice",
-      "The European Council only",
-      "The Committee of the Regions only",
+      "Parliament’s Secretariat",
+      "The European Council’s national delegations",
+      "The European Central Bank",
+      "The Court of Auditors",
     ],
     answer: 0,
     explanation:
-      "Parliament's Secretariat supports Parliament's work under the authority of the Secretary-General.",
+      "The Secretariat coordinates legislative work, organises sittings and meetings, and provides technical and expert assistance.",
   },
   {
     id: "ep-278",
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
+    level: "hard",
     question:
       "Why do the Rules include provisions on European political parties and foundations?",
     options: [
@@ -4842,123 +4847,123 @@ export const EP_QUESTIONS = [
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
     level: "easy",
     question:
-      "What is the purpose of rules on the application of the Rules of Procedure?",
+      "Why must EU legislation be available in every official EU language?",
     options: [
-      "To ensure that Parliament's procedures are applied consistently",
-      "To allow the Council to chair Parliament's sittings",
-      "To replace the Treaties",
-      "To prevent committees from examining files",
+      "So citizens can understand the laws that apply to them in an official language",
+      "So each language version can introduce a different political decision",
+      "So national governments can choose which version to apply",
+      "So interpretation is no longer needed in plenary",
     ],
     answer: 0,
     explanation:
-      "Rules on application support consistent interpretation and use of Parliament's procedures.",
+      "All official EU languages have equal status. Multilingual legislation enables citizens to understand the laws that affect them.",
   },
   {
     id: "ep-280",
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
+    level: "easy",
     question:
-      "What is the purpose of procedures for amending the Rules of Procedure?",
+      "Can Parliament alone adopt a law under the ordinary legislative procedure?",
     options: [
-      "To allow Parliament to update its own internal procedures",
-      "To allow the Commission to appoint Members",
-      "To replace the Treaties",
-      "To prevent Parliament from changing its working methods",
+      "No, Parliament and the Council must agree on the final text",
+      "Yes, if the Commission supports it",
+      "Yes, after any committee report",
+      "Yes, whenever the European Council asks it to",
     ],
     answer: 0,
     explanation:
-      "Parliament may amend its Rules of Procedure through a specific internal procedure.",
+      "The ordinary legislative procedure makes Parliament and the Council co-legislators. Neither can adopt the act alone under that procedure.",
   },
   {
     id: "ep-281",
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
+    level: "easy",
     question:
-      "Why do the Rules include provisions on extraordinary circumstances?",
+      "May an MEP use an official EU language other than English during parliamentary debates?",
     options: [
-      "To allow Parliament to continue functioning when normal procedures cannot be applied fully",
-      "To cancel the parliamentary term automatically",
-      "To transfer all powers to the Council",
-      "To suspend Members' mandates permanently",
+      "Yes, Members have the right to speak and listen in an official language of their choice",
+      "No, plenary speeches must all be in English",
+      "Only when speaking about their own Member State",
+      "Only after permission from every political group",
     ],
     answer: 0,
     explanation:
-      "Extraordinary circumstances provisions help Parliament continue its work when normal arrangements are disrupted.",
+      "MEPs can speak and listen in any official EU language. Interpretation makes multilingual debate possible.",
   },
   {
     id: "ep-282",
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
+    level: "easy",
     question:
-      "In an extraordinary situation, what may Parliament need to adopt?",
+      "How can citizens follow plenary proceedings without being physically present?",
     options: [
-      "Extraordinary measures to ensure the continuity of parliamentary work",
-      "A new Treaty without Member States",
-      "A permanent ban on committee meetings",
-      "A new list of political groups chosen by the Council",
+      "Through live webstreams and recordings",
+      "Only through confidential political group briefings",
+      "Only through the Council Presidency",
+      "Only after the end of the five-year term",
     ],
     answer: 0,
     explanation:
-      "Extraordinary measures may be used to deal with exceptional situations affecting Parliament's work.",
+      "Parliament makes plenary sessions available online both live and as recordings.",
   },
   {
     id: "ep-283",
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "hard",
+    level: "easy",
     question:
-      "If the political balance in Parliament is disturbed, what is the purpose of having a specific procedure?",
+      "Does adopting a non-legislative resolution by itself create binding EU legislation?",
     options: [
-      "To preserve fair representation and the proper functioning of Parliament's bodies",
-      "To cancel all committee memberships",
-      "To give all seats to the largest political group",
-      "To prevent non-attached Members from attending sittings",
+      "No, it expresses Parliament’s position without having legislative value",
+      "Yes, every resolution is an EU regulation",
+      "Yes, if a political group proposed it",
+      "Yes, unless the Commission vetoes it",
     ],
     answer: 0,
     explanation:
-      "This procedure helps preserve fair representation and institutional functioning.",
+      "Non-legislative resolutions express political positions and support scrutiny and political pressure. They are different from binding legislative acts.",
   },
   {
     id: "ep-284",
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
-    question: "What is the purpose of a remote participation regime?",
+    level: "easy",
+    question: "After the annual EU budget has been adopted, which institution is mainly responsible for implementing it?",
     options: [
-      "To allow Parliament's work to continue when Members cannot participate physically under exceptional conditions",
-      "To abolish in-person sittings permanently",
-      "To allow only the Council to vote",
-      "To replace all committee reports with petitions",
+      "The European Commission",
+      "The Conference of Presidents",
+      "The European Ombudsman",
+      "The European Council",
     ],
     answer: 0,
     explanation:
-      "Remote participation supports continuity of work when physical participation is not possible under the Rules.",
+      "The Commission implements the EU budget; other institutions implement their own administrative budgets. Parliament scrutinises implementation through budgetary control and discharge.",
   },
   {
     id: "ep-285",
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
+    level: "easy",
     question:
-      "Why might a part-session or sitting be held in separate meeting rooms?",
+      "Are ordinary committee debates generally open to the public?",
     options: [
-      "To allow parliamentary business to continue under exceptional organisational constraints",
-      "To prevent Members from voting",
-      "To transfer plenary powers to committees",
-      "To replace the President with the Ombudsman",
+      "Yes, they are generally public and webstreamed",
+      "No, all committee meetings are confidential",
+      "Only when the Council chairs the meeting",
+      "Only when no legislative report is discussed",
     ],
     answer: 0,
     explanation:
-      "Separate meeting rooms can help maintain parliamentary business in exceptional circumstances.",
+      "Parliament’s committee debates are generally held in public and webstreamed. Specific arrangements can protect confidential business.",
   },
   {
     id: "ep-286",
@@ -5000,7 +5005,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
+    level: "hard",
     question:
       "What does unfinished business refer to at the end of a parliamentary term?",
     options: [
@@ -5018,7 +5023,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
+    level: "hard",
     question: "What is the purpose of a corrigendum in parliamentary texts?",
     options: [
       "To correct errors in an adopted text without changing the political decision",
@@ -5053,7 +5058,7 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
+    level: "hard",
     question:
       "What is the purpose of the Code of appropriate behaviour for Members?",
     options: [
@@ -5071,25 +5076,25 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
+    level: "easy",
     question:
-      "Why do the Rules include criteria for questions for written answer?",
+      "What is Parliament’s role in the State of the Union debate?",
     options: [
-      "To ensure that written questions meet admissibility and quality requirements",
-      "To prevent Members from asking any questions",
-      "To replace oral debates",
-      "To allow only the Council to ask questions",
+      "To debate the Commission President’s account of achievements and future priorities",
+      "To elect the President of the European Council",
+      "To approve each national government’s budget",
+      "To replace the annual EU budget vote",
     ],
     answer: 0,
     explanation:
-      "Criteria for written questions help ensure that questions are admissible and properly framed.",
+      "The Commission President’s State of the Union address in plenary enables MEPs to discuss past achievements and future priorities.",
   },
   {
     id: "ep-293",
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
+    level: "easy",
     question:
       "What is the purpose of defining the powers and responsibilities of standing committees?",
     options: [
@@ -5107,60 +5112,60 @@ export const EP_QUESTIONS = [
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "hard",
+    level: "medium",
     question:
-      "Why do the Rules include drafting requirements for acts adopted under the ordinary legislative procedure?",
+      "What do Parliament’s lawyer-linguists check in legislative texts?",
     options: [
-      "To ensure legal and linguistic consistency in adopted legislative acts",
-      "To allow political groups to bypass votes",
-      "To replace publication in the Official Journal",
-      "To prevent Parliament from amending draft acts",
+      "Their legal, linguistic and technical quality across the official languages",
+      "The political affiliation of each rapporteur",
+      "The allocation of national seats after elections",
+      "Only the interpretation of speeches",
     ],
     answer: 0,
     explanation:
-      "Drafting requirements help ensure adopted legislative acts are legally and linguistically consistent.",
+      "Lawyer-linguists advise on drafting and procedure, check legislative texts and finalise acts with the Council’s lawyer-linguists.",
   },
   {
     id: "ep-295",
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
-    question: "Why are annexes included in the Rules of Procedure?",
+    level: "easy",
+    question: "What is the multiannual financial framework?",
     options: [
-      "To provide detailed rules, codes or technical provisions supporting the main Rules",
-      "To replace the main Rules entirely",
-      "To list only staff names",
-      "To record only press contacts",
+      "The EU’s long-term plan setting annual spending limits",
+      "The final accounts of each political group",
+      "The list of amendments adopted in a single sitting",
+      "The Commission’s weekly meeting agenda",
     ],
     answer: 0,
     explanation:
-      "Annexes support the main Rules by providing detailed codes, criteria and technical provisions.",
+      "The multiannual financial framework sets spending limits for annual EU budgets. The Council adopts it unanimously after obtaining Parliament’s consent.",
   },
   {
     id: "ep-296",
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
+    level: "easy",
     question:
-      "What is the practical value of clear committee competences for an assistant preparing a file?",
+      "What normally determines which committee examines a legislative proposal?",
     options: [
-      "They help identify the correct committee and avoid misrouting documents",
-      "They remove the need to check procedures",
-      "They allow assistants to vote for Members",
-      "They replace the agenda",
+      "The policy subject and the committee’s responsibilities",
+      "The nationality of the Commission President",
+      "The language in which the proposal was first drafted",
+      "The alphabetical order of political group names",
     ],
     answer: 0,
     explanation:
-      "Clear committee competences help staff route documents and files correctly.",
+      "Files are referred according to committee competences, so that the committee with the relevant policy expertise can prepare Parliament’s work.",
   },
   {
     id: "ep-297",
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
+    level: "hard",
     question:
       "Why is confidentiality important when committees handle sensitive information?",
     options: [
@@ -5180,23 +5185,23 @@ export const EP_QUESTIONS = [
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
     level: "medium",
     question:
-      "What should be checked first when handling a petition administratively?",
+      "Can a company with its registered office in an EU Member State submit a petition?",
     options: [
-      "Whether it falls within the scope and admissibility requirements for petitions",
-      "Whether it elects a committee Chair",
-      "Whether it changes the Treaties automatically",
-      "Whether it appoints the Ombudsman",
+      "Yes, if the matter is within EU activities and directly affects it",
+      "No, only individual EU citizens may petition",
+      "Only if it first collects one million signatures",
+      "Only if it is owned by a national government",
     ],
     answer: 0,
     explanation:
-      "Petitions must be checked for scope and admissibility before substantive handling.",
+      "The right of petition also extends to legal persons with a registered office in a Member State, subject to the scope and direct-concern requirements.",
   },
   {
     id: "ep-299",
     category: "ep_knowledge",
     topic:
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
-    level: "medium",
+    level: "easy",
     question:
       "Why is the Secretariat important for Parliament's institutional functioning?",
     options: [
@@ -5216,15 +5221,15 @@ export const EP_QUESTIONS = [
       "Committees, delegations, petitions, Ombudsman, Secretariat and practical annexes",
     level: "medium",
     question:
-      "What is the best approach when applying the Rules of Procedure to an administrative task?",
+      "Which pairing correctly distinguishes political planning from internal administration?",
     options: [
-      "Identify the relevant procedure, responsible body, deadline and required document",
-      "Guess the answer from memory only",
-      "Ignore committee competences",
-      "Use the notice of competition instead of the Rules",
+      "Conference of Presidents: work and legislative planning; Bureau: internal administrative and financial matters",
+      "Bureau: legislative negotiations for the Council; Secretariat: political group voting instructions",
+      "Quaestors: EU monetary policy; Conference of Presidents: national elections",
+      "Conference of Committee Chairs: adoption of the EU budget; Bureau: judicial review",
     ],
     answer: 0,
     explanation:
-      "Applying the Rules in practice requires checking the procedure, competent body, deadlines and required documents.",
+      "The Conference of Presidents organises parliamentary business and legislative planning. The Bureau handles Parliament’s internal administrative, organisational and financial matters.",
   },
 ];

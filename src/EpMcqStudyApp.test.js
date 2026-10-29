@@ -95,6 +95,17 @@ function answer(correct) {
   return question;
 }
 
+test("EP practice excludes staff rules while keeping their separate category", () => {
+  renderApp();
+  const subject = (name) => [...container.querySelectorAll("button")].find(
+    (item) => item.querySelector("strong")?.textContent === name,
+  );
+  expect(subject("EP questions").textContent).toContain("300 questions");
+  expect(subject("Guide & Internal Rules").textContent).toContain("80 questions");
+  act(() => subject("EP questions").click());
+  expect(container.textContent).not.toContain("Annual leave (1)");
+});
+
 test("setup filters do not start a quiz, and navigation preserves a checked answer", () => {
   renderApp();
   chooseSubject();

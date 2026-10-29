@@ -1,5 +1,13 @@
 # Revue ponctuelle des questions — 28 octobre 2026
 
+> Mise à jour du 29 octobre : la banque EP fait désormais l'objet d'une
+> [révision sur le fonctionnement du Parlement](ep-functioning-review.md), avec
+> 300 réponses reliées à des sources officielles consultées, dont 160 vérifiées
+> dans l'édition datée de juillet 2025 sans certification des amendements suivants.
+> La [révision ICT](ict-infrastructure-review.md) couvre aussi les 300 réponses
+> Infrastructure. Le présent document décrit l'état antérieur ; les nombres et
+> limites ci-dessous ont évolué. Le rapport JSON décrit l'état actuel.
+
 Périmètre demandé : **EP (300 entrées)** et **ICT Infrastructure (300 entrées)**.
 Data Analyst, EU Knowledge, le guide et les règles internes ne sont pas modifiés
 par cette révision. Aucun contrôle quotidien ou planifié n'a été ajouté.

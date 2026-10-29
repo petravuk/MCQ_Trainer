@@ -26,11 +26,26 @@ résultats et historique. Les banques de questions sont dans `src/`.
 
 ## Qualité des questions
 
-La [revue ponctuelle EP et Infrastructure](docs/question-quality-review.md)
-distingue les corrections rédactionnelles, les réponses effectivement vérifiées
-et les contrôles encore en attente. Les sources disponibles sont affichées après
-la correction d'une question. Il n'y a aucun bouton de signalement par les autres
-utilisateurs ni contrôle quotidien planifié.
+Les révisions [EP](docs/ep-functioning-review.md) et
+[ICT Infrastructure](docs/ict-infrastructure-review.md) décrivent les corrections,
+les références individuelles et les limites du contrôle. Les sources sont
+affichées après correction. Il n'y a aucun contrôle quotidien planifié.
+
+La [révision EP du 29 octobre](docs/ep-functioning-review.md) couvre désormais les
+300 réponses EP : 140 à partir des pages officielles de présentation, 160 à partir
+du règlement officiel de juillet 2025. L'édition est affichée pour ces dernières ;
+ses modifications ultérieures n'ont pas été vérifiées. Les sources sont
+consultables après correction de chaque question.
+
+Les 300 réponses ICT ont également une vérification technique ou un calcul
+explicite. Les questions restent des exercices originaux, pas des questions
+officielles EPSO. Les 80 questions **Guide & Internal Rules** ont leur catégorie
+séparée et ne sont plus mélangées aux 300 questions EP.
+
+La vérification et l'ajout éventuel de nouvelles questions restent **manuels**.
+Ni le démarrage ni `npm run update` ne déclenchent une vérification, une recherche
+de nouvelles questions ou une réécriture de la banque. `npm run update` récupère
+uniquement les changements déjà enregistrés sur GitHub puis lance l'application.
 
 ## Tester dans Codespaces
 

@@ -1,0 +1,811 @@
+{
+  "reviewedAt": "2026-10-29",
+  "url": "https://www.europarl.europa.eu/RegData/reglement/2025/07-07/EP-PE_REGL(2025)07-07_EN.pdf",
+  "edition": "10th term, July 2025",
+  "sha256": "ec284c1d3e9cba273d774bf0c41c0fcd17374566b5c18e5adb19fb0cd19c6925",
+  "currentEditionVerified": false,
+  "scope": "160 procedural answers checked against July 2024, then rechecked against the official July 2025 edition. Rule 58 updates the Financial Regulation reference; the relevant answers remain supported. This does not certify unknown later amendments.",
+  "references": {
+    "ep-003": {
+      "rule": 3,
+      "pdfPage": 12,
+      "title": "Verification of credentials"
+    },
+    "ep-004": {
+      "rule": 4,
+      "pdfPage": 13,
+      "title": "Term of office of Members"
+    },
+    "ep-005": {
+      "rule": 5,
+      "pdfPage": 14,
+      "title": "Privileges and immunities"
+    },
+    "ep-006": {
+      "rule": 6,
+      "pdfPage": 15,
+      "title": "Waiver of immunity"
+    },
+    "ep-007": {
+      "rule": 8,
+      "pdfPage": 16,
+      "title": "Urgent action by the President to assert immunity"
+    },
+    "ep-008": {
+      "rule": 9,
+      "pdfPage": 16,
+      "title": "Procedures on immunity"
+    },
+    "ep-009": {
+      "rule": 10,
+      "pdfPage": 18,
+      "title": "Standards of conduct"
+    },
+    "ep-010": {
+      "rule": 10,
+      "pdfPage": 18,
+      "title": "Standards of conduct"
+    },
+    "ep-011": {
+      "rule": 12,
+      "pdfPage": 20,
+      "title": "Internal investigations conducted by the European Anti-Fraud Office (OLAF)"
+    },
+    "ep-012": {
+      "rule": 13,
+      "pdfPage": 20,
+      "title": "Observers"
+    },
+    "ep-013": {
+      "rule": 14,
+      "pdfPage": 21,
+      "title": "Provisional Chair8"
+    },
+    "ep-014": {
+      "rule": 15,
+      "pdfPage": 21,
+      "title": "Nominations and general provisions9"
+    },
+    "ep-015": {
+      "rule": 16,
+      "pdfPage": 21,
+      "title": "Election of President – opening address10"
+    },
+    "ep-019": {
+      "rule": 20,
+      "pdfPage": 22,
+      "title": "Vacancies12"
+    },
+    "ep-020": {
+      "rule": 21,
+      "pdfPage": 23,
+      "title": "Early termination of an office"
+    },
+    "ep-038": {
+      "rule": 35,
+      "pdfPage": 29,
+      "title": "Intergroups"
+    },
+    "ep-039": {
+      "rule": 36,
+      "pdfPage": 29,
+      "title": "Unofficial groupings"
+    },
+    "ep-049": {
+      "rule": 59,
+      "pdfPage": 44,
+      "title": "Joint committee procedure"
+    },
+    "ep-058": {
+      "rule": 136,
+      "pdfPage": 81,
+      "title": "Statements by the Commission, Council and European Council"
+    },
+    "ep-062": {
+      "rule": 186,
+      "pdfPage": 107,
+      "title": "Thresholds35"
+    },
+    "ep-063": {
+      "rule": 186,
+      "pdfPage": 107,
+      "title": "Thresholds35"
+    },
+    "ep-064": {
+      "rule": 186,
+      "pdfPage": 107,
+      "title": "Thresholds35"
+    },
+    "ep-065": {
+      "rule": 187,
+      "pdfPage": 107,
+      "title": "Tabling and presenting amendments36"
+    },
+    "ep-066": {
+      "rule": 193,
+      "pdfPage": 112,
+      "title": "Right to vote41"
+    },
+    "ep-068": {
+      "rule": 198,
+      "pdfPage": 113,
+      "title": "Voting by secret ballot45"
+    },
+    "ep-070": {
+      "rule": 216,
+      "pdfPage": 123,
+      "title": "Composition of committees"
+    },
+    "ep-074": {
+      "rule": 224,
+      "pdfPage": 127,
+      "title": "Voting in committee"
+    },
+    "ep-075": {
+      "rule": 229,
+      "pdfPage": 130,
+      "title": "Setting-up and duties of interparliamentary delegations"
+    },
+    "ep-076": {
+      "rule": 232,
+      "pdfPage": 132,
+      "title": "Right of petition"
+    },
+    "ep-079": {
+      "rule": 242,
+      "pdfPage": 141,
+      "title": "Application of the Rules of Procedure"
+    },
+    "ep-080": {
+      "rule": 248,
+      "pdfPage": 147,
+      "title": "The symbols of the Union"
+    },
+    "ep-083": {
+      "rule": 39,
+      "pdfPage": 32,
+      "title": "Annual programming"
+    },
+    "ep-084": {
+      "rule": 40,
+      "pdfPage": 32,
+      "title": "Respect for fundamental rights"
+    },
+    "ep-089": {
+      "rule": 43,
+      "pdfPage": 34,
+      "title": "Examination of respect for the principles of subsidiarity and proportionality"
+    },
+    "ep-090": {
+      "rule": 44,
+      "pdfPage": 35,
+      "title": "Access to documents and provision of information to Parliament"
+    },
+    "ep-091": {
+      "rule": 45,
+      "pdfPage": 35,
+      "title": "Representation of Parliament in Council meetings"
+    },
+    "ep-093": {
+      "rule": 47,
+      "pdfPage": 35,
+      "title": "Requests to the Commission for submission of proposals"
+    },
+    "ep-094": {
+      "rule": 48,
+      "pdfPage": 37,
+      "title": "Referral of legally binding acts and questions of competence"
+    },
+    "ep-095": {
+      "rule": 49,
+      "pdfPage": 38,
+      "title": "Acceleration of legislative procedures"
+    },
+    "ep-096": {
+      "rule": 50,
+      "pdfPage": 38,
+      "title": "Legislative procedures on initiatives originating from institutions other than the Commission"
+    },
+    "ep-098": {
+      "rule": 52,
+      "pdfPage": 39,
+      "title": "Simplified procedure"
+    },
+    "ep-099": {
+      "rule": 53,
+      "pdfPage": 40,
+      "title": "Non-legislative reports"
+    },
+    "ep-100": {
+      "rule": 54,
+      "pdfPage": 40,
+      "title": "Co-rapporteurship"
+    },
+    "ep-102": {
+      "rule": 57,
+      "pdfPage": 42,
+      "title": "Opinions of committees"
+    },
+    "ep-103": {
+      "rule": 58,
+      "pdfPage": 43,
+      "title": "Budgetary assessment on proposals for legally binding acts with budgetary implications"
+    },
+    "ep-104": {
+      "rule": 59,
+      "pdfPage": 44,
+      "title": "Joint committee procedure"
+    },
+    "ep-106": {
+      "rule": 60,
+      "pdfPage": 44,
+      "title": "Vote in Parliament – first reading"
+    },
+    "ep-107": {
+      "rule": 60,
+      "pdfPage": 44,
+      "title": "Vote in Parliament – first reading"
+    },
+    "ep-108": {
+      "rule": 61,
+      "pdfPage": 46,
+      "title": "Referral back to the committee responsible"
+    },
+    "ep-109": {
+      "rule": 64,
+      "pdfPage": 47,
+      "title": "Communication of the Council's position"
+    },
+    "ep-115": {
+      "rule": 75,
+      "pdfPage": 51,
+      "title": "Conduct of negotiations"
+    },
+    "ep-119": {
+      "rule": 82,
+      "pdfPage": 54,
+      "title": "Modified proposal for a legally binding act"
+    },
+    "ep-120": {
+      "rule": 83,
+      "pdfPage": 54,
+      "title": "Commission position on amendments"
+    },
+    "ep-121": {
+      "rule": 85,
+      "pdfPage": 54,
+      "title": "Follow-up to Parliament's position"
+    },
+    "ep-122": {
+      "rule": 85,
+      "pdfPage": 54,
+      "title": "Follow-up to Parliament's position"
+    },
+    "ep-123": {
+      "rule": 86,
+      "pdfPage": 55,
+      "title": "Renewed referral to Parliament"
+    },
+    "ep-125": {
+      "rule": 94,
+      "pdfPage": 58,
+      "title": "Multiannual financial framework"
+    },
+    "ep-126": {
+      "rule": 96,
+      "pdfPage": 58,
+      "title": "Parliament's position on the draft budget"
+    },
+    "ep-127": {
+      "rule": 96,
+      "pdfPage": 58,
+      "title": "Parliament's position on the draft budget"
+    },
+    "ep-128": {
+      "rule": 96,
+      "pdfPage": 58,
+      "title": "Parliament's position on the draft budget"
+    },
+    "ep-130": {
+      "rule": 99,
+      "pdfPage": 60,
+      "title": "Provisional twelfths system"
+    },
+    "ep-132": {
+      "rule": 100,
+      "pdfPage": 60,
+      "title": "Implementation of the budget"
+    },
+    "ep-134": {
+      "rule": 101,
+      "pdfPage": 61,
+      "title": "Discharge to the Commission in respect of implementation of the budget"
+    },
+    "ep-135": {
+      "rule": 102,
+      "pdfPage": 61,
+      "title": "Other discharge procedures"
+    },
+    "ep-136": {
+      "rule": 103,
+      "pdfPage": 61,
+      "title": "Interinstitutional cooperation"
+    },
+    "ep-137": {
+      "rule": 104,
+      "pdfPage": 62,
+      "title": "Estimates of Parliament"
+    },
+    "ep-138": {
+      "rule": 104,
+      "pdfPage": 62,
+      "title": "Estimates of Parliament"
+    },
+    "ep-139": {
+      "rule": 107,
+      "pdfPage": 63,
+      "title": "Consent procedure"
+    },
+    "ep-142": {
+      "rule": 128,
+      "pdfPage": 77,
+      "title": "Election of the President of the Commission"
+    },
+    "ep-143": {
+      "rule": 128,
+      "pdfPage": 77,
+      "title": "Election of the President of the Commission"
+    },
+    "ep-146": {
+      "rule": 131,
+      "pdfPage": 79,
+      "title": "Motion of censure on the Commission"
+    },
+    "ep-147": {
+      "rule": 131,
+      "pdfPage": 79,
+      "title": "Motion of censure on the Commission"
+    },
+    "ep-148": {
+      "rule": 131,
+      "pdfPage": 79,
+      "title": "Motion of censure on the Commission"
+    },
+    "ep-149": {
+      "rule": 133,
+      "pdfPage": 79,
+      "title": "Appointment of the Members of the Court of Auditors",
+      "annex": "Annex VI, section VI, point 6 (Committee on Budgetary Control)"
+    },
+    "ep-151": {
+      "rule": 136,
+      "pdfPage": 81,
+      "title": "Statements by the Commission, Council and European Council"
+    },
+    "ep-152": {
+      "rule": 136,
+      "pdfPage": 81,
+      "title": "Statements by the Commission, Council and European Council"
+    },
+    "ep-153": {
+      "rule": 138,
+      "pdfPage": 82,
+      "title": "Statements explaining the use of Article 122 of the Treaty on the Functioning of the"
+    },
+    "ep-156": {
+      "rule": 142,
+      "pdfPage": 84,
+      "title": "Questions for oral answer with debate"
+    },
+    "ep-158": {
+      "rule": 144,
+      "pdfPage": 85,
+      "title": "Questions for written answer"
+    },
+    "ep-159": {
+      "rule": 144,
+      "pdfPage": 85,
+      "title": "Questions for written answer"
+    },
+    "ep-160": {
+      "rule": 147,
+      "pdfPage": 87,
+      "title": "Questions for written answer concerning the Single Supervisory Mechanism and the Single"
+    },
+    "ep-162": {
+      "rule": 150,
+      "pdfPage": 88,
+      "title": "Debates on cases of breaches of human rights, democracy and the rule of law"
+    },
+    "ep-165": {
+      "rule": 154,
+      "pdfPage": 90,
+      "title": "Interinstitutional agreements"
+    },
+    "ep-166": {
+      "rule": 155,
+      "pdfPage": 91,
+      "title": "Proceedings before the Court of Justice of the European Union"
+    },
+    "ep-167": {
+      "rule": 156,
+      "pdfPage": 93,
+      "title": "Exchange of information, contacts and reciprocal facilities"
+    },
+    "ep-168": {
+      "rule": 156,
+      "pdfPage": 93,
+      "title": "Exchange of information, contacts and reciprocal facilities"
+    },
+    "ep-169": {
+      "rule": 157,
+      "pdfPage": 93,
+      "title": "Conference of Parliamentary Committees for Union Affairs (COSAC)"
+    },
+    "ep-172": {
+      "rule": 27,
+      "pdfPage": 25,
+      "title": "Duties of the Conference of Presidents"
+    },
+    "ep-173": {
+      "rule": 27,
+      "pdfPage": 25,
+      "title": "Duties of the Conference of Presidents"
+    },
+    "ep-174": {
+      "rule": 55,
+      "pdfPage": 40,
+      "title": "Own-initiative reports"
+    },
+    "ep-175": {
+      "rule": 90,
+      "pdfPage": 56,
+      "title": "Withdrawal from the Union"
+    },
+    "ep-176": {
+      "rule": 90,
+      "pdfPage": 56,
+      "title": "Withdrawal from the Union"
+    },
+    "ep-177": {
+      "rule": 91,
+      "pdfPage": 56,
+      "title": "Breach by a Member State of fundamental principles and values"
+    },
+    "ep-178": {
+      "rule": 91,
+      "pdfPage": 56,
+      "title": "Breach by a Member State of fundamental principles and values"
+    },
+    "ep-179": {
+      "rule": 93,
+      "pdfPage": 57,
+      "title": "Enhanced cooperation between Member States"
+    },
+    "ep-180": {
+      "rule": 117,
+      "pdfPage": 70,
+      "title": "International agreements"
+    },
+    "ep-181": {
+      "rule": 122,
+      "pdfPage": 73,
+      "title": "Consultation of, and provision of information to, Parliament within the framework of the"
+    },
+    "ep-182": {
+      "rule": 121,
+      "pdfPage": 72,
+      "title": "Recommendations on the Union's external policies"
+    },
+    "ep-183": {
+      "rule": 122,
+      "pdfPage": 73,
+      "title": "Consultation of, and provision of information to, Parliament within the framework of the"
+    },
+    "ep-184": {
+      "rule": 123,
+      "pdfPage": 73,
+      "title": "Breach of human rights"
+    },
+    "ep-185": {
+      "rule": 148,
+      "pdfPage": 87,
+      "title": "Annual and other reports of other institutions or bodies"
+    },
+    "ep-186": {
+      "rule": 153,
+      "pdfPage": 90,
+      "title": "Requests to European Agencies"
+    },
+    "ep-187": {
+      "rule": 117,
+      "pdfPage": 70,
+      "title": "International agreements"
+    },
+    "ep-188": {
+      "rule": 87,
+      "pdfPage": 55,
+      "title": "Ordinary Treaty revision"
+    },
+    "ep-191": {
+      "rule": 87,
+      "pdfPage": 55,
+      "title": "Ordinary Treaty revision"
+    },
+    "ep-192": {
+      "rule": 92,
+      "pdfPage": 57,
+      "title": "Composition of Parliament"
+    },
+    "ep-193": {
+      "rule": 93,
+      "pdfPage": 57,
+      "title": "Enhanced cooperation between Member States"
+    },
+    "ep-194": {
+      "rule": 141,
+      "pdfPage": 83,
+      "title": "Special scrutiny hearings"
+    },
+    "ep-195": {
+      "rule": 143,
+      "pdfPage": 84,
+      "title": "Question Time"
+    },
+    "ep-196": {
+      "rule": 145,
+      "pdfPage": 85,
+      "title": "Major interpellations for written answer"
+    },
+    "ep-197": {
+      "rule": 148,
+      "pdfPage": 87,
+      "title": "Annual and other reports of other institutions or bodies"
+    },
+    "ep-198": {
+      "rule": 121,
+      "pdfPage": 72,
+      "title": "Recommendations on the Union's external policies"
+    },
+    "ep-199": {
+      "rule": 151,
+      "pdfPage": 89,
+      "title": "Consultation of the European Economic and Social Committee"
+    },
+    "ep-200": {
+      "rule": 154,
+      "pdfPage": 90,
+      "title": "Interinstitutional agreements"
+    },
+    "ep-204": {
+      "rule": 160,
+      "pdfPage": 95,
+      "title": "Convening of Parliament"
+    },
+    "ep-207": {
+      "rule": 164,
+      "pdfPage": 96,
+      "title": "Adopting and amending the agenda"
+    },
+    "ep-209": {
+      "rule": 166,
+      "pdfPage": 97,
+      "title": "Short presentation"
+    },
+    "ep-210": {
+      "rule": 169,
+      "pdfPage": 98,
+      "title": "Topical debate requested by a political group"
+    },
+    "ep-211": {
+      "rule": 170,
+      "pdfPage": 99,
+      "title": "Urgent procedure"
+    },
+    "ep-212": {
+      "rule": 171,
+      "pdfPage": 99,
+      "title": "Joint debate"
+    },
+    "ep-217": {
+      "rule": 179,
+      "pdfPage": 103,
+      "title": "One-minute speeches"
+    },
+    "ep-218": {
+      "rule": 180,
+      "pdfPage": 103,
+      "title": "Personal statements"
+    },
+    "ep-219": {
+      "rule": 181,
+      "pdfPage": 103,
+      "title": "Prevention of obstruction33"
+    },
+    "ep-220": {
+      "rule": 182,
+      "pdfPage": 104,
+      "title": "Immediate measures"
+    },
+    "ep-221": {
+      "rule": 184,
+      "pdfPage": 106,
+      "title": "Internal appeal procedures"
+    },
+    "ep-227": {
+      "rule": 187,
+      "pdfPage": 107,
+      "title": "Tabling and presenting amendments36"
+    },
+    "ep-228": {
+      "rule": 188,
+      "pdfPage": 108,
+      "title": "Admissibility of amendments37"
+    },
+    "ep-229": {
+      "rule": 188,
+      "pdfPage": 108,
+      "title": "Admissibility of amendments37"
+    },
+    "ep-230": {
+      "rule": 192,
+      "pdfPage": 111,
+      "title": "Split voting40"
+    },
+    "ep-234": {
+      "rule": 201,
+      "pdfPage": 114,
+      "title": "Explanations of votes"
+    },
+    "ep-235": {
+      "rule": 202,
+      "pdfPage": 115,
+      "title": "Points of order48"
+    },
+    "ep-236": {
+      "rule": 203,
+      "pdfPage": 115,
+      "title": "Procedural motions"
+    },
+    "ep-237": {
+      "rule": 205,
+      "pdfPage": 116,
+      "title": "Closure of a debate"
+    },
+    "ep-238": {
+      "rule": 206,
+      "pdfPage": 116,
+      "title": "Adjournment of a debate or vote49"
+    },
+    "ep-243": {
+      "rule": 210,
+      "pdfPage": 118,
+      "title": "Verbatim reports51"
+    },
+    "ep-247": {
+      "rule": 198,
+      "pdfPage": 113,
+      "title": "Voting by secret ballot45"
+    },
+    "ep-248": {
+      "rule": 200,
+      "pdfPage": 114,
+      "title": "Disputes on voting47"
+    },
+    "ep-249": {
+      "rule": 203,
+      "pdfPage": 115,
+      "title": "Procedural motions"
+    },
+    "ep-251": {
+      "rule": 212,
+      "pdfPage": 120,
+      "title": "Setting-up of standing committees"
+    },
+    "ep-252": {
+      "rule": 212,
+      "pdfPage": 120,
+      "title": "Setting-up of standing committees"
+    },
+    "ep-257": {
+      "rule": 217,
+      "pdfPage": 124,
+      "title": "Duties of committees"
+    },
+    "ep-259": {
+      "rule": 220,
+      "pdfPage": 125,
+      "title": "Committee coordinators"
+    },
+    "ep-261": {
+      "rule": 223,
+      "pdfPage": 127,
+      "title": "Minutes of committee meetings"
+    },
+    "ep-262": {
+      "rule": 224,
+      "pdfPage": 127,
+      "title": "Voting in committee"
+    },
+    "ep-263": {
+      "rule": 226,
+      "pdfPage": 128,
+      "title": "Question Time in committee"
+    },
+    "ep-264": {
+      "rule": 227,
+      "pdfPage": 128,
+      "title": "Procedure for the consultation by a committee of confidential information in a committee"
+    },
+    "ep-265": {
+      "rule": 228,
+      "pdfPage": 129,
+      "title": "Public hearings and debates on citizens’ initiatives"
+    },
+    "ep-266": {
+      "rule": 229,
+      "pdfPage": 130,
+      "title": "Setting-up and duties of interparliamentary delegations"
+    },
+    "ep-267": {
+      "rule": 230,
+      "pdfPage": 131,
+      "title": "Joint parliamentary committees"
+    },
+    "ep-268": {
+      "rule": 231,
+      "pdfPage": 131,
+      "title": "Cooperation with the Parliamentary Assembly of the Council of Europe"
+    },
+    "ep-272": {
+      "rule": 234,
+      "pdfPage": 134,
+      "title": "Fact-finding visits"
+    },
+    "ep-273": {
+      "rule": 236,
+      "pdfPage": 135,
+      "title": "Citizens' initiative"
+    },
+    "ep-278": {
+      "rule": 241,
+      "pdfPage": 139,
+      "title": "Powers and responsibilities relating to European political parties and European political"
+    },
+    "ep-286": {
+      "rule": 248,
+      "pdfPage": 147,
+      "title": "The symbols of the Union"
+    },
+    "ep-287": {
+      "rule": 249,
+      "pdfPage": 147,
+      "title": "Gender Mainstreaming"
+    },
+    "ep-288": {
+      "rule": 250,
+      "pdfPage": 147,
+      "title": "Unfinished business"
+    },
+    "ep-289": {
+      "rule": 251,
+      "pdfPage": 148,
+      "title": "Corrigenda"
+    },
+    "ep-290": {
+      "rule": 11,
+      "pdfPage": 19,
+      "title": "Rules of conduct regarding integrity and transparency"
+    },
+    "ep-291": {
+      "rule": 10,
+      "pdfPage": 18,
+      "title": "Standards of conduct"
+    },
+    "ep-297": {
+      "rule": 227,
+      "pdfPage": 128,
+      "title": "Procedure for the consultation by a committee of confidential information in a committee"
+    }
+  }
+}

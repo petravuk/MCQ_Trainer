@@ -22,7 +22,7 @@ const EU_CATEGORY = "eu_knowledge";
 const ICT_INFRASTRUCTURE_CATEGORY = "epso_ad7_infrastructure";
 
 const questionBanks = {
-  [ALL_EP_CATEGORY]: [...EP_QUESTIONS, ...GUIDE_INTERNAL_RULES_QUESTIONS],
+  [ALL_EP_CATEGORY]: EP_QUESTIONS,
   [EP_RULES_CATEGORY]: EP_QUESTIONS,
   [GUIDE_INTERNAL_RULES_CATEGORY]: GUIDE_INTERNAL_RULES_QUESTIONS,
   [DATA_CATEGORY]: DATA_QUESTIONS,
@@ -38,7 +38,7 @@ const categoryConfig = {
   },
   [ALL_EP_CATEGORY]: {
     label: "EP questions",
-    description: "All European Parliament questions combined.",
+    description: "Parliament’s organisation, powers and procedures. Staff rules are in Guide & Internal Rules.",
   },
   [EP_RULES_CATEGORY]: {
     label: "Rules of Procedure",
@@ -204,6 +204,7 @@ function QuestionSources({ question }) {
       <summary>
         Sources &amp; review ·{" "}
         {review.checked ? "Answer checked" : "Source check pending"}
+        {review.referenceEdition && ` · ${review.referenceEdition}`}
       </summary>
       <p>{review.note}</p>
       {review.editorial && <p>{review.editorial}</p>}
@@ -212,7 +213,9 @@ function QuestionSources({ question }) {
           Checked on {review.reviewedAt}
           {review.method === "calculation"
             ? " by calculation"
-            : " against the primary documentation below"}
+            : review.method === "technical-documentation"
+              ? " against the technical documentation below"
+              : " against the primary documentation below"}
           .
         </p>
       )}
@@ -1096,6 +1099,9 @@ export default function EpMcqStudyApp() {
                   {difficultyLabels[current.level]}
                 </span>
                 {current.sourceRule && <span>{current.sourceRule}</span>}
+                {questionReview(current)?.referenceEdition && (
+                  <span>{questionReview(current).referenceEdition}</span>
+                )}
               </div>
               <h2 id="question-heading">{current.question}</h2>
               <div className={styles.questionTools}>
