@@ -120,6 +120,9 @@ test("setup filters do not start a quiz, and navigation preserves a checked answ
   expect(question.topic).toBe("Quantum technologies");
   expect(container.querySelector("fieldset.answers").disabled).toBe(true);
   expect(container.textContent).toContain(question.explanation);
+  expect(container.querySelector("details summary").textContent).toBe("Sources");
+  expect(container.querySelectorAll("details a").length).toBeGreaterThan(0);
+  expect(container.textContent).not.toMatch(/Answer checked|Source check pending|Checked on|has not been certified/);
   click("History");
   click("Practice");
   click("Resume saved quiz");

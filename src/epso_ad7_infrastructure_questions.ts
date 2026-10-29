@@ -529,15 +529,15 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
     "level": "medium",
-    "question": "A site has two WAN providers. Which architecture best reduces dependence on a single provider?",
+    "question": "A managed laptop becomes non-compliant with the organisation’s security policy. Which control can restrict its access to the corporate cloud suite?",
     "options": [
-      "Two circuits purchased through the same last-mile fibre",
-      "One higher-bandwidth provider",
-      "Diverse provider paths with tested failover",
-      "Two logical VLANs on one link"
+      "A longer authentication session regardless of device compliance",
+      "MDM compliance integrated with a conditional access policy",
+      "DNS round-robin alone, without checking device status",
+      "A directory display-name change without an access decision",
     ],
-    "answer": 2,
-    "explanation": "Diverse physical paths and validated routing failover address provider and last-mile failures."
+    "answer": 1,
+    "explanation": "Device management assesses compliance, and conditional access uses that status in the access decision. For example, Intune compliance can be integrated with Microsoft Entra Conditional Access. Configure and test the policy and its remediation path."
   },
   {
     "id": "EPSO-ICT1-036",
@@ -558,16 +558,16 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-037",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
-    "level": "medium",
-    "question": "Which load-balancing technique keeps a user's requests consistently mapped to a backend when required?",
+    "level": "easy",
+    "question": "What does LDAP provide in an enterprise identity environment?",
     "options": [
-      "Round-robin distribution with no affinity mechanism",
-      "Independent random backend selection for every request",
-      "DNSSEC signing without session-affinity configuration",
-      "Session persistence",
+      "Issuing OpenID Connect ID tokens as its native protocol",
+      "Routing packets between Internet autonomous systems",
+      "Replacing all application-specific authorisation decisions",
+      "Directory operations such as searching entries and establishing a session’s authentication state",
     ],
     "answer": 3,
-    "explanation": "Session persistence maintains affinity between a client session and a selected backend."
+    "explanation": "LDAP is a directory access protocol. It includes Search operations and Bind operations that establish authentication state. Directory access is distinct from a complete web SSO solution or an application’s authorisation rules."
   },
   {
     "id": "EPSO-ICT1-038",
@@ -649,15 +649,15 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
     "level": "medium",
-    "question": "What does an MTU mismatch most often cause for large network packets?",
+    "question": "An SMTP server returns success after the end of DATA. What does this establish?",
     "options": [
-      "A replacement of the end-to-end TLS certificate chain",
-      "Fragmentation or black-hole connectivity depending on path behaviour",
-      "A change to the authoritative DNS zone serial number",
-      "An automatic increase in every application’s retransmission limit",
+      "The recipient has opened and read the message",
+      "It has accepted responsibility for delivery, relay or reporting a later failure",
+      "The message has necessarily reached the recipient’s inbox",
+      "Every downstream mail server has already completed processing",
     ],
     "answer": 1,
-    "explanation": "An MTU mismatch affects packet sizes and can break path-MTU discovery."
+    "explanation": "SMTP acceptance is a handoff of responsibility, not proof of final inbox delivery. Subsequent delivery or relay can still fail; investigate the message path and any resulting delivery-status notification."
   },
   {
     "id": "EPSO-ICT1-044",
@@ -679,15 +679,15 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
     "level": "medium",
-    "question": "A container image works locally but fails in production due to a missing package. What best improves repeatability?",
+    "question": "A Tomcat JDBC pool is fully borrowed and new requests wait until maxWait expires. What should be investigated before simply increasing maxActive?",
     "options": [
-      "Using a mutable latest tag without pinning",
-      "Manually installing the package on each host",
-      "Disabling integration tests",
-      "Version-controlled immutable image builds"
+      "Only the HTTP response compression setting",
+      "Only whether the server hostname is present in DNS",
+      "Only the size of the application’s static resource cache",
+      "Slow or leaked connections and the database’s connection capacity",
     ],
     "answer": 3,
-    "explanation": "Immutable reproducible builds ensure the deployed image includes its dependencies."
+    "explanation": "maxActive limits active pool connections; maxWait bounds the wait for a returned connection. Check query duration, connections not returned to the pool and database limits. Increasing the pool blindly can move or worsen the bottleneck."
   },
   {
     "id": "EPSO-ICT1-046",
@@ -724,30 +724,30 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
     "level": "easy",
-    "question": "Which routing technique allows multiple equal-cost paths to be used?",
+    "question": "What does OpenID Connect add to OAuth 2.0 for enterprise single sign-on?",
     "options": [
-      "ECMP",
-      "NAT64",
-      "ARP inspection",
-      "DHCP snooping"
+      "An identity layer and ID Tokens describing the authenticated end-user",
+      "A directory search protocol that replaces LDAP operations",
+      "A guarantee that an API access token is valid for every application",
+      "Automatic assignment of all application permissions to the user",
     ],
     "answer": 0,
-    "explanation": "Equal-cost multipath distributes eligible flows across routes of equal cost."
+    "explanation": "OpenID Connect is an identity layer built on OAuth 2.0. It introduces ID Tokens and standardised end-user claims. Clients must validate the token according to the protocol; authentication does not replace application authorisation."
   },
   {
     "id": "EPSO-ICT1-049",
     "category": "epso_ad7_infrastructure",
     "topic": "Enterprise infrastructure",
     "level": "medium",
-    "question": "A storage snapshot is taken every 15 minutes. Why can it still be inadequate as the sole recovery control?",
+    "question": "What does PostgreSQL point-in-time recovery need to restore a chosen moment between a base backup and a later accidental deletion?",
     "options": [
-      "Every snapshot is always a full offline copy",
-      "Snapshots automatically include a tested application recovery process",
-      "Taking snapshots prevents all changes to the source volume",
-      "Snapshots may share the same failure or compromise domain as the source",
+      "Only the latest SQL dump, without transaction history",
+      "Only a filesystem copy made after the deletion",
+      "Only a list of database users and their passwords",
+      "A restorable physical base backup and an unbroken WAL archive covering the target time",
     ],
     "answer": 3,
-    "explanation": "Snapshots often depend on the original storage platform and require separate protected backup copies."
+    "explanation": "Continuous archiving combines a base backup with the required sequence of WAL records. Recovery replays changes up to the selected target. A base backup alone cannot reproduce all later points in time; test the recovery procedure."
   },
   {
     "id": "EPSO-ICT1-050",
@@ -3514,15 +3514,15 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "category": "epso_ad7_infrastructure",
     "topic": "High-performance computing",
     "level": "medium",
-    "question": "Which diagnostic is useful for identifying unbalanced parallel workloads?",
+    "question": "An HPC pilot meets a compute benchmark but cannot use enterprise identity or the required data services. What is the appropriate acceptance decision?",
     "options": [
-      "Only the total number of files produced by the application",
-      "Only the scheduler queue length before the job started",
-      "Per-rank execution timings and utilisation",
-      "The average utilisation of the whole cluster without per-rank data",
+      "Replace end-to-end acceptance with the supplier’s factory hardware test",
+      "Treat the failed identity and data integrations as irrelevant to the service",
+      "Validate the complete integrated workflow, security controls and agreed service KPIs before production acceptance",
+      "Accept production readiness solely because the compute benchmark passed",
     ],
     "answer": 2,
-    "explanation": "Rank-level timings expose nodes or processes waiting for slower work."
+    "explanation": "The notice places HPC in an infrastructure role, including integration with enterprise services, service-management KPIs and security controls. Compute performance alone does not establish readiness of the integrated production service."
   },
   {
     "id": "EPSO-ICT1-235",
@@ -3888,16 +3888,16 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-259",
     "category": "epso_ad7_infrastructure",
     "topic": "Quantum technologies",
-    "level": "easy",
-    "question": "Which property distinguishes an ideal qubit state from a classical bit?",
+    "level": "medium",
+    "question": "A quantum/HPC pilot claims a speed-up using only quantum-kernel time. What is needed to assess the infrastructure benefit?",
     "options": [
-      "Its unknown state can always be cloned exactly",
-      "One measurement reveals every amplitude of an unknown state",
-      "It always yields two independently readable classical bits",
-      "It can be in a superposition of basis states before measurement"
+      "Assume every use case benefits once quantum hardware is available",
+      "Compare the full hybrid workflow with a suitable classical baseline, including data movement, queueing and required result quality",
+      "Compare only the advertised number of qubits",
+      "Ignore classical preprocessing and postprocessing because they are not quantum operations",
     ],
-    "answer": 3,
-    "explanation": "A qubit is a quantum state capable of superposition, subject to measurement and noise."
+    "answer": 1,
+    "explanation": "Evaluate an end-to-end use case, not an isolated kernel claim. Include classical work, orchestration, data transfers, queueing, result quality and operational constraints. A pilot should test whether a benefit exists rather than assume quantum advantage."
   },
   {
     "id": "EPSO-ICT1-260",
@@ -3918,16 +3918,16 @@ export const EPSO_AD7_INFRASTRUCTURE_QUESTIONS: EpsoInfrastructureQuestion[] = [
     "id": "EPSO-ICT1-261",
     "category": "epso_ad7_infrastructure",
     "topic": "Quantum technologies",
-    "level": "easy",
-    "question": "What is decoherence in a quantum computer?",
+    "level": "medium",
+    "question": "Which data requirements belong in the acceptance criteria for a quantum-sensing pilot integrated with enterprise systems?",
     "options": [
-      "The intentional extraction of a classical outcome by a chosen measurement",
-      "A guarantee that an unknown state can be copied without alteration",
-      "A purely classical queueing delay in the control computer",
-      "Loss of usable quantum coherence through interaction with environment",
+      "Only a dashboard colour convention, without measurement metadata",
+      "Only sample count, regardless of units or calibration",
+      "Only the sensor vendor’s marketing accuracy claim",
+      "Documented units, timestamps, calibration traceability and measurement uncertainty",
     ],
     "answer": 3,
-    "explanation": "Environmental interactions disrupt the quantum state needed for computation."
+    "explanation": "Data integration must preserve the meaning and quality of measurements. Define units, timing, calibration/traceability and uncertainty, along with formats and access controls. These are metrology and integration requirements, not a claim that quantum sensors are automatically more accurate."
   },
   {
     "id": "EPSO-ICT1-262",

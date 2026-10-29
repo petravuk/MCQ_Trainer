@@ -70,15 +70,15 @@
       "distinctWording": 300,
       "duplicateGroups": [],
       "levels": {
-        "medium": 183,
-        "easy": 104,
+        "medium": 184,
+        "easy": 103,
         "hard": 13
       },
       "answerPositions": [
         87,
-        81,
-        59,
-        73
+        83,
+        58,
+        72
       ],
       "easyDistractorCandidates": [],
       "note": "Heuristic candidates require human judgement; they are not proven answer errors. Source checks cover only the explicitly listed IDs."

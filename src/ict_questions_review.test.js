@@ -67,3 +67,23 @@ test("future unreviewed questions do not inherit a bank-wide checked status", ()
     id: "EPSO-ICT1-301",
   })).toMatchObject({ checked: false, reviewedAt: null, sources: [] });
 });
+
+test("directory access and web single sign-on remain distinct", () => {
+  expect(answer(37)).toContain("Directory operations");
+  expect(answer(48)).toBe("An identity layer and ID Tokens describing the authenticated end-user");
+  expect(questionReview(question(37)).sources.some((source) => source.url.includes("rfc4511"))).toBe(true);
+  expect(questionReview(question(48)).sources.some((source) => source.url.includes("openid-connect-core"))).toBe(true);
+});
+
+test("point-in-time recovery requires a base backup and the WAL sequence covering the target", () => {
+  expect(answer(49)).toBe("A restorable physical base backup and an unbroken WAL archive covering the target time");
+  expect(question(49).explanation).toContain("base backup alone cannot reproduce");
+});
+
+test("notice-aligned workplace, HPC and sensing questions reference the supplied competition notice", () => {
+  for (const id of [35, 234, 261]) {
+    expect(questionReview(question(id)).sources.some((source) =>
+      source.url === "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:C_202602425",
+    )).toBe(true);
+  }
+});

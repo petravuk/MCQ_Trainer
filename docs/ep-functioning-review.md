@@ -22,12 +22,11 @@ de TypeScript a été sauvegardé hors du dépôt avant cette mise à jour.
   délais et exceptions de procédure restent disponibles en niveau avancé.
 - **Les 300 réponses EP ont une vérification individuelle** : 140 à partir des
   pages publiques officielles consultées et les 160 restantes à partir du PDF
-  officiel du règlement de juillet 2025. Toutes affichent leurs sources et la
-  date du contrôle dans **Sources & review** après correction. Pour les contrôles
-  sur ce PDF, **July 2025 Rules** est également affiché avant la réponse et dans
-  le statut : les amendements postérieurs ne sont pas vérifiés. Il ne reste pas
-  de statut **Source check pending** dans cette banque EP, mais cela ne signifie
-  pas qu'elle est certifiée contre l'édition la plus récente du règlement.
+  officiel du règlement de juillet 2025. Les liens utiles sont disponibles dans
+  **Sources** après correction. L'édition figure dans le titre du document ;
+  les dates, méthodes et notes de contrôle sont conservées dans les rapports,
+  sans répéter un statut de vérification dans chaque correction.
+  Les amendements postérieurs à juillet 2025 n'ont pas été vérifiés.
   Les vérifications ICT antérieures sont conservées.
 - Les groupes d'équivalence ont été actualisés : des questions désormais
   distinctes ne sont plus supprimées comme doublons lors de la sélection.
@@ -91,8 +90,8 @@ a permis de télécharger et lire le PDF complet de **juillet 2025**. Les 160
 réponses restantes ont été comparées aux règles correspondantes de ce PDF,
 avec correction ou précision lorsque nécessaire. En revanche, il n'a pas été
 possible de confirmer les amendements postérieurs ni de certifier ces réponses
-contre l'édition actuellement applicable. Cette limite reste visible pour chaque
-question concernée, même si sa réponse est désormais vérifiée dans le PDF cité.
+contre l'édition actuellement applicable. Cette limite est documentée ici ;
+les liens affichés identifient explicitement l'édition de juillet 2025.
 
 La page sur la plénière et la règle 185 du PDF confirment le nombre de 39 pour la
 demande de vérification du quorum (`ep-061`). Certains textes institutionnels de
@@ -111,7 +110,7 @@ Data et Infrastructure ne sont pas modifiées par cette révision.
 - Tests existants de navigation, reprise, historique et déduplication, plus
   régressions sur la présidence des négociations, la signature des actes, le
   calcul de majorité, le dépôt de censure, les compétences CONT et l'affichage du
-  statut et de l'édition des sources : **25 tests réussis dans l’ensemble application/EP/ICT**.
+  contenu des références : **33 tests réussis dans l’ensemble application/EP/ICT**.
 - Compilation de production et parcours navigateur du quiz avec ses sources.
 
 Ces corrections ne déclenchent aucun déploiement automatique. Le site en cours

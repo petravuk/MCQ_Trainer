@@ -15,25 +15,29 @@ applications et postes de travail, réseaux, identité et accès, cybersécurit�
 exploitation, gestion des services, architecture, automatisation, technologies
 émergentes dont HPC et quantique, et encadrement des équipes.
 
-EUR-Lex a renvoyé HTTP 202 avec un corps vide pour l'avis intégral : la couverture
-détaillée de toute l'annexe et la pondération de l'examen ne sont **pas certifiées**.
-Les dix thèmes de la banque correspondent aux grands sujets annoncés ; leur
-répartition reste un choix d'entraînement, pas un barème officiel.
+Le PDF de l'avis intégral fourni ensuite a été lu. L'annexe II, pages 20–21,
+confirme les dix familles de fonctions correspondant aux dix thèmes de la banque.
+La [comparaison détaillée](ict-notice-alignment.md) décrit neuf adaptations pour
+mieux couvrir l'annuaire/SSO, le poste de travail, le middleware et les pilotes
+HPC/quantique. L'avis décrit des fonctions, sans pondération des sujets : la
+répartition de la banque reste un choix pédagogique.
 
 ## Résultat
 
 - **300 réponses revues individuellement** : documentation technique pour 296
   questions, calculs explicites pour `009`, `025`, `033`, `144`. Le calcul
   d'Amdahl est également relié à la documentation NVIDIA.
-- 237 entrées modifiées : 18 libellés, 145 jeux de choix, 191 niveaux. Ces
+- 238 entrées modifiées : 27 libellés, 149 jeux de choix, 193 niveaux. Ces
   ensembles se recoupent ; une reformulation n'indique pas nécessairement que
   l'ancienne réponse était fausse.
-- 104 questions faciles, 183 moyennes, 13 avancées. Ces niveaux sont relatifs
+- 103 questions faciles, 184 moyennes, 13 avancées. Ces niveaux sont relatifs
   à l'outil, pas à une difficulté officielle AD 7.
 - Les distracteurs réécrits utilisent des confusions techniques plausibles
   plutôt que des couleurs, logos ou détails hors sujet. Les choix restent
   mélangés à l'affichage.
-- Les sources, sections et dates sont visibles dans **Sources & review**.
+- Les liens et références utiles sont visibles dans **Sources**. Les dates,
+  méthodes et notes de vérification restent dans les rapports ; ils ne sont
+  pas répétés dans chaque correction.
   Les scénarios et leurs conclusions sont rédigés pour l'entraînement : ils
   s'appuient sur les principes cités sans être des citations mot pour mot.
 
@@ -54,7 +58,7 @@ répartition reste un choix d'entraînement, pas un barème officiel.
 ## Sources et validation
 
 `docs/ict-source-review.json` donne les références des 300 questions et les
-empreintes des **102 documents consultés** : RFC Editor/IETF, NIST OSCAL/ACVP,
+empreintes des **110 documents consultés**, dont l'avis fourni : RFC Editor/IETF, NIST OSCAL/ACVP,
 Kubernetes, PostgreSQL, Linux, SRE Google, AWS Well-Architected, PM² de la
 Commission européenne, MPI Forum, OpenMP, Slurm, NVIDIA, Microsoft, IBM et
 documentation de gestion de services.
@@ -66,7 +70,7 @@ présentées comme des obligations de l'EP.
 
 - Audit de structure : 600 questions EP/ICT, aucun identifiant dupliqué, quatre
   options distinctes et une réponse valide par entrée.
-- Application et régressions : **25 tests réussis**.
+- Application et régressions : **33 tests réussis**.
 - Compilation de production et parcours navigateur : catégories, réponse,
   correction, question suivante et sources.
 
@@ -75,4 +79,4 @@ Les 80 questions **Guide & Internal Rules** sont inchangées et séparées de
 
 Les ajouts et révisions ultérieurs restent **manuels, à la demande**. Le démarrage
 et `npm run update` ne vérifient ni ne génèrent des questions. Une nouvelle
-question sans référence individuelle reste marquée comme non vérifiée.
+question ne reçoit aucune vérification ou source automatiquement.

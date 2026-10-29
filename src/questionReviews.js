@@ -255,7 +255,7 @@ const epFunctioningChecks = Object.fromEntries(
       reviewedAt: "2026-10-29",
       method: "primary-source",
       sources: [epSources[key]],
-      note: "Answer checked against the European Parliament’s public explanation of its functioning. This check does not certify every detail of the current Rules of Procedure.",
+      note: "Answer checked against the European Parliament page cited below.",
     }]),
   ),
 );
@@ -1077,7 +1077,7 @@ const epRulesChecks = Object.fromEntries(
       section: "Rule " + ref.rule + " — " + ref.title +
         (ref.annex ? "; " + ref.annex : ""),
     }],
-    note: "Answer checked against the official July 2025 edition cited below. Later amendments have not been verified; this is not certification against the latest edition.",
+    note: "Checked against the July 2025 Rules cited below. Later amendments have not been checked.",
   }]),
 );
 
@@ -1491,6 +1491,38 @@ const ictSourceCatalog = {
   "zero-trust": {
     "title": "Zero Trust as a security foundation | Microsoft Learn",
     "url": "https://learn.microsoft.com/en-us/security/zero-trust/zero-trust-overview"
+  },
+  "notice-ldap": {
+    "title": "RFC 4511 — LDAP directory access protocol",
+    "url": "https://www.rfc-editor.org/rfc/rfc4511.txt"
+  },
+  "notice-oidc": {
+    "title": "OpenID Connect Core 1.0 — identity layer and ID Tokens",
+    "url": "https://openid.net/specs/openid-connect-core-1_0.html"
+  },
+  "notice-mdm": {
+    "title": "Microsoft Intune — device compliance and Conditional Access",
+    "url": "https://learn.microsoft.com/en-us/intune/device-security/compliance/overview"
+  },
+  "notice-smtp": {
+    "title": "RFC 5321 — SMTP responsibility and delivery failures",
+    "url": "https://www.rfc-editor.org/rfc/rfc5321.txt"
+  },
+  "notice-jdbc": {
+    "title": "Apache Tomcat — JDBC connection pool",
+    "url": "https://tomcat.apache.org/tomcat-10.1-doc/jdbc-pool.html"
+  },
+  "notice-pitr": {
+    "title": "PostgreSQL — continuous archiving and point-in-time recovery",
+    "url": "https://www.postgresql.org/docs/current/continuous-archiving.html"
+  },
+  "notice-vim": {
+    "title": "JCGM 200:2012 — International vocabulary of metrology",
+    "url": "https://www.bipm.org/documents/20126/2071204/JCGM_200_2012.pdf"
+  },
+  "notice-full": {
+    "title": "EPSO/AD/429/26 — Notice of competition, Annex II, Field 1",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:C_202602425"
   }
 };
 const ictQuestionReferences = {
@@ -1705,9 +1737,10 @@ const ictQuestionReferences = {
     ]
   },
   "EPSO-ICT1-035": {
-    "section": "REL network topology: redundant connectivity and tested failover",
+    "section": "Annex II, Field 1, 1(h): device management; device compliance and Conditional Access",
     "sources": [
-      "aws-reliability-pdf"
+      "notice-full",
+      "notice-mdm"
     ]
   },
   "EPSO-ICT1-036": {
@@ -1717,9 +1750,10 @@ const ictQuestionReferences = {
     ]
   },
   "EPSO-ICT1-037": {
-    "section": "Sticky sessions and target affinity",
+    "section": "Annex II, Field 1, 1(e); RFC 4511 sections 4.2 and 4.5: Bind and Search",
     "sources": [
-      "aws-sticky"
+      "notice-full",
+      "notice-ldap"
     ]
   },
   "EPSO-ICT1-038": {
@@ -1754,9 +1788,10 @@ const ictQuestionReferences = {
     ]
   },
   "EPSO-ICT1-043": {
-    "section": "RFC 8201: Path MTU Discovery, packet size and black-hole detection",
+    "section": "Annex II, Field 1, 1(c); RFC 5321 sections 3.3 and 6.1: acceptance and reliable delivery",
     "sources": [
-      "mtu"
+      "notice-full",
+      "notice-smtp"
     ]
   },
   "EPSO-ICT1-044": {
@@ -1766,10 +1801,10 @@ const ictQuestionReferences = {
     ]
   },
   "EPSO-ICT1-045": {
-    "section": "Immutable image references/digests and reproducible release engineering",
+    "section": "Annex II, Field 1, 1(c); Tomcat JDBC pool properties maxActive, maxWait and abandoned connections",
     "sources": [
-      "k8s-images",
-      "sre-releases"
+      "notice-full",
+      "notice-jdbc"
     ]
   },
   "EPSO-ICT1-046": {
@@ -1785,16 +1820,17 @@ const ictQuestionReferences = {
     ]
   },
   "EPSO-ICT1-048": {
-    "section": "RFC 2992: equal-cost multipath next-hop selection",
+    "section": "Annex II, Field 1, 1(e); OpenID Connect sections 1 and 2: identity layer and ID Tokens",
     "sources": [
-      "ecmp"
+      "notice-full",
+      "notice-oidc"
     ]
   },
   "EPSO-ICT1-049": {
-    "section": "CP-9 backup separation/protection; recovery from shared failure domains",
+    "section": "Annex II, Field 1, 1(b)/(d); PostgreSQL continuous archiving, base backup and recovery targets",
     "sources": [
-      "nist-controls-json",
-      "aws-reliability-pdf"
+      "notice-full",
+      "notice-pitr"
     ]
   },
   "EPSO-ICT1-050": {
@@ -2928,10 +2964,10 @@ const ictQuestionReferences = {
     ]
   },
   "EPSO-ICT1-234": {
-    "section": "HPC profiling and per-task CPU/accounting statistics",
+    "section": "Annex II, Field 1, 8(b)–(d); HPC integration, acceptance KPIs and security",
     "sources": [
-      "aws-hpc",
-      "slurm-accounting"
+      "notice-full",
+      "aws-hpc"
     ]
   },
   "EPSO-ICT1-235": {
@@ -3089,9 +3125,11 @@ const ictQuestionReferences = {
     ]
   },
   "EPSO-ICT1-259": {
-    "section": "Qubits, basis states, superposition and measurement",
+    "section": "Annex II, Field 1, 9(a); evaluating full HPC/hybrid workflows and result quality",
     "sources": [
-      "microsoft-quantum"
+      "notice-full",
+      "aws-hpc",
+      "ibm-quantum-think"
     ]
   },
   "EPSO-ICT1-260": {
@@ -3101,9 +3139,11 @@ const ictQuestionReferences = {
     ]
   },
   "EPSO-ICT1-261": {
-    "section": "Decoherence and interaction with the environment",
+    "section": "Annex II, Field 1, 9(c); VIM definitions 2.26, 2.39 and 2.41; AU-8 timestamps",
     "sources": [
-      "ibm-quantum-think"
+      "notice-full",
+      "notice-vim",
+      "nist-controls-json"
     ]
   },
   "EPSO-ICT1-262": {
@@ -3490,8 +3530,8 @@ export function questionReview(question) {
     note:
       checked?.note ||
       (question.id.startsWith("ep-")
-        ? "Current Rules of Procedure source verification is pending. This question has not been certified against the current edition."
-        : "Primary-source verification is pending. An editorial correction alone does not certify the answer."),
+        ? "This answer has not yet been checked against a cited official source."
+        : "This answer has not yet been checked against a cited technical source."),
     editorial: editorialNotes[question.id],
     suppliedReference: question.explanation.match(/\bRule\s+\d+\b/)?.[0],
   };
