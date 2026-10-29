@@ -41,6 +41,10 @@ Les 300 réponses ICT ont également une vérification technique ou un calcul
 explicite. Les questions restent des exercices originaux, pas des questions
 officielles EPSO. Les 80 questions **Guide & Internal Rules** ont leur catégorie
 séparée et ne sont plus mélangées aux 300 questions EP.
+La carte « Rules of Procedure », qui affichait les mêmes questions, est retirée.
+Ses sessions sauvegardées et statistiques sont rattachées à « EP questions ».
+Les banques restent dans deux fichiers : `src/ep_questions_bank.ts` et
+`src/guide_internal_rules_question_bank.ts`.
 
 La vérification et l'ajout éventuel de nouvelles questions restent **manuels**.
 Ni le démarrage ni `npm run update` ne déclenchent une vérification, une recherche

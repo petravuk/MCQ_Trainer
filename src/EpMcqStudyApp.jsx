@@ -14,8 +14,8 @@ import {
   topicResults,
 } from "./quizProgress";
 import { questionReview, questionKey } from "./questionReviews";
+import { migrateStoredEpCategory } from "./categoryMigration";
 const ALL_EP_CATEGORY = "ep_all";
-const EP_RULES_CATEGORY = "ep_rules";
 const GUIDE_INTERNAL_RULES_CATEGORY = "ep_guide_internal_rules";
 const DATA_CATEGORY = "data";
 const EU_CATEGORY = "eu_knowledge";
@@ -23,7 +23,6 @@ const ICT_INFRASTRUCTURE_CATEGORY = "epso_ad7_infrastructure";
 
 const questionBanks = {
   [ALL_EP_CATEGORY]: EP_QUESTIONS,
-  [EP_RULES_CATEGORY]: EP_QUESTIONS,
   [GUIDE_INTERNAL_RULES_CATEGORY]: GUIDE_INTERNAL_RULES_QUESTIONS,
   [DATA_CATEGORY]: DATA_QUESTIONS,
   [EU_CATEGORY]: EU_QUESTIONS,
@@ -39,10 +38,6 @@ const categoryConfig = {
   [ALL_EP_CATEGORY]: {
     label: "EP questions",
     description: "Parliament’s organisation, powers and procedures. Staff rules are in Guide & Internal Rules.",
-  },
-  [EP_RULES_CATEGORY]: {
-    label: "Rules of Procedure",
-    description: "European Parliament Rules of Procedure.",
   },
   [GUIDE_INTERNAL_RULES_CATEGORY]: {
     label: "Guide & Internal Rules",
@@ -94,7 +89,19 @@ function getJsonStorage(key, fallback) {
 
   try {
     const raw = window.localStorage.getItem(key);
-    return raw ? JSON.parse(raw) : fallback;
+    if (!raw) return fallback;
+    const kind = {
+      [HISTORY_KEY]: "history",
+      [DRAFT_KEY]: "draft",
+      [LATEST_WRONG_KEY]: "wrong",
+      [MARKED_KEY]: "ids",
+      [PROGRESS_KEY]: "progress",
+    }[key];
+    return migrateStoredEpCategory(
+      kind,
+      JSON.parse(raw),
+      kind === "wrong" ? getJsonStorage(PROGRESS_KEY, {}) : undefined,
+    );
   } catch {
     return fallback;
   }

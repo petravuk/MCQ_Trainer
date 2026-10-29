@@ -102,6 +102,7 @@ test("EP practice excludes staff rules while keeping their separate category", (
   );
   expect(subject("EP questions").textContent).toContain("300 questions");
   expect(subject("Guide & Internal Rules").textContent).toContain("80 questions");
+  expect(subject("Rules of Procedure")).toBeUndefined();
   act(() => subject("EP questions").click());
   expect(container.textContent).not.toContain("Annual leave (1)");
 });
