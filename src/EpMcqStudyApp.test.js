@@ -1,4 +1,5 @@
 import React, { act, StrictMode } from "react";
+import { vi } from "vitest";
 import { createRoot } from "react-dom/client";
 import EpMcqStudyApp from "./EpMcqStudyApp";
 import { EPSO_AD7_INFRASTRUCTURE_QUESTIONS } from "./epso_ad7_infrastructure_questions";
@@ -9,25 +10,25 @@ import {
   topicResults,
 } from "./quizProgress";
 
-jest.mock("./firebase", () => ({ auth: {}, googleProvider: {} }));
-jest.mock("firebase/auth", () => ({
-  onAuthStateChanged: jest.fn((auth, callback) => {
+vi.mock("./firebase", () => ({ auth: {}, googleProvider: {} }));
+vi.mock("firebase/auth", () => ({
+  onAuthStateChanged: vi.fn((auth, callback) => {
     callback(null);
     return () => {};
   }),
-  signInWithPopup: jest.fn(),
-  signOut: jest.fn(),
+  signInWithPopup: vi.fn(),
+  signOut: vi.fn(),
 }));
-jest.mock("./firebase_results", () => ({ saveQuizResult: jest.fn() }));
+vi.mock("./firebase_results", () => ({ saveQuizResult: vi.fn() }));
 
 let container;
 let root;
 
 beforeEach(() => {
   localStorage.clear();
-  jest.clearAllMocks();
-  window.scrollTo = jest.fn();
-  window.confirm = jest.fn(() => true);
+  vi.clearAllMocks();
+  window.scrollTo = vi.fn();
+  window.confirm = vi.fn(() => true);
   global.IS_REACT_ACT_ENVIRONMENT = true;
   container = document.createElement("div");
   document.body.append(container);
