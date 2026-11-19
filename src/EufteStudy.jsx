@@ -108,6 +108,7 @@ export default function EufteStudy() {
       <section className="eufte-card" aria-labelledby="eufte-audio-title" ref={audioPanel}>
         <div className="eufte-card-heading"><span className="eufte-icon"><Icon type="audio" /></span><div><h2 id="eufte-audio-title">{copy.audioTitle}</h2><p>{copy.audioSubtitle}</p></div></div>
         <p className="eufte-audio-note">{copy.audioNote(pack.totalMinutes)}</p>
+        {language === "en" && <h3 className="eufte-list-label">Under Construction</h3>}
         <ol className="eufte-module-list">
           {modules.map((module) => <li key={module.id} className="eufte-audio-module">
             <div className="eufte-module-heading"><span className="eufte-number">{String(module.id).padStart(2,"0")}</span><h3>{module.title}</h3><span className="eufte-duration">{module.duration}</span></div>
