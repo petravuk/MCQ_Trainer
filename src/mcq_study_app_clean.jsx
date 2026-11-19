@@ -4,7 +4,6 @@ import { EU_QUESTIONS } from "./eu_question_bank";
 import { REASONING_TIPS } from "./numerical_shortcuts";
 import { EP_QUESTIONS } from "./ep_questions_bank";
 import { saveQuizResult } from "./firebase_results";
-import type { User } from "firebase/auth";
 import { loginWithGoogle, logout, listenToAuthState } from "./firebase_auth";
 
 const baseQuestionBank = {
