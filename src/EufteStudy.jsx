@@ -3,7 +3,7 @@ import { readingModulesByLanguage } from "./eufte/modules";
 import { text, frenchModuleDetails } from "./eufte/interface";
 import englishResources from "./eufte/resources.en.json";
 
-const BASE = `${process.env.PUBLIC_URL || ""}/eufte`;
+const BASE = `${import.meta.env.BASE_URL.replace(/\/$/, "")}/eufte`;
 const LANGUAGE_KEY = "mcq-eufte-language-v1";
 const resources = {
   fr: { pdfPages: 20, totalMinutes: 35, durations: { 1: "5:35", 2: "6:07", 3: "5:23", 4: "6:04", 5: "6:06", 6: "5:48" } },
