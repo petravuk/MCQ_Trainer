@@ -3,7 +3,7 @@ import { db } from "./firebase";
 
 // Firestore is the source of completed quizzes for a signed-in user.
 // Unfinished quizzes and manual review marks remain browser-only.
-export async function loadQuizHistory(userId) {
+export async function loadQuizHistory(userId: string) {
   const snapshot = await getDocs(
     query(collection(db, "quizResults"), where("userId", "==", userId)),
   );
@@ -32,10 +32,10 @@ export async function loadQuizHistory(userId) {
     .sort((a, b) => b.createdAtMs - a.createdAtMs);
 }
 
-export function rebuildCompletedProgress(history) {
-  const wrongByCategory = {};
-  const seen = new Set();
-  const progress = {};
+export function rebuildCompletedProgress(history: any[]) {
+  const wrongByCategory: Record<string, string[]> = {};
+  const seen = new Set<string>();
+  const progress: Record<string, any> = {};
   // Apply answers in chronological order so later corrections clear mistakes.
   for (const session of [...history].reverse()) {
     if (!session.category) continue;
