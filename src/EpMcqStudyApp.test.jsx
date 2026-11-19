@@ -119,7 +119,7 @@ test("setup filters do not start a quiz, and navigation preserves a checked answ
   expect(button("Check answer").disabled).toBe(true);
   const question = answer(true);
   expect(question.topic).toBe("Quantum technologies");
-  expect(container.querySelector("fieldset.answers").disabled).toBe(true);
+  expect(container.querySelector('input[type="radio"]').closest("fieldset").disabled).toBe(true);
   expect(container.textContent).toContain(question.explanation);
   expect(container.querySelector("details summary").textContent).toBe("Sources");
   expect(container.querySelectorAll("details a").length).toBeGreaterThan(0);
@@ -219,7 +219,7 @@ test("save and exit restores the same question order, position and checked answe
     first.question,
   );
   expect(container.querySelector("input:checked")).not.toBeNull();
-  expect(container.querySelector("fieldset.answers").disabled).toBe(true);
+  expect(container.querySelector('input[type="radio"]').closest("fieldset").disabled).toBe(true);
   const progress = JSON.parse(localStorage.getItem("mcq-question-progress-v1"));
   expect(progress[`epso_ad7_infrastructure:${first.id}`]).toMatchObject({
     attempts: 1,
