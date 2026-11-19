@@ -6,6 +6,7 @@ import { DATA_QUESTIONS } from "./data_question_bank";
 import { EU_QUESTIONS } from "./eu_question_bank";
 import { EPSO_AD7_INFRASTRUCTURE_QUESTIONS } from "./epso_ad7_infrastructure_questions";
 import { saveQuizResult } from "./firebase_results";
+import { loadQuizHistory, rebuildCompletedProgress } from "./firebase_history";
 import { auth, googleProvider } from "./firebase";
 import styles from "./EpMcqStudyApp.module.css";
 import EufteStudy from "./EufteStudy";
@@ -265,11 +266,46 @@ export default function EpMcqStudyApp() {
   const [draftError, setDraftError] = useState("");
   const [completed, setCompleted] = useState(false);
   const [saveStatus, setSaveStatus] = useState("");
+  const [cloudHistoryStatus, setCloudHistoryStatus] = useState("");
   const finishedRef = useRef(false);
   const headingRef = useRef(null);
   const saveAttemptRef = useRef(0);
 
-  useEffect(() => onAuthStateChanged(auth, setUser), []);
+  useEffect(() => {
+    let active = true;
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+      setUser(currentUser);
+      if (!currentUser) {
+        setCloudHistoryStatus("");
+        setHistory(getJsonStorage(HISTORY_KEY, []));
+        setLatestWrongByCategory(getJsonStorage(LATEST_WRONG_KEY, {}));
+        setSeenIds(getJsonStorage(SEEN_KEY, []));
+        setQuestionProgress(getJsonStorage(PROGRESS_KEY, {}));
+        return;
+      }
+      setCloudHistoryStatus("Loading saved results from your account...");
+      try {
+        const results = await loadQuizHistory(currentUser.uid);
+        if (!active || auth.currentUser?.uid !== currentUser.uid) return;
+        const derived = rebuildCompletedProgress(results);
+        setHistory(results);
+        setLatestWrongByCategory(derived.wrongByCategory);
+        setSeenIds(derived.seenIds);
+        setQuestionProgress(derived.progress);
+        setCloudHistoryStatus(`Synced ${results.length} completed sessions from your account.`);
+      } catch (error) {
+        if (!active || auth.currentUser?.uid !== currentUser.uid) return;
+        console.error("Firestore history load failed:", error);
+        setCloudHistoryStatus(
+          `Could not load account history: ${error.code || error.message || "Unknown error"}. Browser history is still available.`,
+        );
+      }
+    });
+    return () => {
+      active = false;
+      unsubscribe();
+    };
+  }, []);
   useEffect(() => {
     if (screen === "eufte") {
       window.history.replaceState(null, "", "#eufte");
@@ -619,7 +655,7 @@ export default function EpMcqStudyApp() {
     );
     try {
       const { id, date, ...result } = entry;
-      await saveQuizResult(result);
+      await saveQuizResult({ ...result, sessionId: id });
       if (attempt === saveAttemptRef.current)
         setSaveStatus("Results saved to your account.");
     } catch {
@@ -1442,6 +1478,7 @@ export default function EpMcqStudyApp() {
               </h1>
               <p>Look back at your practice and choose where to go next.</p>
             </div>
+            {cloudHistoryStatus && <p role="status" className={styles.bottomNote}>{cloudHistoryStatus}</p>}
             <div className={styles.historyToolbar}>
               <label className={styles.field}>
                 Subject
@@ -1460,6 +1497,7 @@ export default function EpMcqStudyApp() {
               <button
                 className={styles.textButton}
                 disabled={
+                  Boolean(user) || (
                   !filteredHistory.length &&
                   !actualTopicResults.length &&
                   !Object.entries(markedByCategory).some(
@@ -1471,7 +1509,7 @@ export default function EpMcqStudyApp() {
                     ([key, ids]) =>
                       ids.length &&
                       (historyCategory === "all" || historyCategory === key),
-                  )
+                  ))
                 }
                 onClick={clearHistory}
               >
@@ -1502,9 +1540,9 @@ export default function EpMcqStudyApp() {
             >
               <h2 id="topic-results-heading">Results by topic</h2>
               <p className={styles.fieldHint}>
-                Based on each answer checked since this feature was added,
-                including reviews and unfinished quizzes. Previous quiz totals
-                are kept separately.
+                {user
+                  ? "Based on saved answers from completed sessions in your account. Unfinished quizzes remain in this browser."
+                  : "Based on answers checked in this browser, including unfinished quizzes."}
               </p>
               {actualTopicResults.length ? (
                 <div className={styles.topicResults}>
@@ -1588,8 +1626,8 @@ export default function EpMcqStudyApp() {
               )}
             </section>
             <p className={styles.bottomNote}>
-              Your latest 30 sessions in this browser. Topic statistics also
-              include checked answers from unfinished sessions.
+              {user ? "Completed sessions are loaded from your account. " : "Your latest 30 sessions in this browser. "}
+              Unfinished quizzes and manual review marks stay in this browser.
             </p>
           </>
         )}

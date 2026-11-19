@@ -3,6 +3,7 @@ import { auth, db } from "./firebase";
 
 export async function saveQuizResult(result: {
   category: string;
+  sessionId?: string;
   mode?: string;
   difficulty?: string;
   topicFilter?: string;
