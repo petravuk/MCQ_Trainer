@@ -1,0 +1,59 @@
+name: Preview English audio with Playwright
+
+on:
+  push:
+    branches:
+      - test/english-audio-under-construction
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install app dependencies
+        run: npm install --no-audit --no-fund
+      - name: Install Playwright
+        run: npm install --no-save --no-package-lock playwright
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Start the preview server
+        run: |
+          npm run dev -- --host 127.0.0.1 > /tmp/mcq-vite.log 2>&1 &
+          for i in $(seq 1 60); do
+            if curl -fsS http://127.0.0.1:3000/ > /dev/null; then exit 0; fi
+            sleep 2
+          done
+          cat /tmp/mcq-vite.log
+          exit 1
+      - name: Check and capture English audio
+        run: |
+          node --input-type=module <<'JS'
+          import { chromium } from 'playwright';
+          import { mkdir } from 'node:fs/promises';
+          const browser = await chromium.launch({ headless: true });
+          const page = await browser.newPage({ viewport: { width: 1440, height: 1100 }, deviceScaleFactor: 1 });
+          await page.goto('http://127.0.0.1:3000/#eufte');
+          await page.getByRole('button', { name: /EN English/i }).click();
+          const label = page.getByRole('heading', { name: 'Under Construction', exact: true });
+          await label.waitFor({ state: 'visible' });
+          const players = await page.locator('.eufte-audio-module audio').count();
+          if (players !== 6) throw new Error('Expected 6 English audio players, got ' + players);
+          await mkdir('playwright-captures', { recursive: true });
+          await page.locator('section[aria-labelledby="eufte-audio-title"]').screenshot({ path: 'playwright-captures/english-audio.png' });
+          console.log('PASS: Under Construction visible and six English MP3 players present');
+          await browser.close();
+          JS
+      - name: Upload screenshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: english-mp3-preview
+          path: playwright-captures/
+          if-no-files-found: warn
