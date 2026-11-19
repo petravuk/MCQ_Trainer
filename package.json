@@ -28,5 +28,8 @@
     "preview": "vite preview --host 0.0.0.0",
     "test:watch": "vitest"
   },
-  "homepage": "https://petravuk.github.io/MCQ_Trainer"
+  "homepage": "https://petravuk.github.io/MCQ_Trainer",
+  "overrides": {
+    "@grpc/grpc-js": "1.14.7"
+  }
 }
