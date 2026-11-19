@@ -1495,3 +1495,19 @@
     padding-bottom: 12px;
   }
 }
+
+@media (max-width: 600px) {
+  .nav {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    min-width: 0;
+  }
+  .navButton {
+    min-width: 0;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px 4px;
+  }
+}

@@ -126,3 +126,33 @@ dépendances : une mise à jour qui en ajoute nécessitera aussi une installatio
 CI=true npm test -- --watchAll=false --runInBand
 npm run build
 ```
+
+
+## EUFTE et lecture des fiches
+
+L’onglet EUFTE regroupe six MP3 français et les fiches à lire directement dans
+l’application. « Lire la fiche » ouvre le texte complet, les tableaux, les
+références et les questions corrigées, avec navigation entre les six modules.
+Les PDF et ZIP sont disponibles en complément dans public/eufte. Le texte à
+l’écran est dans src/eufte/fiches/ (un fichier JSON par module). L’espace anglais attend les prochains
+audios. Un seul lecteur joue à la fois.
+
+Un accès direct est possible avec #eufte à la fin de l’adresse. Le quiz en
+cours est conservé pendant la consultation des fiches.
+
+Voix : Piper SIWIS, SIWIS French Speech Synthesis Database
+(https://datashare.is.ed.ac.uk/handle/10283/2353), licence CC BY 4.0.
+
+
+Les six textes sont éditables séparément dans `src/eufte/fiches/` :
+
+- `module-1-comprendre-reglement.fr.json`
+- `module-2-obligations-entites.fr.json`
+- `module-3-iicb.fr.json`
+- `module-4-cert-ue.fr.json`
+- `module-5-incidents-crises.fr.json`
+- `module-6-echeances-redaction.fr.json`
+
+Chaque fichier contient le titre et les paragraphes ou tableaux de la fiche.
+Les PDF et MP3 déjà générés sont dans `public/eufte/fiches/` et
+`public/eufte/audio/`. Modifier un texte à l’écran ne régénère pas ces fichiers.

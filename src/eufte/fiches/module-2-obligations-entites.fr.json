@@ -1,0 +1,163 @@
+{
+  "id": 2,
+  "title": "Obligations des entités",
+  "blocks": [
+    {
+      "kind": "h",
+      "text": "Module 2 — Organiser la cybersécurité"
+    },
+    {
+      "kind": "small",
+      "text": "Articles 5 à 9 · PDF source FR, pages 11 à 14"
+    },
+    {
+      "kind": "p",
+      "text": "<b>Idée centrale :</b> chaque entité doit organiser un cycle complet : examiner sa situation, établir un cadre, évaluer sa maturité, mettre en œuvre des mesures et approuver un plan. La responsabilité relève du niveau hiérarchique le plus élevé."
+    },
+    {
+      "kind": "h",
+      "text": "Le cadre de gestion, de gouvernance et de contrôle — article 6"
+    },
+    {
+      "kind": "p",
+      "text": "Après un examen initial, tel qu’un audit, chaque entité établit son cadre au plus tard le <b>8 avril 2025</b>. Il couvre tout l’environnement TIC non classifié : systèmes sur site, technologie opérationnelle, cloud, actifs et services externalisés ou hébergés par des tiers, appareils mobiles, réseaux d’entreprise, réseaux professionnels non connectés à internet et appareils connectés à ces environnements."
+    },
+    {
+      "kind": "p",
+      "text": "L’approche est <b>« tous risques »</b> : elle ne se limite pas aux attaques malveillantes. Le considérant 6 cite aussi les incendies, inondations, pannes et accès physiques non autorisés. Le cadre fixe les politiques, objectifs, priorités, rôles, responsabilités et mécanismes de mesure de l’efficacité. Il est révisé régulièrement et <b>au moins tous les quatre ans</b>, compte tenu de l’évolution des risques."
+    },
+    {
+      "kind": "p",
+      "text": "La direction est responsable de la mise en œuvre et contrôle les obligations liées au cadre. Elle peut déléguer certaines obligations à des responsables de niveau prévu par le texte ; elle peut néanmoins être tenue responsable des infractions. Chaque entité garantit qu’un pourcentage adéquat de son budget TIC est consacré à la cybersécurité : <b>aucun taux numérique uniforme n’est fixé</b>."
+    },
+    {
+      "kind": "h",
+      "text": "Le responsable local et les compétences"
+    },
+    {
+      "kind": "p",
+      "text": "Chaque entité désigne un responsable local de la cybersécurité, ou une fonction équivalente : point de contact unique, il facilite l’application et rend directement et régulièrement compte à la direction. Certaines tâches peuvent être partagées entre entités ou déléguées au CERT-UE par accord de niveau de service. Le CERT-UE tient la liste des responsables ; toute désignation ou modification lui est signalée rapidement. Les cadres supérieurs et personnels concernés suivent régulièrement une formation spécifique. <b>Article 6, paragraphes 8–9.</b>"
+    },
+    {
+      "kind": "h",
+      "text": "Maturité et plan — articles 7 et 9"
+    },
+    {
+      "kind": "p",
+      "text": "L’évaluation de maturité porte sur tout l’environnement TIC : première échéance au <b>8 juillet 2025</b>, puis au moins tous les deux ans. Un tiers spécialisé peut aider ; des entités de structures similaires peuvent coopérer. La discussion des résultats au sein de l’IICB ou du groupe informel exige une demande de l’IICB et le consentement explicite de l’entité."
+    },
+    {
+      "kind": "p",
+      "text": "Le plan, approuvé par la direction au plus tard le <b>8 janvier 2026</b>, tient compte de la maturité, des actifs, des risques et des mesures. Il inclut le plan de gestion des crises pour incidents majeurs et est soumis intégralement à l’IICB. Révision tous les deux ans, ou plus fréquemment selon les évaluations ou une modification substantielle du cadre."
+    },
+    {
+      "kind": "h",
+      "text": "Module 2 — Mesures et proportionnalité"
+    },
+    {
+      "kind": "small",
+      "text": "Article 5 et article 8 · PDF source FR, pages 11, 13 et 14"
+    },
+    {
+      "kind": "p",
+      "text": "L’IICB publie les lignes directrices de mise en œuvre au plus tard le <b>8 septembre 2024</b>, après consultation de l’ENISA et orientations du CERT-UE. Les entités en tiennent compte, ainsi que des orientations et recommandations pertinentes. <b>Article 5.</b>"
+    },
+    {
+      "kind": "h",
+      "text": "Des mesures adaptées aux risques — article 8, paragraphe 1"
+    },
+    {
+      "kind": "p",
+      "text": "Au plus tard le <b>8 septembre 2025</b>, les entités prennent, sous la supervision de leur direction, des mesures <b>techniques, opérationnelles et organisationnelles appropriées et proportionnées</b>. Elles gèrent les risques identifiés et préviennent ou réduisent les conséquences des incidents. La proportionnalité dépend notamment de l’exposition, de la taille, de la probabilité et de la gravité des incidents, y compris leurs conséquences sociétales, économiques et interinstitutionnelles. L’état des connaissances et, s’il y a lieu, les normes applicables comptent aussi."
+    },
+    {
+      "kind": "h",
+      "text": "Les 16 domaines à prendre en compte — article 8, paragraphe 2"
+    },
+    {
+      "kind": "p",
+      "text": "a) Politique de cybersécurité ; b) analyse des risques et sécurité des systèmes ; c) stratégie cloud ; d) audit, le cas échéant, pouvant inclure évaluations et tests d’intrusion ; e) mise en œuvre des recommandations d’audit ; f) organisation, rôles et responsabilités ; g) gestion et inventaire des actifs, cartographie des réseaux ; h) ressources humaines et contrôle d’accès ; i) sécurité des activités ; j) sécurité des communications ; k) acquisition, développement, maintenance et gestion/divulgation des vulnérabilités ; l) transparence du code source dans la mesure du possible ; m) chaîne d’approvisionnement ; n) traitement des incidents et coopération avec le CERT-UE ; o) continuité, sauvegardes, reprise et crises ; p) éducation, compétences, sensibilisation, exercices et formation."
+    },
+    {
+      "kind": "p",
+      "text": "Pour les fournisseurs et prestataires directs, il faut considérer leurs vulnérabilités propres et la qualité globale de leurs produits et pratiques, notamment le développement sécurisé."
+    },
+    {
+      "kind": "h",
+      "text": "Les mesures spécifiques minimales — article 8, paragraphe 3"
+    },
+    {
+      "kind": "p",
+      "text": "a) Permettre et pérenniser le télétravail ; b) progresser vers les principes de <b>vérification systématique — zero trust</b> ; c) authentification à facteurs multiples comme norme ; d) cryptographie, chiffrement, notamment de bout en bout, et signatures numériques sécurisées ; e) communications et communications d’urgence sécurisées, le cas échéant ; f) détection et suppression préventives des logiciels malveillants et espions ; g) développement et évaluation sécurisés des logiciels ; h) formation adaptée aux missions et capacités attendues pour la direction et les personnels chargés de l’application ; i) formation régulière du personnel ; j) analyses des risques d’interconnexion, le cas échéant ; k) renforcement des règles de passation des marchés."
+    },
+    {
+      "kind": "p",
+      "text": "Les contrats doivent supprimer les obstacles au partage avec le CERT-UE et imposer le signalement des incidents, vulnérabilités et menaces, avec des mécanismes de réaction et de suivi. Les mentions <b>« le cas échéant »</b> et <b>« dans la mesure du possible »</b> doivent être conservées pour les dispositions auxquelles elles se rapportent."
+    },
+    {
+      "kind": "h",
+      "text": "Module 2 — Mémorisation et entraînement"
+    },
+    {
+      "kind": "h",
+      "text": "La synthèse à reconstruire"
+    },
+    {
+      "kind": "p",
+      "text": "La cybersécurité est une responsabilité de gouvernance. Chaque entité met en place un cadre couvrant tout son environnement TIC non classifié, selon une approche tous risques. La direction reste responsable même en cas de délégation. L’évaluation de maturité permet d’adapter les mesures proportionnées aux risques ; le plan approuvé formalise ces mesures et inclut la gestion des crises. Un responsable local assure le point de contact et le suivi. La formation, les ressources, la sécurité des fournisseurs et l’amélioration continue complètent le dispositif."
+    },
+    {
+      "kind": "t",
+      "rows": [
+        [
+          "Français",
+          "Anglais à reconnaître"
+        ],
+        [
+          "Cadre de gestion des risques",
+          "Cybersecurity risk-management, governance and control framework"
+        ],
+        [
+          "Évaluation de maturité",
+          "Cybersecurity maturity assessment"
+        ],
+        [
+          "Mesures proportionnées",
+          "Proportionate measures"
+        ],
+        [
+          "Plan de cybersécurité",
+          "Cybersecurity plan"
+        ],
+        [
+          "Chaîne d’approvisionnement",
+          "Supply chain"
+        ]
+      ]
+    },
+    {
+      "kind": "h",
+      "text": "Questions — répondre avant de lire les solutions"
+    },
+    {
+      "kind": "p",
+      "text": "1. Une délégation supprime-t-elle la responsabilité de la direction ?<br/>2. Le cloud externalisé est-il hors du cadre ?<br/>3. Quelles sont les périodicités du cadre, de la maturité et du plan ?<br/>4. Le règlement fixe-t-il 10 % du budget TIC pour la cybersécurité ?<br/>5. Qui approuve le plan et à qui est-il transmis ?"
+    },
+    {
+      "kind": "h",
+      "text": "Corrigé"
+    },
+    {
+      "kind": "p",
+      "text": "1. Non : la direction peut demeurer responsable des infractions (art. 6, § 6).<br/>2. Non : il fait partie du périmètre (art. 6, § 2).<br/>3. Cadre : au moins tous les quatre ans ; maturité : au moins tous les deux ans ; plan : tous les deux ans ou davantage selon les circonstances (art. 6–9).<br/>4. Non : pourcentage adéquat, sans valeur chiffrée (art. 6, § 7).<br/>5. La direction l’approuve ; l’entité le soumet intégralement à l’IICB (art. 9)."
+    },
+    {
+      "kind": "h",
+      "text": "Exercice écrit — 10 minutes"
+    },
+    {
+      "kind": "p",
+      "text": "En 120 à 150 mots, explique à une direction les quatre étapes « cadre — maturité — mesures — plan » et les responsabilités qui lui reviennent. Exercice pédagogique, sans statut de sujet officiel."
+    }
+  ]
+}

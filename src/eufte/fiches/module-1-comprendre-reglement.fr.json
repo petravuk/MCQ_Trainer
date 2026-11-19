@@ -1,0 +1,276 @@
+{
+  "id": 1,
+  "title": "Comprendre le règlement",
+  "blocks": [
+    {
+      "kind": "p",
+      "text": "Ce premier module explique pourquoi le règlement (UE, Euratom) 2023/2841 existe, à qui il s’applique et quelles distinctions il faut maîtriser avant d’étudier les obligations. Il prépare l’EUFTE du concours EPSO/AD/429/26, prévu le 2 décembre 2026. <b>À retenir : les entités de l’Union doivent mieux se protéger individuellement et coopérer parce que leurs systèmes sont interdépendants.</b>"
+    },
+    {
+      "kind": "h",
+      "text": "Pourquoi une règle commune"
+    },
+    {
+      "kind": "p",
+      "text": "Les services numériques, le cloud et le télétravail sont essentiels au fonctionnement de l’administration européenne. Ils accroissent aussi les dépendances et les surfaces d’attaque. Les entités ne disposent pas toutes de la même maturité en cybersécurité. Un incident dans une entité peut se propager à d’autres ou perturber leurs activités : ce sont les <b>effets en cascade</b>. Le règlement vise donc un niveau élevé commun de cybersécurité, avec des mesures proportionnées aux risques, le partage d’informations et la coopération."
+    },
+    {
+      "kind": "p",
+      "text": "<b>Sources : considérants 1 à 5, pp. 1–2.</b> Les considérants expliquent la logique du texte ; les articles en fixent les règles. La directive NIS 2, citée au considérant 5, sert de référence de cohérence et d’ambition. Elle reste un texte distinct."
+    },
+    {
+      "kind": "h",
+      "text": "Ce que le règlement organise"
+    },
+    {
+      "kind": "p",
+      "text": "L’article 1 identifie quatre volets :"
+    },
+    {
+      "kind": "p",
+      "text": "1. Un cadre interne de gestion, de gouvernance et de contrôle des risques dans chaque entité."
+    },
+    {
+      "kind": "p",
+      "text": "2. La gestion des risques, la communication et le partage d’informations."
+    },
+    {
+      "kind": "p",
+      "text": "3. L’organisation et le fonctionnement de l’IICB et du CERT-UE."
+    },
+    {
+      "kind": "p",
+      "text": "4. Le suivi de la mise en œuvre du règlement."
+    },
+    {
+      "kind": "p",
+      "text": "<b>Source : article 1, p. 9.</b>"
+    },
+    {
+      "kind": "p",
+      "text": "Pour s’orienter dans la suite : la direction de chaque entité est responsable de la mise en œuvre ; l’IICB suit et soutient l’application et oriente stratégiquement le CERT-UE ; le CERT-UE fournit l’assistance technique et coordonne les réponses aux incidents. <b>Sources : articles 6, 10 et 13, pp. 11–12, 15 et 18–20.</b>"
+    },
+    {
+      "kind": "h",
+      "text": "À qui et à quoi il s’applique"
+    },
+    {
+      "kind": "p",
+      "text": "Le règlement s’applique aux <b>entités de l’Union</b>, à l’IICB et au CERT-UE. Les entités de l’Union sont les institutions, organes et organismes créés par les traités de l’Union ou conformément à ceux-ci. Les administrations nationales et toutes les entreprises européennes ne sont donc pas automatiquement incluses dans cette définition. L’autonomie institutionnelle prévue par les traités est préservée."
+    },
+    {
+      "kind": "p",
+      "text": "<b>Sources : article 2, paragraphes 1–2, et article 3, point 1, p. 10.</b>"
+    },
+    {
+      "kind": "p",
+      "text": "<b>Exception à conserver dans toute synthèse :</b> le règlement ne s’applique pas aux réseaux et systèmes d’information traitant des informations classifiées de l’Union européenne, sauf l’article 13, paragraphe 8. Ce paragraphe permet au CERT-UE d’aider une entité sur de tels systèmes si elle l’y invite explicitement, selon ses procédures et dans le respect des règles de protection des informations classifiées."
+    },
+    {
+      "kind": "p",
+      "text": "<b>Sources : article 2, paragraphe 3, p. 10 ; article 13, paragraphe 8, p. 20.</b>"
+    },
+    {
+      "kind": "p",
+      "text": "« Non classifié » ne signifie pas « public ». Un système non classifié peut contenir des données personnelles et des informations confidentielles. L’environnement couvert comprend notamment les systèmes sur site, le cloud, les services hébergés par des tiers et les appareils mobiles. <b>Source : article 6, paragraphe 2, p. 11.</b>"
+    },
+    {
+      "kind": "h",
+      "text": "Les mots à distinguer"
+    },
+    {
+      "kind": "t",
+      "rows": [
+        [
+          "Français officiel",
+          "Anglais officiel",
+          "Repère"
+        ],
+        [
+          "Entités de l’Union",
+          "Union entities",
+          "Acteurs définis à l’article 3, point 1"
+        ],
+        [
+          "Niveau hiérarchique le plus élevé",
+          "Highest level of management",
+          "Niveau administratif supérieur défini à l’article 3, point 5"
+        ],
+        [
+          "Incident évité",
+          "Near miss",
+          "Renvoi à NIS 2 dans l’article 3, point 6"
+        ],
+        [
+          "Incident important",
+          "Significant incident",
+          "Critères et obligations d’information de l’article 21"
+        ],
+        [
+          "Incident majeur",
+          "Major incident",
+          "Définition propre à l’article 3, point 8"
+        ],
+        [
+          "Incident de cybersécurité majeur",
+          "Large-scale cybersecurity incident",
+          "Renvoi à NIS 2 dans l’article 3, point 9"
+        ],
+        [
+          "Informations classifiées de l’UE",
+          "EU classified information, EUCI",
+          "Exception au champ d’application"
+        ],
+        [
+          "Conseil interinstitutionnel de cybersécurité",
+          "Interinstitutional Cybersecurity Board, IICB",
+          "Suivi et orientation stratégique"
+        ]
+      ]
+    },
+    {
+      "kind": "p",
+      "text": "<b>Sources : versions FR et EN, articles 2, 3, 10 et 21.</b>"
+    },
+    {
+      "kind": "p",
+      "text": "Un <b>incident majeur</b> est un incident qui provoque des perturbations dépassant les capacités de réaction d’une entité de l’Union <b>et</b> du CERT-UE, <b>ou</b> qui a une incidence notable sur au moins deux entités de l’Union. Il faut préserver les deux branches de cette définition. <b>Source : article 3, point 8, p. 10.</b>"
+    },
+    {
+      "kind": "p",
+      "text": "L’<b>incident important</b>, qui déclenche les obligations de notification de l’article 21, ne doit pas être confondu avec cette catégorie. Ses critères concernent les perturbations opérationnelles graves ou pertes financières pour l’entité et les dommages considérables à d’autres personnes. L’article couvre aussi les effets que l’incident est susceptible de provoquer. <b>Source : article 21, paragraphe 1, p. 24.</b>"
+    },
+    {
+      "kind": "p",
+      "text": "Le troisième terme, <b>incident de cybersécurité majeur</b>, renvoie à une définition de NIS 2. Il n’est pas un synonyme à substituer aux deux précédents. Plusieurs définitions de l’article 3 sont des renvois : leur formulation complète n’est pas reproduite dans ce règlement."
+    },
+    {
+      "kind": "h",
+      "text": "La cybersécurité et les données personnelles"
+    },
+    {
+      "kind": "p",
+      "text": "Le CERT-UE, l’IICB et les entités doivent respecter le règlement (UE) 2018/1725 lorsqu’ils traitent des données personnelles. Ils ne peuvent les traiter ou les échanger que dans la mesure nécessaire et dans le seul but d’exécuter leurs tâches ou obligations. L’article 4 encadre aussi les catégories particulières de données pour les activités qu’il énumère, avec des mesures techniques contre les autres usages et des garanties pour les droits fondamentaux."
+    },
+    {
+      "kind": "p",
+      "text": "<b>Source : article 4, p. 11.</b> La cybersécurité ne donne donc pas une autorisation générale d’échanger toutes les données."
+    },
+    {
+      "kind": "h",
+      "text": "Une synthèse à apprendre"
+    },
+    {
+      "kind": "p",
+      "text": "Le règlement (UE, Euratom) 2023/2841 vise un niveau élevé commun de cybersécurité dans les entités de l’Union, dont les systèmes numériques sont interdépendants. Il associe un cadre interne de gestion des risques, la coopération, le partage d’informations et le suivi de la mise en œuvre. Chaque entité conserve ses responsabilités ; l’IICB assure le suivi et l’orientation stratégique, tandis que le CERT-UE apporte l’assistance technique et coordonne les réponses aux incidents. Le dispositif préserve l’autonomie institutionnelle et la protection des données personnelles. Les systèmes traitant des informations classifiées de l’Union sont exclus, sous réserve de l’assistance prévue à l’article 13, paragraphe 8."
+    },
+    {
+      "kind": "p",
+      "text": "<b>Références : considérants 1–5 ; articles 1–4, 6, 10 et 13.</b>"
+    },
+    {
+      "kind": "h",
+      "text": "Questions de rappel"
+    },
+    {
+      "kind": "p",
+      "text": "Réponds à voix haute avant de lire le corrigé."
+    },
+    {
+      "kind": "p",
+      "text": "1. Pourquoi un incident limité à une entité peut-il justifier des règles communes ?"
+    },
+    {
+      "kind": "p",
+      "text": "2. Quels sont les quatre volets de l’article 1 ?"
+    },
+    {
+      "kind": "p",
+      "text": "3. Le règlement concerne-t-il automatiquement toutes les entreprises de l’Union ?"
+    },
+    {
+      "kind": "p",
+      "text": "4. Quelle exception concerne les informations classifiées, et quelle possibilité d’assistance subsiste ?"
+    },
+    {
+      "kind": "p",
+      "text": "5. « Non classifié » signifie-t-il « public » ?"
+    },
+    {
+      "kind": "p",
+      "text": "6. Quelles sont les deux branches de la définition d’un incident majeur ?"
+    },
+    {
+      "kind": "p",
+      "text": "7. Comment traduit-on « incident important » et « incident majeur » en anglais ?"
+    },
+    {
+      "kind": "p",
+      "text": "8. Peut-on partager toutes les données personnelles au motif de la cybersécurité ?"
+    },
+    {
+      "kind": "h",
+      "text": "Corrigé"
+    },
+    {
+      "kind": "p",
+      "text": "1. Les systèmes et flux de données sont interdépendants : une perturbation peut entraîner des effets en cascade. Considérant 3."
+    },
+    {
+      "kind": "p",
+      "text": "2. Cadre interne ; gestion des risques et partage d’informations ; organisation de l’IICB et du CERT-UE ; suivi de la mise en œuvre. Article 1."
+    },
+    {
+      "kind": "p",
+      "text": "3. Non. Les entités de l’Union sont définies à l’article 3, point 1."
+    },
+    {
+      "kind": "p",
+      "text": "4. Les réseaux et systèmes traitant des informations classifiées de l’UE sont exclus, sauf l’assistance du CERT-UE prévue à l’article 13, paragraphe 8, sur invitation explicite et dans le respect des règles applicables. Article 2, paragraphe 3."
+    },
+    {
+      "kind": "p",
+      "text": "5. Non. Des informations confidentielles ou personnelles peuvent être non classifiées."
+    },
+    {
+      "kind": "p",
+      "text": "6. Perturbations dépassant les capacités de réaction de l’entité et du CERT-UE, ou incidence notable sur au moins deux entités. Article 3, point 8."
+    },
+    {
+      "kind": "p",
+      "text": "7. Significant incident ; major incident."
+    },
+    {
+      "kind": "p",
+      "text": "8. Non. Nécessité, finalité limitée aux tâches et obligations, et garanties de l’article 4."
+    },
+    {
+      "kind": "h",
+      "text": "Exercice de rédaction"
+    },
+    {
+      "kind": "p",
+      "text": "<b>Exercice pédagogique de 10 minutes, sans statut de sujet officiel :</b> explique en français, en 120 à 150 mots, pourquoi ce règlement a été adopté et à qui il s’applique. Fais apparaître l’interdépendance, l’objectif commun, les acteurs et l’exception relative aux informations classifiées. Utilise les références pour vérifier ta réponse."
+    },
+    {
+      "kind": "p",
+      "text": "Pour l’EUFTE réel, l’avis prévoit 40 minutes, la langue 2, une note sur 10 et un seuil de 5/10. La documentation sera disponible pendant le test ; la réponse devra suivre la consigne reçue. <b>Source : avis EPSO/AD/429/26, section 4.3.2(d), p. 9.</b>"
+    },
+    {
+      "kind": "h",
+      "text": "Sources"
+    },
+    {
+      "kind": "p",
+      "text": "Règlement (UE, Euratom) 2023/2841 du 13 décembre 2023, versions française et anglaise fournies, 27 pages chacune. Les pages citées correspondent aux pages du PDF et à la pagination du Journal officiel."
+    },
+    {
+      "kind": "p",
+      "text": "Texte officiel français (https://eur-lex.europa.eu/eli/reg/2023/2841/oj?locale=fr) · Texte officiel anglais (https://eur-lex.europa.eu/eli/reg/2023/2841/oj?locale=en)"
+    },
+    {
+      "kind": "p",
+      "text": "Avis de concours fourni : EPSO/AD/429/26, C/2026/2425, notamment section 4.3.2(d), p. 9."
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "id": 4,
+  "title": "Missions du CERT-UE",
+  "blocks": [
+    {
+      "kind": "h",
+      "text": "Module 4 — Missions du CERT-UE"
+    },
+    {
+      "kind": "small",
+      "text": "Articles 13 à 18 · PDF source FR, pages 18 à 23"
+    },
+    {
+      "kind": "p",
+      "text": "<b>Idée centrale :</b> le CERT-UE est le pôle technique de conseil, d’échange d’informations et de coordination des réponses. Il aide les entités à prévenir, détecter et traiter les incidents, atténuer leurs effets, y répondre et s’en remettre. Sa mission concerne l’environnement TIC non classifié. <b>Article 13, paragraphes 1–2.</b>"
+    },
+    {
+      "kind": "h",
+      "text": "Services de base et autres tâches — article 13"
+    },
+    {
+      "kind": "p",
+      "text": "Le CERT-UE recueille, gère, analyse et partage les informations sur les menaces, vulnérabilités et incidents. Il soutient la mise en œuvre du règlement et propose ou élabore les instruments de l’article 14. Son catalogue décrit les services CSIRT standard, dits <b>services de base</b>. Il entretient les réseaux de partenaires, signale à l’IICB les problèmes d’application, contribue à la conscience situationnelle avec l’ENISA et coordonne la gestion des incidents majeurs."
+    },
+    {
+      "kind": "p",
+      "text": "Il joue un rôle de coordinateur pour la divulgation coordonnée des vulnérabilités. À la demande d’une entité, il effectue un scan proactif <b>non intrusif</b> de ses systèmes accessibles au public. Il organise des exercices et peut y participer ou recommander la participation à des exercices existants, le cas échéant avec l’ENISA."
+    },
+    {
+      "kind": "h",
+      "text": "Services payants — article 13, paragraphe 6"
+    },
+    {
+      "kind": "p",
+      "text": "Les services hors catalogue comprennent notamment des prestations supplémentaires de sécurité sur accord de niveau de service et selon les ressources disponibles, par exemple la surveillance de première ligne 24 h/24 et 7 j/7 des menaces de gravité élevée ; des services pour des opérations ou projets de cybersécurité distincts de la protection de l’environnement TIC, sur accord écrit et approbation préalable de l’IICB ; un scan proactif sur demande visant les vulnérabilités à impact important ; et certains services pour des entités extérieures coopérant étroitement avec l’Union, sous les conditions d’accord et d’approbation prévues."
+    },
+    {
+      "kind": "p",
+      "text": "Il faut distinguer le scan public non intrusif de l’article 13, § 3, h), et le service payant de scan de l’article 13, § 6, c). Les conditions et le périmètre ne sont pas identiques."
+    },
+    {
+      "kind": "h",
+      "text": "Assistance particulière — article 13, paragraphes 8 à 12"
+    },
+    {
+      "kind": "p",
+      "text": "Pour les systèmes traitant des informations classifiées de l’UE, l’assistance exige une <b>invitation explicite</b> de l’entité et le respect de ses procédures et des règles de protection. Pour les violations de données personnelles, le CERT-UE soutient l’entité en coopération avec le CEPD, sans remplacer ses compétences de contrôle. Il communique ses procédures d’incident et des informations anonymisées sur les incidents majeurs. Des conseils techniques aux services politiques sont possibles sur demande expresse."
+    },
+    {
+      "kind": "h",
+      "text": "Module 4 — Instruments, direction et coopération"
+    },
+    {
+      "kind": "h",
+      "text": "Qui prépare et qui adopte ? — article 14, page 20"
+    },
+    {
+      "kind": "p",
+      "text": "Le CERT-UE élabore des <b>injonctions</b> décrivant les mesures urgentes à prendre dans un délai déterminé. L’entité informe rapidement le CERT-UE de leur application. Il soumet à l’IICB des <b>propositions d’orientations</b> destinées à toutes ou certaines entités, et des <b>propositions de recommandations</b> destinées individuellement aux entités. L’IICB adopte les orientations et recommandations (art. 11, l)."
+    },
+    {
+      "kind": "p",
+      "text": "Ces instruments peuvent concerner la maturité, les méthodes et indicateurs communs, les risques et mesures, les plans, les solutions ouvertes et l’interopérabilité, la chaîne d’approvisionnement, l’acquisition conjointe et le partage d’informations."
+    },
+    {
+      "kind": "h",
+      "text": "Chef, administration et financement — articles 15–16, pages 21–22"
+    },
+    {
+      "kind": "p",
+      "text": "La <b>Commission désigne le chef après approbation des deux tiers des membres de l’IICB</b>, consulté à toutes les étapes de sélection. Le chef dirige le bon fonctionnement sous l’orientation de l’IICB, propose les documents de travail et financiers et rapporte au moins annuellement. Le CERT-UE est intégré administrativement à une direction générale de la Commission, tout en conservant son statut de fournisseur interinstitutionnel autonome. Pour les procédures administratives et financières, le chef agit sous l’autorité de la Commission et la surveillance de l’IICB."
+    },
+    {
+      "kind": "p",
+      "text": "Une ligne distincte du budget de la Commission finance les activités prévues pour les entités relevant de la rubrique Administration publique européenne. Les autres entités versent une contribution annuelle équitable et proportionnée, convenue par accord de niveau de service. Les coûts des services payants sont recouvrés auprès des bénéficiaires. Le réexamen administratif doit envisager la possibilité de faire du CERT-UE un organisme de l’Union : <b>le texte ne dit pas que cette transformation est déjà réalisée</b>."
+    },
+    {
+      "kind": "h",
+      "text": "Coopération et identité de l’entité — articles 17–18, pages 22–23"
+    },
+    {
+      "kind": "p",
+      "text": "Avec les homologues des États membres, le CERT-UE échange rapidement les informations pertinentes et avertit sans tarder les homologues concernés d’un incident important sur leur territoire. Sous réserve de la protection des données, des informations d’incident peuvent être partagées sans autorisation de l’entité. Mais révéler son identité exige : son consentement ; ou une divulgation augmentant la probabilité d’éviter ou d’atténuer d’autres incidents ; ou une identité déjà rendue publique par l’entité. Dans le deuxième cas, décision du chef, explication écrite, demande de consentement dans un délai donné, et information préalable de l’entité."
+    },
+    {
+      "kind": "p",
+      "text": "La coopération avec les autres homologues et partenaires relève de l’approbation préalable de l’IICB au cas par cas. L’article 18 prévoit des modalités de confidentialité et une possibilité d’échange sans telles modalités en cas de besoin urgent et imminent, avec information immédiate du président et rapport à l’IICB. Le partage d’informations sur un incident spécifique avec ces partenaires exige le <b>consentement de l’entité touchée</b>, un arrangement ou contrat de non-divulgation et le seul objectif d’aider l’analyse (art. 18, § 3)."
+    },
+    {
+      "kind": "h",
+      "text": "Module 4 — Synthèse et questions"
+    },
+    {
+      "kind": "h",
+      "text": "La synthèse à reconstruire"
+    },
+    {
+      "kind": "p",
+      "text": "Le CERT-UE fournit le soutien technique et opérationnel commun aux entités de l’Union. Son catalogue de services de base est complété par des services payants sous conditions. Il prépare des instruments de mise en œuvre, organise des exercices et coordonne les incidents, notamment majeurs. Sa direction stratégique relève de l’IICB, tandis que son rattachement administratif est à la Commission. Sa coopération avec les États membres et d’autres partenaires renforce la détection et la réaction, dans le respect de règles distinctes de confidentialité, de consentement et de protection des données."
+    },
+    {
+      "kind": "t",
+      "rows": [
+        [
+          "Français",
+          "Anglais à reconnaître"
+        ],
+        [
+          "Services de base / services payants",
+          "Basic services / chargeable services"
+        ],
+        [
+          "Accord de niveau de service",
+          "Service-level agreement (SLA)"
+        ],
+        [
+          "Orientations / recommandations",
+          "Guidelines / recommendations"
+        ],
+        [
+          "Injonctions",
+          "Calls for action"
+        ],
+        [
+          "Conscience situationnelle",
+          "Situational awareness"
+        ]
+      ]
+    },
+    {
+      "kind": "h",
+      "text": "Questions"
+    },
+    {
+      "kind": "p",
+      "text": "1. Qui désigne le chef du CERT-UE et avec quelle approbation ?<br/>2. Tous les services sont-ils gratuits ?<br/>3. Le CERT-UE adopte-t-il seul les orientations de l’IICB ?<br/>4. Le consentement est-il toujours indispensable pour révéler l’identité à un homologue d’un État membre ?<br/>5. Les mêmes règles s’appliquent-elles au partage d’un incident spécifique avec d’autres partenaires ?"
+    },
+    {
+      "kind": "h",
+      "text": "Corrigé"
+    },
+    {
+      "kind": "p",
+      "text": "1. Commission, après approbation des deux tiers de l’IICB (art. 15).<br/>2. Non : services de base et services payants, selon les mécanismes de financement (art. 13 et 16).<br/>3. Non : il propose, l’IICB adopte les orientations et recommandations (art. 11 et 14).<br/>4. Non : trois hypothèses existent, avec procédure particulière pour la divulgation préventive sans consentement (art. 17, § 3).<br/>5. Non : l’article 18, § 3, exige consentement, confidentialité contractuelle ou convenue et finalité d’analyse."
+    },
+    {
+      "kind": "h",
+      "text": "Exercice écrit — 10 minutes"
+    },
+    {
+      "kind": "p",
+      "text": "Explique à une entité ce que le CERT-UE peut lui apporter et les responsabilités qu’elle conserve. Cite un service de base, un service payant et une garantie de confidentialité. Exercice pédagogique."
+    }
+  ]
+}

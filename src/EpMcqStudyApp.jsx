@@ -8,6 +8,8 @@ import { EPSO_AD7_INFRASTRUCTURE_QUESTIONS } from "./epso_ad7_infrastructure_que
 import { saveQuizResult } from "./firebase_results";
 import { auth, googleProvider } from "./firebase";
 import styles from "./EpMcqStudyApp.module.css";
+import EufteStudy from "./EufteStudy";
+import "./eufte.css";
 import {
   validateDraft,
   recordQuestionAnswer,
@@ -227,7 +229,9 @@ export default function EpMcqStudyApp() {
   const [user, setUser] = useState(null);
   const [authError, setAuthError] = useState("");
   const [authPending, setAuthPending] = useState(false);
-  const [screen, setScreen] = useState("setup");
+  const [screen, setScreen] = useState(() =>
+    window.location.hash === "#eufte" ? "eufte" : "setup",
+  );
   const [category, setCategory] = useState(ALL_EP_CATEGORY);
   const [mode, setMode] = useState("practice");
   const [selectedDifficulties, setSelectedDifficulties] =
@@ -266,6 +270,20 @@ export default function EpMcqStudyApp() {
   const saveAttemptRef = useRef(0);
 
   useEffect(() => onAuthStateChanged(auth, setUser), []);
+  useEffect(() => {
+    if (screen === "eufte") {
+      window.history.replaceState(null, "", "#eufte");
+    } else if (window.location.hash === "#eufte") {
+      window.history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
+  }, [screen]);
+  useEffect(() => {
+    const onHashChange = () => {
+      if (window.location.hash === "#eufte") setScreen("eufte");
+    };
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, []);
   useEffect(() => {
     headingRef.current?.focus({ preventScroll: true });
     window.scrollTo(0, 0);
@@ -696,9 +714,9 @@ export default function EpMcqStudyApp() {
           </div>
           <nav className={styles.nav} aria-label="Main navigation">
             <button
-              className={`${styles.navButton} ${!["history", "review"].includes(screen) ? styles.navActive : ""}`}
+              className={`${styles.navButton} ${!["history", "review", "eufte"].includes(screen) ? styles.navActive : ""}`}
               aria-current={
-                !["history", "review"].includes(screen) ? "page" : undefined
+                !["history", "review", "eufte"].includes(screen) ? "page" : undefined
               }
               onClick={() => setScreen("setup")}
             >
@@ -720,6 +738,14 @@ export default function EpMcqStudyApp() {
             >
               <Icon name="book" size={17} />
               Review
+            </button>
+            <button
+              className={`${styles.navButton} ${screen === "eufte" ? styles.navActive : ""}`}
+              aria-current={screen === "eufte" ? "page" : undefined}
+              onClick={() => setScreen("eufte")}
+            >
+              <Icon name="book" size={17} />
+              EUFTE
             </button>
           </nav>
           <div className={styles.account}>
@@ -743,7 +769,8 @@ export default function EpMcqStudyApp() {
         </div>
       </header>
 
-      <main id="main-content" className={styles.main}>
+      {screen === "eufte" && <EufteStudy />}
+      <main id={screen === "eufte" ? undefined : "main-content"} className={styles.main} hidden={screen === "eufte"}>
         {authError && (
           <div role="alert" className={styles.error}>
             {authError}
@@ -755,7 +782,7 @@ export default function EpMcqStudyApp() {
             </button>
           </div>
         )}
-        {!["history", "review"].includes(screen) && (
+        {!["history", "review", "eufte"].includes(screen) && (
           <ol className={styles.steps} aria-label="Quiz stages">
             {["Set up", "Practice", "Results"].map((label, index) => (
               <li

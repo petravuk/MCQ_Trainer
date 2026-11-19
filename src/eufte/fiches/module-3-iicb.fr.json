@@ -1,0 +1,155 @@
+{
+  "id": 3,
+  "title": "IICB et respect des règles",
+  "blocks": [
+    {
+      "kind": "h",
+      "text": "Module 3 — L’IICB et sa gouvernance"
+    },
+    {
+      "kind": "small",
+      "text": "Articles 10 à 12 · PDF source FR, pages 15 à 18"
+    },
+    {
+      "kind": "p",
+      "text": "<b>Idée centrale :</b> le conseil interinstitutionnel de cybersécurité, ou <b>IICB</b>, suit et soutient l’application du règlement et supervise les priorités et objectifs généraux du CERT-UE, auquel il donne des orientations stratégiques. Il ne remplace pas la responsabilité de chaque entité."
+    },
+    {
+      "kind": "h",
+      "text": "Composition — article 10, paragraphe 3"
+    },
+    {
+      "kind": "p",
+      "text": "L’IICB réunit un représentant de chacune des quinze entités suivantes : Parlement européen ; Conseil européen ; Conseil de l’Union européenne ; Commission ; Cour de justice ; Banque centrale européenne ; Cour des comptes ; Service européen pour l’action extérieure ; Comité économique et social ; Comité des régions ; Banque européenne d’investissement ; Centre de compétences européen en cybersécurité ; ENISA ; Contrôleur européen de la protection des données ; Agence de l’Union européenne pour le programme spatial."
+    },
+    {
+      "kind": "p",
+      "text": "S’y ajoutent <b>trois représentants du réseau des agences de l’UE — EUAN</b>, désignés sur proposition de son comité consultatif TIC, pour les autres organes et organismes gérant leur propre environnement TIC. Cela représente <b>18 membres</b>. Les entités représentées s’efforcent d’assurer un équilibre entre femmes et hommes. Chaque membre peut avoir un suppléant ; d’autres représentants peuvent être invités sans droit de vote."
+    },
+    {
+      "kind": "h",
+      "text": "Fonctionnement — article 10, paragraphes 5 à 13"
+    },
+    {
+      "kind": "p",
+      "text": "Le chef du CERT-UE et les présidents du groupe de coopération, du réseau des CSIRT et d’EU-CyCLONe, ou leurs suppléants, peuvent participer comme observateurs, sous réserve des circonstances exceptionnelles prévues. Le président est choisi parmi les membres pour <b>trois ans</b> ; son suppléant devient membre à part entière pour la même durée."
+    },
+    {
+      "kind": "p",
+      "text": "L’IICB se réunit <b>au moins trois fois par an</b>. Chaque membre dispose d’une voix. Les décisions relèvent de la <b>majorité simple</b>, sauf règle contraire. Le président vote uniquement en cas d’égalité, sa voix pouvant alors départager. Une procédure écrite simplifiée permet l’approbation sans objection dans le délai fixé. La Commission assure le secrétariat, qui rend compte au président. Un comité exécutif peut être créé et recevoir certaines tâches ou certains pouvoirs."
+    },
+    {
+      "kind": "h",
+      "text": "Rapport annuel — article 10, paragraphe 14"
+    },
+    {
+      "kind": "p",
+      "text": "Au plus tard le 8 janvier 2025, puis chaque année, l’IICB rapporte au <b>Parlement européen et au Conseil</b> les progrès d’application, notamment la coopération du CERT-UE avec les homologues des États membres. Ce rapport contribue au rapport bisannuel NIS 2 sur l’état de la cybersécurité dans l’Union. Ne pas confondre avec le rapport à la Commission prévu à l’article 25."
+    },
+    {
+      "kind": "h",
+      "text": "Module 3 — Missions et respect des règles"
+    },
+    {
+      "kind": "h",
+      "text": "Les tâches de l’IICB — article 11, pages 16–17"
+    },
+    {
+      "kind": "p",
+      "text": "L’IICB donne des orientations au chef du CERT-UE, supervise l’application et peut demander des rapports ad hoc. Il adopte une stratégie pluriannuelle, évaluée régulièrement et <b>au moins tous les cinq ans</b>. Il organise la méthodologie des évaluations <b>volontaires</b> par les pairs, effectuées par des experts d’une autre entité."
+    },
+    {
+      "kind": "p",
+      "text": "Sur proposition du chef du CERT-UE, il approuve notamment le programme de travail annuel, le catalogue des services, la planification financière et les effectifs, les modalités des accords de niveau de service, les indicateurs de performance et les rapports d’activité. Il approuve aussi les accords pertinents de coopération avec d’autres entités."
+    },
+    {
+      "kind": "p",
+      "text": "Il adopte les orientations et recommandations proposées par le CERT-UE, peut demander l’élaboration, le retrait ou la modification des propositions ou d’une injonction, crée des groupes techniques et examine les documents des entités. Il facilite le groupe informel des responsables locaux, conseille sur les interconnexions et les chaînes d’approvisionnement, établit le plan commun de gestion des crises et coordonne l’adoption des plans individuels."
+    },
+    {
+      "kind": "h",
+      "text": "Les moyens de conformité — article 12, pages 17–18"
+    },
+    {
+      "kind": "p",
+      "text": "L’IICB peut demander les informations et documents nécessaires. Une entité directement représentée ne vote pas sur les mesures de conformité qui la concernent. Avant de prendre les mesures de l’article 12, paragraphe 2, l’IICB permet à l’entité de présenter ses observations et respecte ses procédures internes."
+    },
+    {
+      "kind": "p",
+      "text": "Les instruments prévus sont : <b>a)</b> avis motivé sur les lacunes ; <b>b)</b> orientations correctrices, après consultation du CERT-UE, avec délai ; <b>c)</b> avertissement assorti d’un délai et de recommandations ; <b>d)</b> notification motivée si les lacunes de l’avertissement restent insuffisamment corrigées ; <b>e)</b> recommandation d’audit ou demande d’audit par un tiers ; <b>f)</b> information de la Cour des comptes dans son mandat, le cas échéant ; <b>g)</b> recommandation aux États membres et entités de suspendre temporairement les flux de données vers l’entité concernée."
+    },
+    {
+      "kind": "p",
+      "text": "Les avertissements et recommandations sont adressés à la direction. L’entité explique les actions correctrices dans un délai raisonnable convenu. En cas de violation persistante imputable aux actes ou omissions d’un agent, l’IICB demande à l’entité des mesures appropriées, y compris d’envisager des mesures disciplinaires selon les règles applicables. <b>Il ne prononce pas lui-même une sanction disciplinaire.</b>"
+    },
+    {
+      "kind": "p",
+      "text": "L’IICB peut autoriser, dans des cas dûment motivés et compte tenu de la taille de l’entité, une prolongation des délais du <b>cadre (art. 6, § 1)</b> et des <b>mesures (art. 8, § 1)</b>. Cette possibilité n’est pas une prolongation générale de toutes les échéances."
+    },
+    {
+      "kind": "h",
+      "text": "Module 3 — Synthèse et questions"
+    },
+    {
+      "kind": "h",
+      "text": "La synthèse à reconstruire"
+    },
+    {
+      "kind": "p",
+      "text": "L’IICB constitue le niveau commun de suivi et d’orientation stratégique. Il réunit les principales institutions et des représentants des autres organismes par l’EUAN. Il encadre les priorités, moyens et activités du CERT-UE, facilite l’apprentissage commun et la préparation aux crises, et contrôle l’application du règlement. Ses instruments de conformité permettent d’identifier et de corriger les lacunes tout en respectant l’autonomie et les procédures des entités. Les mesures disciplinaires éventuelles relèvent des entités selon les règles applicables."
+    },
+    {
+      "kind": "t",
+      "rows": [
+        [
+          "Français",
+          "Anglais à reconnaître"
+        ],
+        [
+          "Conseil interinstitutionnel de cybersécurité",
+          "Interinstitutional Cybersecurity Board"
+        ],
+        [
+          "Respect des règles",
+          "Compliance"
+        ],
+        [
+          "Évaluation par les pairs",
+          "Peer review"
+        ],
+        [
+          "Avis motivé",
+          "Reasoned opinion"
+        ],
+        [
+          "Avertissement",
+          "Warning"
+        ]
+      ]
+    },
+    {
+      "kind": "h",
+      "text": "Questions"
+    },
+    {
+      "kind": "p",
+      "text": "1. Combien de membres et combien de réunions au minimum ?<br/>2. Le président vote-t-il comme les autres à chaque décision ?<br/>3. Une entité vote-t-elle sur une mesure de conformité qui la concerne ?<br/>4. L’IICB peut-il lui-même suspendre les flux de données ?<br/>5. Peut-il prolonger automatiquement tous les délais ?"
+    },
+    {
+      "kind": "h",
+      "text": "Corrigé"
+    },
+    {
+      "kind": "p",
+      "text": "1. 18 membres, au moins trois réunions annuelles (art. 10).<br/>2. Non : uniquement en cas d’égalité (art. 10, § 9).<br/>3. Non lorsqu’elle est directement représentée (art. 12, § 1).<br/>4. Le texte prévoit une <b>recommandation</b> aux États membres et aux entités de suspendre temporairement les flux ; il faut conserver ce verbe (art. 12, § 2, g).<br/>5. Non : possibilité motivée limitée aux délais visés aux articles 6, § 1, et 8, § 1 (art. 12, § 5)."
+    },
+    {
+      "kind": "h",
+      "text": "Exercice écrit — 10 minutes"
+    },
+    {
+      "kind": "p",
+      "text": "Présente en 120 à 150 mots le rôle de l’IICB et trois instruments permettant de traiter un défaut d’application. Distingue supervision, recommandation et décision de l’entité. Exercice pédagogique."
+    }
+  ]
+}

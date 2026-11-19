@@ -1,0 +1,230 @@
+{
+  "id": 6,
+  "title": "Échéances et rédaction",
+  "blocks": [
+    {
+      "kind": "h",
+      "text": "Module 6 — Échéances et dispositions finales"
+    },
+    {
+      "kind": "small",
+      "text": "Articles 24 à 26 et échéances transversales · Texte source fourni, version du JO du 18 décembre 2023"
+    },
+    {
+      "kind": "p",
+      "text": "<b>Ces dates sont celles fixées par le document d’examen.</b> Une échéance passée n’établit pas que l’obligation a effectivement été remplie. Les éventuelles mesures ultérieures ne sont pas ajoutées au texte source."
+    },
+    {
+      "kind": "t",
+      "rows": [
+        [
+          "Échéance",
+          "Obligation et référence"
+        ],
+        [
+          "8 juillet 2024",
+          "IICB : orientations ou recommandations sur les modalités, le format et le contenu des informations d’incident (art. 21, § 9)."
+        ],
+        [
+          "8 septembre 2024",
+          "IICB : lignes directrices pour examen initial, cadre, maturité, mesures et plan (art. 5)."
+        ],
+        [
+          "8 janvier 2025",
+          "IICB : premier rapport annuel au Parlement et au Conseil (art. 10, § 14) ; rapport annuel à la Commission, avec aide du CERT-UE (art. 25, § 1). Orientations ou recommandations de coordination des incidents sur proposition du CERT-UE (art. 22, § 4)."
+        ],
+        [
+          "8 avril 2025",
+          "Chaque entité : cadre interne après examen initial (art. 6, § 1)."
+        ],
+        [
+          "8 juillet 2025",
+          "Chaque entité : première évaluation de maturité (art. 7, § 1)."
+        ],
+        [
+          "8 septembre 2025",
+          "Chaque entité : mesures de gestion des risques, dans les meilleurs délais et au plus tard à cette date (art. 8, § 1)."
+        ],
+        [
+          "8 janvier 2026",
+          "Direction de chaque entité : approbation du plan dans les meilleurs délais et au plus tard à cette date (art. 9, § 1)."
+        ],
+        [
+          "8 janvier 2027",
+          "Commission : première évaluation et rapport au Parlement et au Conseil sur l’application et l’expérience stratégique/opérationnelle ; inclut le réexamen de la possibilité de faire du CERT-UE un organisme de l’Union (art. 25, § 2)."
+        ],
+        [
+          "8 janvier 2029",
+          "Commission : évaluation du fonctionnement, rapport au Parlement, Conseil, CESE et Comité des régions ; évalue l’opportunité d’inclure les systèmes traitant des informations classifiées ; proposition législative au besoin (art. 25, § 3)."
+        ]
+      ]
+    },
+    {
+      "kind": "h",
+      "text": "Budget initial et effet juridique — articles 24 et 26, page 27"
+    },
+    {
+      "kind": "p",
+      "text": "La Commission peut proposer une réaffectation de personnel et de moyens financiers vers son budget pour les activités du CERT-UE, prenant effet avec le premier budget annuel adopté après l’entrée en vigueur. Le règlement entre en vigueur le vingtième jour suivant sa publication. Il est obligatoire dans tous ses éléments et directement applicable dans tout État membre."
+    },
+    {
+      "kind": "h",
+      "text": "Module 6 — Périodicités et carte du règlement"
+    },
+    {
+      "kind": "t",
+      "rows": [
+        [
+          "Fréquence",
+          "Élément à retenir"
+        ],
+        [
+          "Au moins tous les 4 ans",
+          "Révision du cadre de gestion des risques (art. 6, § 4), avec révisions régulières tenant compte des risques."
+        ],
+        [
+          "Au moins tous les 2 ans",
+          "Évaluation de maturité (art. 7, § 1)."
+        ],
+        [
+          "Tous les 2 ans ou plus",
+          "Révision du plan selon les conditions de l’article 9, § 1."
+        ],
+        [
+          "Au moins 3 fois par an",
+          "Réunions de l’IICB (art. 10, § 8)."
+        ],
+        [
+          "3 ans",
+          "Mandat du président de l’IICB (art. 10, § 7)."
+        ],
+        [
+          "Régulièrement, au moins tous les 5 ans",
+          "Évaluation de la stratégie pluriannuelle de l’IICB (art. 11, c)."
+        ],
+        [
+          "Chaque année",
+          "Rapports de l’IICB (art. 10, § 14 ; art. 25, § 1), documents et rapports du chef du CERT-UE selon l’art. 15, liste des experts des entités (art. 23, § 4)."
+        ],
+        [
+          "Tous les 3 mois",
+          "Rapport de synthèse anonymisé et agrégé du CERT-UE (art. 21, § 8)."
+        ],
+        [
+          "Tous les 2 ans dès 2027",
+          "Évaluation et rapport de la Commission (art. 25, § 2)."
+        ]
+      ]
+    },
+    {
+      "kind": "h",
+      "text": "Retrouver rapidement une information dans les 27 pages"
+    },
+    {
+      "kind": "t",
+      "rows": [
+        [
+          "Question de la consigne",
+          "Articles et pages du PDF source"
+        ],
+        [
+          "Pourquoi ? Pour qui ? Quels termes ?",
+          "Considérants dès p. 1 ; articles 1–4, pp. 9–11."
+        ],
+        [
+          "Que doit faire chaque entité ?",
+          "Articles 5–9, pp. 11–14."
+        ],
+        [
+          "Qui supervise et comment corriger ?",
+          "Articles 10–12, pp. 15–18."
+        ],
+        [
+          "Que fait le CERT-UE et avec qui ?",
+          "Articles 13–18, pp. 18–23."
+        ],
+        [
+          "Que partager, notifier, coordonner ?",
+          "Articles 19–23, pp. 23–27."
+        ],
+        [
+          "Quel financement initial et quel réexamen ?",
+          "Articles 24–26, p. 27."
+        ]
+      ]
+    },
+    {
+      "kind": "p",
+      "text": "<b>Trois plans différents :</b> le cadre fixe la gouvernance et les règles ; le plan de cybersécurité formalise les mesures de l’entité et inclut son plan de crise ; le plan commun de crise de l’IICB organise la coopération en cas d’incident majeur. Références : articles 6, 9 et 23."
+    },
+    {
+      "kind": "h",
+      "text": "Module 6 — Préparer la réponse écrite"
+    },
+    {
+      "kind": "h",
+      "text": "Ce que l’avis établit réellement"
+    },
+    {
+      "kind": "p",
+      "text": "L’EUFTE évalue la <b>communication écrite</b>. Il dure <b>40 minutes</b>, se déroule en langue 2, est noté sur 10 avec un seuil de 5/10. La documentation publiée avant l’épreuve sera également fournie durant le test avec la ou les consignes. Ce n’est ni un test de langue ni un test de connaissances factuelles. L’avis renvoie aux critères publiés par EPSO ; ils ne sont pas reproduits dans l’avis fourni. <b>Source : section 4.3.2(d), p. 9 de l’avis.</b>"
+    },
+    {
+      "kind": "h",
+      "text": "Méthode de travail proposée — à adapter à la consigne"
+    },
+    {
+      "kind": "p",
+      "text": "<b>0–5 minutes :</b> repérer le destinataire, l’objectif, le format, la langue et une éventuelle limite de longueur. <b>5–12 minutes :</b> choisir les articles pertinents et construire un plan court. <b>12–33 minutes :</b> rédiger une réponse qui hiérarchise l’information. <b>33–40 minutes :</b> vérifier les conditions, acteurs, délais et transitions. Cette répartition est une proposition d’entraînement, pas une prescription d’EPSO."
+    },
+    {
+      "kind": "p",
+      "text": "Pour chaque règle, cherche : <b>qui agit — quelle action — quel délai — quelles conditions ou exceptions</b>. Ne récite pas les six modules si la consigne porte sur un seul thème. Préserve les différences entre « doit », « peut », « recommande », « propose » et « adopte ». Distingue incident important, incident majeur et incident de cybersécurité majeur."
+    },
+    {
+      "kind": "h",
+      "text": "Plan possible pour une synthèse générale"
+    },
+    {
+      "kind": "p",
+      "text": "<b>Introduction :</b> objectif commun face à l’interdépendance et aux risques.<br/><b>1.</b> Responsabilité et préparation des entités : cadre, maturité, mesures et plan.<br/><b>2.</b> Gouvernance et soutien : IICB, suivi de conformité et CERT-UE.<br/><b>3.</b> Coopération opérationnelle : partage, notifications et crises, avec garanties.<br/><b>Conclusion si utile :</b> amélioration continue et réexamen. Ce plan doit être adapté au sujet effectivement reçu."
+    },
+    {
+      "kind": "t",
+      "rows": [
+        [
+          "Formulation française",
+          "Formulation anglaise utile"
+        ],
+        [
+          "Le règlement vise à…",
+          "The Regulation aims to…"
+        ],
+        [
+          "Chaque entité est tenue de…",
+          "Each Union entity is required to…"
+        ],
+        [
+          "Sous réserve de…",
+          "Subject to…"
+        ],
+        [
+          "Sans préjudice de…",
+          "Without prejudice to…"
+        ],
+        [
+          "Au plus tard…",
+          "No later than…"
+        ]
+      ]
+    },
+    {
+      "kind": "h",
+      "text": "Questions finales et corrigé"
+    },
+    {
+      "kind": "p",
+      "text": "<b>1.</b> Évaluation de maturité : deux ou quatre ans ? <b>Réponse :</b> au moins deux ans ; quatre ans concerne le cadre.<br/><b>2.</b> Le réexamen de 2029 inclut-il déjà les systèmes classifiés ? <b>Réponse :</b> non, il évalue l’opportunité de leur inclusion.<br/><b>3.</b> Faut-il apprendre toutes les dates par cœur pour obtenir la note ? <b>Réponse :</b> l’épreuve évalue la communication écrite avec documentation disponible ; savoir retrouver et employer correctement les dates reste utile."
+    }
+  ]
+}

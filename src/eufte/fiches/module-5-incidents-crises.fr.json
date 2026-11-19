@@ -1,0 +1,184 @@
+{
+  "id": 5,
+  "title": "Notifications et gestion des crises",
+  "blocks": [
+    {
+      "kind": "h",
+      "text": "Module 5 — Notifier un incident important"
+    },
+    {
+      "kind": "small",
+      "text": "Articles 19 à 23 · PDF source FR, pages 23 à 27"
+    },
+    {
+      "kind": "p",
+      "text": "<b>Idée centrale :</b> informer rapidement permet de coordonner la réaction et d’éviter les effets en cascade. Les notifications obligatoires d’incidents importants sont distinctes du partage volontaire et de la gestion des incidents majeurs."
+    },
+    {
+      "kind": "h",
+      "text": "Identifier le caractère important — article 21, paragraphe 1"
+    },
+    {
+      "kind": "p",
+      "text": "Le texte énonce les situations suivantes : <b>a)</b> l’incident a causé ou est susceptible de causer une perturbation opérationnelle grave au fonctionnement de l’entité ou des pertes financières pour celle-ci ; <b>b)</b> il a affecté ou est susceptible d’affecter d’autres personnes physiques ou morales en causant des dommages matériels, corporels ou moraux considérables. Il faut conserver les <b>effets potentiels</b>, pas seulement ceux déjà constatés. « Important » se traduit par <b>significant</b>."
+    },
+    {
+      "kind": "h",
+      "text": "Chronologie des informations au CERT-UE — article 21, paragraphe 2"
+    },
+    {
+      "kind": "t",
+      "rows": [
+        [
+          "Moment limite",
+          "Contenu à transmettre"
+        ],
+        [
+          "24 heures après connaissance",
+          "Alerte précoce ; si pertinent, suspicion d’acte illicite ou malveillant et éventuel impact inter-entités ou transfrontière."
+        ],
+        [
+          "72 heures après connaissance",
+          "Notification d’incident ; mise à jour et première évaluation de gravité et d’impact ; indicateurs de compromission lorsqu’ils sont disponibles."
+        ],
+        [
+          "À la demande du CERT-UE",
+          "Rapport intermédiaire sur les évolutions pertinentes."
+        ],
+        [
+          "Un mois après la notification",
+          "Rapport final : description et impact, menace ou cause profonde probable, mesures d’atténuation appliquées et en cours, impact inter-entités ou transfrontière le cas échéant."
+        ],
+        [
+          "Si l’incident est encore en cours",
+          "Rapport d’avancement à la date prévue du rapport final ; puis rapport final dans le mois suivant le traitement de l’incident."
+        ]
+      ]
+    },
+    {
+      "kind": "p",
+      "text": "<b>24 h et 72 h sont comptées depuis la connaissance de l’incident important</b>, et non depuis la première alerte. Ces plafonds s’accompagnent de l’obligation d’agir <b>sans retard injustifié</b> : il ne faut pas attendre leur expiration si l’information peut être transmise plus tôt. Le mois du rapport final court depuis la notification, pas depuis la connaissance initiale."
+    },
+    {
+      "kind": "h",
+      "text": "Autres destinataires — article 21, paragraphes 3 à 7"
+    },
+    {
+      "kind": "p",
+      "text": "L’entité informe aussi les homologues concernés de l’État membre où elle est située, sans retard injustifié et au plus tard dans les <b>24 heures</b> après connaissance. Elle communique, le cas échéant, aux utilisateurs potentiellement touchés les mesures ou corrections utiles, et éventuellement la menace elle-même. Le CERT-UE émet une alerte si un incident ou une menace importante touche un composant connu comme connecté à une autre entité. Les informations numériques demandées par le CERT-UE sont fournies rapidement."
+    },
+    {
+      "kind": "h",
+      "text": "Module 5 — Partage et gestion des crises"
+    },
+    {
+      "kind": "h",
+      "text": "Secret, accès et partage — articles 19–20, pages 23–24"
+    },
+    {
+      "kind": "p",
+      "text": "Les entités et le CERT-UE respectent le secret professionnel et les règles de sécurité de l’information. Les demandes d’accès aux documents du CERT-UE relèvent du règlement 1049/2001, avec les consultations prévues pour les documents d’autres entités ou États membres. Le partage volontaire peut porter sur incidents, menaces, incidents évités et vulnérabilités. Le CERT-UE assure des communications traçables, confidentielles et fiables ; il peut prioriser les notifications obligatoires."
+    },
+    {
+      "kind": "p",
+      "text": "Sans préjudice de l’article 12, le partage volontaire ne crée pas d’obligations supplémentaires du seul fait de notifier ; de même, la notification d’incident n’accroît pas en elle-même la responsabilité (art. 21, § 4). Cela <b>n’efface pas les obligations ou défauts d’application préexistants</b>. Les données d’inventaire demandées par le CERT-UE et leurs mises à jour sont fournies rapidement."
+    },
+    {
+      "kind": "p",
+      "text": "Le partage entre le CERT-UE et les entités d’informations révélant l’identité de l’entité touchée exige son consentement ; en cas de refus, elle en donne les motifs (art. 20, § 3). Les obligations des articles 20 et 21 excluent les informations classifiées de l’UE et les informations marquées comme interdites de redistribution, sauf autorisation explicite de partage avec le CERT-UE pour ces dernières."
+    },
+    {
+      "kind": "h",
+      "text": "Coordonner la réaction — article 22, page 26"
+    },
+    {
+      "kind": "p",
+      "text": "Le CERT-UE facilite l’échange et, le cas échéant avec l’ENISA, la coordination : communication externe cohérente, soutien mutuel y compris sur site si pertinent, emploi optimal des ressources, liens avec les autres mécanismes de crise de l’Union. Il soutient la conscience situationnelle avec l’ENISA. En cas de suspicion criminelle, il conseille sur le signalement rapide aux autorités répressives. Des experts des entités peuvent être mobilisés pour un État membre sur sa demande spécifique et avec l’approbation des entités concernées."
+    },
+    {
+      "kind": "h",
+      "text": "Passer à la gestion d’un incident majeur — article 23, pages 26–27"
+    },
+    {
+      "kind": "p",
+      "text": "Rappel : un <b>major incident</b> dépasse les capacités de réaction d’une entité <b>et</b> du CERT-UE, <b>ou</b> a une incidence notable sur au moins deux entités (art. 3, point 8). Le plan commun de crise est défini par l’IICB, en coopération étroite avec le CERT-UE et l’ENISA. Il prévoit : coordination et flux d’informations ; instructions permanentes communes ; taxinomie de gravité et déclencheurs de crise ; exercices réguliers ; canaux sécurisés."
+    },
+    {
+      "kind": "p",
+      "text": "Le représentant de la Commission à l’IICB sert de point de contact pour les informations pertinentes avec EU-CyCLONe. Le CERT-UE coordonne la gestion entre entités et tient un inventaire des expertises disponibles. Chaque entité fournit une liste d’experts, mise à jour <b>chaque année</b>. Ce plan commun complète les plans de crise individuels inclus dans les plans de cybersécurité de l’article 9."
+    },
+    {
+      "kind": "p",
+      "text": "Tous les trois mois, le CERT-UE adresse à l’IICB, l’ENISA, l’INTCEN et au réseau des CSIRT un rapport de synthèse anonymisé et agrégé. <b>Article 21, paragraphe 8.</b>"
+    },
+    {
+      "kind": "h",
+      "text": "Module 5 — Synthèse et questions"
+    },
+    {
+      "kind": "h",
+      "text": "La synthèse à reconstruire"
+    },
+    {
+      "kind": "p",
+      "text": "Le règlement articule partage volontaire, notifications obligatoires et gestion coordonnée des crises. Pour un incident important, l’entité alerte le CERT-UE sous 24 heures et notifie sous 72 heures après connaissance, sans retard injustifié ; elle informe aussi les homologues concernés de l’État membre hôte sous 24 heures. Un rapport final intervient dans le mois suivant la notification, avec un régime adapté si l’incident continue. La coordination technique revient au CERT-UE, tandis que l’IICB établit le plan commun des incidents majeurs. Secret, protection des données et conditions de divulgation restent applicables."
+    },
+    {
+      "kind": "t",
+      "rows": [
+        [
+          "Français",
+          "Anglais à reconnaître"
+        ],
+        [
+          "Alerte précoce",
+          "Early warning"
+        ],
+        [
+          "Notification d’incident",
+          "Incident notification"
+        ],
+        [
+          "Sans retard injustifié",
+          "Without undue delay"
+        ],
+        [
+          "Indicateurs de compromission",
+          "Indicators of compromise"
+        ],
+        [
+          "Mesures d’atténuation",
+          "Mitigation measures"
+        ],
+        [
+          "Rapport d’avancement / rapport final",
+          "Progress report / final report"
+        ]
+      ]
+    },
+    {
+      "kind": "h",
+      "text": "Questions"
+    },
+    {
+      "kind": "p",
+      "text": "1. Les 72 heures commencent-elles à l’envoi de l’alerte précoce ?<br/>2. Le rapport final arrive-t-il un mois après connaissance ?<br/>3. Que faire si l’incident est encore en cours ?<br/>4. Peut-on se limiter au CERT-UE pour les premiers destinataires ?<br/>5. Qui établit le plan commun de crise et qui coordonne les incidents majeurs ?"
+    },
+    {
+      "kind": "h",
+      "text": "Corrigé"
+    },
+    {
+      "kind": "p",
+      "text": "1. Non : à la connaissance de l’incident important (art. 21, § 2, b).<br/>2. Non : un mois après la notification (art. 21, § 2, d).<br/>3. Rapport d’avancement à l’échéance, puis rapport final dans le mois suivant le traitement (art. 21, § 2, e).<br/>4. Non : homologues concernés de l’État membre hôte à informer aussi dans les 24 heures, sans retard injustifié ; utilisateurs selon les conditions du texte (art. 21, § 3 et 5).<br/>5. IICB pour le plan, avec CERT-UE et ENISA ; CERT-UE pour la coordination entre entités (art. 23)."
+    },
+    {
+      "kind": "h",
+      "text": "Exercice écrit — 10 minutes"
+    },
+    {
+      "kind": "p",
+      "text": "Une entité découvre un incident important lundi à 9 h. Présente les destinataires, les informations et les plafonds de 24 h et 72 h, en rappelant qu’il faut agir sans retard injustifié. Puis précise le point de départ du délai du rapport final. Exercice pédagogique."
+    }
+  ]
+}
