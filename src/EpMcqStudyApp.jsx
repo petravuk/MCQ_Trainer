@@ -331,6 +331,11 @@ function getOptionStyle({ picked, correct, isSubmitted }) {
 
 export default function EpMcqStudyApp() {
   const resultSavedRef = useRef(false);
+  const pendingFirebaseResultRef = useRef(null);
+  const firebaseSaveInProgressRef = useRef(false);
+  const firebaseSessionRef = useRef(0);
+  const [firebaseSaveStatus, setFirebaseSaveStatus] = useState("idle");
+  const [firebaseSaveError, setFirebaseSaveError] = useState("");
 
   const [user, setUser] = useState(null);
   const [authError, setAuthError] = useState("");
@@ -469,6 +474,31 @@ export default function EpMcqStudyApp() {
       .slice(0, 4);
   }, [wrongAnswers]);
 
+  async function saveResultToFirebase() {
+    const payload = pendingFirebaseResultRef.current;
+    if (!payload || firebaseSaveInProgressRef.current) return;
+
+    const session = firebaseSessionRef.current;
+    firebaseSaveInProgressRef.current = true;
+    setFirebaseSaveStatus("saving");
+    setFirebaseSaveError("");
+    try {
+      await saveQuizResult(payload);
+      if (session === firebaseSessionRef.current) {
+        pendingFirebaseResultRef.current = null;
+        setFirebaseSaveStatus("saved");
+      }
+    } catch (err) {
+      console.error("Firebase save failed:", err);
+      if (session === firebaseSessionRef.current) {
+        setFirebaseSaveStatus("error");
+        setFirebaseSaveError(`${err.code ? err.code + ": " : ""}${err.message || "Unknown error"}`);
+      }
+    } finally {
+      firebaseSaveInProgressRef.current = false;
+    }
+  }
+
   useEffect(() => {
     if (!completed || !questions.length || resultSavedRef.current) return;
 
@@ -522,7 +552,7 @@ export default function EpMcqStudyApp() {
     setSeenIds(updatedSeen);
     setJsonStorage(SEEN_KEY, updatedSeen);
 
-    saveQuizResult({
+    pendingFirebaseResultRef.current = {
       category,
       mode,
       difficulty: selectedDifficulties.join(", "),
@@ -531,9 +561,8 @@ export default function EpMcqStudyApp() {
       score,
       accuracy,
       wrongQuestionIds,
-    }).catch((err) => {
-      console.error("Firebase save failed:", err);
-    });
+    };
+    saveResultToFirebase();
   }, [
     completed,
     questions,
@@ -554,6 +583,10 @@ export default function EpMcqStudyApp() {
 
   function resetSession(nextMode = mode) {
     resultSavedRef.current = false;
+    firebaseSessionRef.current += 1;
+    pendingFirebaseResultRef.current = null;
+    setFirebaseSaveStatus("idle");
+    setFirebaseSaveError("");
     setMode(nextMode);
     setCurrentIndex(0);
     setSelected({});
@@ -886,6 +919,21 @@ export default function EpMcqStudyApp() {
                     <div style={styles.muted}>Accuracy</div>
                     <div style={styles.statValue}>{accuracy}%</div>
                   </div>
+                </div>
+
+                <div role="status" aria-live="polite" style={{ ...styles.smallText, marginTop: 16 }}>
+                  {firebaseSaveStatus === "saving" && "Saving result to Firebase..."}
+                  {firebaseSaveStatus === "saved" && "Result saved to Firebase."}
+                  {firebaseSaveStatus === "error" && (
+                    <div>
+                      <strong>Firebase save failed:</strong> {firebaseSaveError}
+                      <div style={{ marginTop: 8 }}>
+                        <button style={styles.button} onClick={saveResultToFirebase}>
+                          Retry saving result
+                        </button>
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <div style={{ ...styles.buttonRow, marginTop: 16 }}>
