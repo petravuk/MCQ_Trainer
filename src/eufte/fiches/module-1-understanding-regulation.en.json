@@ -1,0 +1,178 @@
+{
+  "id": 1,
+  "title": "Understanding the Regulation",
+  "detail": "Purpose, scope, definitions and personal data",
+  "articles": "Articles 1–4",
+  "blocks": [
+    {
+      "kind": "h",
+      "text": "Why a common cybersecurity framework",
+      "spoken": false
+    },
+    {
+      "kind": "small",
+      "text": "Recitals 1–5; Articles 1–2 · English source PDF, pages 1–2 and 9–10"
+    },
+    {
+      "kind": "p",
+      "text": "Union entities depend on interconnected digital systems, integrated data flows, cloud services and remote working. An incident affecting one entity can have <b>cascading effects</b> on others. Differences in cybersecurity maturity and response capabilities make common arrangements necessary."
+    },
+    {
+      "kind": "p",
+      "text": "Regulation (EU, Euratom) 2023/2841 aims to achieve a <b>high common level of cybersecurity</b> at Union institutions, bodies, offices and agencies. It combines measures commensurate with risks, information sharing and collaboration. Recitals explain the rationale; the articles establish the rules. The ambition is consistent with Directive (EU) 2022/2555, known as NIS 2, which remains a separate legal instrument."
+    },
+    {
+      "kind": "h",
+      "text": "Four areas in Article 1"
+    },
+    {
+      "kind": "p",
+      "text": "The Regulation covers: <b>1.</b> each entity’s internal cybersecurity risk-management, governance and control framework; <b>2.</b> cybersecurity risk management, reporting and information sharing; <b>3.</b> the organisation and operation of the Interinstitutional Cybersecurity Board, or IICB, and CERT-EU; and <b>4.</b> monitoring implementation."
+    },
+    {
+      "kind": "h",
+      "text": "Entities and systems covered"
+    },
+    {
+      "kind": "p",
+      "text": "It applies to Union entities, the IICB and CERT-EU, without prejudice to institutional autonomy under the Treaties. Union entities are institutions, bodies, offices and agencies set up by or pursuant to the EU Treaties. Do not automatically extend this definition to all European businesses or national administrations. Sources: Article 2 and Article 3(1)."
+    },
+    {
+      "kind": "p",
+      "text": "The Regulation <b>does not apply to network and information systems handling EU classified information</b>, except for Article 13(8). That provision allows CERT-EU to assist with incidents affecting such systems when explicitly invited by the entity, in accordance with its procedures and the applicable protection rules."
+    },
+    {
+      "kind": "p",
+      "text": "<b>Unclassified does not mean public.</b> An unclassified system may contain personal data or confidential information. The ICT environment covered includes on-premises systems, operational technology, mobile devices and outsourced or cloud-hosted assets and services. Source: Article 6(2)."
+    },
+    {
+      "kind": "h",
+      "text": "Roles, definitions and safeguards",
+      "spoken": false
+    },
+    {
+      "kind": "small",
+      "text": "Articles 3–4, 6, 10, 13 and 21 · English source PDF, pages 10–12, 15, 18–20 and 24–25"
+    },
+    {
+      "kind": "h",
+      "text": "Three levels of responsibility"
+    },
+    {
+      "kind": "p",
+      "text": "Each entity organises its own cybersecurity under the responsibility of its <b>highest level of management</b>. The IICB monitors and supports implementation and provides strategic direction to CERT-EU. CERT-EU supplies technical support, facilitates information exchange and coordinates incident response. Common support does not transfer each entity’s responsibility to CERT-EU."
+    },
+    {
+      "kind": "h",
+      "text": "Three incident categories that must remain distinct"
+    },
+    {
+      "kind": "p",
+      "text": "A <b>major incident</b> causes disruption exceeding a Union entity’s <b>and</b> CERT-EU’s capacity to respond, <b>or</b> has a significant impact on at least two Union entities. Preserve both alternatives. Source: Article 3(8)."
+    },
+    {
+      "kind": "p",
+      "text": "A <b>significant incident</b> is the category addressed by the reporting obligations in Article 21. Its criteria concern severe operational disruption or financial loss to the entity and considerable damage to other persons; the provision also covers effects that the incident is capable of causing. Do not substitute “major” for “significant”."
+    },
+    {
+      "kind": "p",
+      "text": "A <b>large-scale cybersecurity incident</b> is a separate term referring to the NIS 2 definition. Article 3 also refers to other instruments for definitions including incident, near miss, vulnerability and cybersecurity risk. Those full definitions are not reproduced in this Regulation."
+    },
+    {
+      "kind": "h",
+      "text": "Personal data remain protected — Article 4"
+    },
+    {
+      "kind": "p",
+      "text": "CERT-EU, the IICB and Union entities must comply with Regulation (EU) 2018/1725. They may process and exchange personal data only to the extent necessary and for the sole purpose of performing the relevant tasks or fulfilling obligations. Special categories of personal data are subject to the purposes and safeguards specified in Article 4(3), including technical measures against other uses and protection of fundamental rights. Cybersecurity is not a general authorisation to share all data."
+    },
+    {
+      "kind": "t",
+      "rows": [
+        [
+          "French term",
+          "Official English term"
+        ],
+        [
+          "Entités de l’Union",
+          "Union entities"
+        ],
+        [
+          "Incident important",
+          "Significant incident"
+        ],
+        [
+          "Incident majeur",
+          "Major incident"
+        ],
+        [
+          "Incident de cybersécurité majeur",
+          "Large-scale cybersecurity incident"
+        ],
+        [
+          "Incident évité",
+          "Near miss"
+        ],
+        [
+          "Niveau hiérarchique le plus élevé",
+          "Highest level of management"
+        ]
+      ]
+    },
+    {
+      "kind": "h",
+      "text": "Recall and written practice",
+      "spoken": false
+    },
+    {
+      "kind": "h",
+      "text": "Summary to reconstruct"
+    },
+    {
+      "kind": "p",
+      "text": "The Regulation addresses the cybersecurity interdependence of Union entities through internal risk management, common governance and operational cooperation. Each entity retains responsibility; the IICB provides oversight and strategic direction, while CERT-EU offers technical support and coordinates incident response. Institutional autonomy, personal-data safeguards and the exclusion for systems handling EU classified information remain relevant."
+    },
+    {
+      "kind": "h",
+      "text": "Recall questions"
+    },
+    {
+      "kind": "qa",
+      "question": "Why are entity-level measures alone insufficient?",
+      "answer": "Interconnected systems and integrated data flows create cascading risks. Cooperation and information sharing complement each entity’s protection. Recitals 1–4."
+    },
+    {
+      "kind": "qa",
+      "question": "Does the Regulation automatically cover every European business?",
+      "answer": "No. It applies to Union entities as defined in Article 3, the IICB and CERT-EU. Articles 2–3."
+    },
+    {
+      "kind": "qa",
+      "question": "What is the exception concerning EU classified information?",
+      "answer": "Systems handling EU classified information are excluded, except for assistance under Article 13(8) on explicit invitation and subject to the relevant procedures and protection rules."
+    },
+    {
+      "kind": "qa",
+      "question": "What are the two alternatives defining a major incident?",
+      "answer": "Disruption beyond the response capacity of the entity and CERT-EU, or a significant impact on at least two Union entities. Article 3(8)."
+    },
+    {
+      "kind": "qa",
+      "question": "Does unclassified mean public?",
+      "answer": "No. Unclassified environments may still contain confidential or personal information."
+    },
+    {
+      "kind": "qa",
+      "question": "Can personal data be shared without limits for cybersecurity purposes?",
+      "answer": "No. Necessity, purpose limitation and the safeguards in Article 4 apply."
+    },
+    {
+      "kind": "h",
+      "text": "Ten-minute writing exercise"
+    },
+    {
+      "kind": "p",
+      "text": "In 120–150 words, explain why the Regulation was adopted, who it covers and the exception for classified systems. Use a clear introduction and a logical sequence. This is a practice task, not an official examination assignment."
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "id": 5,
+  "title": "Incident reporting and crisis management",
+  "detail": "Notifications, information sharing and coordinated response",
+  "articles": "Articles 19–23",
+  "blocks": [
+    {
+      "kind": "h",
+      "text": "Reporting a significant incident",
+      "spoken": false
+    },
+    {
+      "kind": "small",
+      "text": "Article 21 · English source PDF, pages 24–25"
+    },
+    {
+      "kind": "p",
+      "text": "Rapid information helps protect other entities and coordinate the response. Distinguish voluntary sharing, mandatory reporting of <b>significant incidents</b> and coordinated management of <b>major incidents</b>."
+    },
+    {
+      "kind": "h",
+      "text": "Significance — Article 21(1)"
+    },
+    {
+      "kind": "p",
+      "text": "Article 21 sets out the following criteria: <b>(a)</b> the incident has caused or is capable of causing severe operational disruption to the functioning of, or financial loss to, the entity concerned; <b>(b)</b> it has affected or is capable of affecting other natural or legal persons by causing considerable material or non-material damage. Potential effects are included; do not wait for every consequence to materialise before considering the obligations."
+    },
+    {
+      "kind": "h",
+      "text": "Information submitted to CERT-EU — Article 21(2)"
+    },
+    {
+      "kind": "t",
+      "rows": [
+        [
+          "Deadline or trigger",
+          "What must be submitted"
+        ],
+        [
+          "24 hours after awareness",
+          "Early warning, without undue delay; where applicable, suspected unlawful or malicious origin and possible cross-entity or cross-border impact."
+        ],
+        [
+          "72 hours after awareness",
+          "Incident notification, without undue delay; updated information, initial assessment of severity and impact, and indicators of compromise where available."
+        ],
+        [
+          "At CERT-EU’s request",
+          "Intermediate report on relevant status updates."
+        ],
+        [
+          "One month after the incident notification",
+          "Final report: detailed description, severity and impact, likely threat or root cause, applied and ongoing mitigation, and cross-border or cross-entity effects where applicable."
+        ],
+        [
+          "If the incident is still ongoing",
+          "Progress report at the final-report deadline; final report within one month of handling the incident."
+        ]
+      ]
+    },
+    {
+      "kind": "p",
+      "text": "<b>Both 24 hours and 72 hours run from awareness</b>, not one after the other. “Without undue delay” means these ceilings are not a reason to wait. The final-report month starts with the notification, not initial awareness."
+    },
+    {
+      "kind": "h",
+      "text": "Other recipients — Article 21(3)–(7)"
+    },
+    {
+      "kind": "p",
+      "text": "Within 24 hours after awareness, and without undue delay, the entity also informs relevant counterparts in the <b>Member State where it is located</b>. Under the applicable conditions, potentially affected users receive mitigation measures or remedies, and information about the threat where appropriate. CERT-EU issues an alert when a significant incident or threat affects a component known to be connected to another entity’s environment. Digital information requested by CERT-EU is supplied without undue delay."
+    },
+    {
+      "kind": "h",
+      "text": "Information sharing and coordinated crises",
+      "spoken": false
+    },
+    {
+      "kind": "small",
+      "text": "Articles 19–20 and 22–23 · English source PDF, pages 23–27"
+    },
+    {
+      "kind": "h",
+      "text": "Confidentiality and voluntary sharing"
+    },
+    {
+      "kind": "p",
+      "text": "Entities and CERT-EU respect professional secrecy and information-security rules. Access requests for CERT-EU documents follow Regulation 1049/2001, including the relevant consultations. Voluntary sharing may concern incidents, cyber threats, near misses and vulnerabilities. Communications must support traceability, confidentiality and reliability; mandatory notifications may be prioritised."
+    },
+    {
+      "kind": "p",
+      "text": "Voluntary notification does not, by itself, create additional obligations that would not otherwise apply. The mere act of reporting an incident does not increase liability, without prejudice to Article 12. These safeguards <b>do not erase existing duties or implementation shortcomings</b>. Information and updates requested from entity ICT inventories must be supplied without undue delay."
+    },
+    {
+      "kind": "p",
+      "text": "When CERT-EU shares incident information revealing the affected entity’s identity with other Union entities, Article 20(3) requires its consent; a refusal must be explained. Articles 20 and 21 exclude EU classified information and information visibly marked against further distribution, unless sharing the latter with CERT-EU has been explicitly authorised."
+    },
+    {
+      "kind": "h",
+      "text": "Coordination — Article 22"
+    },
+    {
+      "kind": "p",
+      "text": "CERT-EU facilitates information exchange and response coordination, where appropriate with ENISA: coherent external communication, mutual support including on-site help where relevant, optimal operational resources and links to other Union crisis mechanisms. It supports situational awareness with ENISA. If criminal activity is suspected, it advises on reporting without undue delay to law-enforcement authorities."
+    },
+    {
+      "kind": "p",
+      "text": "Experts from Union entities may contribute to response in a Member State following that State’s specific request and the approval of the entities concerned, under the rules in Article 22(5)."
+    },
+    {
+      "kind": "h",
+      "text": "Major incidents — Article 23"
+    },
+    {
+      "kind": "p",
+      "text": "A major incident exceeds the response capacity of an entity <b>and</b> CERT-EU, <b>or</b> significantly affects at least two entities. The IICB establishes a common cyber crisis management plan in close cooperation with CERT-EU and ENISA. It includes coordination and information flows, common standard operating procedures, a common severity taxonomy and crisis triggers, regular exercises and secure communication channels."
+    },
+    {
+      "kind": "p",
+      "text": "The Commission’s representative in the IICB is the contact for relevant information sharing with EU-CyCLONe. CERT-EU coordinates major incidents between entities and maintains an inventory of available technical expertise. Entities contribute lists of experts, updated <b>annually</b>. The common plan complements entities’ individual crisis plans under Article 9."
+    },
+    {
+      "kind": "p",
+      "text": "Every three months, CERT-EU submits an anonymised, aggregated summary report to the IICB, ENISA, EU INTCEN and the CSIRTs network. Article 21(8)."
+    },
+    {
+      "kind": "h",
+      "text": "Recall and written practice",
+      "spoken": false
+    },
+    {
+      "kind": "h",
+      "text": "Summary to reconstruct"
+    },
+    {
+      "kind": "p",
+      "text": "The Regulation combines voluntary information sharing, mandatory significant-incident reporting and coordinated management of major incidents. Entities alert CERT-EU within 24 hours and notify within 72 hours after awareness, without undue delay; relevant host Member State counterparts are also informed within 24 hours. Final reporting follows the notification-based timeline. CERT-EU coordinates the operational response under shared crisis arrangements and information safeguards."
+    },
+    {
+      "kind": "t",
+      "rows": [
+        [
+          "French",
+          "English"
+        ],
+        [
+          "Alerte précoce",
+          "Early warning"
+        ],
+        [
+          "Sans retard injustifié",
+          "Without undue delay"
+        ],
+        [
+          "Indicateurs de compromission",
+          "Indicators of compromise"
+        ],
+        [
+          "Rapport d’avancement",
+          "Progress report"
+        ],
+        [
+          "Mesures d’atténuation",
+          "Mitigation measures"
+        ]
+      ]
+    },
+    {
+      "kind": "h",
+      "text": "Recall questions"
+    },
+    {
+      "kind": "qa",
+      "question": "When do the 72 hours begin?",
+      "answer": "When the entity becomes aware of the significant incident, not when the early warning is sent."
+    },
+    {
+      "kind": "qa",
+      "question": "When does the month for the final report begin?",
+      "answer": "On submission of the incident notification. If the incident remains ongoing, the progress-report and subsequent final-report rules apply."
+    },
+    {
+      "kind": "qa",
+      "question": "Who must also be informed within 24 hours?",
+      "answer": "The relevant Member State counterparts in the Member State where the entity is located, without undue delay. Article 21(3)."
+    },
+    {
+      "kind": "qa",
+      "question": "Who establishes the common crisis plan and who coordinates major incidents?",
+      "answer": "The IICB establishes the plan in close cooperation with CERT-EU and ENISA. CERT-EU coordinates management between Union entities. Article 23."
+    },
+    {
+      "kind": "h",
+      "text": "Ten-minute writing exercise"
+    },
+    {
+      "kind": "p",
+      "text": "An entity becomes aware of a significant incident on Monday at 09:00. Explain the recipients, required information and 24-hour and 72-hour ceilings, always noting “without undue delay”. State the starting point for the final-report month. Practice task only."
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "id": 3,
+  "title": "The IICB and compliance",
+  "detail": "Governance, oversight and corrective measures",
+  "articles": "Articles 10–12",
+  "blocks": [
+    {
+      "kind": "h",
+      "text": "The Interinstitutional Cybersecurity Board",
+      "spoken": false
+    },
+    {
+      "kind": "small",
+      "text": "Article 10 · English source PDF, pages 15–16"
+    },
+    {
+      "kind": "p",
+      "text": "The <b>Interinstitutional Cybersecurity Board</b>, or IICB, monitors and supports implementation by Union entities and supervises CERT-EU’s general priorities and objectives, providing strategic direction. It does not replace each entity’s responsibility."
+    },
+    {
+      "kind": "h",
+      "text": "Composition"
+    },
+    {
+      "kind": "p",
+      "text": "The IICB has <b>18 members</b>: one representative from each of fifteen named entities and three representatives designated by the EU Agencies Network, or EUAN, on a proposal from its ICT advisory committee, for the other bodies and agencies managing their own ICT environment."
+    },
+    {
+      "kind": "p",
+      "text": "The fifteen are the European Parliament, European Council, Council of the European Union, Commission, Court of Justice, European Central Bank, Court of Auditors, European External Action Service, European Economic and Social Committee, Committee of the Regions, European Investment Bank, European Cybersecurity Competence Centre, ENISA, European Data Protection Supervisor and EU Agency for the Space Programme. Represented entities endeavour to achieve gender balance among appointees."
+    },
+    {
+      "kind": "p",
+      "text": "Members may have alternates. Other representatives may be invited without voting rights. The Head of CERT-EU and the chairs of the Cooperation Group, CSIRTs network and EU-CyCLONe, or their alternates, may participate as observers, subject to the exceptional arrangements in the text."
+    },
+    {
+      "kind": "h",
+      "text": "Working arrangements"
+    },
+    {
+      "kind": "p",
+      "text": "The Board selects a chair from its members for <b>three years</b>; the chair’s alternate becomes a full member for the same period. It meets <b>at least three times a year</b>. Each member has one vote, decisions normally use a <b>simple majority</b>, and the chair votes <b>only in the event of a tie</b>, when that vote may decide the outcome."
+    },
+    {
+      "kind": "p",
+      "text": "A simplified written procedure allows approval unless a member objects within the deadline set by the chair. The Commission provides the secretariat, accountable to the chair. An executive committee may be created and receive specified delegated tasks and powers."
+    },
+    {
+      "kind": "p",
+      "text": "By <b>8 January 2025</b>, and annually thereafter, the IICB reports to the <b>European Parliament and Council</b> on implementation progress, including CERT-EU cooperation with Member State counterparts. This contributes to the biennial NIS 2 state-of-cybersecurity report. Article 10(14). Do not confuse it with the report to the Commission under Article 25."
+    },
+    {
+      "kind": "h",
+      "text": "Tasks and compliance instruments",
+      "spoken": false
+    },
+    {
+      "kind": "small",
+      "text": "Articles 11–12 · English source PDF, pages 16–18"
+    },
+    {
+      "kind": "h",
+      "text": "Strategic, operational and cooperative tasks"
+    },
+    {
+      "kind": "p",
+      "text": "The IICB guides CERT-EU’s Head, supervises implementation and may request ad hoc reports. It adopts a multiannual cybersecurity strategy, assessed regularly and <b>at least every five years</b>. It organises the methodology for <b>voluntary peer reviews</b> by experts from an entity other than the one reviewed."
+    },
+    {
+      "kind": "p",
+      "text": "On proposals from CERT-EU’s Head it approves, among other things, the annual work programme, service catalogue and updates, financial planning including staffing, service-level agreement arrangements, performance indicators and activity reports. It approves relevant cooperation agreements and adopts guidelines and recommendations proposed by CERT-EU."
+    },
+    {
+      "kind": "p",
+      "text": "The Board can request the preparation, withdrawal or amendment of proposals or a call for action, establish technical advisory groups, assess entities’ documents, facilitate an informal local-officers group supported by ENISA, advise on interconnections and supply chains, establish a common crisis plan and coordinate the adoption of entities’ individual plans."
+    },
+    {
+      "kind": "h",
+      "text": "Correcting implementation gaps — Article 12"
+    },
+    {
+      "kind": "p",
+      "text": "The IICB may request the necessary information and documents. An entity directly represented in the Board <b>does not vote</b> on compliance measures concerning it. Before using the Article 12(2) measures, the entity must have an opportunity to present observations, without prejudice to its internal procedures."
+    },
+    {
+      "kind": "p",
+      "text": "The available instruments are: <b>(a)</b> a reasoned opinion on shortcomings; <b>(b)</b> corrective guidance following consultation with CERT-EU and with a deadline; <b>(c)</b> a warning to remedy shortcomings, with recommendations and a deadline; <b>(d)</b> a reasoned notification if warning-related shortcomings remain insufficiently remedied; <b>(e)</b> a recommendation for an audit or a request for a third-party audit; <b>(f)</b> information to the Court of Auditors within its mandate, where appropriate; and <b>(g)</b> a recommendation to all Member States and Union entities to suspend temporarily data flows to the entity concerned."
+    },
+    {
+      "kind": "p",
+      "text": "Warnings and recommendations are addressed to the highest level of management. The entity explains the corrective action within a reasonable period agreed with the Board. For persistent infringement attributable to an official’s actions or omissions, the IICB asks the entity to take appropriate action, including considering disciplinary measures under the applicable rules. <b>The Board does not itself impose a disciplinary sanction.</b>"
+    },
+    {
+      "kind": "p",
+      "text": "In duly justified cases, taking account of entity size, the Board may extend the deadlines specifically identified for the <b>Framework, Article 6(1), and risk measures, Article 8(1)</b>. This is not a general power to extend every deadline."
+    },
+    {
+      "kind": "h",
+      "text": "Recall and written practice",
+      "spoken": false
+    },
+    {
+      "kind": "h",
+      "text": "Summary to reconstruct"
+    },
+    {
+      "kind": "p",
+      "text": "The IICB provides common strategic oversight, approves key CERT-EU arrangements, facilitates cooperation and checks implementation. Its compliance instruments help identify and correct gaps while respecting entity procedures and responsibilities. Keep the distinction between recommendations, oversight and actions taken by the entity itself."
+    },
+    {
+      "kind": "t",
+      "rows": [
+        [
+          "French",
+          "English"
+        ],
+        [
+          "Respect des règles",
+          "Compliance"
+        ],
+        [
+          "Évaluation par les pairs",
+          "Peer review"
+        ],
+        [
+          "Avis motivé",
+          "Reasoned opinion"
+        ],
+        [
+          "Avertissement",
+          "Warning"
+        ],
+        [
+          "Orientations",
+          "Guidelines"
+        ]
+      ]
+    },
+    {
+      "kind": "h",
+      "text": "Recall questions"
+    },
+    {
+      "kind": "qa",
+      "question": "How many members does the IICB have and how often must it meet?",
+      "answer": "Eighteen members and at least three meetings a year. Article 10."
+    },
+    {
+      "kind": "qa",
+      "question": "Does the chair vote on every decision?",
+      "answer": "No. The chair votes only in a tie. Article 10(9)."
+    },
+    {
+      "kind": "qa",
+      "question": "May a directly represented entity vote on compliance measures concerning itself?",
+      "answer": "No. Article 12(1) excludes that vote."
+    },
+    {
+      "kind": "qa",
+      "question": "Can the IICB itself impose disciplinary sanctions or directly execute the suspension of data flows?",
+      "answer": "It asks the entity to consider appropriate measures under the relevant rules and may recommend temporary suspension of data flows. Preserve those limits. Article 12."
+    },
+    {
+      "kind": "h",
+      "text": "Ten-minute writing exercise"
+    },
+    {
+      "kind": "p",
+      "text": "In 120–150 words, explain the IICB’s role and three instruments for dealing with implementation shortcomings. Distinguish a reasoned opinion, a recommendation and action by the entity. Practice task only."
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "id": 2,
+  "title": "Obligations of Union entities",
+  "detail": "Framework, maturity, measures and cybersecurity plan",
+  "articles": "Articles 5–9",
+  "blocks": [
+    {
+      "kind": "h",
+      "text": "Governance and the management cycle",
+      "spoken": false
+    },
+    {
+      "kind": "small",
+      "text": "Articles 5–9 · English source PDF, pages 11–14"
+    },
+    {
+      "kind": "p",
+      "text": "Each entity must organise a complete cybersecurity management cycle: an initial review, a governance framework, maturity assessments, proportionate measures and an approved cybersecurity plan. The <b>highest level of management</b> remains responsible."
+    },
+    {
+      "kind": "h",
+      "text": "The Framework — Article 6"
+    },
+    {
+      "kind": "p",
+      "text": "By <b>8 April 2025</b>, following an initial cybersecurity review such as an audit, each entity must establish its internal cybersecurity risk-management, governance and control framework. It covers the entire unclassified ICT environment: on-premises systems, operational technology networks, cloud or third-party hosted assets and services, mobile devices, corporate networks, business networks not connected to the internet and devices connected to these environments."
+    },
+    {
+      "kind": "p",
+      "text": "The Framework follows an <b>all-hazards approach</b>, addressing more than malicious attacks. Recital 6 also mentions theft, fire, floods, power or telecommunications failures and unauthorised physical access. The Framework sets policies, objectives, priorities, roles, responsibilities and mechanisms to measure implementation effectiveness. It is reviewed regularly in light of changing risks, and <b>at least every four years</b>."
+    },
+    {
+      "kind": "p",
+      "text": "The highest level of management oversees compliance. It may delegate specific obligations to the officials identified in the text, but may still be held liable for infringements. Each entity must ensure that an <b>adequate percentage</b> of its ICT budget is spent on cybersecurity. No uniform numerical percentage is specified."
+    },
+    {
+      "kind": "h",
+      "text": "Local officer, training and maturity"
+    },
+    {
+      "kind": "p",
+      "text": "A local cybersecurity officer or equivalent function acts as the single point of contact, facilitates implementation and reports directly and regularly to the highest level of management. Certain tasks may be shared by entities or delegated to CERT-EU through a service-level agreement. CERT-EU maintains the list of officers and must be notified of appointments and changes without undue delay. Relevant senior officials and staff receive regular specific training. Article 6(8)–(9)."
+    },
+    {
+      "kind": "p",
+      "text": "The first maturity assessment is due by <b>8 July 2025</b>, then <b>at least every two years</b>, covering the entire ICT environment. A specialised third party may assist; similarly structured entities may cooperate. Discussion of results in the IICB or informal officers’ group requires an IICB request and the entity’s explicit consent. Article 7."
+    },
+    {
+      "kind": "p",
+      "text": "The IICB issues implementation guidelines by <b>8 September 2024</b>, after consulting ENISA and receiving CERT-EU guidance. Entities take these and relevant guidelines and recommendations into account. Article 5."
+    },
+    {
+      "kind": "h",
+      "text": "Risk measures and the cybersecurity plan",
+      "spoken": false
+    },
+    {
+      "kind": "small",
+      "text": "Articles 8–9 · English source PDF, pages 13–14"
+    },
+    {
+      "kind": "p",
+      "text": "Appropriate and proportionate <b>technical, operational and organisational measures</b> must be taken without undue delay and by <b>8 September 2025</b> at the latest. Proportionality takes account of exposure, size, incident likelihood and severity, including societal, economic and interinstitutional effects, the state of the art and relevant standards. Proportionate does not mean optional."
+    },
+    {
+      "kind": "h",
+      "text": "At least sixteen domains — Article 8(2)"
+    },
+    {
+      "kind": "p",
+      "text": "(a) Cybersecurity policy; (b) risk analysis and information-system security; (c) cloud policy objectives; (d) audits where appropriate, potentially including risk, vulnerability and threat assessments and penetration testing; (e) implementation of audit recommendations; (f) organisation, roles and responsibilities; (g) asset inventory and network cartography; (h) human resources security and access control; (i) operations security; (j) communications security; (k) system acquisition, development and maintenance, including vulnerability handling and disclosure; (l) source-code transparency where possible; (m) supply chain security; (n) incident handling, monitoring, logging and CERT-EU cooperation; (o) business continuity, backups, disaster recovery and crises; (p) education, skills, awareness, exercises and training."
+    },
+    {
+      "kind": "p",
+      "text": "Supply chain measures take account of each direct supplier’s vulnerabilities and the overall quality of products and cybersecurity practices, including secure development procedures."
+    },
+    {
+      "kind": "h",
+      "text": "Specific minimum measures — Article 8(3)"
+    },
+    {
+      "kind": "p",
+      "text": "These include enabling and sustaining teleworking; concrete steps towards <b>zero-trust principles</b>; multifactor authentication as a norm; cryptography, encryption, especially end-to-end encryption, and secure digital signing; secured communications and emergency systems where appropriate; proactive malware and spyware detection and removal; secure software development and evaluation; role-appropriate management and staff training; regular staff training; and interconnectivity risk analyses where relevant."
+    },
+    {
+      "kind": "p",
+      "text": "Procurement rules must remove contractual barriers to sharing incident, vulnerability and threat information with CERT-EU, and impose contractual reporting obligations with appropriate response and monitoring mechanisms. Preserve qualifications such as “where appropriate”, “where relevant” and “where possible” for the measures to which they attach."
+    },
+    {
+      "kind": "h",
+      "text": "The plan — Article 9"
+    },
+    {
+      "kind": "p",
+      "text": "Management approves the cybersecurity plan without undue delay and by <b>8 January 2026</b> at the latest. It draws on the maturity assessment, assets, risks and measures, includes at least the Article 8 measures, and incorporates the entity’s <b>cyber crisis management plan for major incidents</b>. The completed plan is submitted to the IICB. It is revised every two years, or more frequently where necessary following maturity assessments or a substantial Framework review."
+    },
+    {
+      "kind": "h",
+      "text": "Recall and written practice",
+      "spoken": false
+    },
+    {
+      "kind": "h",
+      "text": "Summary to reconstruct"
+    },
+    {
+      "kind": "p",
+      "text": "Cybersecurity is a governance responsibility. The Framework defines policies and responsibilities across the unclassified environment; maturity assessments identify gaps; proportionate measures address risks; and the approved plan formalises implementation and crisis preparedness. Delegation and external services do not remove management responsibility."
+    },
+    {
+      "kind": "t",
+      "rows": [
+        [
+          "French",
+          "English"
+        ],
+        [
+          "Approche tous risques",
+          "All-hazards approach"
+        ],
+        [
+          "Évaluation de maturité",
+          "Cybersecurity maturity assessment"
+        ],
+        [
+          "Plan de cybersécurité",
+          "Cybersecurity plan"
+        ],
+        [
+          "Chaîne d’approvisionnement",
+          "Supply chain"
+        ],
+        [
+          "Responsable local",
+          "Local cybersecurity officer"
+        ]
+      ]
+    },
+    {
+      "kind": "h",
+      "text": "Recall questions"
+    },
+    {
+      "kind": "qa",
+      "question": "Does outsourcing a cloud service remove it from the Framework?",
+      "answer": "No. Outsourced and cloud-hosted assets and services are included. Article 6(2)."
+    },
+    {
+      "kind": "qa",
+      "question": "How often are the Framework and maturity reviewed?",
+      "answer": "The Framework is reviewed at least every four years; maturity is assessed at least every two years. Articles 6–7."
+    },
+    {
+      "kind": "qa",
+      "question": "Does delegation eliminate management liability?",
+      "answer": "No. Management may still be held liable for the entity’s infringements. Article 6(6)."
+    },
+    {
+      "kind": "qa",
+      "question": "Who approves the cybersecurity plan and who receives it?",
+      "answer": "The highest level of management approves it; the entity submits the completed plan to the IICB. Article 9."
+    },
+    {
+      "kind": "h",
+      "text": "Ten-minute writing exercise"
+    },
+    {
+      "kind": "p",
+      "text": "Brief a senior manager in 120–150 words on the sequence “Framework — maturity — measures — plan”. Explain their responsibility and include the different review periods. Practice task only."
+    }
+  ]
+}

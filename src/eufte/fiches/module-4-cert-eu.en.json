@@ -1,0 +1,176 @@
+{
+  "id": 4,
+  "title": "CERT-EU services and cooperation",
+  "detail": "Technical support, leadership, funding and partners",
+  "articles": "Articles 13–18",
+  "blocks": [
+    {
+      "kind": "h",
+      "text": "CERT-EU’s mission and services",
+      "spoken": false
+    },
+    {
+      "kind": "small",
+      "text": "Article 13 · English source PDF, pages 18–20"
+    },
+    {
+      "kind": "p",
+      "text": "CERT-EU is the common technical hub for advice, cybersecurity information exchange and incident-response coordination. It helps Union entities <b>prevent, detect, handle, mitigate, respond to and recover from incidents</b> in their unclassified ICT environments."
+    },
+    {
+      "kind": "p",
+      "text": "It collects, manages, analyses and shares information on threats, vulnerabilities and incidents, supports implementation, alerts the IICB to implementation issues, contributes to situational awareness with ENISA and coordinates the management of major incidents."
+    },
+    {
+      "kind": "h",
+      "text": "Basic services and other tasks"
+    },
+    {
+      "kind": "p",
+      "text": "Its catalogue describes standard CSIRT services, called <b>basic services</b>. CERT-EU maintains peer and partner networks and acts in a role equivalent to a coordinator for coordinated vulnerability disclosure. On an entity’s request, it carries out proactive, <b>non-intrusive scanning of publicly accessible systems</b>. It organises exercises, may participate in them or recommend participation in existing exercises, where appropriate with ENISA."
+    },
+    {
+      "kind": "h",
+      "text": "Chargeable services — Article 13(6)"
+    },
+    {
+      "kind": "p",
+      "text": "Services outside the catalogue may include additional ICT security support under service-level agreements and subject to resources, such as frontline monitoring of high-severity threats around the clock. They also include support for cybersecurity operations or projects distinct from protecting the entity’s ICT environment, under written agreements and prior IICB approval; proactive scanning on request for vulnerabilities with potentially significant impact; and specified services for closely cooperating external entities under the conditions set out in the text."
+    },
+    {
+      "kind": "p",
+      "text": "Do not confuse the public non-intrusive scan in Article 13(3)(h) with the chargeable scan in Article 13(6)(c). Their conditions and scope differ. Charging and financing arrangements are specified in Article 16."
+    },
+    {
+      "kind": "h",
+      "text": "Special assistance and safeguards"
+    },
+    {
+      "kind": "p",
+      "text": "Assistance for incidents in systems handling EU classified information requires an <b>explicit invitation</b>, the entity’s procedures and the applicable protection rules. For personal-data breaches, CERT-EU supports the entity in cooperation with the European Data Protection Supervisor, without replacing that authority’s powers. It communicates its incident-handling procedures and supplies anonymised information on major incidents. Technical input to policy departments is possible on express request. Article 13(8)–(12)."
+    },
+    {
+      "kind": "h",
+      "text": "Instruments, management and cooperation",
+      "spoken": false
+    },
+    {
+      "kind": "small",
+      "text": "Articles 14–18 · English source PDF, pages 20–23"
+    },
+    {
+      "kind": "h",
+      "text": "Who proposes and who adopts?"
+    },
+    {
+      "kind": "p",
+      "text": "Under Article 14, CERT-EU issues <b>calls for action</b> describing urgent security measures within a set timeframe. The entity informs CERT-EU without undue delay how they were applied. CERT-EU submits proposals for <b>guidelines</b> addressed to all or some entities and <b>recommendations</b> addressed to individual entities. The <b>IICB adopts</b> guidelines and recommendations. They may address maturity, measures, plans, common or open-source approaches, procurement and information sharing."
+    },
+    {
+      "kind": "h",
+      "text": "Leadership and financing — Articles 15–16"
+    },
+    {
+      "kind": "p",
+      "text": "The <b>Commission appoints CERT-EU’s Head after approval by two thirds of the IICB’s members</b>. The IICB is consulted throughout selection. The Head manages operations under the Board’s direction, prepares work and financial proposals and reports at least annually."
+    },
+    {
+      "kind": "p",
+      "text": "CERT-EU is administratively integrated into a Commission directorate-general while retaining its status as an <b>autonomous interinstitutional service provider</b>. For administrative and financial procedures, its Head acts under Commission authority and IICB oversight."
+    },
+    {
+      "kind": "p",
+      "text": "A separate Commission budget line funds the specified activities for entities financed under the European Public Administration heading. Other entities make fair and proportionate annual contributions agreed through service-level agreements. Chargeable-service costs are recovered from beneficiaries. Administrative reviews consider whether CERT-EU could become a Union body; the Regulation does not say that this change has already happened."
+    },
+    {
+      "kind": "h",
+      "text": "Cooperation and disclosure of identity — Articles 17–18"
+    },
+    {
+      "kind": "p",
+      "text": "With Member State counterparts, CERT-EU exchanges relevant information rapidly and warns the relevant counterparts without delay when aware of a significant incident in their territory. Subject to data protection, relevant incident-specific information may be exchanged without the affected entity’s authorisation."
+    },
+    {
+      "kind": "p",
+      "text": "Information revealing the target’s identity may be shared if the entity consents, if disclosure increases the likelihood of preventing or mitigating incidents elsewhere despite refusal, or if the entity has already made its involvement public. The second case requires the Head’s approval, a written explanation and request for consent within a specified period, notice that disclosure may proceed without consent, and information to the entity before disclosure."
+    },
+    {
+      "kind": "p",
+      "text": "Cooperation with other counterparts and partners requires prior IICB approval case by case. Article 18 includes confidentiality arrangements and an urgent-and-imminent-need exception for exchange without pre-existing arrangements, with immediate information to the chair and reporting to the Board. For sharing specific incident information with those partners, Article 18(3) requires the affected entity’s <b>consent</b>, confidentiality arrangements or a non-disclosure contract, and the sole purpose of helping analysis."
+    },
+    {
+      "kind": "h",
+      "text": "Recall and written practice",
+      "spoken": false
+    },
+    {
+      "kind": "h",
+      "text": "Summary to reconstruct"
+    },
+    {
+      "kind": "p",
+      "text": "CERT-EU provides shared technical and operational support, coordinates incidents and cooperates with partners under confidentiality and data-protection rules. Basic and chargeable services are distinct. Strategic direction rests with the IICB, while administrative support comes from the Commission. Neither common services nor external cooperation remove each entity’s responsibilities."
+    },
+    {
+      "kind": "t",
+      "rows": [
+        [
+          "French",
+          "Official English"
+        ],
+        [
+          "Services de base / services payants",
+          "Basic services / chargeable services"
+        ],
+        [
+          "Injonctions",
+          "Calls for action"
+        ],
+        [
+          "Accord de niveau de service",
+          "Service-level agreement"
+        ],
+        [
+          "Conscience situationnelle",
+          "Situational awareness"
+        ],
+        [
+          "Divulgation coordonnée des vulnérabilités",
+          "Coordinated vulnerability disclosure"
+        ]
+      ]
+    },
+    {
+      "kind": "h",
+      "text": "Recall questions"
+    },
+    {
+      "kind": "qa",
+      "question": "Who appoints CERT-EU’s Head, and what approval is needed?",
+      "answer": "The Commission, after approval by two thirds of the IICB’s members. Article 15."
+    },
+    {
+      "kind": "qa",
+      "question": "Are all CERT-EU services basic services?",
+      "answer": "No. Article 13 also provides for chargeable services under specified conditions."
+    },
+    {
+      "kind": "qa",
+      "question": "Who adopts the guidelines proposed by CERT-EU?",
+      "answer": "The IICB adopts them. CERT-EU submits proposals and issues calls for action. Articles 11 and 14."
+    },
+    {
+      "kind": "qa",
+      "question": "Does disclosure of identity to Member State counterparts always require consent?",
+      "answer": "No. Article 17(3) contains three situations, with a special procedure for preventive disclosure without consent. Other partners are subject to the different conditions of Article 18(3)."
+    },
+    {
+      "kind": "h",
+      "text": "Ten-minute writing exercise"
+    },
+    {
+      "kind": "p",
+      "text": "Explain what an entity can expect from CERT-EU. Include a basic service, a chargeable service and a safeguard for incident information. Keep strategic and administrative responsibilities distinct. Practice task only."
+    }
+  ]
+}

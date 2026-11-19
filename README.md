@@ -156,3 +156,27 @@ Les six textes sont éditables séparément dans `src/eufte/fiches/` :
 Chaque fichier contient le titre et les paragraphes ou tableaux de la fiche.
 Les PDF et MP3 déjà générés sont dans `public/eufte/fiches/` et
 `public/eufte/audio/`. Modifier un texte à l’écran ne régénère pas ces fichiers.
+
+
+### Français et anglais
+
+Les boutons **FR / EN** changent à la fois les six audios, les six textes
+lisibles dans l’application, les libellés et les fichiers à télécharger. Le
+choix est mémorisé dans ce navigateur ; il est aussi disponible dans le
+lecteur de fiches, sans perdre le module sélectionné. Changer de langue
+arrête le lecteur audio en cours.
+
+Les textes anglais sont les six fichiers `*.en.json` de `src/eufte/fiches/`,
+à côté des fichiers français `*.fr.json`. Les MP3, PDF et ZIP anglais portent
+le suffixe `EN` dans `public/eufte/audio/` et `public/eufte/fiches/`.
+Le catalogue `src/eufte/modules.js` réunit les deux langues ; les libellés
+sont dans `src/eufte/interface.js`. Les durées et le nombre de pages anglais
+sont dans `src/eufte/resources.en.json`.
+
+La terminologie et les références anglaises suivent le PDF source anglais
+du règlement 2023/2841 fourni pour l’épreuve. Les exercices et plans de
+rédaction restent des propositions d’entraînement, pas des sujets officiels.
+
+Voix anglaise : Piper en_GB cori high, voix britannique féminine entraînée à
+partir d’enregistrements LibriVox du domaine public (https://librivox.org).
+Informations de création de la voix : https://brycebeattie.com/files/tts/.

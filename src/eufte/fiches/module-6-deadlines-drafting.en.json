@@ -1,0 +1,255 @@
+{
+  "id": 6,
+  "title": "Deadlines and written communication",
+  "detail": "Key dates, review cycles and drafting practice",
+  "articles": "Articles 24–26 and cross-cutting milestones",
+  "blocks": [
+    {
+      "kind": "h",
+      "text": "Milestones and final provisions",
+      "spoken": false
+    },
+    {
+      "kind": "small",
+      "text": "Dates specified in the supplied source Regulation, published on 18 December 2023"
+    },
+    {
+      "kind": "p",
+      "text": "Separate <b>initial implementation dates</b>, <b>recurring duties</b> and <b>incident-triggered deadlines</b>. A deadline that is already past does not establish that the obligation was actually fulfilled. These notes retain the examination source’s dates without adding subsequent implementation measures."
+    },
+    {
+      "kind": "t",
+      "rows": [
+        [
+          "Date",
+          "Duty and source"
+        ],
+        [
+          "8 July 2024",
+          "IICB guidelines or recommendations on incident-reporting arrangements, format and content: Article 21(9)."
+        ],
+        [
+          "8 September 2024",
+          "IICB implementation guidelines for the initial review, Framework, maturity, measures and plan: Article 5."
+        ],
+        [
+          "8 January 2025",
+          "First annual IICB report to Parliament and Council: Article 10(14); report to the Commission with CERT-EU assistance: Article 25(1); incident-coordination guidelines or recommendations: Article 22(4)."
+        ],
+        [
+          "8 April 2025",
+          "Entity Framework after initial review: Article 6(1)."
+        ],
+        [
+          "8 July 2025",
+          "First entity maturity assessment: Article 7(1)."
+        ],
+        [
+          "8 September 2025",
+          "Entity risk-management measures, without undue delay and by this date at the latest: Article 8(1)."
+        ],
+        [
+          "8 January 2026",
+          "Management approval of the entity’s plan, without undue delay and by this date at the latest: Article 9(1)."
+        ],
+        [
+          "8 January 2027",
+          "First Commission evaluation and report to Parliament and Council on implementation and strategic and operational experience; includes considering CERT-EU’s possible Union-body status: Article 25(2)."
+        ],
+        [
+          "8 January 2029",
+          "Commission review of how the Regulation functions, including possible inclusion of EU classified systems, with reports to Parliament, Council, EESC and Committee of the Regions; legislative proposal where necessary: Article 25(3)."
+        ]
+      ]
+    },
+    {
+      "kind": "h",
+      "text": "Budget and legal effect — Articles 24–26, page 27"
+    },
+    {
+      "kind": "p",
+      "text": "The Commission may propose reallocating staff and financial resources to its budget for CERT-EU activities, taking effect with the first annual Union budget adopted after entry into force. The Regulation enters into force on the twentieth day after publication and is binding in its entirety and directly applicable in all Member States."
+    },
+    {
+      "kind": "h",
+      "text": "Review cycles and finding the right article",
+      "spoken": false
+    },
+    {
+      "kind": "small",
+      "text": "Cross-cutting references in Articles 6–25"
+    },
+    {
+      "kind": "t",
+      "rows": [
+        [
+          "Frequency",
+          "Requirement"
+        ],
+        [
+          "At least every 4 years",
+          "Framework review, with regular review in light of changing risks: Article 6(4)."
+        ],
+        [
+          "At least every 2 years",
+          "Cybersecurity maturity assessment: Article 7(1)."
+        ],
+        [
+          "Every 2 years or more frequently",
+          "Cybersecurity-plan revision under the conditions in Article 9(1)."
+        ],
+        [
+          "At least 3 meetings annually",
+          "IICB meetings: Article 10(8)."
+        ],
+        [
+          "3-year term",
+          "IICB chair: Article 10(7)."
+        ],
+        [
+          "Regularly and at least every 5 years",
+          "Assessment of IICB multiannual strategy: Article 11(c)."
+        ],
+        [
+          "Annually",
+          "IICB reporting under Articles 10(14) and 25(1); Head’s documents and reporting under Article 15; entity expert lists under Article 23(4)."
+        ],
+        [
+          "Every 3 months",
+          "CERT-EU anonymised, aggregated summary: Article 21(8)."
+        ],
+        [
+          "Every 2 years from 2027",
+          "Commission implementation evaluation and report: Article 25(2)."
+        ]
+      ]
+    },
+    {
+      "kind": "h",
+      "text": "Three different planning instruments"
+    },
+    {
+      "kind": "p",
+      "text": "The <b>Framework</b> establishes governance and policies. The <b>entity’s cybersecurity plan</b> includes its measures and individual crisis plan. The <b>common IICB crisis plan</b> organises coordinated management of major incidents. Articles 6, 9 and 23."
+    },
+    {
+      "kind": "t",
+      "rows": [
+        [
+          "Assignment focus",
+          "Where to look in the source PDF"
+        ],
+        [
+          "Purpose, scope and definitions",
+          "Recitals; Articles 1–4, pages 9–11."
+        ],
+        [
+          "Entity obligations",
+          "Articles 5–9, pages 11–14."
+        ],
+        [
+          "Oversight and compliance",
+          "Articles 10–12, pages 15–18."
+        ],
+        [
+          "CERT-EU and partners",
+          "Articles 13–18, pages 18–23."
+        ],
+        [
+          "Information, incidents and crises",
+          "Articles 19–23, pages 23–27."
+        ],
+        [
+          "Initial budget and review",
+          "Articles 24–26, page 27."
+        ]
+      ]
+    },
+    {
+      "kind": "h",
+      "text": "Drafting a clear response",
+      "spoken": false
+    },
+    {
+      "kind": "small",
+      "text": "Competition notice EPSO/AD/429/26, section 4.3.2(d), page 9; drafting approach below is a practice suggestion"
+    },
+    {
+      "kind": "p",
+      "text": "The EUFTE assesses <b>written communication</b>, lasts <b>40 minutes</b>, is taken in language 2 and is marked out of 10 with a pass score of 5. The published documentation is available during the test with the assignment. It is neither a language test nor a factual-knowledge test. The notice refers to EPSO’s assessment anchors rather than reproducing them."
+    },
+    {
+      "kind": "p",
+      "text": "For every obligation, ask: <b>who acts, what must be done, by when, and subject to which conditions or exceptions?</b> Select information relevant to the assignment rather than reciting every module. Keep “shall”, “may”, “recommend”, “propose” and “adopt” distinct, and check the exact incident category."
+    },
+    {
+      "kind": "p",
+      "text": "A suggested 40-minute practice allocation is: five minutes to analyse the task, seven to select information and plan, twenty-one to draft, and seven to review. This is not an official EPSO prescription. In the review, check the actor, legal force, deadline starting point and any qualification."
+    },
+    {
+      "kind": "p",
+      "text": "For a broad synthesis, a possible structure is: <b>1.</b> entity responsibility and preparedness; <b>2.</b> common governance and support; <b>3.</b> information sharing, reporting and coordinated crises, with safeguards. Adapt the introduction, headings and conclusion to the actual recipient and task."
+    },
+    {
+      "kind": "t",
+      "rows": [
+        [
+          "Purpose",
+          "Useful English wording"
+        ],
+        [
+          "Introduce an aim",
+          "The Regulation aims to…"
+        ],
+        [
+          "State an obligation",
+          "Each Union entity is required to…"
+        ],
+        [
+          "Preserve a condition",
+          "Subject to…"
+        ],
+        [
+          "Preserve another rule",
+          "Without prejudice to…"
+        ],
+        [
+          "State a deadline",
+          "No later than…"
+        ]
+      ]
+    },
+    {
+      "kind": "h",
+      "text": "Recall questions"
+    },
+    {
+      "kind": "qa",
+      "question": "Is maturity assessed every four years?",
+      "answer": "No. At least every two years. Four years concerns the Framework review."
+    },
+    {
+      "kind": "qa",
+      "question": "What are the four initial entity milestones?",
+      "answer": "Framework in April twenty twenty-five, maturity in July, measures in September and the plan in January twenty twenty-six, each with the eighth of the month as its specified date."
+    },
+    {
+      "kind": "qa",
+      "question": "Does the 2029 review already bring EU classified systems into the general scope?",
+      "answer": "No. It assesses whether their inclusion is appropriate. Article 25(3)."
+    },
+    {
+      "kind": "qa",
+      "question": "Which four questions help you summarise an obligation?",
+      "answer": "Who acts, what action is required, by when, and subject to which conditions or exceptions."
+    },
+    {
+      "kind": "h",
+      "text": "Ten-minute writing exercise"
+    },
+    {
+      "kind": "p",
+      "text": "Draft a short briefing explaining the difference between the Framework, the entity plan and the common crisis plan. Then check the terminology and deadlines against the source. Practice task only."
+    }
+  ]
+}
